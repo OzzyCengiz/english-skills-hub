@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Skills Hub | Reading with Writing</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Masthead -->
+  <header class="app-header">
+    <!-- Admin Button -->
+<a href="admin.html" class="btn-pill" style="text-decoration: none;">⚙️ Studio</a>
+    <div class="brand-meta">
+      <h1 class="brand-title">English Skills Hub</h1>
+      <span class="brand-tag">Reading & Writing Studio</span>
+    </div>
+    
+    <div class="header-tools">
+      <div class="tool-group">
+        <button id="font-decrease" aria-label="Decrease text size">A−</button>
+        <button id="font-size-label" style="pointer-events: none;">16px</button>
+        <button id="font-increase" aria-label="Increase text size">A+</button>
+      </div>
+      <button id="toggle-dyslexic" class="btn-pill">Easy-Read</button>
+      <button id="toggle-focus" class="btn-pill">Focus Mask</button>
+    </div>
+  </header>
+
+  <!-- Grade Bar (1-6) -->
+  <nav class="grade-nav" id="grade-pills"></nav>
+
+  <!-- Editorial 2-Column Shell -->
+  <div class="editorial-shell">
+    <!-- Left Sidebar: Index & Context -->
+    <aside class="sidebar-column">
+      <div class="sidebar-section">
+        <span class="section-label">Units in this Grade</span>
+        <ul id="unit-nav-list" class="unit-index-list"></ul>
+      </div>
+
+      <div class="metadata-panel">
+        <span class="section-label" style="margin-bottom: 0.25rem;">Pedagogical Focus</span>
+        <dl>
+          <dt>Reading Strategy</dt>
+          <dd id="sidebar-skill-name">-</dd>
+          <dt>Writing Target</dt>
+          <dd id="sidebar-writing-goal">-</dd>
+        </dl>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-column">
+      <!-- Article Header -->
+      <header class="article-header">
+        <span class="article-kicker" id="banner-grade-tag">Grade 1 · Unit 1</span>
+        <h2 class="article-headline" id="banner-unit-title">Loading Unit...</h2>
+        <p class="article-subhead" id="banner-unit-desc"></p>
+      </header>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs" role="tablist">
+        <button class="tab-link active" data-tab="passage">Passage</button>
+        <button class="tab-link" data-tab="vocab">Key Vocabulary</button>
+        <button class="tab-link" data-tab="practice">Practice & Tips</button>
+        <button class="tab-link" data-tab="write">Writing Workshop</button>
+      </nav>
+
+      <!-- Dynamic Tab Content -->
+      <section id="workspace-content"></section>
+    </main>
+  </div>
+
+  <!-- Focus Mask Tool -->
+  <div id="focus-mask" class="focus-mask" style="display: none;">
+    <div id="focus-window" class="focus-window"></div>
+  </div>
+
+  <!-- Vocabulary Modal -->
+  <div id="vocab-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-top">
+        <h3 id="modal-term" class="modal-term">Word</h3>
+        <button id="modal-close" class="modal-close-btn">✕</button>
+      </div>
+      <span id="modal-pos" class="modal-pos">noun</span>
+      <p id="modal-definition" class="modal-definition"></p>
+      <button id="modal-speak-btn" class="btn-pill active" style="margin-top: 1rem;">🔊 Pronounce</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

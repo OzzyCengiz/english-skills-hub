@@ -1,0 +1,276 @@
+/* Sol Sidebar - Dizin / İçindekiler */
+.sidebar-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-400);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.unit-index-list {
+  list-style: none;
+  border-top: 1px solid var(--ink-border);
+}
+
+.unit-index-item {
+  border-bottom: 1px solid var(--ink-border);
+}
+
+.unit-link {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 0.85rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: padding-left 0.2s var(--ease);
+}
+
+.unit-link:hover {
+  padding-left: 0.5rem;
+}
+
+.unit-link.active {
+  font-weight: 600;
+  color: var(--accent-color);
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--accent-color);
+}
+
+.unit-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-400);
+  margin-right: 0.5rem;
+}
+
+/* Sidebar Bilgi Kartı */
+.metadata-panel {
+  background: var(--bg-subtle);
+  border: 1px solid var(--ink-border);
+  padding: 1.25rem;
+  border-radius: 4px;
+}
+
+.metadata-panel dt {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-400);
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+}
+
+.metadata-panel dt:first-child { margin-top: 0; }
+
+.metadata-panel dd {
+  font-size: 0.9rem;
+  color: var(--ink-900);
+  font-weight: 600;
+}
+
+/* Ana İçerik Başlığı (Hero Banner yerine Editoryal Başlık) */
+.article-header {
+  border-bottom: 1px solid var(--ink-border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.article-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.article-headline {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0;
+}
+
+.article-subhead {
+  font-size: 1.1rem;
+  color: var(--ink-700);
+}
+
+/* Sekmeler - Temiz Çizgi Tasarım */
+.nav-tabs {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--ink-border);
+  margin-bottom: 2rem;
+}
+
+.tab-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0;
+  color: var(--ink-400);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.tab-link.active {
+  color: var(--ink-900);
+  font-weight: 600;
+}
+
+.tab-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ink-900);
+}
+
+/* Okuma Parçası (Reading Passage) */
+.reading-canvas {
+  background: var(--bg-surface);
+  border: 1px solid var(--ink-border);
+  padding: 2.5rem;
+  border-radius: 4px;
+}
+
+.reading-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ink-border);
+}
+
+.passage-dialogue {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.dialogue-turn {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+}
+
+.speaker-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-400);
+  text-transform: uppercase;
+}
+
+.speech-body {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Kelime Etiketleri (Aşırı Sarı Kutu Yerine İnce Çizgi) */
+.vocab-anchor {
+  background: transparent;
+  border-bottom: 1px solid var(--accent-color);
+  color: var(--ink-900);
+  padding: 0 2px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.vocab-anchor:hover {
+  background: var(--accent-tint);
+}
+
+/* Soru & Alıştırma Paneli */
+.exercise-entry {
+  border: 1px solid var(--ink-border);
+  background: var(--bg-surface);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.exercise-question {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.choice-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ink-border);
+  background: var(--bg-surface);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: border-color 0.15s;
+}
+
+.choice-btn:hover:not(:disabled) {
+  border-color: var(--ink-900);
+}
+
+.choice-btn.is-correct {
+  border-color: #059669;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.choice-btn.is-wrong {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+/* Focus Mask - Temiz Lens */
+.focus-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 19, 22, 0.6);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.focus-window {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0 0 0 9999px rgba(18, 19, 22, 0.6);
+  border-top: 1px solid var(--accent-border);
+  border-bottom: 1px solid var(--accent-border);
+}
+
+@media (max-width: 640px) {
+  .dialogue-turn {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .reading-canvas {
+    padding: 1.25rem;
+  }
+}

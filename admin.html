@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Studio | English Skills Hub</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body style="background: var(--bg-canvas);">
+
+  <!-- Admin Masthead -->
+  <header class="app-header">
+    <div class="brand-meta">
+      <h1 class="brand-title">Curriculum Studio</h1>
+      <span class="brand-tag">Lesson & Content Management</span>
+    </div>
+    <div class="header-tools">
+      <a href="index.html" class="btn-pill" style="text-decoration: none;">← View Student Hub</a>
+      <button id="btn-export-data" class="btn-pill active">📥 Export data.js</button>
+    </div>
+  </header>
+
+  <!-- Studio Ana Yerleşim (Sol: Liste, Sağ: Editör) -->
+  <main class="editorial-shell" style="max-width: 1400px; margin: 2rem auto;">
+    
+    <!-- Sol Panel: Mevcut Üniteleri Seçme & Yönetme -->
+    <aside class="sidebar-column">
+      <div class="sidebar-section">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem;">
+          <span class="section-label" style="margin-bottom: 0;">Manage Units</span>
+          <button id="btn-new-unit" class="btn-pill" style="font-size: 0.7rem; border-color: var(--ink-900);">+ New Unit</button>
+        </div>
+
+        <!-- Grade Filtresi -->
+        <select id="admin-grade-filter" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); background: var(--bg-surface);">
+          <option value="1">Grade 1 Units</option>
+          <option value="2">Grade 2 Units</option>
+          <option value="3">Grade 3 Units</option>
+          <option value="4">Grade 4 Units</option>
+          <option value="5">Grade 5 Units</option>
+          <option value="6">Grade 6 Units</option>
+        </select>
+
+        <!-- Ünite Listesi -->
+        <ul id="admin-unit-list" class="unit-index-list"></ul>
+      </div>
+    </aside>
+
+    <!-- Sağ Panel: Ünite Ekleme / Düzenleme Formu -->
+    <section class="main-column">
+      <div class="reading-canvas" style="border-radius: 4px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink-border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <h2 id="form-mode-title" style="font-family: var(--font-serif); font-size: 2rem; font-weight: 400;">Create New Unit</h2>
+            <p id="form-mode-sub" style="font-size: 0.8rem; color: var(--ink-400); font-family: var(--font-mono);">NEW RECORD · GRADE 1</p>
+          </div>
+          <button id="btn-delete-unit" class="btn-pill" style="display: none; border-color: #dc2626; color: #dc2626;">🗑 Delete Unit</button>
+        </div>
+
+        <form id="admin-unit-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <!-- Gizli Inputlar (Hangi ünite düzenleniyor takibi için) -->
+          <input type="hidden" id="edit-unit-id" value="">
+          <input type="hidden" id="edit-unit-grade" value="">
+
+          <!-- Seviye ve Başlık -->
+          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 1rem;">
+            <div>
+              <label class="section-label">Target Grade</label>
+              <select id="adm-grade" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); background: var(--bg-surface);">
+                <option value="1">Grade 1</option>
+                <option value="2">Grade 2</option>
+                <option value="3">Grade 3</option>
+                <option value="4">Grade 4</option>
+                <option value="5">Grade 5</option>
+                <option value="6">Grade 6</option>
+              </select>
+            </div>
+            <div>
+              <label class="section-label">Unit Title</label>
+              <input type="text" id="adm-title" required placeholder="e.g. From Wheat to Bread" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+            </div>
+          </div>
+
+          <!-- Pedagoji ve Tür -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+            <div>
+              <label class="section-label">Genre / Type</label>
+              <input type="text" id="adm-type" required placeholder="e.g. Science Article" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+            </div>
+            <div>
+              <label class="section-label">Reading Strategy</label>
+              <input type="text" id="adm-skill" required placeholder="e.g. Paraphrase" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+            </div>
+            <div>
+              <label class="section-label">Writing Target</label>
+              <input type="text" id="adm-writing" required placeholder="e.g. Explanatory Text" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+            </div>
+          </div>
+
+          <!-- Okuma Metni -->
+          <div>
+            <label class="section-label">Passage Lines (Format: Speaker | Sentence)</label>
+            <textarea id="adm-passage" rows="5" required placeholder="Host | Welcome to the lesson.&#10;Speaker | Today we will read together." style="width: 100%; padding: 0.75rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem;"></textarea>
+          </div>
+
+          <!-- Kelimeler -->
+          <div>
+            <label class="section-label">Vocabulary (Format: Word | Part of Speech | Definition)</label>
+            <textarea id="adm-vocab" rows="3" required placeholder="dough | noun | A mix of flour and water.&#10;yeast | noun | A tiny living thing that makes dough rise." style="width: 100%; padding: 0.75rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem;"></textarea>
+          </div>
+
+          <!-- Soru & Quiz -->
+          <div class="exercise-entry" style="margin-bottom: 0;">
+            <span class="section-label" style="margin-bottom: 0.5rem;">Comprehension Check</span>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <input type="text" id="adm-q-text" required placeholder="Question text..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+              <input type="text" id="adm-q-correct" required placeholder="Correct Answer..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+              <input type="text" id="adm-q-wrong1" required placeholder="Distractor (Wrong option)..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+              <input type="text" id="adm-q-tip" required placeholder="Pedagogical Clue / Note..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+            </div>
+          </div>
+
+          <!-- Butonlar -->
+          <div style="display: flex; justify-content: flex-end; gap: 0.75rem; border-top: 1px solid var(--ink-border); padding-top: 1.25rem;">
+            <button type="submit" id="btn-submit-form" class="btn-pill active" style="padding: 0.65rem 1.75rem; font-size: 0.9rem;">+ Publish Unit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
