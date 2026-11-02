@@ -7,8 +7,8 @@ Designed and architected by an educator with 8+ years of ESL classroom experienc
 ---
 
 ## 🚀 Live Demo & Studio
-- **Student Hub:** [https://your-username.github.io/english-skills-hub/](https://your-username.github.io/english-skills-hub/)
-- **Curriculum Studio (Admin CMS):** [https://your-username.github.io/english-skills-hub/admin.html](https://your-username.github.io/english-skills-hub/admin.html)
+- **Student Hub:** https://ozzycengiz.github.io/english-skills-hub/
+- **Curriculum Studio (Admin CMS):** https://ozzycengiz.github.io/english-skills-hub/admin.html
 
 ---
 
