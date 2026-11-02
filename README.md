@@ -1,90 +1,103 @@
-English Skills Hub — Reading & Writing Studio
+# English Skills Hub & Studio 📚
 
-An editorial-grade, accessibility-first web application engineered for young English language learners (Grades 1–6). It bridges foundational reading comprehension with guided writing composition using clean typography, bespoke per-unit dynamic theming, and zero external dependencies.
+An editorial, accessibility-first web platform and curriculum management studio designed for primary ESL learners (Grades 1–6). It bridges reading comprehension, vocabulary development, and structured writing tasks using modern vanilla web standards, dynamic design token injection, browser-native speech synthesis, and an integrated authoring CMS.
 
-Designed and developed by an ESL educator with 8+ years of classroom experience, translating real pedagogical problem-solving into a lightweight, human-crafted frontend architecture.
+Designed and architected by an educator with 8+ years of ESL classroom experience to solve real-world literacy bottlenecks without relying on heavy frontend frameworks or backend overhead.
 
-⚡ Live Demo
+---
 
-Launch Reading & Writing Studio
+## 🚀 Live Demo & Studio
+- **Student Hub:** [https://your-username.github.io/english-skills-hub/](https://your-username.github.io/english-skills-hub/)
+- **Curriculum Studio (Admin CMS):** [https://your-username.github.io/english-skills-hub/admin.html](https://your-username.github.io/english-skills-hub/admin.html)
 
-🖋 Design Philosophy: Editorial & Craft
+---
 
-Unlike generic, template-driven AI dashboards flooded with gradients and heavy component frameworks, this platform takes an editorial, typography-centric approach:
+## ✨ Key Capabilities
 
-Warm Canvas & Paper Ink: High-contrast reading environment inspired by print publications (Instrument Serif paired with Plus Jakarta Sans and JetBrains Mono).
+### 🎓 Learner Experience (`index.html`)
+- **Structured Scaffolding (Grades 1–6):** Level-appropriate literacy progression covering core reading strategies (paraphrasing, character analysis, inferences) alongside writing goals.
+- **Dynamic Theming via CSS Tokens:** Seamless palette transitions per unit and grade using zero-runtime CSS Custom Properties.
+- **Integrated Reading Assistance:**
+  - **Browser-Native TTS:** Contextual speech synthesis via Web Speech API with tailored rate and accent controls.
+  - **Focus Mask Lens:** Guided reading window to eliminate visual clutter and support learners with ADHD or visual tracking difficulties.
+  - **Typography Adaptability:** Live scale controls and one-click toggle for dyslexia-friendly typography (`Lexend`).
+- **Contextual Vocabulary Engine:** Non-destructive keyword tokenization and definition modals with pronunciation playback.
+- **Immediate Formative Feedback:** Multiple-choice verification providing pedagogical hints and rationale.
 
-Dynamic Thematic Accents: Each unit injects its own distinct color identity (Terracotta, Sage, Indigo, Ochre, Teal) into CSS Custom Properties (--accent-color, --accent-tint, --accent-border) without touching JavaScript styles or full-page repaints.
+### ⚙️ Curriculum Studio CMS (`admin.html`)
+- **Complete In-Browser CRUD:** Create, read, update, and delete lessons across Grades 1–6 directly in the browser interface.
+- **Local Persistence & Instant Sync:** Changes persist in `localStorage` and automatically reflect across the Student Hub without server round-trips.
+- **Production Data Export:** One-click JSON serialization generating a ready-to-commit `data.js` for permanent Git-backed updates.
+- **Isolated Architecture:** Keeps administrative code, form parsing, and state mutation strictly separated from the public student view.
 
-Cognitive Clarity: Elimination of visual noise (no floating rounded cards or arbitrary emojis) to keep attention strictly on sentence structures and vocabulary context.
+---
 
-✨ Features & Pedagogical Engineering
+## 🛠 Tech Stack & Engineering Standards
 
-Comprehensive Spiral Curriculum (Grades 1–6):
+Built entirely with modern vanilla web standards (zero build steps, zero external npm dependencies, zero framework bloat):
 
-Progressive strategy ladders from character recognition and 5 Ws to complex paraphrasing and deep inferences.
+- **HTML5:** Clean semantic document structure, accessibility attributes (`aria-*`), and responsive viewport standards.
+- **CSS3:** Bespoke editorial aesthetic with strict typography hierarchy, CSS Grid/Flexbox layouts, and CSS Variables for dynamic runtime theming.
+- **Vanilla JavaScript (ES6+):**
+  - **Decoupled Architecture:** Strict separation between data models (`data.js`), runtime state (`state.js`), audio interfaces (`speech.js`), DOM rendering (`app.js`), and CMS workflows (`admin.js`).
+  - **State Synchronization:** Bidirectional synchronization between persistent browser storage and static data definitions.
+  - **Web Speech API:** Lightweight abstraction layer over the native browser speech synthesizer.
 
-Paired writing objectives for each text genre (Narrative, Informational, Explanatory, Comparative).
+---
 
-Interactive Vocabulary Anchors: In-text keywords open contextual modal cards with precise definitions, parts of speech, and auditory pronunciation.
+## 📂 Project Architecture
 
-Native Web Speech Synthesis: Browser-level Text-to-Speech (TTS) calibrated for young ESL learners (adjusted pacing and clear enunciation) for both full passage reading and individual terms.
-
-Assistive Reading Tools:
-
-Dynamic Tracking Mask: A mouse-following focus overlay that isolates the active line of text to assist students with ADHD, visual crowding, or emerging literacy.
-
-Dyslexia-Friendly Adaptation: One-click typography shift to high-legibility geometric styling (Lexend) with expanded tracking and word spacing.
-
-Adjustable Type Scale: Granular font sizing directly managed in app state.
-
-Immediate Formative Feedback: Option-based comprehension checks providing contextual teaching notes upon answer selection.
-
-🛠 Technical Architecture
-
-Built purely with vanilla web standards—no React, no Tailwind CDN, no npm build step. Fast, accessible, and performant by design.
-
+```text
 english-skills-hub/
 │
-├── index.html              # Semantic HTML5 markup (ARIA, dialogs, masthead)
+├── index.html              # Student-facing application shell
+├── admin.html              # Dedicated Curriculum Studio (Authoring CMS)
 ├── css/
-│   ├── main.css            # Editorial baseline, typographic scales & layout shell
-│   └── components.css      # Dialogs, unit links, exercise choices & focus mask
+│   ├── main.css            # Editorial typography, layout shells, and CSS variables
+│   └── components.css      # Reusable UI components, themes, dialogue turns, and modals
 ├── js/
-│   ├── data.js             # Curriculum data store (Grades 1–6 & unique palettes)
-│   ├── state.js            # Single source of truth for runtime application state
-│   ├── speech.js           # Lightweight Web Speech API wrapper
-│   └── app.js              # DOM controller, dynamic CSS injector & event orchestrator
-└── README.md
+│   ├── data.js             # Core curriculum model (Grades 1–6, units, and palettes)
+│   ├── state.js            # Centralized student hub state
+│   ├── speech.js           # Web Speech API wrapper
+│   ├── app.js              # Student hub controller, theme injector, and event engine
+│   └── admin.js            # Curriculum Studio controller (CRUD, storage & export)
+└── README.md               # Technical and architectural documentation
+```
 
+---
 
-Key Engineering Decisions
+## 💻 Local Setup & Development
 
-Separation of Concerns: Data models (CURRICULUM_DATA), application state (AppState), and view renderers (App.views) are isolated into dedicated modules.
+No build pipeline, package manager, or compilation needed.
 
-CSS Variable Theming: Dynamic colors are injected at the :root level during unit selection, allowing the entire theme cascade to update natively via CSS inheritance.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/english-skills-hub.git
+   ```
+2. **Navigate into the project directory:**
+   ```bash
+   cd english-skills-hub
+   ```
+3. **Launch the platform:**
+   - Open `index.html` directly in any modern browser for the student hub.
+   - Open `admin.html` to manage and author lesson units.
+   - Alternatively, serve via VS Code *Live Server* or any local static file server.
 
-Event Delegation & Memory Safety: Reusable event bindings and modal managers eliminate redundant DOM listener creation.
+---
 
-🚀 Running Locally
+## 🔄 Content Authoring Workflow
 
-No installation or node modules required.
+1. Navigate to `/admin.html`.
+2. Select the target grade and choose **+ New Unit** (or select an existing unit from the index to edit).
+3. Fill in the passage lines (`Speaker | Sentence`), vocabulary items (`Word | POS | Definition`), and comprehension checks.
+4. Click **Publish Unit** to review changes instantly in `/index.html`.
+5. Click **Export data.js**, replace `js/data.js` in your local directory, and push to GitHub to ship updates to production.
 
-Clone the repository:
+---
 
-git clone https://github.com/OzzyCengiz/english-skills-hub.git
+## 📬 Contact & Inquiries
 
+Open to frontend engineering roles, EdTech tooling, and custom educational web development.
 
-Open the project:
-
-Double-click index.html to open in any modern browser, or
-
-Launch with VS Code Live Server (http://127.0.0.1:5500).
-
-👨‍🏫 About the Author
-
-A veteran ESL educator based in Thailand with 8+ years of classroom teaching experience across primary and secondary levels. Passionate about software craftsmanship, accessibility, and creating digital learning tools that actually work in real classroom environments.
-
-GitHub: @yOzzyCengiz
-
-Email: oguzhancengix@gmail.com
+- **GitHub:** @OzzyCengiz
+- **Email:** oguzhancengix@gmail.com
