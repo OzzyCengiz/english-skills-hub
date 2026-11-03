@@ -5,17 +5,97 @@
 const App = {
   selectedClozeWord: null,
   searchQuery: "",
+  storyPracticeMode: false,
 
   init() {
     this.syncCustomCurriculum();
     this.applySurfaceMode(AppState.surfaceMode);
+    if (window.innerWidth <= 960) {
+      const collapsibleEl = document.getElementById("sidebar-collapsible-content");
+      if (collapsibleEl) collapsibleEl.classList.add("is-collapsed");
+    }
     this.renderGradePills();
     this.bindGlobalEvents();
     this.loadState();
+
+    SpeechEngine.onVoicesReadyCallbacks.push(() => {
+      this.populateVoiceSelect();
+    });
+
+    SpeechEngine.onKokoroStatusCallbacks.push(() => {
+      this.updateKokoroBadge();
+    });
+  },
+
+  updateKokoroBadge() {
+    const badge = document.getElementById("kokoro-status-badge");
+    if (!badge) return;
+    if (!SpeechEngine.isUsingKokoroVoice()) {
+      badge.style.display = "none";
+      return;
+    }
+    badge.style.display = "inline-flex";
+    badge.textContent = SpeechEngine.kokoroStatusText || "🧠 Kokoro-82M AI";
+    badge.setAttribute("data-status", SpeechEngine.kokoroStatus || "idle");
+  },
+
+  populateVoiceSelect() {
+    const voiceSelect = document.getElementById("speech-voice-select");
+    if (!voiceSelect) return;
+
+    const kokoroVoices = SpeechEngine.KOKORO_VOICES || [];
+    const cloudVoices = SpeechEngine.CLOUD_VOICES || [];
+    const deviceVoices = (SpeechEngine.availableEnglishVoices || []).slice(0, 8);
+    const currentURI = SpeechEngine.selectedVoiceURI || "kokoro:auto";
+
+    const kokoroGroupHtml = `
+      <optgroup label="🧠 Kokoro-82M Neural AI Voices (Ultra-Realistic)">
+        ${kokoroVoices.map(kv => {
+          const isSel = currentURI === kv.id || (!currentURI && kv.id === "kokoro:auto");
+          return `<option value="${kv.id}" ${isSel ? "selected" : ""}>🧠 ${kv.label}</option>`;
+        }).join("")}
+      </optgroup>
+    `;
+
+    const cloudGroupHtml = `
+      <optgroup label="☁️ Cloud Stream Voices (Instant Fallback)">
+        ${cloudVoices.map(cv => {
+          const isSel = currentURI === cv.id;
+          return `<option value="${cv.id}" ${isSel ? "selected" : ""}>☁️ ${cv.label}</option>`;
+        }).join("")}
+      </optgroup>
+    `;
+
+    const deviceGroupHtml = deviceVoices.length > 0 ? `
+      <optgroup label="💻 Device / Browser Voices">
+        ${deviceVoices.map(v => {
+          const uri = v.voiceURI || v.name;
+          const label = SpeechEngine.formatVoiceLabel(v);
+          const isSel = currentURI && (v.voiceURI === currentURI || v.name === currentURI);
+          return `<option value="${uri.replace(/"/g, "&quot;")}" ${isSel ? "selected" : ""}>🗣 ${label}</option>`;
+        }).join("")}
+      </optgroup>
+    ` : "";
+
+    voiceSelect.innerHTML = kokoroGroupHtml + cloudGroupHtml + deviceGroupHtml;
+    this.updateKokoroBadge();
+  },
+
+  isDialogueUnit(unit) {
+    if (!unit) return false;
+    if (unit.format === "dialogue") return true;
+    if (unit.format === "story") return false;
+    const speakers = new Set((unit.lines || []).map(l => (l.speaker || "").toLowerCase()));
+    if (speakers.size <= 1) return false;
+    const first = (unit.lines?.[0]?.speaker || "").toLowerCase();
+    if (first.startsWith("paragraph") || first.startsWith("section") || first.startsWith("journal")) {
+      return false;
+    }
+    return true;
   },
 
   syncCustomCurriculum() {
-    const saved = localStorage.getItem("esh_custom_curriculum_v3");
+    const saved = localStorage.getItem("esh_custom_curriculum_v4");
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -41,6 +121,7 @@ const App = {
   loadState(scrollToMainOnMobile = false) {
     SpeechEngine.stop();
     AppState.roleplaySpeaker = "";
+    this.storyPracticeMode = false;
     this.applyTheme();
     this.renderGradePills();
     this.renderSidebarUnits();
@@ -48,9 +129,37 @@ const App = {
     this.updateWordBankButtonCount();
 
     if (scrollToMainOnMobile && window.innerWidth <= 960) {
+      const collapsibleEl = document.getElementById("sidebar-collapsible-content");
+      if (collapsibleEl) collapsibleEl.classList.add("is-collapsed");
+      this.updateMobileDrawerLabel();
       const mainEl = document.getElementById("main-workspace");
       if (mainEl) {
         mainEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      this.updateMobileDrawerLabel();
+    }
+  },
+
+  updateMobileDrawerLabel() {
+    const mobileToggleBtn = document.getElementById("btn-toggle-units-mobile");
+    const collapsibleEl = document.getElementById("sidebar-collapsible-content");
+    const headingEl = document.getElementById("sidebar-units-heading");
+    const units = AppState.getCurrentGradeUnits();
+    const currentUnit = AppState.getCurrentUnit();
+    if (!mobileToggleBtn || !collapsibleEl) return;
+
+    const isCollapsed = collapsibleEl.classList.contains("is-collapsed");
+    mobileToggleBtn.textContent = isCollapsed
+      ? `📖 All Units (${units.length}) ▾`
+      : `▴ Close List`;
+
+    if (headingEl && !this.searchQuery.trim()) {
+      if (window.innerWidth <= 960 && currentUnit) {
+        const num = String(AppState.activeUnitIndex + 1).padStart(2, "0");
+        headingEl.textContent = `Unit ${num}: ${currentUnit.title}`;
+      } else {
+        headingEl.textContent = "Units in this Grade";
       }
     }
   },
@@ -189,13 +298,18 @@ const App = {
     const unit = AppState.getCurrentUnit();
     if (!unit) return;
 
+    const units = AppState.getCurrentGradeUnits();
     const tagEl = document.getElementById("banner-grade-tag");
     const titleEl = document.getElementById("banner-unit-title");
     const descEl = document.getElementById("banner-unit-desc");
+    const prevBtn = document.getElementById("btn-prev-unit");
+    const nextBtn = document.getElementById("btn-next-unit");
 
-    if (tagEl) tagEl.textContent = `Grade ${AppState.activeGrade} · Unit ${AppState.activeUnitIndex + 1}`;
+    if (tagEl) tagEl.textContent = `Grade ${AppState.activeGrade} · Unit ${AppState.activeUnitIndex + 1} of ${units.length}`;
     if (titleEl) titleEl.textContent = unit.title;
-    if (descEl) descEl.textContent = `${unit.type} — Genre & Comprehension Practice`;
+    if (descEl) descEl.textContent = `${unit.type}`;
+    if (prevBtn) prevBtn.disabled = AppState.activeUnitIndex <= 0;
+    if (nextBtn) nextBtn.disabled = AppState.activeUnitIndex >= units.length - 1;
 
     const container = document.getElementById("workspace-content");
     if (!container) return;
@@ -223,28 +337,82 @@ const App = {
 
   views: {
     passage(unit) {
+      const isDialogue = App.isDialogueUnit(unit);
       const uniqueSpeakers = [...new Set(unit.lines.map(l => l.speaker))];
       const roleOptions = uniqueSpeakers.map(sp => `
         <option value="${sp}" ${AppState.roleplaySpeaker === sp ? "selected" : ""}>🎭 Roleplay as: ${sp}</option>
       `).join("");
 
-      const dialogueLines = unit.lines.map((l, idx) => {
-        let text = l.text;
+      const decorateVocab = (rawText) => {
+        let text = rawText;
         unit.vocab.forEach(v => {
           const escaped = v.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
           const reg = new RegExp(`\\b(${escaped})\\b`, "gi");
           text = text.replace(reg, `<span class="vocab-anchor" data-word="${v.word}">$1</span>`);
         });
+        return text;
+      };
 
-        const isUserRole = AppState.roleplaySpeaker && l.speaker.toLowerCase() === AppState.roleplaySpeaker.toLowerCase();
+      // 1) STORY TEXT VIEW (Default for Story, Article, Essay, Journal, Newsletter units)
+      if (!isDialogue && !App.storyPracticeMode) {
+        const paragraphs = [];
+        const chunkSize = 4;
+        for (let i = 0; i < unit.lines.length; i += chunkSize) {
+          const slice = unit.lines.slice(i, i + chunkSize);
+          const sentencesHtml = slice.map((l, offset) => {
+            const idx = i + offset;
+            const text = decorateVocab(l.text);
+            const isJournal = /^journal\s*[—-]/i.test(l.speaker || "");
+            const datePrefix = isJournal
+              ? `<strong class="story-date-badge">${l.speaker.replace(/^journal\s*[—-]\s*/i, "")}:</strong> `
+              : "";
+            return `<span class="story-sentence" data-line-index="${idx}" title="Tap sentence to hear it aloud, or tap dotted words for definitions">${datePrefix}${text}</span>`;
+          }).join(" ");
+          paragraphs.push(`<p class="story-paragraph">${sentencesHtml}</p>`);
+        }
+
+        return `
+          <div class="reading-canvas">
+            <div class="reading-toolbar">
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="reading-toolbar-hint">📖 STORY TEXT · TAP ANY SENTENCE TO LISTEN · TAP DOTTED WORDS</span>
+                <span id="kokoro-status-badge" class="kokoro-badge" data-status="${SpeechEngine.kokoroStatus}">${SpeechEngine.kokoroStatusText}</span>
+              </div>
+              <div class="reading-toolbar-controls">
+                <select id="speech-voice-select" aria-label="Narrator voice" class="toolbar-select"></select>
+                <select id="speech-rate-select" aria-label="Reading speed" class="toolbar-select">
+                  <option value="0.82" ${SpeechEngine.rate === 0.82 ? "selected" : ""}>0.82x Slow & Clear</option>
+                  <option value="0.92" ${SpeechEngine.rate === 0.92 ? "selected" : ""}>0.92x Natural 🌟</option>
+                  <option value="1" ${SpeechEngine.rate === 1 ? "selected" : ""}>1.0x Normal</option>
+                </select>
+                <button type="button" id="btn-toggle-sentence-mode" class="btn-pill" title="Practice reading individual sentences aloud with microphone">
+                  🎙 Mic Practice
+                </button>
+                <button id="btn-read-passage" class="btn-pill" style="border-color: var(--accent-color); color: var(--accent-color);">
+                  🔊 Read Story
+                </button>
+              </div>
+            </div>
+            <article class="passage-story">
+              ${paragraphs.join("")}
+            </article>
+          </div>
+        `;
+      }
+
+      // 2) DIALOGUE VIEW (or Sentence Practice Mode for Story units)
+      const dialogueLines = unit.lines.map((l, idx) => {
+        const text = decorateVocab(l.text);
+        const isUserRole = isDialogue && AppState.roleplaySpeaker && l.speaker.toLowerCase() === AppState.roleplaySpeaker.toLowerCase();
+        const speakerLabel = isDialogue ? l.speaker : `Sentence ${String(idx + 1).padStart(2, "0")}`;
 
         return `
           <div class="dialogue-turn ${isUserRole ? "is-user-role" : ""}" data-line-index="${idx}">
-            <div>
-              <span class="speaker-label">${l.speaker}</span>
+            <div class="dialogue-speaker-col">
+              <span class="speaker-label">${speakerLabel}</span>
               ${isUserRole ? `<div><span class="role-badge">🎤 YOUR LINE</span></div>` : ""}
             </div>
-            <div>
+            <div class="dialogue-text-col">
               <div class="speech-body">${text}</div>
               <div class="speech-feedback-box line-feedback" data-feedback-index="${idx}" style="display: none;"></div>
             </div>
@@ -259,19 +427,29 @@ const App = {
       return `
         <div class="reading-canvas">
           <div class="reading-toolbar">
-            <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-400);">TAP DOTTED WORDS FOR DEFINITIONS · 🔊 LISTEN · 🎙 READ ALOUD</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="reading-toolbar-hint">${isDialogue ? "🎭 DIALOGUE · TAP DOTTED WORDS · 🔊 LISTEN · 🎙 READ ALOUD" : "🎙 SENTENCE PRACTICE · TAP 🔊 OR 🎙 ON ANY SENTENCE"}</span>
+              <span id="kokoro-status-badge" class="kokoro-badge" data-status="${SpeechEngine.kokoroStatus}">${SpeechEngine.kokoroStatusText}</span>
+            </div>
             <div class="reading-toolbar-controls">
-              <select id="roleplay-speaker-select" aria-label="Roleplay character" style="padding: 0.35rem 0.5rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem; background: var(--bg-surface); color: var(--ink-700);">
-                <option value="">🎭 Roleplay: Off (Listen All)</option>
-                ${roleOptions}
-              </select>
-              <select id="speech-rate-select" aria-label="Reading speed" style="padding: 0.35rem 0.5rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem; background: var(--bg-surface); color: var(--ink-700);">
-                <option value="0.8" ${SpeechEngine.rate === 0.8 ? "selected" : ""}>0.8x Slow</option>
-                <option value="0.9" ${SpeechEngine.rate === 0.9 ? "selected" : ""}>0.9x Clear</option>
+              ${isDialogue ? `
+                <select id="roleplay-speaker-select" aria-label="Roleplay character" class="toolbar-select">
+                  <option value="">🎭 Roleplay: Off (Listen All)</option>
+                  ${roleOptions}
+                </select>
+              ` : `
+                <button type="button" id="btn-toggle-sentence-mode" class="btn-pill active">
+                  📖 Back to Story Text
+                </button>
+              `}
+              <select id="speech-voice-select" aria-label="Narrator voice" class="toolbar-select"></select>
+              <select id="speech-rate-select" aria-label="Reading speed" class="toolbar-select">
+                <option value="0.82" ${SpeechEngine.rate === 0.82 ? "selected" : ""}>0.82x Slow & Clear</option>
+                <option value="0.92" ${SpeechEngine.rate === 0.92 ? "selected" : ""}>0.92x Natural 🌟</option>
                 <option value="1" ${SpeechEngine.rate === 1 ? "selected" : ""}>1.0x Normal</option>
               </select>
               <button id="btn-read-passage" class="btn-pill" style="border-color: var(--accent-color); color: var(--accent-color);">
-                ${AppState.roleplaySpeaker ? "🎭 Start Roleplay" : "🔊 Read Passage"}
+                ${isDialogue && AppState.roleplaySpeaker ? "🎭 Start Roleplay" : "🔊 Read Passage"}
               </button>
             </div>
           </div>
@@ -657,9 +835,20 @@ const App = {
     const container = document.getElementById("printable-handout");
     if (!unit || !container) return;
 
-    const linesHtml = unit.lines.map(l => `
-      <p style="margin-bottom: 0.45rem;"><strong>${l.speaker}:</strong> ${l.text}</p>
-    `).join("");
+    const isDialogue = this.isDialogueUnit(unit);
+    let linesHtml = "";
+    if (isDialogue) {
+      linesHtml = unit.lines.map(l => `
+        <p style="margin-bottom: 0.45rem;"><strong>${l.speaker}:</strong> ${l.text}</p>
+      `).join("");
+    } else {
+      const paragraphs = [];
+      for (let i = 0; i < unit.lines.length; i += 4) {
+        const chunk = unit.lines.slice(i, i + 4).map(l => l.text).join(" ");
+        paragraphs.push(`<p style="margin-bottom: 0.65rem; line-height: 1.65;">${chunk}</p>`);
+      }
+      linesHtml = paragraphs.join("");
+    }
 
     const vocabRows = unit.vocab.map(v => `
       <tr>
@@ -722,12 +911,37 @@ const App = {
   },
 
   bindPassageEvents(unit) {
+    this.populateVoiceSelect();
+
     document.querySelectorAll(".vocab-anchor").forEach(tag => {
-      tag.onclick = () => {
+      tag.onclick = (e) => {
+        e.stopPropagation();
         const wordData = unit.vocab.find(v => v.word.toLowerCase() === tag.dataset.word.toLowerCase());
         if (wordData) this.openVocabModal(wordData, unit);
       };
     });
+
+    const voiceSelect = document.getElementById("speech-voice-select");
+    if (voiceSelect) {
+      voiceSelect.onchange = (e) => {
+        SpeechEngine.setPreferredVoice(e.target.value);
+        this.updateKokoroBadge();
+      };
+    }
+
+    // Pre-synthesize the first line of the current passage if Kokoro-82M is ready
+    if (unit && unit.lines && unit.lines.length > 0 && SpeechEngine.kokoroStatus === "ready") {
+      SpeechEngine.preloadText(unit.lines[0].text, 0);
+    }
+
+    const toggleSentenceBtn = document.getElementById("btn-toggle-sentence-mode");
+    if (toggleSentenceBtn) {
+      toggleSentenceBtn.onclick = () => {
+        SpeechEngine.stop();
+        this.storyPracticeMode = !this.storyPracticeMode;
+        this.renderWorkspace();
+      };
+    }
 
     const roleSelect = document.getElementById("roleplay-speaker-select");
     if (roleSelect) {
@@ -741,16 +955,39 @@ const App = {
     const rateSelect = document.getElementById("speech-rate-select");
     if (rateSelect) {
       rateSelect.onchange = (e) => {
-        SpeechEngine.rate = parseFloat(e.target.value) || 0.9;
+        SpeechEngine.rate = parseFloat(e.target.value) || 0.88;
       };
     }
 
     const clearHighlights = () => {
-      document.querySelectorAll(".dialogue-turn").forEach(row => row.classList.remove("is-speaking"));
+      document.querySelectorAll(".dialogue-turn, .story-sentence").forEach(el => el.classList.remove("is-speaking"));
     };
 
+    const isDialogue = this.isDialogueUnit(unit);
     const readBtn = document.getElementById("btn-read-passage");
-    const defaultBtnLabel = AppState.roleplaySpeaker ? "🎭 Start Roleplay" : "🔊 Read Passage";
+    const defaultBtnLabel = isDialogue
+      ? (AppState.roleplaySpeaker ? "🎭 Start Roleplay" : "🔊 Read Passage")
+      : (this.storyPracticeMode ? "🔊 Read Passage" : "🔊 Read Story");
+
+    // In Story Text view, tapping any sentence reads that sentence aloud
+    document.querySelectorAll(".story-sentence").forEach(sentEl => {
+      sentEl.onclick = (e) => {
+        if (e.target.closest(".vocab-anchor")) return;
+        const idx = Number(sentEl.dataset.lineIndex);
+        const line = unit.lines[idx];
+        if (!line) return;
+
+        clearHighlights();
+        if (readBtn) {
+          readBtn.textContent = defaultBtnLabel;
+          readBtn.classList.remove("active");
+        }
+        sentEl.classList.add("is-speaking");
+        SpeechEngine.speak(line.text, () => {
+          sentEl.classList.remove("is-speaking");
+        });
+      };
+    });
 
     document.querySelectorAll(".line-speak-btn").forEach(btn => {
       btn.onclick = () => {
@@ -820,7 +1057,9 @@ const App = {
           (lineIdx, isUserTurn) => {
             clearHighlights();
             const row = document.querySelector(`.dialogue-turn[data-line-index="${lineIdx}"]`);
+            const sent = document.querySelector(`.story-sentence[data-line-index="${lineIdx}"]`);
             if (row) row.classList.add("is-speaking");
+            if (sent) sent.classList.add("is-speaking");
             if (isUserTurn) {
               const fb = document.querySelector(`.line-feedback[data-feedback-index="${lineIdx}"]`);
               if (fb) {
@@ -835,7 +1074,7 @@ const App = {
             readBtn.textContent = defaultBtnLabel;
             readBtn.classList.remove("active");
           },
-          AppState.roleplaySpeaker
+          isDialogue ? AppState.roleplaySpeaker : ""
         );
       };
     }
@@ -1305,14 +1544,25 @@ const App = {
       btn.onclick = () => this.applySurfaceMode(btn.dataset.surfaceMode);
     });
 
-    // Mobil Ünite Listesi Aç/Kapat Butonu
+    // Mobil Ünite Listesi Aç/Kapat Butonu ve Başlık Satırı
     const mobileToggleBtn = document.getElementById("btn-toggle-units-mobile");
+    const sidebarHeaderRow = document.querySelector(".sidebar-header-row");
     const collapsibleEl = document.getElementById("sidebar-collapsible-content");
     if (mobileToggleBtn && collapsibleEl) {
-      mobileToggleBtn.onclick = () => {
-        const isCollapsed = collapsibleEl.classList.toggle("is-collapsed");
-        mobileToggleBtn.textContent = isCollapsed ? "▸ Show Units" : "▾ Hide Units";
+      const toggleDrawer = (e) => {
+        if (window.innerWidth > 960 && e.currentTarget !== mobileToggleBtn) return;
+        e.stopPropagation();
+        collapsibleEl.classList.toggle("is-collapsed");
+        this.updateMobileDrawerLabel();
       };
+      mobileToggleBtn.onclick = toggleDrawer;
+      if (sidebarHeaderRow) {
+        sidebarHeaderRow.onclick = (e) => {
+          if (window.innerWidth <= 960 && e.target !== mobileToggleBtn) {
+            toggleDrawer(e);
+          }
+        };
+      }
     }
 
     const searchInput = document.getElementById("unit-search-input");
@@ -1326,6 +1576,26 @@ const App = {
     const printHandoutBtn = document.getElementById("btn-print-handout");
     if (printHandoutBtn) {
       printHandoutBtn.onclick = () => this.printFullHandout();
+    }
+
+    const prevUnitBtn = document.getElementById("btn-prev-unit");
+    const nextUnitBtn = document.getElementById("btn-next-unit");
+    if (prevUnitBtn) {
+      prevUnitBtn.onclick = () => {
+        if (AppState.activeUnitIndex > 0) {
+          AppState.activeUnitIndex--;
+          this.loadState();
+        }
+      };
+    }
+    if (nextUnitBtn) {
+      nextUnitBtn.onclick = () => {
+        const units = AppState.getCurrentGradeUnits();
+        if (AppState.activeUnitIndex < units.length - 1) {
+          AppState.activeUnitIndex++;
+          this.loadState();
+        }
+      };
     }
 
     document.querySelectorAll(".tab-link").forEach(tab => {

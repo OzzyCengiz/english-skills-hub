@@ -11,6 +11,7 @@ const CURRICULUM_DATA = {
   "1": [
     {
       "id": "g1-u1",
+      "format": "dialogue",
       "title": "My School Day",
       "type": "Dialogue · First Words & Classroom Routine",
       "skill": "Identify Characters and Setting",
@@ -229,6 +230,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g1-u2",
+      "format": "story",
       "title": "Our Pets",
       "type": "Story · Animal Friends at Home",
       "skill": "Classify Animals and Describe Details",
@@ -240,64 +242,64 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "On Saturday morning, the neighborhood children gathered in the green garden to show their favorite pets."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "First, Mia opened a woven basket and lifted out a small kitten named Luna."
         },
         {
-          "speaker": "Mia",
-          "text": "Luna has soft white fur, pink ears, and she loves to drink warm milk from a bowl."
+          "speaker": "Narrator",
+          "text": "Mia smiled and showed everyone how Luna had soft white fur, pink ears, and loved to drink warm milk from a bowl."
         },
         {
-          "speaker": "Storyteller",
-          "text": "When Luna purred softly, her tiny whiskers tickled Mia's hand."
+          "speaker": "Narrator",
+          "text": "When Luna purred softly in Mia's arms, her tiny whiskers tickled Mia's hand."
         },
         {
-          "speaker": "Sam",
-          "text": "Look at my big brown puppy named Max! He has floppy ears and a wagging tail."
+          "speaker": "Narrator",
+          "text": "Next, Sam introduced his big brown puppy named Max, who had floppy ears and a happily wagging tail."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Max barked happily and began to chase a bouncy red ball across the grass."
+          "speaker": "Narrator",
+          "text": "Max barked with excitement and began to chase a bouncy red ball across the soft grass."
         },
         {
-          "speaker": "Elena",
-          "text": "My pet does not have fur at all; I brought my green parrot named Kiwi in his shiny cage."
+          "speaker": "Narrator",
+          "text": "Elena's pet did not have fur at all; she had brought her green parrot named Kiwi inside his shiny cage."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Kiwi flapped his bright feathers and whistled a sweet tune for all the children."
+          "speaker": "Narrator",
+          "text": "Kiwi flapped his bright feathers and whistled a sweet tune for all the children in the yard."
         },
         {
-          "speaker": "Noah",
-          "text": "Inside this clear glass tank, you can see my slow turtle named Shelly."
+          "speaker": "Narrator",
+          "text": "Beside the wooden bench, Noah pointed to a clear glass tank where his slow turtle named Shelly rested."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Shelly hid her head inside her hard shell and then peeked out at a crisp lettuce leaf."
+          "speaker": "Narrator",
+          "text": "Shelly shyly hid her head inside her hard shell and then peeked out to nibble on a crisp lettuce leaf."
         },
         {
-          "speaker": "Mia",
-          "text": "Look at Toby's pet rabbit! He has long ears and hops gently on the clover."
+          "speaker": "Narrator",
+          "text": "Meanwhile, Toby's pet rabbit Barnaby twitched his long ears and hopped gently across the green clover."
         },
         {
-          "speaker": "Toby",
-          "text": "Barnaby is a gentle rabbit, and he crunches on an orange carrot every afternoon."
+          "speaker": "Narrator",
+          "text": "Toby explained that Barnaby was a gentle rabbit who crunched on a fresh orange carrot every afternoon."
         },
         {
-          "speaker": "Storyteller",
-          "text": "All the children poured fresh water into clean dishes so the animals could drink."
+          "speaker": "Narrator",
+          "text": "After admiring all the animals, the children poured cool water into clean dishes so their pets could drink."
         },
         {
-          "speaker": "Sam",
-          "text": "Even though our pets look very different, each animal needs love, food, and a safe shelter."
+          "speaker": "Narrator",
+          "text": "Even though their pets looked very different, each animal needed love, healthy food, and a safe shelter."
         },
         {
-          "speaker": "Storyteller",
-          "text": "As the sun began to set, the happy friends promised to meet in the garden again next week."
+          "speaker": "Narrator",
+          "text": "As the golden sun began to set, the happy friends promised to meet in the garden again next week."
         }
       ],
       "vocab": [
@@ -449,6 +451,7 @@ const CURRICULUM_DATA = {
   "2": [
     {
       "id": "g2-u1",
+      "format": "dialogue",
       "title": "Community Helpers",
       "type": "Dialogue · Civic Tour of Our Town",
       "skill": "Identify Main Idea and Supporting Details",
@@ -667,6 +670,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g2-u2",
+      "format": "story",
       "title": "A Seed's Journey",
       "type": "Story · Nature & Plant Life Cycle",
       "skill": "Sequence of Events",
@@ -678,64 +682,64 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Storyteller",
-          "text": "In early spring, Maya and her grandfather walked into the backyard with a packet of striped sunflower seeds."
+          "speaker": "Narrator",
+          "text": "In early spring, Maya and her grandfather walked into the sunny backyard with a packet of striped sunflower seeds."
         },
         {
-          "speaker": "Grandpa",
-          "text": "Every giant sunflower begins its life inside one of these tiny shells, Maya."
+          "speaker": "Narrator",
+          "text": "Grandpa showed Maya how every giant sunflower begins its life tucked inside one of those tiny striped shells."
         },
         {
-          "speaker": "Storyteller",
-          "text": "First, Maya used a small metal trowel to dig a neat row of holes in the dark soil."
+          "speaker": "Narrator",
+          "text": "First, Maya used a small metal trowel to dig a neat row of holes in the rich, dark soil."
         },
         {
-          "speaker": "Maya",
-          "text": "How deep should I drop each seed, Grandpa?"
+          "speaker": "Narrator",
+          "text": "She asked her grandfather how deep she should plant each seed along the garden bed."
         },
         {
-          "speaker": "Grandpa",
-          "text": "Push each seed one inch down, and then pat the warm earth gently over the top."
+          "speaker": "Narrator",
+          "text": "Following Grandpa's advice, Maya pushed each seed one inch down and patted the warm earth gently over the top."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Next, Maya tipped her green watering can so cool drops of moisture soaked into the ground."
+          "speaker": "Narrator",
+          "text": "Next, she tipped her green watering can so cool drops of moisture soaked deep into the ground."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "For five quiet days, nothing showed above the dirt, but something amazing was happening underground."
         },
         {
-          "speaker": "Grandpa",
-          "text": "Beneath the surface, the seed coat softens and white roots push downward to anchor the plant."
+          "speaker": "Narrator",
+          "text": "Beneath the surface, the outer seed coat softened and white roots pushed downward to anchor the young plant."
         },
         {
-          "speaker": "Storyteller",
-          "text": "On the seventh morning, a curved green sprout poked bravely through the damp crust of earth."
+          "speaker": "Narrator",
+          "text": "Then, on the seventh morning, a curved green sprout poked bravely through the damp crust of earth."
         },
         {
-          "speaker": "Maya",
-          "text": "Look, Grandpa! Two baby leaves are unfolding toward the golden sunlight!"
+          "speaker": "Narrator",
+          "text": "Maya clapped her hands with joy as two baby leaves unfolded toward the golden morning sunlight."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Week after week, the sturdy stem grew taller than Maya's knees, then taller than her shoulders."
+          "speaker": "Narrator",
+          "text": "Week after week, the sturdy green stem grew taller than Maya's knees and soon reached higher than her shoulders."
         },
         {
-          "speaker": "Grandpa",
-          "text": "The broad leaves act like little kitchens, using sunshine and air to make food for the plant."
+          "speaker": "Narrator",
+          "text": "Grandpa explained that the broad leaves acted like little kitchens, using sunshine and air to make food for the plant."
         },
         {
-          "speaker": "Storyteller",
-          "text": "In July, a round green bud formed at the very top of the stalk."
+          "speaker": "Narrator",
+          "text": "When July arrived, a heavy round green bud formed at the very top of the tall stalk."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Finally, the bud opened its bright yellow petals like a crown facing the summer sky."
+          "speaker": "Narrator",
+          "text": "Finally, the bud opened its bright yellow petals like a golden crown facing the summer sky."
         },
         {
-          "speaker": "Maya",
-          "text": "Bees are visiting our flower for nectar, and soon it will make brand-new seeds for next spring!"
+          "speaker": "Narrator",
+          "text": "Buzzing bees visited the flower to drink sweet nectar, helping the plant make brand-new seeds for next spring."
         }
       ],
       "vocab": [
@@ -887,6 +891,7 @@ const CURRICULUM_DATA = {
   "3": [
     {
       "id": "g3-u1",
+      "format": "dialogue",
       "title": "Weather & Seasons",
       "type": "Dialogue · Science Club Investigation",
       "skill": "Identify Cause and Effect",
@@ -1105,6 +1110,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g3-u2",
+      "format": "story",
       "title": "The Night Sky Lantern",
       "type": "Story · Japanese Mountain Folktale",
       "skill": "Analyze Character Motivation and Trait",
@@ -1116,63 +1122,63 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "Long ago, in a quiet valley surrounded by steep mountains, lived a curious boy named Kenji."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "Every afternoon, thick gray fog rolled in from the sea and hid the winding footpath to the village."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "One evening, Kenji saw tired merchants and woodcutters stumbling in the darkness near the bamboo bridge."
         },
         {
-          "speaker": "Kenji",
-          "text": "Grandmother, why do travelers lose their way so often on the mountain trail?"
+          "speaker": "Narrator",
+          "text": "Troubled by the danger, Kenji asked his grandmother why travelers lost their way so often on the mountain trail."
         },
         {
-          "speaker": "Grandmother",
-          "text": "When the mist covers the moon and stars, Kenji, there is no beacon to guide them home."
+          "speaker": "Narrator",
+          "text": "His grandmother explained that when the mist covered the moon and stars, there was no beacon to guide them home."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "Kenji had a generous heart, and he decided to build something that could shine through the thickest fog."
         },
         {
-          "speaker": "Storyteller",
-          "text": "The next morning, he split slender strips of bamboo and wove them into a sturdy frame."
+          "speaker": "Narrator",
+          "text": "Early the next morning, he split slender strips of bamboo and wove them into a sturdy frame."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "Carefully, he pasted oiled mulberry paper around the frame to craft a large windproof lantern."
         },
         {
-          "speaker": "Kenji",
-          "text": "If I place a tall beeswax candle inside this lantern, the wind will not blow out the flame."
+          "speaker": "Narrator",
+          "text": "He placed a tall beeswax candle inside the lantern so the mountain wind would not blow out the flame."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "Before dusk, Kenji tied the lantern to a long cedar pole and climbed up to the highest rocky ridge."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Although the evening breeze was cold and his arms grew weary, Kenji held the glowing pole high."
+          "speaker": "Narrator",
+          "text": "Although the evening breeze was freezing and his arms grew weary, Kenji held the glowing pole high."
         },
         {
-          "speaker": "Traveler",
-          "text": "Look up on the ridge! A warm golden light is shining above the bamboo bridge!"
+          "speaker": "Narrator",
+          "text": "Down in the gorge, travelers cheered when they spotted the warm golden light shining above the bamboo bridge."
         },
         {
-          "speaker": "Storyteller",
-          "text": "Following Kenji's steady light, the merchants and woodcutters crossed the narrow bridge safely."
+          "speaker": "Narrator",
+          "text": "Following Kenji's steady light, the merchants and woodcutters crossed the narrow bridge safely to their families."
         },
         {
-          "speaker": "Grandmother",
-          "text": "Your kindness and determination turned a dark mountain into a safe path for everyone, Kenji."
+          "speaker": "Narrator",
+          "text": "His grandmother praised Kenji, saying his kindness and determination had turned a dark mountain into a safe path."
         },
         {
-          "speaker": "Storyteller",
+          "speaker": "Narrator",
           "text": "Inspired by the boy, the grateful villagers built a permanent stone lighthouse on that very peak."
         }
       ],
@@ -1325,6 +1331,7 @@ const CURRICULUM_DATA = {
   "4": [
     {
       "id": "g4-u1",
+      "format": "dialogue",
       "title": "Habitats Around the World",
       "type": "Dialogue · Wildlife Documentary Expedition",
       "skill": "Compare and Contrast",
@@ -1543,6 +1550,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g4-u2",
+      "format": "story",
       "title": "Inventions That Changed Communication",
       "type": "Story · Historical Narrative & Timeline",
       "skill": "Chronological Order",
@@ -1554,63 +1562,63 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "For thousands of years, sending a message to a distant city was a slow and exhausting journey."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "In ancient times, messengers carried handwritten scrolls on foot, on horseback, or aboard wooden sailing ships."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "If a storm blocked the road or the sea, a single letter could take months to reach its destination."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "In the 1440s, Johannes Gutenberg invented the movable-type printing press in Germany."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "Because the printing press could produce hundreds of pages quickly, books and newspapers became available to ordinary citizens."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "Four centuries later, in the 1830s, Samuel Morse developed the electric telegraph and Morse code."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "For the first time in history, operators could tap pulses of electricity along copper wires to send news in minutes."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "In 1866, engineers laid a massive telegraph cable across the floor of the Atlantic Ocean to connect continents."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "Just ten years later, in 1876, Alexander Graham Bell spoke the first clear words through a telephone."
         },
         {
-          "speaker": "Bell",
-          "text": "Mr. Watson, come here, I want to see you!"
+          "speaker": "Narrator",
+          "text": "Bell called out to his assistant in the next room, proving that a wire could carry the human voice."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "Instead of reading dots and dashes, families could now hear the actual voice of a loved one far away."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "At the turn of the twentieth century, Guglielmo Marconi proved that radio waves could travel through the air without wires."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "Ships at sea used wireless radio broadcasts to call for rescue and receive weather warnings."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "In the late twentieth century, orbiting satellites and fiber-optic cables linked computers into the global Internet."
         },
         {
-          "speaker": "Historian",
+          "speaker": "Narrator",
           "text": "Today, a student can transmit text, voice, and video instantly to a friend on the other side of the globe!"
         }
       ],
@@ -1763,6 +1771,7 @@ const CURRICULUM_DATA = {
   "5": [
     {
       "id": "g5-u1",
+      "format": "dialogue",
       "title": "Healthy Foods, Healthy Bodies",
       "type": "Interview · Topic 1: Let's Eat! (Health)",
       "skill": "Paraphrase",
@@ -1985,6 +1994,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u2",
+      "format": "story",
       "title": "Our Class Party",
       "type": "Story · Topic 1: Let's Eat! (Health)",
       "skill": "Use the 5 Ws (Who, What, When, Where, Why)",
@@ -2008,36 +2018,36 @@ const CURRICULUM_DATA = {
           "text": "Earlier that week, their teacher Mr. Gomez had asked every student to bring a wholesome dish from home."
         },
         {
-          "speaker": "Emma",
-          "text": "Look at these long banquet tables! We covered them with bright paper tablecloths and name cards."
+          "speaker": "Narrator",
+          "text": "The students decorated the long banquet tables with bright paper tablecloths and hand-lettered name cards."
         },
         {
           "speaker": "Narrator",
           "text": "Emma placed a chilled glass bowl of fruit salad near the center of the first table."
         },
         {
-          "speaker": "Emma",
-          "text": "My grandmother and I chopped strawberries, kiwi, mango, and pineapple so everyone could enjoy a sweet treat without added sugar."
+          "speaker": "Narrator",
+          "text": "She and her grandmother had chopped strawberries, kiwi, mango, and pineapple so everyone could enjoy a sweet treat without added sugar."
         },
         {
-          "speaker": "Carlos",
-          "text": "Next to your salad, I set down a warm platter of whole-wheat quesadillas stuffed with black beans and corn."
+          "speaker": "Narrator",
+          "text": "Beside the salad, Carlos set down a warm platter of whole-wheat quesadillas stuffed with black beans and corn."
         },
         {
           "speaker": "Narrator",
           "text": "Carlos explained that beans and corn are traditional ingredients in Mexico and provide plenty of fiber."
         },
         {
-          "speaker": "Aisha",
-          "text": "I brought homemade chickpea hummus and crunchy vegetable sticks like celery, bell peppers, and cucumbers!"
+          "speaker": "Narrator",
+          "text": "Next, Aisha arranged homemade chickpea hummus alongside crunchy vegetable sticks like celery, bell peppers, and cucumbers."
         },
         {
           "speaker": "Narrator",
           "text": "Also, Mr. Gomez blended fresh oranges, bananas, and yogurt to pour cold smoothies into paper cups."
         },
         {
-          "speaker": "Mr. Gomez",
-          "text": "Before we eat, let's check our allergy labels so every classmate stays completely safe."
+          "speaker": "Narrator",
+          "text": "Before anyone filled a plate, Mr. Gomez reminded the class to check the allergy labels so every classmate stayed completely safe."
         },
         {
           "speaker": "Narrator",
@@ -2045,11 +2055,11 @@ const CURRICULUM_DATA = {
         },
         {
           "speaker": "Narrator",
-          "text": "Music played softly from a speaker while the students sampled foods from six different countries."
+          "text": "Cheerful music played softly from a speaker while the students sampled foods from six different countries."
         },
         {
-          "speaker": "Carlos",
-          "text": "Healthy food is not boring at all; these colorful dishes are delicious and give us energy as well!"
+          "speaker": "Narrator",
+          "text": "Everyone agreed that these colorful dishes were delicious and gave their bodies lasting energy as well."
         },
         {
           "speaker": "Narrator",
@@ -2203,8 +2213,9 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u3",
+      "format": "story",
       "title": "Now You See Them, Now You Don't",
-      "type": "Article & Dialogue · Topic 2: The Animal Kingdom (Science)",
+      "type": "Article · Topic 2: The Animal Kingdom (Science)",
       "skill": "Make Connections (Text-to-Self, Text-to-World)",
       "writingGoal": "Report — Organizing with Headings",
       "theme": {
@@ -2214,64 +2225,64 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Ranger Cole",
-          "text": "Heading 1: Masters of Disguise. Welcome to our forest trail! Have you ever played hide-and-seek in the woods?"
+          "speaker": "Narrator",
+          "text": "During a forest hike, Nora noticed that when she wore a dark green jacket near pine trees, her friends walked right past her without noticing."
         },
         {
-          "speaker": "Nora",
-          "text": "Yes! When I wear a dark green jacket near pine trees, my friends walk right past me without noticing."
+          "speaker": "Narrator",
+          "text": "Just like a child playing hide-and-seek in the woods, wild animals use a natural disguise every single day to survive."
         },
         {
-          "speaker": "Ranger Cole",
-          "text": "You just made a great connection, Nora! In nature, animals use camouflage every single day to survive."
+          "speaker": "Narrator",
+          "text": "In science, this remarkable ability to blend into the environment is called camouflage."
         },
         {
-          "speaker": "Ben",
-          "text": "Look closely at that oak branch—is that a dry twig or a living insect?"
+          "speaker": "Narrator",
+          "text": "High on an oak branch, a walking stick insect rests so still that hikers mistake it for a dry twig."
         },
         {
-          "speaker": "Ranger Cole",
-          "text": "That is a walking stick insect! Its body mimics the shape, bark texture, and brown color of a real twig."
+          "speaker": "Narrator",
+          "text": "Its slender body mimics the exact shape, rough bark texture, and brown color of a real tree branch."
         },
         {
-          "speaker": "Nora",
-          "text": "Why does the walking stick insect need to blend into the tree branch so carefully?"
+          "speaker": "Narrator",
+          "text": "Because hungry birds scan the treetops for food, blending into the background keeps the insect hidden from predators."
         },
         {
-          "speaker": "Ranger Cole",
-          "text": "Hungry birds scan the branches for food, so blending into the background keeps the insect hidden from predators."
+          "speaker": "Narrator",
+          "text": "Other creatures can even change their colors when the seasons or their surroundings change."
         },
         {
-          "speaker": "Ben",
-          "text": "Heading 2: Changing Colors. Do some animals change their color when the seasons or surroundings change?"
+          "speaker": "Narrator",
+          "text": "In summer, the Arctic fox has brown and gray fur that matches the mossy rocks of the northern tundra."
         },
         {
-          "speaker": "Ranger Cole",
-          "text": "Indeed! In summer, the Arctic fox has brown and gray fur that matches the rocky tundra soil."
+          "speaker": "Narrator",
+          "text": "When winter snow covers the ground, the Arctic fox grows a thick coat of pure white fur."
         },
         {
-          "speaker": "Nora",
-          "text": "What happens to the Arctic fox when winter snow covers the ground?"
+          "speaker": "Narrator",
+          "text": "This white coat allows the fox to sneak up on prey and hide from polar bears in the deep snowdrifts."
         },
         {
-          "speaker": "Ranger Cole",
-          "text": "Its coat turns pure white, allowing it to sneak up on prey and hide from polar bears in the snowdrifts."
+          "speaker": "Narrator",
+          "text": "Beneath the ocean waves, Ben remembered from a documentary that octopuses and cuttlefish can change color in less than a second."
         },
         {
-          "speaker": "Ben",
-          "text": "I saw a documentary about octopuses and cuttlefish in the ocean! They can change color in less than a second."
+          "speaker": "Narrator",
+          "text": "Even large land animals rely on clever patterns and stripes to protect themselves in open habitats."
         },
         {
-          "speaker": "Ranger Cole",
-          "text": "Heading 3: Patterns and Stripes. Even large animals use patterns! Think about a zebra's black-and-white stripes."
+          "speaker": "Narrator",
+          "text": "When a herd of zebras stands closely together, their black-and-white stripes dazzle a lion's eyes so it cannot single out one animal."
         },
         {
-          "speaker": "Nora",
-          "text": "When a herd of zebras stands together, their stripes dazzle a lion's eyes so it cannot single out one animal."
+          "speaker": "Narrator",
+          "text": "Similarly, a leopard's spotted coat breaks up its body outline in the dappled shadows of tall grass and trees."
         },
         {
-          "speaker": "Ranger Cole",
-          "text": "And a leopard's spotted coat breaks up its outline in the dappled shadows of tall grass and trees!"
+          "speaker": "Narrator",
+          "text": "From tiny forest insects to ocean octopuses, camouflage is one of nature's smartest tools for survival."
         }
       ],
       "vocab": [
@@ -2391,13 +2402,13 @@ const CURRICULUM_DATA = {
           "tip": "Read line 12."
         },
         {
-          "question": "Under which heading does Ranger Cole explain zebras and leopards?",
-          "correct": "Heading 3: Patterns and Stripes",
+          "question": "Why do zebras and leopards use stripes and spots in open habitats?",
+          "correct": "To dazzle predators' eyes or break up their outline in shadows",
           "options": [
-            "Heading 1: Masters of Disguise",
-            "Heading 2: Changing Colors"
+            "To attract insects",
+            "To stay warm in snow"
           ],
-          "tip": "Look at line 13."
+          "tip": "Look at lines 12–14."
         },
         {
           "question": "How do a zebra's black-and-white stripes protect it when standing in a herd?",
@@ -2421,6 +2432,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u4",
+      "format": "dialogue",
       "title": "The Big Race",
       "type": "Story · Topic 2: The Animal Kingdom (Science)",
       "skill": "Classify and Categorize",
@@ -2639,6 +2651,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u5",
+      "format": "story",
       "title": "Daniel Learns a Lesson",
       "type": "Story · Topic 3: Around the House (Social Studies)",
       "skill": "Identify the Theme",
@@ -2654,60 +2667,60 @@ const CURRICULUM_DATA = {
           "text": "At the beginning of the school week, Daniel's parents posted a household schedule on the kitchen refrigerator."
         },
         {
-          "speaker": "Mom",
-          "text": "In our house, everyone has daily chores so that our home stays clean, organized, and comfortable."
+          "speaker": "Narrator",
+          "text": "His mother explained that everyone had daily chores so that their home would stay clean, organized, and comfortable."
         },
         {
           "speaker": "Narrator",
-          "text": "Daniel's sister Maya swept the porch every afternoon and folded the clean laundry from the dryer."
+          "text": "Daniel's sister Maya swept the porch every afternoon and folded the clean laundry fresh from the dryer."
         },
         {
           "speaker": "Narrator",
           "text": "Daniel's job was to tidy his bedroom, put dirty clothes in the hamper, and pack his backpack before bedtime."
         },
         {
-          "speaker": "Daniel",
-          "text": "Cleaning up is boring! I would rather play video games now and worry about my messy room later."
+          "speaker": "Narrator",
+          "text": "However, Daniel thought cleaning up was boring and decided to play video games instead of doing his chores."
         },
         {
           "speaker": "Narrator",
-          "text": "On Tuesday and Wednesday, Daniel tossed his jacket, comic books, and clean laundry onto a giant heap on his floor."
-        },
-        {
-          "speaker": "Dad",
-          "text": "Daniel, if you neglect your responsibilities today, you will create a bigger problem for yourself tomorrow."
+          "text": "On Tuesday and Wednesday, he tossed his jacket, comic books, and clean laundry onto a giant heap on his floor."
         },
         {
           "speaker": "Narrator",
-          "text": "Daniel shrugged and left his wet soccer cleats and shin guards buried beneath a pile of unfolded blankets."
+          "text": "His father warned him that if he chose to neglect his responsibilities today, he would create a bigger problem tomorrow."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Daniel simply shrugged and left his wet soccer cleats and shin guards buried beneath a pile of unfolded blankets."
         },
         {
           "speaker": "Narrator",
           "text": "On Saturday morning, the championship soccer tournament arrived, and the team bus honked outside at eight o'clock."
         },
         {
-          "speaker": "Daniel",
-          "text": "Oh no! Where is my blue team jersey, and where is my left shin guard?"
+          "speaker": "Narrator",
+          "text": "Suddenly, Daniel realized he could not find his blue team jersey or his left shin guard anywhere."
         },
         {
           "speaker": "Narrator",
-          "text": "In a panic, Daniel dug through the cluttered mountain of books, wrappers, and tangled clothes, but he could not find his gear."
-        },
-        {
-          "speaker": "Maya",
-          "text": "Here is your jersey under the desk, Daniel, but it is wrinkled and covered in cookie crumbs!"
+          "text": "In a panic, he dug through the cluttered mountain of books, wrappers, and tangled clothes, but his gear was hidden."
         },
         {
           "speaker": "Narrator",
-          "text": "By the time Daniel found his missing cleat, the team bus had already pulled away, and Dad had to drive him late."
+          "text": "When Maya finally spotted his jersey under the desk, it was badly wrinkled and covered in cookie crumbs."
         },
         {
-          "speaker": "Coach",
-          "text": "Because you arrived late, Daniel, you will have to sit on the bench during the first half of the match."
+          "speaker": "Narrator",
+          "text": "By the time Daniel found his missing cleat, the team bus had already pulled away, and his father had to drive him late."
         },
         {
-          "speaker": "Daniel",
-          "text": "To sum it up, I learned that taking responsibility and staying organized every day saves time and prevents stress!"
+          "speaker": "Narrator",
+          "text": "Because he arrived late to the field, the coach told Daniel he had to sit on the bench during the first half of the match."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "To sum it up, Daniel learned that taking daily responsibility and staying organized saves time and prevents stress."
         }
       ],
       "vocab": [
@@ -2857,6 +2870,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u6",
+      "format": "story",
       "title": "Visiting an Ice Hotel",
       "type": "Magazine Article · Topic 3: Around the House (Social Studies)",
       "skill": "Identify Cause and Effect",
@@ -2868,64 +2882,64 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Travel Writer",
+          "speaker": "Narrator",
           "text": "Every winter in northern Sweden, architects and sculptors gather beside the frozen Torne River to build a remarkable hotel."
         },
         {
-          "speaker": "Architect Elsa",
-          "text": "Because winter temperatures drop far below freezing near the Arctic Circle, we can construct an entire building out of snow and ice!"
+          "speaker": "Narrator",
+          "text": "Because winter temperatures drop far below freezing near the Arctic Circle, builders can construct an entire building out of snow and ice."
         },
         {
-          "speaker": "Travel Writer",
-          "text": "Where do you get such massive blocks of crystal-clear ice for the walls and pillars?"
+          "speaker": "Narrator",
+          "text": "Creating the crystal-clear walls and pillars requires massive blocks of pure ice from the river."
         },
         {
-          "speaker": "Architect Elsa",
-          "text": "In March, we harvest two thousand tons of pure river ice and store it in cold warehouses until construction begins in November."
+          "speaker": "Narrator",
+          "text": "Each March, workers harvest two thousand tons of river ice and store it in cold warehouses until construction begins in November."
         },
         {
-          "speaker": "Travel Writer",
-          "text": "How do the builders keep the ceilings and archways from collapsing?"
+          "speaker": "Narrator",
+          "text": "To keep the high ceilings and archways from collapsing, engineers use a special snow-and-water mixture called snice."
         },
         {
-          "speaker": "Architect Elsa",
-          "text": "We spray a mixture of snow and water called 'snice' onto steel molds; because it freezes rock-solid, it forms strong vaulted roofs."
+          "speaker": "Narrator",
+          "text": "Workers spray the snice onto giant steel molds; because it freezes rock-solid, it forms strong vaulted roofs."
         },
         {
-          "speaker": "Travel Writer",
-          "text": "Inside the hotel, artists carve sparkling chandeliers, furniture, and animal sculptures directly into the ice."
+          "speaker": "Narrator",
+          "text": "Inside the hotel, talented artists carve sparkling chandeliers, chairs, and animal sculptures directly into the ice."
         },
         {
-          "speaker": "Guest Liam",
-          "text": "When I walked into our bedroom suite, I was amazed to see that even the bed frame is carved from a giant block of ice!"
+          "speaker": "Narrator",
+          "text": "When guests walk into a bedroom suite, they are amazed to see that even the bed frame is carved from a giant block of ice."
         },
         {
-          "speaker": "Travel Writer",
-          "text": "Because the room stays at minus five degrees Celsius, how do guests sleep comfortably without freezing?"
+          "speaker": "Narrator",
+          "text": "Although the room temperature stays at minus five degrees Celsius, visitors sleep comfortably through the night."
         },
         {
-          "speaker": "Architect Elsa",
-          "text": "We cover the ice beds with thick reindeer hides and give every guest a thermal expedition sleeping bag."
+          "speaker": "Narrator",
+          "text": "Staff members cover the ice beds with thick reindeer hides and give every guest a warm thermal sleeping bag."
         },
         {
-          "speaker": "Guest Liam",
-          "text": "Since thick ice walls absorb sound, the bedrooms inside the hotel are extraordinarily quiet and peaceful."
+          "speaker": "Narrator",
+          "text": "Since the thick snow and ice walls absorb sound, the bedrooms inside the hotel are extraordinarily quiet and peaceful."
         },
         {
-          "speaker": "Travel Writer",
-          "text": "Why aren't there any metal heaters or fireplaces inside the ice bedrooms?"
+          "speaker": "Narrator",
+          "text": "Of course, there are no metal heaters or fireplaces anywhere inside the ice bedrooms."
         },
         {
-          "speaker": "Architect Elsa",
-          "text": "If we installed heaters inside the rooms, the walls and furniture would melt immediately!"
+          "speaker": "Narrator",
+          "text": "If builders installed heaters inside the rooms, the frozen walls and furniture would melt immediately."
         },
         {
-          "speaker": "Travel Writer",
-          "text": "What happens to this magnificent structure when warm spring sunshine returns in April?"
+          "speaker": "Narrator",
+          "text": "Instead, guests walk to a heated wooden cabin next door each morning for hot lingonberry juice and a warm breakfast."
         },
         {
-          "speaker": "Architect Elsa",
-          "text": "In conclusion, the entire hotel slowly melts back into the Torne River, so we design a brand-new hotel every single winter!"
+          "speaker": "Narrator",
+          "text": "In conclusion, this magnificent structure melts back into the Torne River every spring, so artists design a brand-new hotel each winter."
         }
       ],
       "vocab": [
@@ -3075,6 +3089,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u7",
+      "format": "story",
       "title": "Our Family Camping Trip",
       "type": "Story · Topic 4: The Four Seasons (Science)",
       "skill": "Skim for Gist",
@@ -3090,44 +3105,44 @@ const CURRICULUM_DATA = {
           "text": "In mid-October, the Miller family packed their camping gear into the station wagon and drove up to Pine Ridge National Park."
         },
         {
-          "speaker": "Leo",
-          "text": "Summer camping is too hot and crowded, so autumn is my favorite season to explore the mountains!"
+          "speaker": "Narrator",
+          "text": "Summer camping was often too hot and crowded, so Leo considered autumn the best season to explore the mountains."
         },
         {
           "speaker": "Narrator",
           "text": "Along the winding mountain road, maple and birch trees formed a blazing canopy of crimson, amber, and gold."
         },
         {
-          "speaker": "Mom",
-          "text": "Look at the crisp foliage on the trail! The air smells like pine needles, woodsmoke, and damp earth."
+          "speaker": "Narrator",
+          "text": "As the family hiked along the trail, they admired the crisp foliage and breathed in the scent of pine needles and woodsmoke."
         },
         {
           "speaker": "Narrator",
-          "text": "Before sunset, the family cleared pinecones from a flat campsite, and they pitched their canvas tent near a bubbling stream."
-        },
-        {
-          "speaker": "Dad",
-          "text": "Mountain weather changes quickly in October, so we must fasten the rainfly tightly over our tent poles."
-        },
-        {
-          "speaker": "Hannah",
-          "text": "The afternoon sun felt warm during our hike, but now a brisk breeze is blowing down from the peaks!"
+          "text": "Before sunset, they cleared pinecones from a flat campsite, and they pitched their canvas tent near a bubbling stream."
         },
         {
           "speaker": "Narrator",
-          "text": "Everyone zipped up their fleece jackets, pulled on woolen hats, and gathered dry twigs for the stone fire ring."
+          "text": "Because mountain weather changes quickly in October, Dad made sure to fasten the rainfly tightly over the tent poles."
         },
         {
-          "speaker": "Dad",
-          "text": "I brought a kettle of vegetable stew, and Mom packed whole-grain rolls to warm over the campfire embers."
+          "speaker": "Narrator",
+          "text": "The afternoon sun had felt warm during their hike, but now a brisk breeze was blowing down from the peaks."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Everyone zipped up their warm fleece jackets, pulled on woolen hats, and gathered dry twigs for the stone fire ring."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Dad heated a kettle of vegetable stew, and Mom set out whole-grain rolls to warm over the glowing campfire embers."
         },
         {
           "speaker": "Narrator",
           "text": "As twilight deepened into night, thousands of glittering stars appeared in the cloudless autumn sky."
         },
         {
-          "speaker": "Leo",
-          "text": "Look through the binoculars! You can see the craters on the moon, and Orion's belt is rising above the ridge."
+          "speaker": "Narrator",
+          "text": "Looking through a pair of binoculars, Leo spotted the craters on the moon and Orion's belt rising above the ridge."
         },
         {
           "speaker": "Narrator",
@@ -3138,8 +3153,8 @@ const CURRICULUM_DATA = {
           "text": "When they unzipped the tent flap at dawn, a delicate layer of silver frost sparkled on every blade of grass."
         },
         {
-          "speaker": "Hannah",
-          "text": "Our fingers are chilly this morning, but drinking hot cocoa by the campfire warms us right up!"
+          "speaker": "Narrator",
+          "text": "Their fingers felt chilly in the morning air, but drinking hot cocoa by the campfire warmed them right up."
         },
         {
           "speaker": "Narrator",
@@ -3293,6 +3308,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u8",
+      "format": "story",
       "title": "Antarctic Expedition",
       "type": "Journal · Topic 4: The Four Seasons (Science)",
       "skill": "Draw Conclusions",
@@ -3511,6 +3527,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u9",
+      "format": "story",
       "title": "Baking Cookies with Grandma",
       "type": "Story · Topic 5: Our Five Senses (Health & Science)",
       "skill": "Scan for Details (Numbers & Amounts)",
@@ -3526,36 +3543,36 @@ const CURRICULUM_DATA = {
           "text": "On rainy Sunday afternoons, ten-year-old Clara loved visiting her grandmother's cozy kitchen to bake oatmeal cinnamon cookies."
         },
         {
-          "speaker": "Grandma Rose",
-          "text": "Great baking uses all five of our senses, Clara, plus careful measurement of every ingredient!"
+          "speaker": "Narrator",
+          "text": "Grandma Rose always reminded Clara that great baking uses all five of our senses plus careful measurement of every ingredient."
         },
         {
           "speaker": "Narrator",
           "text": "First, Clara preheated the electric oven to 350 degrees Fahrenheit and lined 2 metal baking sheets with parchment paper."
         },
         {
-          "speaker": "Clara",
-          "text": "Grandma, I am scanning your handwritten recipe card now—how much flour and oats do we need?"
+          "speaker": "Narrator",
+          "text": "Next, she scanned her grandmother's handwritten recipe card to check how much flour and oats they needed."
         },
         {
-          "speaker": "Grandma Rose",
-          "text": "Please measure 2 cups of whole-wheat flour, 3 cups of rolled oats, and 1 teaspoon of baking soda into the large ceramic bowl."
+          "speaker": "Narrator",
+          "text": "She measured 2 cups of whole-wheat flour, 3 cups of rolled oats, and 1 teaspoon of baking soda into a large ceramic bowl."
         },
         {
           "speaker": "Narrator",
           "text": "Clara ran her fingers through the dry oats and felt their rough, flaky texture against her skin."
         },
         {
-          "speaker": "Clara",
-          "text": "Next, the recipe calls for 2 teaspoons of ground cinnamon and half a teaspoon of grated nutmeg!"
+          "speaker": "Narrator",
+          "text": "Then she added 2 teaspoons of ground cinnamon and half a teaspoon of grated nutmeg to the dry mixture."
         },
         {
           "speaker": "Narrator",
           "text": "As soon as Clara opened the spice jars, a warm, woody aroma filled the kitchen and made her nose tingle."
         },
         {
-          "speaker": "Grandma Rose",
-          "text": "In the second bowl, let's whisk 2 farm eggs, 1 cup of brown sugar, and 1 teaspoon of sweet vanilla extract."
+          "speaker": "Narrator",
+          "text": "In a second bowl, Grandma Rose helped Clara whisk 2 farm eggs, 1 cup of brown sugar, and 1 teaspoon of sweet vanilla extract."
         },
         {
           "speaker": "Narrator",
@@ -3566,8 +3583,8 @@ const CURRICULUM_DATA = {
           "text": "She scooped 24 rounded tablespoons of sticky dough onto the trays, spacing them 2 inches apart."
         },
         {
-          "speaker": "Grandma Rose",
-          "text": "Set the brass kitchen timer for 12 minutes, and listen closely as the butter sizzles softly in the oven."
+          "speaker": "Narrator",
+          "text": "They set the brass kitchen timer for 12 minutes and listened closely as the butter sizzles softly inside the warm oven."
         },
         {
           "speaker": "Narrator",
@@ -3578,8 +3595,8 @@ const CURRICULUM_DATA = {
           "text": "When the timer dinged brightly, Grandma lifted the trays out and let the cookies cool on a wire rack for 5 minutes."
         },
         {
-          "speaker": "Clara",
-          "text": "They are crispy on the outside, chewy on the inside, and the sweet cinnamon flavor dances on my tongue!"
+          "speaker": "Narrator",
+          "text": "Taking her first warm bite, Clara noticed how the cookies were crispy on the outside, chewy on the inside, and bursting with sweet cinnamon flavor."
         }
       ],
       "vocab": [
@@ -3729,6 +3746,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u10",
+      "format": "dialogue",
       "title": "Musical Instruments: Brass",
       "type": "Article & Workshop · Topic 5: Our Five Senses (Music)",
       "skill": "Visualize (Sensory Details)",
@@ -3947,6 +3965,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u11",
+      "format": "story",
       "title": "Our Trip to Egypt",
       "type": "Essay · Topic 6: See the World! (Social Studies)",
       "skill": "Take Notes",
@@ -4165,6 +4184,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g5-u12",
+      "format": "story",
       "title": "Adventure in Oaxaca",
       "type": "Story · Topic 6: See the World! (Social Studies)",
       "skill": "Identify Characters, Setting, and Plot",
@@ -4184,56 +4204,56 @@ const CURRICULUM_DATA = {
           "text": "Colorful paper banners fluttered above the cobblestone streets while marimba music echoed from the town bandstand."
         },
         {
-          "speaker": "Mateo",
-          "text": "Today is my mother's birthday, Lucia, and we promised to bring home the fresh chocolate bread from Baker Don Pedro's stall!"
-        },
-        {
-          "speaker": "Lucia",
-          "text": "The market is enormous, Mateo, and hundreds of shoppers are crowding the aisles—how will we find him?"
+          "speaker": "Narrator",
+          "text": "It was Mateo's mother's birthday, and the cousins had promised to bring home fresh chocolate bread from Baker Don Pedro's stall."
         },
         {
           "speaker": "Narrator",
-          "text": "Near the fountain, they spotted Weaver Sofia, an artisan who was spinning dyed wool into bright Zapotec rugs."
-        },
-        {
-          "speaker": "Weaver Sofia",
-          "text": "Don Pedro moved his bakery stall this morning because workers were repairing the roof in the north hall."
+          "text": "Because the market was enormous and crowded with hundreds of shoppers along the narrow aisles, finding him was not easy."
         },
         {
           "speaker": "Narrator",
-          "text": "She pointed toward the spice aisle and told the cousins to follow the scent of roasted cinnamon and cocoa beans."
+          "text": "Near the stone fountain, they spotted Weaver Sofia, an artisan who was spinning dyed wool into bright Zapotec rugs."
         },
         {
           "speaker": "Narrator",
-          "text": "As Mateo and Lucia hurried past stacks of clay pottery and carved wooden animals called alebrijes, a sudden problem arose."
+          "text": "Weaver Sofia explained that Don Pedro had moved his bakery stall that morning because workers were repairing the roof in the north hall."
         },
         {
           "speaker": "Narrator",
-          "text": "An elderly vendor named Señor Ramos accidentally bumped his wooden cart, and dozens of ripe avocados rolled across the stones!"
+          "text": "She pointed toward the spice section and told the cousins to follow the warm scent of roasted cinnamon and cocoa beans."
         },
         {
-          "speaker": "Mateo",
-          "text": "Wait, Lucia! Even though we are in a hurry, we cannot leave Señor Ramos to pick up all his fruit alone."
+          "speaker": "Narrator",
+          "text": "As Mateo and Lucia hurried past stacks of clay pottery and carved wooden animals, a sudden problem arose."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "An elderly vendor named Señor Ramos accidentally bumped his wooden cart, and dozens of ripe avocados rolled across the stones."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Even though they were in a hurry, Mateo knew they could not leave Señor Ramos to pick up all his fruit alone."
         },
         {
           "speaker": "Narrator",
           "text": "The two cousins knelt on the cobblestones, gathered every single avocado into reed baskets, and lifted them onto his cart."
         },
         {
-          "speaker": "Señor Ramos",
-          "text": "Thank you both for your kindness! If you are looking for Don Pedro, he is right behind that archway, and he has one loaf left!"
+          "speaker": "Narrator",
+          "text": "Grateful for their kindness, Señor Ramos pointed to the stone archway behind him and said Don Pedro had just one loaf left."
         },
         {
           "speaker": "Narrator",
-          "text": "Mateo and Lucia sprinted through the stone archway just as Don Pedro was wrapping his final loaf of warm pan de yema."
+          "text": "Mateo and Lucia sprinted through the archway just as Don Pedro was wrapping his final loaf of warm birthday bread."
         },
         {
-          "speaker": "Don Pedro",
-          "text": "Señor Ramos waved to me to save this last loaf for two helpful children—here it is, fresh from the brick oven!"
+          "speaker": "Narrator",
+          "text": "Don Pedro smiled and told them that Señor Ramos had waved to him to save that last loaf fresh from the brick oven."
         },
         {
-          "speaker": "Lucia",
-          "text": "Helping someone in need didn't slow us down at all; in fact, it helped us succeed in our quest!"
+          "speaker": "Narrator",
+          "text": "Lucia realized that helping someone in need had not slowed them down at all; in fact, it had helped them succeed in their quest."
         }
       ],
       "vocab": [
@@ -4385,6 +4405,7 @@ const CURRICULUM_DATA = {
   "6": [
     {
       "id": "g6-u1",
+      "format": "story",
       "title": "A Visit to the Aquarium",
       "type": "Story · Topic 1: What's in the Water? (Science)",
       "skill": "Identify the Point of View (1st vs. 3rd Person)",
@@ -4603,6 +4624,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u2",
+      "format": "dialogue",
       "title": "Interview with a Shark Photographer",
       "type": "Interview · Topic 1: What's in the Water? (Science)",
       "skill": "Make Inferences",
@@ -4825,6 +4847,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u3",
+      "format": "story",
       "title": "Field Day",
       "type": "Newsletter · Topic 2: What to Wear (Health)",
       "skill": "Identify the Main Idea and Details",
@@ -4836,63 +4859,63 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Headline",
+          "speaker": "Narrator",
           "text": "Gear Up for Victory: How Smart Clothing Keeps Athletes Safe on Field Day!"
         },
         {
-          "speaker": "Newsletter Hook",
+          "speaker": "Narrator",
           "text": "Are you ready to sprint, jump, and cheer at Friday's Annual Oakridge Field Day? Before you lace up, read this essential health guide!"
         },
         {
-          "speaker": "Coach Miller",
-          "text": "Main Section 1: Dress for the Forecast. Weather meteorologists predict sunny skies and temperatures reaching 28 degrees Celsius by noon."
+          "speaker": "Narrator",
+          "text": "First, athletes should always dress for the forecast: weather meteorologists predict sunny skies and temperatures reaching 28 degrees Celsius by noon."
         },
         {
-          "speaker": "Student Maya",
-          "text": "Coach Miller, should we wear dark cotton sweatshirts or lightweight athletic shirts for the morning track events?"
+          "speaker": "Narrator",
+          "text": "Many students wonder whether they should wear cotton sweatshirts or lightweight athletic shirts for the morning track events."
         },
         {
-          "speaker": "Coach Miller",
-          "text": "Choose loose, breathable fabrics in light colors! Dark clothing absorbs heat from the sun, whereas white or yellow shirts reflect sunlight."
+          "speaker": "Narrator",
+          "text": "Coach Miller advises everyone to choose loose, breathable fabrics in light colors because dark clothing absorbs heat while white or yellow shirts reflect sunlight."
         },
         {
-          "speaker": "Nurse Carter",
-          "text": "Also, moisture-wicking synthetic shirts pull sweat away from your skin so it can evaporate and cool your body naturally."
+          "speaker": "Narrator",
+          "text": "In addition, Nurse Carter explains that moisture-wicking synthetic shirts pull sweat away from your skin so it can evaporate and cool your body naturally."
         },
         {
-          "speaker": "Student Leo",
-          "text": "What kind of footwear do we need for the obstacle course and the 400-meter relay race?"
+          "speaker": "Narrator",
+          "text": "Choosing the right footwear is equally important for the obstacle course and the 400-meter relay race."
         },
         {
-          "speaker": "Coach Miller",
-          "text": "Main Section 2: Protect Your Feet. Every competitor must wear supportive running sneakers with tied laces and cushioned rubber soles."
+          "speaker": "Narrator",
+          "text": "Every competitor must wear supportive running sneakers with tied laces and cushioned rubber soles."
         },
         {
-          "speaker": "Nurse Carter",
-          "text": "Never wear flip-flops, sandals, or brand-new stiff shoes on Field Day, because they cause painful blisters and twisted ankles."
+          "speaker": "Narrator",
+          "text": "Students should never wear flip-flops, sandals, or brand-new stiff shoes on Field Day, because they cause painful blisters and twisted ankles."
         },
         {
-          "speaker": "Student Maya",
-          "text": "What about sun protection while we are waiting on the grassy sidelines between events?"
+          "speaker": "Narrator",
+          "text": "Smart sun protection also matters while classes are waiting on the grassy sidelines between events."
         },
         {
-          "speaker": "Nurse Carter",
-          "text": "Main Section 3: Shield Your Skin and Eyes. Apply broad-spectrum sunscreen thirty minutes before going outside, and reapply it after two hours."
+          "speaker": "Narrator",
+          "text": "Everyone should apply broad-spectrum sunscreen thirty minutes before going outside and reapply it after two hours."
         },
         {
-          "speaker": "Coach Miller",
-          "text": "Wearing a wide-brimmed cap or a sports visor shades your face, and UV-blocking sunglasses protect your eyes from glare."
+          "speaker": "Narrator",
+          "text": "Wearing a wide-brimmed cap or a sports visor shades your face, and UV-blocking sunglasses protect your eyes from harsh glare."
         },
         {
-          "speaker": "Student Leo",
-          "text": "Do we need any special safety gear for the afternoon bicycle slalom and inline skating relay?"
+          "speaker": "Narrator",
+          "text": "Special safety gear is also required for the afternoon bicycle slalom and inline skating relay."
         },
         {
-          "speaker": "Coach Miller",
-          "text": "Yes! A buckled helmet, knee pads, and wrist guards are mandatory for all wheeled events to prevent concussions and scrapes."
+          "speaker": "Narrator",
+          "text": "A buckled helmet, knee pads, and wrist guards are mandatory for all wheeled events to prevent concussions and scrapes."
         },
         {
-          "speaker": "Newsletter Summary",
+          "speaker": "Narrator",
           "text": "When you dress wisely for the weather and the sport, you stay comfortable, prevent injuries, and perform at your very best!"
         }
       ],
@@ -5043,6 +5066,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u4",
+      "format": "story",
       "title": "Who Was That?",
       "type": "Story · Topic 2: What to Wear (Health & Drama)",
       "skill": "Identify the Main Idea and Theme",
@@ -5055,35 +5079,35 @@ const CURRICULUM_DATA = {
       "lines": [
         {
           "speaker": "Narrator",
-          "text": "Backstage at the Oakridge Middle School theater, the costume rack collapsed with a loud metallic crash!"
+          "text": "Backstage at the Oakridge Middle School theater, the costume rack collapsed with a loud metallic crash."
         },
         {
-          "speaker": "Director Ms. Lin",
-          "text": "The curtain rises for our historical mystery play in twenty minutes, and all of our garments are mixed together!"
+          "speaker": "Narrator",
+          "text": "The curtain was scheduled to rise for the historical mystery play in twenty minutes, and all of the garments were mixed together."
         },
         {
           "speaker": "Narrator",
           "text": "Julian, the quietest sixth grader on the stage crew, stared at the tangled pile of cloaks, hats, and boots."
         },
         {
-          "speaker": "Chloe",
-          "text": "Even worse, Julian, our lead actor Sam just lost his voice from a sore throat and cannot go on stage as Detective Vance!"
-        },
-        {
-          "speaker": "Director Ms. Lin",
-          "text": "Julian, you have operated the spotlight at every rehearsal—do you know Detective Vance's lines?"
-        },
-        {
-          "speaker": "Julian",
-          "text": "I have whispered every single scene from the wings, Ms. Lin, but everyone in the audience knows how shy I am!"
-        },
-        {
-          "speaker": "Chloe",
-          "text": "Wait until you put on the detective's attire, Julian; a great costume transforms how you feel inside."
+          "speaker": "Narrator",
+          "text": "Even worse, Chloe announced that lead actor Sam had just lost his voice from a sore throat and could not go on stage as Detective Vance."
         },
         {
           "speaker": "Narrator",
-          "text": "First, Julian sorted the fallen wardrobe by historical era so the other actors could dress quickly."
+          "text": "Director Ms. Lin remembered that Julian had operated the spotlight at every rehearsal and asked if he knew Detective Vance's lines."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Julian admitted that he had whispered every single scene from the wings, yet he worried because everyone knew how shy he was."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Chloe encouraged him to put on the detective's attire, reminding him that a great costume transforms how an actor feels inside."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "First, Julian sorted the fallen wardrobe by historical era so the rest of the cast could dress quickly."
         },
         {
           "speaker": "Narrator",
@@ -5098,8 +5122,8 @@ const CURRICULUM_DATA = {
           "text": "As the heavy velvet curtain parted, Julian stepped into the warm amber glow of the stage lights."
         },
         {
-          "speaker": "Audience Member",
-          "text": "Look at the posture and voice of that detective on stage—who is that remarkable actor?"
+          "speaker": "Narrator",
+          "text": "Across the rows of seats, audience members whispered in amazement at the tall posture and commanding voice of the detective on stage."
         },
         {
           "speaker": "Narrator",
@@ -5110,8 +5134,8 @@ const CURRICULUM_DATA = {
           "text": "When the mystery concluded, the entire auditorium erupted in applause, and Julian removed his fedora to take a bow."
         },
         {
-          "speaker": "Julian",
-          "text": "The trench coat gave me the courage to step onto the stage, but the confidence inside me was mine all along!"
+          "speaker": "Narrator",
+          "text": "Julian realized that the trench coat had given him the courage to step onto the stage, but the confidence inside him had been his all along."
         }
       ],
       "vocab": [
@@ -5261,6 +5285,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u5",
+      "format": "story",
       "title": "Lost and Found",
       "type": "Story · Topic 3: From Here to There (Geography)",
       "skill": "Identify and Analyze the Setting",
@@ -5280,56 +5305,56 @@ const CURRICULUM_DATA = {
           "text": "Twelve-year-old Owen and his older sister Clara were hiking back from Mirror Lake along a narrow pine trail."
         },
         {
-          "speaker": "Clara",
-          "text": "Notice how the shadows are lengthening between the hemlock trees, Owen, and the air is turning damp and chilly."
+          "speaker": "Narrator",
+          "text": "Clara noticed that the shadows were lengthening between the hemlock trees and the mountain air was turning damp and chilly."
         },
         {
-          "speaker": "Owen",
-          "text": "Wait, Clara—the trail splits into two forks right here by this fallen cedar log, and the wooden signpost is broken!"
+          "speaker": "Narrator",
+          "text": "Suddenly, the trail split into two forks beside a fallen cedar log, where the old wooden signpost lay broken on the ground."
         },
         {
           "speaker": "Narrator",
           "text": "Owen tapped his smartphone screen in order to check their GPS location, but the battery icon flashed red and died."
         },
         {
-          "speaker": "Owen",
-          "text": "Oh no! Without a digital signal in this deep canyon, how will we know which fork leads down to the ranger station?"
+          "speaker": "Narrator",
+          "text": "Without a digital signal in that deep canyon, Owen worried about how they would know which fork led down to the ranger station."
         },
         {
-          "speaker": "Clara",
-          "text": "Stay calm, Owen! Dad taught us always to pack a waterproof topographic map and a magnetic compass so that we never rely only on batteries."
+          "speaker": "Narrator",
+          "text": "Remaining calm, Clara reminded him that their father had taught them to pack a waterproof topographic map and a magnetic compass so that they never relied only on batteries."
         },
         {
           "speaker": "Narrator",
           "text": "Clara knelt on a flat boulder and spread out the paper map in order to study the surrounding terrain."
         },
         {
-          "speaker": "Clara",
-          "text": "First, let's hold the compass flat in my palm so that the red magnetic needle can swing freely toward north."
+          "speaker": "Narrator",
+          "text": "First, she held the compass flat in her palm so that the red magnetic needle could swing freely toward north."
         },
         {
           "speaker": "Narrator",
           "text": "Next, she rotated the compass bezel until the orienting arrow lined up directly with the red needle."
         },
         {
-          "speaker": "Owen",
-          "text": "Look at the brown contour lines on the map! On the left fork, the lines are packed tightly together."
-        },
-        {
-          "speaker": "Clara",
-          "text": "Tightly packed contour lines mean a steep cliff, whereas widely spaced lines on the right fork show a gentle slope downward."
-        },
-        {
-          "speaker": "Owen",
-          "text": "Also, the map shows a blue dashed line for Rush Creek running parallel to the right-hand trail!"
+          "speaker": "Narrator",
+          "text": "Looking closely at the brown contour lines on the map, Owen saw that the lines on the left fork were packed tightly together."
         },
         {
           "speaker": "Narrator",
-          "text": "They listened carefully in the quiet forest and heard rushing water echoing from the right fork."
+          "text": "Clara explained that tightly packed contour lines meant a steep cliff, whereas widely spaced lines on the right fork showed a gentle slope downward."
         },
         {
           "speaker": "Narrator",
-          "text": "Following the compass bearing and the sound of the creek, Owen and Clara reached the warm lantern light of the ranger station before dusk."
+          "text": "Owen also spotted a blue dashed line for Rush Creek running parallel to the right-hand trail."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "When they listened carefully in the quiet forest, they heard rushing water echoing from the right fork."
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Following their compass bearing and the sound of the creek, Owen and Clara reached the warm lantern light of the ranger station before dusk."
         }
       ],
       "vocab": [
@@ -5479,6 +5504,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u6",
+      "format": "dialogue",
       "title": "The World of Orienteering",
       "type": "Article & Briefing · Topic 3: From Here to There (Sports & Geography)",
       "skill": "Use Visuals (Maps, Keys, Diagrams, Flags)",
@@ -5697,8 +5723,9 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u7",
+      "format": "story",
       "title": "Languages We Use",
-      "type": "Article & Data Seminar · Topic 4: A World of Words (Social Studies)",
+      "type": "Article · Topic 4: A World of Words (Social Studies)",
       "skill": "Understand a Bar Graph",
       "writingGoal": "Review — Examples (for example, for instance, such as)",
       "theme": {
@@ -5708,64 +5735,64 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Dr. Chen",
-          "text": "Welcome to our Global Linguistics Seminar! Today we are examining a bar graph of the world's most spoken languages."
+          "speaker": "Narrator",
+          "text": "In the study of global linguistics, researchers use charts and bar graphs to compare the world's most spoken languages."
         },
         {
-          "speaker": "Amina",
-          "text": "Dr. Chen, what do the horizontal axis and the vertical axis on this bar graph represent?"
+          "speaker": "Narrator",
+          "text": "To read a language bar graph accurately, a student first checks what the horizontal axis and vertical axis represent."
         },
         {
-          "speaker": "Dr. Chen",
+          "speaker": "Narrator",
           "text": "The horizontal x-axis lists the names of ten major languages, while the vertical y-axis measures speakers in hundreds of millions."
         },
         {
-          "speaker": "Noah",
-          "text": "Why does each language have two bars of different colors standing side by side?"
+          "speaker": "Narrator",
+          "text": "Beside each language name, two bars of different colors stand side by side to allow a clear comparison."
         },
         {
-          "speaker": "Dr. Chen",
-          "text": "Great observation! The dark teal bar shows native speakers, whereas the light gold bar shows total speakers including second-language learners."
+          "speaker": "Narrator",
+          "text": "The dark teal bar shows native speakers who learned the language from birth, whereas the light gold bar shows total speakers including second-language learners."
         },
         {
-          "speaker": "Amina",
-          "text": "Look at the dark teal bars first: Mandarin Chinese has the tallest native-speaker bar at over 900 million people!"
+          "speaker": "Narrator",
+          "text": "Looking at the dark teal bars first, Mandarin Chinese has the tallest native-speaker bar at over 900 million people."
         },
         {
-          "speaker": "Noah",
-          "text": "And Spanish has the second-tallest native-speaker bar at around 485 million, which is higher than English's native bar of 380 million."
+          "speaker": "Narrator",
+          "text": "Spanish has the second-tallest native-speaker bar at around 485 million, which is higher than English's native bar of 380 million."
         },
         {
-          "speaker": "Dr. Chen",
-          "text": "Now compare the light gold bars for total speakers! Which language has the tallest bar overall?"
+          "speaker": "Narrator",
+          "text": "However, when comparing the light gold bars for total speakers, the ranking changes dramatically."
         },
         {
-          "speaker": "Amina",
-          "text": "English reaches nearly 1,450 million total speakers because so many people learn it as a second or third language!"
+          "speaker": "Narrator",
+          "text": "English reaches nearly 1,450 million total speakers because hundreds of millions of people learn it as a second or third language."
         },
         {
-          "speaker": "Dr. Chen",
-          "text": "Exactly! English serves as a global lingua franca in international fields, such as aviation, science, medicine, and diplomacy."
+          "speaker": "Narrator",
+          "text": "Today, English serves as a global bridge language in international fields, such as aviation, science, medicine, and diplomacy."
         },
         {
-          "speaker": "Noah",
-          "text": "Look at Hindi and Arabic on the bar graph: for instance, Hindi has over 600 million total speakers across India and the diaspora."
+          "speaker": "Narrator",
+          "text": "Other major world languages also connect vast populations; for instance, Hindi has over 600 million total speakers across India and the global diaspora."
         },
         {
-          "speaker": "Dr. Chen",
-          "text": "Today, students use interactive digital apps and multilingual websites to practice new vocabularies and scripts."
+          "speaker": "Narrator",
+          "text": "Around the world, students use interactive digital apps and multilingual websites to practice new vocabularies and scripts."
         },
         {
-          "speaker": "Amina",
+          "speaker": "Narrator",
           "text": "For example, our school language club uses audio flashcards to study Japanese characters and French pronunciation."
         },
         {
-          "speaker": "Dr. Chen",
-          "text": "Learning a second language strengthens your memory and helps you appreciate diverse cultures and literature."
+          "speaker": "Narrator",
+          "text": "Scientists have found that learning a second language strengthens memory and helps people appreciate diverse cultures and literature."
         },
         {
-          "speaker": "Noah",
-          "text": "Looking at this bar graph proves that being bilingual or multilingual connects you to billions of people worldwide!"
+          "speaker": "Narrator",
+          "text": "Understanding this bar graph proves that becoming bilingual or multilingual connects a reader to billions of people worldwide."
         }
       ],
       "vocab": [
@@ -5915,6 +5942,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u8",
+      "format": "story",
       "title": "So Many Questions",
       "type": "Story · Topic 4: A World of Words (Literature)",
       "skill": "Make Predictions",
@@ -5930,8 +5958,8 @@ const CURRICULUM_DATA = {
           "text": "Eleven-year-old Maya carried a brass-cornered notebook everywhere she went, filling its pages with curious questions."
         },
         {
-          "speaker": "Maya",
-          "text": "Why do libraries arrange fiction by the author's last name, yet group nonfiction by numbers such as the Dewey Decimal System?"
+          "speaker": "Narrator",
+          "text": "She often wondered why libraries arrange fiction by the author's last name, yet group nonfiction by numbers such as the Dewey Decimal System."
         },
         {
           "speaker": "Narrator",
@@ -5942,28 +5970,28 @@ const CURRICULUM_DATA = {
           "text": "While dusting a mahogany bookshelf in the historical corner, Maya noticed a leather-bound volume with a brass keyhole on its cover."
         },
         {
-          "speaker": "Maya",
-          "text": "Mr. Arthur, look at this antique book titled 'The Founder's Riddle'—why is it locked, and where is the key?"
+          "speaker": "Narrator",
+          "text": "Showing the antique book titled 'The Founder's Riddle' to Mr. Arthur, Maya asked why it was locked and where the key could be."
         },
         {
-          "speaker": "Mr. Arthur",
-          "text": "A hundred years ago, the library's founder hid the key inside the library and left a verse of clues on the back cover!"
+          "speaker": "Narrator",
+          "text": "Mr. Arthur smiled and explained that a hundred years ago, the library's founder had hidden the key inside the building and left a verse of clues on the back cover."
         },
         {
           "speaker": "Narrator",
           "text": "Maya turned the book over and read the engraved rhyme aloud: 'Seek the silent globe that spins where oceans meet the stars.'"
         },
         {
-          "speaker": "Maya",
-          "text": "Let's make a prediction! There are three globes in the library, for example the plastic world globe in the children's room."
+          "speaker": "Narrator",
+          "text": "Using the clue to make a prediction, Maya thought of the three globes in the library, for example the plastic world globe in the children's room."
         },
         {
-          "speaker": "Mr. Arthur",
-          "text": "True, Maya, but notice the words 'where oceans meet the stars'—which room has a painted ceiling of constellations?"
+          "speaker": "Narrator",
+          "text": "However, Mr. Arthur pointed to the words 'where oceans meet the stars' and asked which room had a painted ceiling of constellations."
         },
         {
-          "speaker": "Maya",
-          "text": "The Astronomy & Navigation Reading Room on the third floor! I predict the clue points to the antique celestial sphere!"
+          "speaker": "Narrator",
+          "text": "Maya's eyes lit up as she realized the clue pointed to the antique celestial sphere in the third-floor Astronomy & Navigation Reading Room."
         },
         {
           "speaker": "Narrator",
@@ -5971,11 +5999,11 @@ const CURRICULUM_DATA = {
         },
         {
           "speaker": "Narrator",
-          "text": "Maya examined the engraved brass meridian ring and spotted a tiny latch shaped like a crescent moon."
+          "text": "Examining the engraved brass meridian ring closely, Maya spotted a tiny metal latch shaped like a crescent moon."
         },
         {
-          "speaker": "Maya",
-          "text": "If I press this crescent latch inward, I bet a hidden compartment will pop open at the base of the stand!"
+          "speaker": "Narrator",
+          "text": "She predicted that pressing the crescent latch inward would cause a hidden compartment to pop open at the base of the stand."
         },
         {
           "speaker": "Narrator",
@@ -6133,6 +6161,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u9",
+      "format": "dialogue",
       "title": "A Trip to Earth",
       "type": "Story · Topic 5: Getting to Know You (Science Fiction)",
       "skill": "Analyze Characters",
@@ -6351,6 +6380,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u10",
+      "format": "story",
       "title": "Number 261",
       "type": "Biographical Essay · Topic 5: Getting to Know You (History & Sports)",
       "skill": "Understand Types of Conflict (Internal vs. External)",
@@ -6569,6 +6599,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u11",
+      "format": "story",
       "title": "My Mexican Adventure",
       "type": "Story · Topic 6: Finding Adventure (Social Studies)",
       "skill": "Make a Value Judgment",
@@ -6580,63 +6611,63 @@ const CURRICULUM_DATA = {
       },
       "lines": [
         {
-          "speaker": "Elena",
+          "speaker": "Narrator",
           "text": "During our summer trip to the Yucatán Peninsula in Mexico, my uncle Carlos took my brother Leo and me on an unforgettable expedition."
         },
         {
-          "speaker": "Uncle Carlos",
-          "text": "Today we are hiking through the tropical jungle to explore an ancient Mayan cenote—a natural limestone sinkhole filled with crystal water!"
+          "speaker": "Narrator",
+          "text": "We hiked through the lush tropical jungle to explore an ancient Mayan cenote—a natural limestone sinkhole filled with crystal water."
         },
         {
-          "speaker": "Elena",
+          "speaker": "Narrator",
           "text": "Instead of repeating the word 'big' in my travel journal, I wrote that the towering ceiba trees were immense, vast, and gigantic."
         },
         {
-          "speaker": "Leo",
-          "text": "Listen to the howler monkeys roaring in the canopy, Elena! This jungle trail is thrilling!"
+          "speaker": "Narrator",
+          "text": "High above our heads, howler monkeys roared in the green canopy as we followed the winding jungle trail."
         },
         {
-          "speaker": "Uncle Carlos",
-          "text": "When we reach the wooden stairway descending into the cavern, everyone must wear a life vest and rinse off all sunscreen."
+          "speaker": "Narrator",
+          "text": "When we reached the wooden stairway descending into the cavern, Uncle Carlos asked everyone to put on a life vest and rinse off all sunscreen."
         },
         {
-          "speaker": "Leo",
-          "text": "Why do we have to shower and wash off our lotion before swimming in the underground pool, Uncle Carlos?"
+          "speaker": "Narrator",
+          "text": "Leo wondered why we had to shower and wash off our lotion before swimming in the underground pool."
         },
         {
-          "speaker": "Uncle Carlos",
-          "text": "Chemical lotions pollute the fragile groundwater and harm the blind cavefish and delicate rock formations."
+          "speaker": "Narrator",
+          "text": "Uncle Carlos explained that chemical lotions pollute the fragile groundwater and harm the blind cavefish and delicate rock formations."
         },
         {
-          "speaker": "Elena",
+          "speaker": "Narrator",
           "text": "We washed carefully at the eco-shower, and then we walked down forty carved stone steps into the cool subterranean chamber."
         },
         {
-          "speaker": "Elena",
+          "speaker": "Narrator",
           "text": "Shafts of golden sunlight beamed through an opening in the cave ceiling, illuminating turquoise water that was clear and transparent."
         },
         {
-          "speaker": "Leo",
-          "text": "Look at those icicle-shaped stone stalactites hanging from the roof! Can I climb that ledge and touch one?"
+          "speaker": "Narrator",
+          "text": "Pointing at the icicle-shaped stone stalactites hanging from the roof, Leo asked if he could climb the ledge and touch one."
         },
         {
-          "speaker": "Elena",
-          "text": "Stop, Leo! Remember what the park ranger's sign said: human skin oils stop stalactites from growing, and a single touch ruins thousands of years of nature!"
+          "speaker": "Narrator",
+          "text": "I quickly stopped him and reminded him of the ranger's sign: human skin oils stop stalactites from growing, and a single touch ruins thousands of years of nature."
         },
         {
-          "speaker": "Leo",
-          "text": "You made the right call, Elena—admiring the formations without touching them preserves this wonder for future explorers."
+          "speaker": "Narrator",
+          "text": "Leo agreed that I had made the right call because admiring the formations without touching them preserves that wonder for future explorers."
         },
         {
-          "speaker": "Uncle Carlos",
-          "text": "Put on your snorkel masks and float gently on the surface so you can observe the submerged stalagmites and darting catfish below."
+          "speaker": "Narrator",
+          "text": "We put on our snorkel masks and floated gently on the surface to observe the submerged stalagmites and darting catfish below."
         },
         {
-          "speaker": "Elena",
+          "speaker": "Narrator",
           "text": "Floating silently in the emerald water, I felt a deep sense of awe for the Mayan people who considered these caverns sacred."
         },
         {
-          "speaker": "Elena",
+          "speaker": "Narrator",
           "text": "True adventure isn't about conquering nature or taking souvenirs; it is about exploring with respect and stewardship."
         }
       ],
@@ -6787,6 +6818,7 @@ const CURRICULUM_DATA = {
     },
     {
       "id": "g6-u12",
+      "format": "story",
       "title": "Adventures in Science",
       "type": "Essay & Data Report · Topic 6: Finding Adventure (Science)",
       "skill": "Understand a Pie Chart",

@@ -31,7 +31,7 @@ const AdminStudio = {
   },
 
   loadFromStorage() {
-    const saved = localStorage.getItem("esh_custom_curriculum_v3");
+    const saved = localStorage.getItem("esh_custom_curriculum_v4");
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -47,7 +47,7 @@ const AdminStudio = {
   },
 
   saveToStorage() {
-    localStorage.setItem("esh_custom_curriculum_v3", JSON.stringify(CURRICULUM_DATA));
+    localStorage.setItem("esh_custom_curriculum_v4", JSON.stringify(CURRICULUM_DATA));
   },
 
   detectPresetKey(themeObj, grade) {
@@ -211,6 +211,10 @@ const AdminStudio = {
     document.getElementById("adm-type").value = unit.type || "";
     document.getElementById("adm-skill").value = unit.skill || "";
     document.getElementById("adm-writing").value = unit.writingGoal || "";
+    const formatSelect = document.getElementById("adm-format");
+    if (formatSelect) {
+      formatSelect.value = unit.format === "dialogue" ? "dialogue" : "story";
+    }
 
     if (unit.lines && unit.lines.length) {
       document.getElementById("adm-passage").value = unit.lines.map(l => `${l.speaker} | ${l.text}`).join("\n");
@@ -259,10 +263,16 @@ const AdminStudio = {
 
   parsePassage(raw) {
     return raw.trim().split("\n").map(row => {
-      const parts = row.split("|");
+      if (row.includes("|")) {
+        const parts = row.split("|");
+        return {
+          speaker: parts[0] ? parts[0].trim() : "Narrator",
+          text: parts.slice(1).join("|").trim()
+        };
+      }
       return {
-        speaker: parts[0] ? parts[0].trim() : "Narrator",
-        text: parts[1] ? parts[1].trim() : ""
+        speaker: "Narrator",
+        text: row.trim()
       };
     }).filter(l => l.text !== "");
   },
@@ -447,7 +457,7 @@ const AdminStudio = {
     if (resetBtn) {
       resetBtn.onclick = () => {
         if (confirm("Reset local browser changes and restore the default curriculum from data.js?")) {
-          localStorage.removeItem("esh_custom_curriculum_v3");
+          localStorage.removeItem("esh_custom_curriculum_v4");
           window.location.reload();
         }
       };
@@ -508,6 +518,7 @@ const AdminStudio = {
         const type = document.getElementById("adm-type").value.trim();
         const skill = document.getElementById("adm-skill").value.trim();
         const writingGoal = document.getElementById("adm-writing").value.trim();
+        const format = document.getElementById("adm-format")?.value || "story";
 
         const lines = this.parsePassage(document.getElementById("adm-passage").value);
         const vocab = this.parseVocab(document.getElementById("adm-vocab").value);
@@ -518,6 +529,7 @@ const AdminStudio = {
           if (unitIndex !== -1) {
             CURRICULUM_DATA[grade][unitIndex] = {
               ...CURRICULUM_DATA[grade][unitIndex],
+              format,
               title,
               type,
               skill,
@@ -532,6 +544,7 @@ const AdminStudio = {
         } else {
           const newUnit = {
             id: this.generateNextUnitId(grade),
+            format,
             title,
             type,
             skill,

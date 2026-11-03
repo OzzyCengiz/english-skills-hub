@@ -81,7 +81,13 @@
       <header class="article-header">
         <div class="article-header-top">
           <span class="article-kicker" id="banner-grade-tag">Grade 1 · Unit 1</span>
-          <button type="button" id="btn-print-handout" class="btn-pill" title="Print complete classroom worksheet for this unit">📄 Print Full Handout</button>
+          <div class="article-header-actions">
+            <div class="tool-group">
+              <button type="button" id="btn-prev-unit" title="Previous Unit">← Prev</button>
+              <button type="button" id="btn-next-unit" title="Next Unit">Next →</button>
+            </div>
+            <button type="button" id="btn-print-handout" class="btn-pill" title="Print complete classroom worksheet for this unit">📄 Handout</button>
+          </div>
         </div>
         <h2 class="article-headline" id="banner-unit-title">Loading Unit...</h2>
         <p class="article-subhead" id="banner-unit-desc"></p>
@@ -89,10 +95,10 @@
 
       <!-- Navigation Tabs -->
       <nav class="nav-tabs" role="tablist">
-        <button class="tab-link active" data-tab="passage">Passage</button>
-        <button class="tab-link" data-tab="vocab">Key Vocabulary</button>
-        <button class="tab-link" data-tab="practice">Practice & Tips</button>
-        <button class="tab-link" data-tab="write">Writing Workshop</button>
+        <button class="tab-link active" data-tab="passage">📖 Passage</button>
+        <button class="tab-link" data-tab="vocab">🔤 Vocabulary</button>
+        <button class="tab-link" data-tab="practice">✍️ Practice</button>
+        <button class="tab-link" data-tab="write">📝 Write</button>
       </nav>
 
       <!-- Dynamic Tab Content -->

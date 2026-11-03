@@ -122,7 +122,13 @@
 
           <!-- Okuma Metni -->
           <div>
-            <label class="section-label">Passage Lines (Format: Speaker | Sentence)</label>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.45rem;">
+              <label class="section-label" style="margin-bottom: 0;">Passage Lines (Story sentences or Speaker | Sentence)</label>
+              <select id="adm-format" style="padding: 0.35rem 0.6rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem; background: var(--bg-surface); color: var(--ink-900);">
+                <option value="story">📖 Format: Story Text (Paragraphs)</option>
+                <option value="dialogue">🎭 Format: Dialogue (Speaker Turns)</option>
+              </select>
+            </div>
             <textarea id="adm-passage" rows="5" required placeholder="Host | Welcome to the lesson.&#10;Speaker | Today we will read together." style="width: 100%; padding: 0.75rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; background: var(--bg-surface); color: var(--ink-900);"></textarea>
           </div>
 
