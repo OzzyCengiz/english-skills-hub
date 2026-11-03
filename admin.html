@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#121316">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Curriculum Studio | English Skills Hub</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
@@ -17,23 +21,26 @@
     </div>
     <div class="header-tools">
       <a href="index.html" class="btn-pill" style="text-decoration: none;">← View Student Hub</a>
+      <button id="btn-reset-data" class="btn-pill" title="Restore default data.js curriculum">↺ Reset Default</button>
+      <button id="btn-import-data" class="btn-pill" title="Import a data.js or JSON curriculum file">📂 Import</button>
+      <input type="file" id="input-import-file" accept=".js,.json" style="display: none;">
       <button id="btn-export-data" class="btn-pill active">📥 Export data.js</button>
     </div>
   </header>
 
   <!-- Studio Ana Yerleşim (Sol: Liste, Sağ: Editör) -->
-  <main class="editorial-shell" style="max-width: 1400px; margin: 2rem auto;">
+  <main class="editorial-shell" style="max-width: 1400px;">
     
     <!-- Sol Panel: Mevcut Üniteleri Seçme & Yönetme -->
     <aside class="sidebar-column">
       <div class="sidebar-section">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
           <span class="section-label" style="margin-bottom: 0;">Manage Units</span>
           <button id="btn-new-unit" class="btn-pill" style="font-size: 0.7rem; border-color: var(--ink-900);">+ New Unit</button>
         </div>
 
         <!-- Grade Filtresi -->
-        <select id="admin-grade-filter" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); background: var(--bg-surface);">
+        <select id="admin-grade-filter" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); background: var(--bg-surface); color: var(--ink-900);">
           <option value="1">Grade 1 Units</option>
           <option value="2">Grade 2 Units</option>
           <option value="3">Grade 3 Units</option>
@@ -48,14 +55,18 @@
     </aside>
 
     <!-- Sağ Panel: Ünite Ekleme / Düzenleme Formu -->
-    <section class="main-column">
+    <section class="main-column" id="admin-editor-column">
       <div class="reading-canvas" style="border-radius: 4px;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink-border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink-border); padding-bottom: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.75rem;">
           <div>
             <h2 id="form-mode-title" style="font-family: var(--font-serif); font-size: 2rem; font-weight: 400;">Create New Unit</h2>
             <p id="form-mode-sub" style="font-size: 0.8rem; color: var(--ink-400); font-family: var(--font-mono);">NEW RECORD · GRADE 1</p>
           </div>
-          <button id="btn-delete-unit" class="btn-pill" style="display: none; border-color: #dc2626; color: #dc2626;">🗑 Delete Unit</button>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button type="button" id="btn-preview-unit" class="btn-pill" title="Preview how this unit looks to students">👁 Preview</button>
+            <button type="button" id="btn-duplicate-unit" class="btn-pill" style="display: none;" title="Clone this unit as a copy">📋 Duplicate</button>
+            <button type="button" id="btn-delete-unit" class="btn-pill" style="display: none; border-color: #dc2626; color: #dc2626;">🗑 Delete Unit</button>
+          </div>
         </div>
 
         <form id="admin-unit-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
@@ -63,11 +74,11 @@
           <input type="hidden" id="edit-unit-id" value="">
           <input type="hidden" id="edit-unit-grade" value="">
 
-          <!-- Seviye ve Başlık -->
-          <div style="display: grid; grid-template-columns: 140px 1fr; gap: 1rem;">
+          <!-- Seviye, Renk Paleti ve Başlık -->
+          <div class="admin-grid-top">
             <div>
               <label class="section-label">Target Grade</label>
-              <select id="adm-grade" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); background: var(--bg-surface);">
+              <select id="adm-grade" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); background: var(--bg-surface); color: var(--ink-900);">
                 <option value="1">Grade 1</option>
                 <option value="2">Grade 2</option>
                 <option value="3">Grade 3</option>
@@ -77,58 +88,79 @@
               </select>
             </div>
             <div>
+              <label class="section-label">Editorial Palette</label>
+              <select id="adm-theme-preset" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); background: var(--bg-surface); color: var(--ink-900);">
+                <option value="terracotta">Terracotta (G1)</option>
+                <option value="forest">Forest Sage (G2)</option>
+                <option value="indigo">Deep Indigo (G3)</option>
+                <option value="plum">Muted Plum (G4)</option>
+                <option value="ochre">Classic Ochre (G5)</option>
+                <option value="teal">Petrol Teal (G6)</option>
+              </select>
+            </div>
+            <div>
               <label class="section-label">Unit Title</label>
-              <input type="text" id="adm-title" required placeholder="e.g. From Wheat to Bread" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+              <input type="text" id="adm-title" required placeholder="e.g. From Wheat to Bread" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; background: var(--bg-surface); color: var(--ink-900);">
             </div>
           </div>
 
           <!-- Pedagoji ve Tür -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+          <div class="admin-grid-3">
             <div>
               <label class="section-label">Genre / Type</label>
-              <input type="text" id="adm-type" required placeholder="e.g. Science Article" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+              <input type="text" id="adm-type" required placeholder="e.g. Science Article" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; background: var(--bg-surface); color: var(--ink-900);">
             </div>
             <div>
               <label class="section-label">Reading Strategy</label>
-              <input type="text" id="adm-skill" required placeholder="e.g. Paraphrase" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+              <input type="text" id="adm-skill" required placeholder="e.g. Paraphrase" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; background: var(--bg-surface); color: var(--ink-900);">
             </div>
             <div>
               <label class="section-label">Writing Target</label>
-              <input type="text" id="adm-writing" required placeholder="e.g. Explanatory Text" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+              <input type="text" id="adm-writing" required placeholder="e.g. Explanatory Text" style="width: 100%; padding: 0.65rem; border: 1px solid var(--ink-border); border-radius: 4px; background: var(--bg-surface); color: var(--ink-900);">
             </div>
           </div>
 
           <!-- Okuma Metni -->
           <div>
             <label class="section-label">Passage Lines (Format: Speaker | Sentence)</label>
-            <textarea id="adm-passage" rows="5" required placeholder="Host | Welcome to the lesson.&#10;Speaker | Today we will read together." style="width: 100%; padding: 0.75rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem;"></textarea>
+            <textarea id="adm-passage" rows="5" required placeholder="Host | Welcome to the lesson.&#10;Speaker | Today we will read together." style="width: 100%; padding: 0.75rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; background: var(--bg-surface); color: var(--ink-900);"></textarea>
           </div>
 
           <!-- Kelimeler -->
           <div>
             <label class="section-label">Vocabulary (Format: Word | Part of Speech | Definition)</label>
-            <textarea id="adm-vocab" rows="3" required placeholder="dough | noun | A mix of flour and water.&#10;yeast | noun | A tiny living thing that makes dough rise." style="width: 100%; padding: 0.75rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem;"></textarea>
+            <textarea id="adm-vocab" rows="3" required placeholder="dough | noun | A mix of flour and water.&#10;yeast | noun | A tiny living thing that makes dough rise." style="width: 100%; padding: 0.75rem; border: 1px solid var(--ink-border); border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; background: var(--bg-surface); color: var(--ink-900);"></textarea>
           </div>
 
-          <!-- Soru & Quiz -->
-          <div class="exercise-entry" style="margin-bottom: 0;">
-            <span class="section-label" style="margin-bottom: 0.5rem;">Comprehension Check</span>
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <input type="text" id="adm-q-text" required placeholder="Question text..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
-              <input type="text" id="adm-q-correct" required placeholder="Correct Answer..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
-              <input type="text" id="adm-q-wrong1" required placeholder="Distractor (Wrong option)..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
-              <input type="text" id="adm-q-tip" required placeholder="Pedagogical Clue / Note..." style="width: 100%; padding: 0.55rem; border: 1px solid var(--ink-border); border-radius: 4px;">
+          <!-- Dinamik Soru & Quiz Listesi -->
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="section-label" style="margin-bottom: 0;">Comprehension Questions</span>
+              <button type="button" id="btn-add-question" class="btn-pill" style="font-size: 0.72rem; border-color: var(--ink-900);">+ Add Question</button>
             </div>
+            <div id="admin-questions-container" style="display: flex; flex-direction: column; gap: 1rem;"></div>
           </div>
 
           <!-- Butonlar -->
           <div style="display: flex; justify-content: flex-end; gap: 0.75rem; border-top: 1px solid var(--ink-border); padding-top: 1.25rem;">
-            <button type="submit" id="btn-submit-form" class="btn-pill active" style="padding: 0.65rem 1.75rem; font-size: 0.9rem;">+ Publish Unit</button>
+            <button type="submit" id="btn-submit-form" class="btn-pill active" style="padding: 0.65rem 1.75rem; font-size: 0.9rem; width: 100%; max-width: 240px;">+ Publish Unit</button>
           </div>
         </form>
       </div>
     </section>
   </main>
+
+  <!-- Live Preview Modal -->
+  <div id="admin-preview-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-dialog" style="max-width: 720px;">
+      <div class="modal-top">
+        <h3 id="preview-modal-title" class="modal-term" style="font-size: 1.85rem;">Unit Preview</h3>
+        <button id="preview-modal-close" class="modal-close-btn" aria-label="Close preview">✕</button>
+      </div>
+      <p id="preview-modal-meta" style="font-size: 0.8rem; color: var(--ink-400); font-family: var(--font-mono); margin-bottom: 1.25rem;"></p>
+      <div id="preview-modal-body"></div>
+    </div>
+  </div>
 
   <script src="js/data.js"></script>
   <script src="js/admin.js"></script>

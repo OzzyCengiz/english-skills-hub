@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lexend:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Editorial Kağıt & Mürekkep Paleti */
+  /* Editorial Kağıt & Mürekkep Paleti (Varsayılan: Paper) */
   --bg-canvas: #fcfbf9;
   --bg-surface: #ffffff;
   --bg-subtle: #f4f3ef;
@@ -19,14 +19,44 @@
   --font-serif: 'Instrument Serif', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --font-dyslexic: 'Lexend', system-ui, sans-serif;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Warm Sepia Okuma Teması */
+body[data-surface="sepia"] {
+  --bg-canvas: #f4ecd8;
+  --bg-surface: #fbf6e9;
+  --bg-subtle: #ebe1c7;
+  --ink-900: #2c221e;
+  --ink-700: #4e4039;
+  --ink-400: #857468;
+  --ink-border: #ded2b6;
+}
+
+/* Night Ink (Karanlık) Okuma Teması */
+body[data-surface="night"] {
+  --bg-canvas: #0f1115;
+  --bg-surface: #181b22;
+  --bg-subtle: #222630;
+  --ink-900: #f3f4f6;
+  --ink-700: #cbd5e1;
+  --ink-400: #94a3b8;
+  --ink-border: #2e3440;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,6 +66,36 @@ body {
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+button,
+select,
+input,
+textarea,
+a {
+  touch-action: manipulation;
+}
+
+/* Easy-Read (Dyslexia-Friendly) Modu */
+body.easy-read-mode,
+body.easy-read-mode .speech-body,
+body.easy-read-mode .exercise-question,
+body.easy-read-mode .choice-btn,
+body.easy-read-mode textarea,
+body.easy-read-mode input {
+  font-family: var(--font-dyslexic);
+  letter-spacing: 0.03em;
+  word-spacing: 0.08em;
+  line-height: 1.85;
+}
+
+body.easy-read-mode .article-headline {
+  font-family: var(--font-dyslexic);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 /* Üst Konsol - Minimalist Masthead */
@@ -46,12 +106,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .brand-meta {
   display: flex;
-  align-items: baseline;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
 }
 
 .brand-title {
@@ -74,6 +136,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .tool-group {
@@ -81,6 +144,8 @@ body {
   border: 1px solid var(--ink-border);
   border-radius: 4px;
   background: var(--bg-surface);
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .tool-group button, .btn-pill {
@@ -88,15 +153,26 @@ body {
   border: none;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  padding: 0.4rem 0.75rem;
+  padding: 0.45rem 0.75rem;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--ink-700);
   cursor: pointer;
+  white-space: nowrap;
   transition: all 0.15s var(--ease);
 }
 
 .tool-group button:hover, .btn-pill:hover {
   background: var(--bg-subtle);
   color: var(--ink-900);
+}
+
+.tool-group button.active {
+  background: var(--ink-900);
+  color: var(--bg-surface);
+  font-weight: 600;
 }
 
 .tool-group button + button {
@@ -110,7 +186,7 @@ body {
 
 .btn-pill.active {
   background: var(--ink-900);
-  color: #fff;
+  color: var(--bg-surface);
   border-color: var(--ink-900);
 }
 
@@ -122,24 +198,32 @@ body {
   display: flex;
   gap: 2rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.grade-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .grade-nav-item {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   text-transform: uppercase;
-  padding: 0.75rem 0;
+  padding: 0.85rem 0.25rem;
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
   color: var(--ink-400);
   cursor: pointer;
   transition: all 0.2s var(--ease);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .grade-nav-item.active {
   color: var(--ink-900);
-  border-bottom-color: var(--ink-900);
+  border-bottom-color: var(--accent-color);
   font-weight: 600;
 }
 
@@ -157,26 +241,89 @@ body {
 @media (max-width: 960px) {
   .editorial-shell {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    margin: 1.25rem auto;
   }
 }
 
 @media (max-width: 640px) {
   .app-header {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
+    align-items: stretch;
+    gap: 0.65rem;
     padding: 0.75rem 1rem;
+  }
+  .brand-meta {
+    justify-content: space-between;
+  }
+  .brand-tag {
+    display: none;
+  }
+  .header-tools {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .header-tools::-webkit-scrollbar {
+    display: none;
+  }
+  .tool-group {
+    flex-shrink: 0;
   }
   .grade-nav {
     padding: 0 1rem;
-    gap: 1rem;
+    gap: 1.15rem;
   }
   .editorial-shell {
     padding: 0 1rem;
     margin: 1rem auto;
   }
   .article-headline {
-    font-size: 2rem;
+    font-size: 1.9rem;
+  }
+  /* iOS Safari'de input odaklanınca otomatik zoom yapmasını engeller */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Tam Ünite Çalışma Kağıdı (Varsayılan olarak ekranda gizli, yazdırmada görünür) */
+.printable-handout {
+  display: none;
+}
+
+/* Yazdırma (Print Worksheet & Full Handout) Stili */
+@media print {
+  .app-header,
+  .grade-nav,
+  .sidebar-column,
+  .nav-tabs,
+  .reading-toolbar,
+  .writing-actions,
+  .modal-overlay {
+    display: none !important;
+  }
+  .editorial-shell {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  body.printing-full-handout .editorial-shell {
+    display: none !important;
+  }
+  body.printing-full-handout .printable-handout {
+    display: block !important;
+    padding: 0.5in;
+    color: #000;
+    font-size: 11pt;
   }
 }
