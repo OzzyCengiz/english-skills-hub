@@ -1,0 +1,3827 @@
+{
+  "app": {
+    "title": "LAST BREATH",
+    "subtitle": "FIELD TERMINAL // REV 0.1"
+  },
+  "menu": {
+    "kicker": "EMERGENCY BROADCAST // SURVIVAL TERMINAL",
+    "lore": "Grid collapse +14 months. Shortwave relays are failing across every continent. Ration your calories, chart passable corridors, fortify an outpost, and keep breathing.",
+    "active_transmission": "ACTIVE SURVIVOR SIGNAL DETECTED",
+    "charted_sectors": "{count} sectors charted",
+    "new_expedition_title": "CONFIGURE NEW EXPEDITION",
+    "no_save_title": "SURVIVOR RECON PROTOCOL",
+    "no_save_desc": "No active survivor signals detected in this sector. Register your identity, customize your background, and begin your post-apocalyptic journey.",
+    "select_archetype": "1. SELECT SURVIVOR BACKGROUND",
+    "select_sector": "2. SELECT STARTING SECTOR",
+    "footer_hint": "ALL PROGRESS AUTOSAVED TO LOCAL TERMINAL",
+    "action": {
+      "continue": "RESUME TRANSMISSION",
+      "start_new": "DEPLOY INTO SECTOR",
+      "open_menu": "MAIN MENU",
+      "new_game": "START NEW EXPEDITION →",
+      "create_character": "CREATE SURVIVOR EXPEDITION →",
+      "back_to_menu": "← MAIN MENU",
+      "new_game_main": "NEW GAME",
+      "load_game": "LOAD GAME",
+      "settings": "SETTINGS",
+      "exit": "EXIT",
+      "return_to_game": "RETURN TO GAME",
+      "desc_new_game": "Embark on a new survival expedition and create your character.",
+      "desc_load_game": "Browse expedition save slots (10 Slots) and resume.",
+      "desc_settings": "Configure audio, language, CRT monitor scanlines, and preferences.",
+      "desc_exit": "Safely terminate current session and exit the game.",
+      "codex_memorial": "EXPEDITION CODEX & MEMORIAL",
+      "desc_codex_memorial": "Review fallen survivor epitaphs, career statistics, achievement medals, and field lore.",
+      "install_app": "INSTALL APP (PWA)",
+      "desc_install_app": "Install to your device for offline fullscreen play."
+    },
+    "archetype": {
+      "scavenger": {
+        "name": "Recon Scavenger",
+        "desc": "Starts with a courier duffel, lensatic compass, extra rations, and Lv.1 Recon & Scavenging."
+      },
+      "medic": {
+        "name": "Field Medic",
+        "desc": "Starts with a trauma kit, antibiotics, chemical poncho, and Lv.1 Field Medicine."
+      },
+      "engineer": {
+        "name": "Salvage Engineer",
+        "desc": "Starts with a forged wrecking bar, steel plates, wiring, and Lv.1 Salvage Engineering."
+      },
+      "veteran": {
+        "name": "Cordon Veteran",
+        "desc": "Starts with a weighted machete, riding jacket, military rations, and Lv.1 Close Quarters."
+      }
+    },
+    "slots": {
+      "title": "EXPEDITION SAVE SLOTS",
+      "subtitle": "10 Save Slots // 2 Free Slots · 8 Survivor Premium Slots",
+      "free_badge": "FREE",
+      "premium_badge": "PREMIUM",
+      "locked_badge": "LOCKED 🔒",
+      "active_badge": "ACTIVE RUN",
+      "empty": "EMPTY SLOT",
+      "empty_desc": "No active survival expedition recorded in this slot.",
+      "locked_desc": "This slot is locked. Survivor Premium Edition is required to unlock 8 additional slots.",
+      "load_btn": "LOAD",
+      "save_btn": "SAVE",
+      "delete_btn": "DELETE",
+      "unlock_btn": "UNLOCK 🔒",
+      "delete_confirm": "All progress in this save slot will be permanently deleted. Are you sure?",
+      "save_success": "Game saved successfully.",
+      "load_failed": "Failed to load save file or data is corrupt.",
+      "premium_status_active": "SURVIVOR PREMIUM ACTIVE 👑",
+      "premium_status_free": "FREE EDITION",
+      "upgrade_cta": "UPGRADE TO PREMIUM"
+    },
+    "premium": {
+      "title": "SURVIVOR PREMIUM EDITION",
+      "kicker": "EXCLUSIVE CLEARANCE LEVEL",
+      "desc": "Break the limits of the wasteland. Remove all ads, unlock all 10 save slots, and claim instant emergency supply drops.",
+      "active_badge": "👑 LIFETIME PREMIUM ACTIVE // All ads disabled, 10 save slots unlocked.",
+      "feature_1": "Completely Ad-Free Experience (Zero commercial breaks)",
+      "feature_2": "All 10 Save Slots Unlocked (Full multi-expedition management)",
+      "feature_3": "Instant Emergency Supply Drops (Rations & water without watching ads)",
+      "feature_4": "Gold VIP Survivor Badge & Lifetime Meta Support",
+      "unlock_btn": "ACTIVATE PREMIUM (TEST MODE)",
+      "revoke_btn": "DISABLE PREMIUM (TEST LOCKED MODE)",
+      "promo_label": "HAVE A LICENSE / PROMO CODE?",
+      "promo_submit": "REDEEM CODE",
+      "promo_success": "✓ Code verified! Lifetime Premium activated.",
+      "promo_invalid": "✗ Invalid code. Try: VIP-SURVIVOR",
+      "close": "CLOSE",
+      "active_notice": "Survivor Premium license is active on this device."
+    },
+    "settings": {
+      "title": "SYSTEM SETTINGS",
+      "subtitle": "Display interface, audio, language, and local storage configuration",
+      "language": "Interface Language",
+      "sfx": "Sound Effects (SFX)",
+      "ambient": "Radio & Atmospheric Ambience",
+      "crt": "CRT Screen Flicker & Scanline Effects",
+      "autosave": "Auto-Save System",
+      "reset_title": "Danger Zone (Data Reset)",
+      "reset_desc": "Clears all save slots, preferences, and local game state.",
+      "reset_btn": "CLEAR ALL DATA",
+      "reset_confirm": "WARNING: All save slots and preferences will be permanently wiped! Proceed?",
+      "on": "ON",
+      "off": "OFF",
+      "saved_notice": "Settings saved."
+    },
+    "exit": {
+      "title": "TERMINATE SESSION",
+      "desc": "You are about to exit the wasteland. Your current expedition state is safely stored in your active slot.",
+      "confirm_btn": "EXIT GAME",
+      "cancel_btn": "CANCEL / RETURN",
+      "terminated_title": "CONNECTION TERMINATED // OFFLINE",
+      "terminated_desc": "Survivor telemetry sealed into non-volatile storage. You may safely close this browser tab.",
+      "reconnect_btn": "RECONNECT"
+    }
+  },
+  "character": {
+    "create_title": "SURVIVOR REGISTRATION // NEW EXPEDITION",
+    "create_subtitle": "EMERGENCY PROTOCOL ACTIVE. CONFIGURE OPERATIVE IDENTITY, BIOMETRICS, AND DEPLOYMENT SECTOR.",
+    "default_name": "Survivor",
+    "callsign_kicker": "CALLSIGN // ID",
+    "steps": {
+      "identity": "1. IDENTITY",
+      "archetype": "2. ORIGIN",
+      "sector": "3. SECTOR",
+      "summary": "4. SUMMARY"
+    },
+    "step_subtitle": {
+      "1": "Step 1/4: Enter operative callsign, age, blood type, and primary survival disposition.",
+      "2": "Step 2/4: Select pre-collapse professional background and starting equipment kit.",
+      "3": "Step 3/4: Choose the insertion sector to commence survival operations.",
+      "4": "Step 4/4: Review survivor field dossier and initiate deployment."
+    },
+    "label": {
+      "identity": "1. OPERATIVE IDENTITY & BIOMETRICS",
+      "name": "OPERATIVE CALLSIGN / NAME",
+      "age": "AGE",
+      "blood": "BLOOD TYPE",
+      "trait": "SURVIVOR TRAIT",
+      "archetype": "2. SURVIVOR BACKGROUND & LOADOUT",
+      "sector": "3. INITIAL DROP SECTOR",
+      "dossier_preview": "OPERATIVE FIELD DOSSIER // REAL-TIME PREVIEW"
+    },
+    "placeholder": {
+      "name": "Enter operative callsign..."
+    },
+    "action": {
+      "random_name": "⚄ RANDOM",
+      "deploy": "DEPLOY INTO SECTOR // COMMENCE RUN",
+      "back": "← BACK TO SIGNAL",
+      "back_to_menu": "← MAIN MENU",
+      "next": "NEXT STEP →",
+      "prev": "← PREVIOUS STEP"
+    },
+    "age_bracket": {
+      "young": "Youth (18–25) // High Stamina & Rapid Recovery",
+      "prime": "Prime (26–40) // Balanced Resilience & Composure",
+      "veteran": "Veteran (41–65) // Survival Instincts & Resourcefulness"
+    }
+  },
+  "trait": {
+    "stoic": {
+      "name": "Stoic",
+      "desc": "High pain threshold; reduces panic and vitality loss from severe physical trauma."
+    },
+    "night_owl": {
+      "name": "Night Owl",
+      "desc": "Heightened sensory clarity during darkness; avoids nighttime disorientation."
+    },
+    "fast_metabolism": {
+      "name": "Fast Metabolism",
+      "desc": "+25% faster natural health regeneration when resting in safe structures."
+    },
+    "hoarder": {
+      "name": "Hoarder",
+      "desc": "Master of efficient pack storage; permanently expands carrying capacity by +2.5 kg."
+    },
+    "iron_stomach": {
+      "name": "Iron Stomach",
+      "desc": "Robust gastrointestinal immunity; halves infection risk from stale food and untreated water."
+    }
+  },
+  "loot": {
+    "title": {
+      "scavenge_found": "RECON & SALVAGE // SUPPLIES FOUND",
+      "scavenge_empty": "RECON & SALVAGE // SECTOR EMPTY",
+      "combat_victory": "THREAT ELIMINATED // SPOILS OF WAR",
+      "combat_scavenge": "MID-COMBAT SALVAGE // CACHE ACQUIRED",
+      "survey_result": "SECTOR RECONNAISSANCE // COMPLETE",
+      "rest_result": "FIELD REST // STATUS REPORT"
+    },
+    "desc": {
+      "scavenge_found": "Scavenging in {location} ({country}) yielded the following regional resources. Select which items to pack into your inventory:",
+      "scavenge_empty": "Searched {location} ({country}) thoroughly but found no usable salvage. The local scrap deposits may be depleted.",
+      "combat_victory": "{enemy} was neutralized (+{xp} XP). The following items were recovered from the hostile:",
+      "combat_scavenge": "You swiftly scavenged {enemy} while dodging. Found:",
+      "survey": "High-ground observation successfully charted {count} new neighboring corridors and waypoints.",
+      "survey_empty": "Observation complete. No new uncharted sectors could be spotted from this vantage.",
+      "rest": "Rested securely for {hours} hours. Vital signs stabilized and energy reserves replenished."
+    },
+    "load_status": "Pack Capacity: {current} / {max} kg (+{selected} kg selected)",
+    "overload_warning": "⚠ WARNING: Selected items exceed your pack carrying limit!",
+    "no_items": "No collectible items discovered.",
+    "action": {
+      "take_all": "TAKE ALL",
+      "take_selected": "PACK SELECTED ({count})",
+      "leave_all": "LEAVE ON GROUND",
+      "close": "ACKNOWLEDGE // CONTINUE"
+    },
+    "scanner": {
+      "searching": "SCANNING SECTOR...",
+      "completed": "SCAN COMPLETED",
+      "empty_status": "SECTOR EMPTY",
+      "items_detected": "{revealed} / {total} resources detected",
+      "completed_desc": "A total of {count} items were found and cataloged.",
+      "empty_desc": "No salvageable items or scrap could be found in this sector.",
+      "telemetry_searching": "Searching debris, lockers, and wreckage...",
+      "speedup": "SPEED UP ⏩",
+      "searching_wait": "SEARCHING... (%{percent})"
+    }
+  },
+  "hud": {
+    "day": "DAY {day}",
+    "day_short": "D{day}",
+    "daylight": "DAYLIGHT",
+    "night": "NIGHTFALL",
+    "new_run": "NEW EXPEDITION",
+    "confirm_reset": "Abandon current survivor and start a new expedition?",
+    "tab": {
+      "map": "SECTOR MAP",
+      "map_short": "MAP",
+      "inventory": "PACK & GEAR",
+      "inventory_short": "PACK",
+      "craft": "CRAFTING",
+      "craft_short": "CRAFT",
+      "base": "OUTPOST & BASE",
+      "base_short": "BASE",
+      "status": "BIOSCAN",
+      "status_short": "BIO",
+      "log": "FIELD LOG",
+      "log_short": "LOG"
+    },
+    "pill": {
+      "health": "HP",
+      "satiety": "KCAL",
+      "hydration": "H2O",
+      "energy": "STAM"
+    },
+    "codex": "CODEX",
+    "install_app": "INSTALL",
+    "radio": "RADIO"
+  },
+  "ui": {
+    "page": "Page {current} / {total}",
+    "prev_page": "◀ Prev",
+    "next_page": "Next ▶",
+    "slot_range": "{from}-{to} / {total}",
+    "close": "CLOSE"
+  },
+  "rarity": {
+    "common": "COMMON",
+    "rare": "RARE",
+    "epic": "EPIC",
+    "legendary": "LEGENDARY"
+  },
+  "status": {
+    "tabs": {
+      "vitals": "1. BIOMETRIC",
+      "body": "2. TRAUMA",
+      "skills": "3. SKILLS"
+    },
+    "section": {
+      "vitals": "BIOMETRIC VITALS",
+      "body": "ANATOMICAL TRAUMA SCHEMATIC",
+      "conditions": "ACTIVE TRAUMA & PATHOGENS",
+      "readout": "COMBAT & RIG TELEMETRY",
+      "skills": "SURVIVAL PROFICIENCIES"
+    },
+    "body": {
+      "part": {
+        "head": "Cranial / Head",
+        "torso": "Torso / Chest",
+        "leftArm": "Left Arm",
+        "rightArm": "Right Arm",
+        "leftLeg": "Left Leg",
+        "rightLeg": "Right Leg"
+      },
+      "condition": {
+        "intact": "INTACT",
+        "arterial_bleed": "ARTERIAL BLEED",
+        "minor_bleed": "BLEEDING",
+        "fracture": "FRACTURE",
+        "pneumothorax": "PNEUMOTHORAX",
+        "burn": "BURN",
+        "infection": "INFECTED"
+      },
+      "no_supplies": "Required medical supply not in pack"
+    },
+    "vital": {
+      "health": "INTEGRITY",
+      "satiety": "CALORIES",
+      "hydration": "HYDRATION",
+      "energy": "STAMINA"
+    },
+    "band": {
+      "fine": "NOMINAL",
+      "low": "DEGRADED",
+      "critical": "CRITICAL",
+      "depleted": "FAILING"
+    },
+    "no_ailments": "No acute bleeding, systemic infection, or musculoskeletal trauma detected.",
+    "readout": {
+      "weapon": "Equipped Sidearm / Melee",
+      "combat_rating": "Tactical Rating",
+      "armor": "Ballistic / Slash Rating",
+      "scavenge_bonus": "Search Efficiency",
+      "travel_bonus": "Overland Pace"
+    }
+  },
+  "ailment": {
+    "bleeding": {
+      "name": "Laceration Hemorrhage",
+      "desc": "Steady blood loss each hour. Apply bandages or a field kit before shock sets in.",
+      "severity": "GRADE {severity}"
+    },
+    "infection": {
+      "name": "Systemic Sepsis",
+      "desc": "Bacterial load climbing. Early stage can be fought off if well-fed; advanced stages require antiseptic or antibiotics."
+    },
+    "sprain": {
+      "name": "Torn Ligament",
+      "desc": "Slows overland travel significantly until splinted or rested.",
+      "remaining": "{hours}h rem"
+    },
+    "pain": {
+      "name": "Severe Pain & Shock",
+      "desc": "Intense physical trauma draining stamina and slowing movement speed."
+    },
+    "poison": {
+      "name": "Toxic Poisoning",
+      "desc": "Circulating systemic toxins causing progressive biological damage."
+    }
+  },
+  "skill": {
+    "level_short": "LVL {level}",
+    "max_level": "MAX",
+    "foraging": {
+      "name": "Recon & Scavenging",
+      "desc": "Increases salvage yield from ruins and improves evasion across collapsed terrain."
+    },
+    "medical": {
+      "name": "Field Medicine",
+      "desc": "Amplifies healing and treatment potency; raises natural wound clotting odds."
+    },
+    "engineering": {
+      "name": "Salvage Engineering",
+      "desc": "Improves vehicle stripping, jury-rigging, and mechanical hazard resolution."
+    },
+    "marksmanship": {
+      "name": "Close Quarters & Arms",
+      "desc": "Raises tactical combat rating in hostile encounters."
+    }
+  },
+  "inventory": {
+    "tabs": {
+      "pack": "1. CARRIED INVENTORY",
+      "equipped": "2. WORN RIG & LOADOUT",
+      "vehicles": "Vehicles & Fleet"
+    },
+    "weight": "LOAD",
+    "slots": "SLOTS",
+    "overloaded_notice": "OVERBURDENED — Overland travel slowed by 15% and stamina drain increased by 15%.",
+    "unarmed": "Unarmed",
+    "no_ammo": "Dry / No Rounds",
+    "slot_empty": "— EMPTY —",
+    "empty": "No items in this category.",
+    "ground_empty": "Nothing left on the ground at this sector.",
+    "section": {
+      "equipped": "WORN RIG & LOADOUT",
+      "pack": "CARRIED INVENTORY",
+      "ground": "LOCAL CACHE"
+    },
+    "slot": {
+      "weapon": "PRIMARY",
+      "body": "TORSO",
+      "pack": "PACK"
+    },
+    "category": {
+      "all": "ALL",
+      "supplies": "RATIONS",
+      "medical": "MEDICAL",
+      "weapons": "ARMS",
+      "scrap": "SALVAGE",
+      "gear": "RIGGING"
+    },
+    "action": {
+      "use": "USE",
+      "equip": "EQUIP",
+      "unequip": "STOW",
+      "drop": "DROP (1)",
+      "drop_all": "DROP ALL",
+      "take": "TAKE",
+      "take_all": "TAKE ALL",
+      "close_inspect": "CLOSE",
+      "take_one": "TAKE (×1)",
+      "take_all_item": "TAKE ALL (×{count})",
+      "treat": "TREAT"
+    },
+    "grid": {
+      "inspect_prompt": "Tap any slot to inspect specifications and actions.",
+      "slot_num": "Slot {num}",
+      "empty_slot": "EMPTY",
+      "total_weight": "Total Load",
+      "unit_kg": "kg"
+    },
+    "vehicles": {
+      "list_title": "CLAIMED VEHICLES INVENTORY",
+      "empty_title": "NO VEHICLES DISCOVERED YET",
+      "empty_desc": "Perform survey recon, scavenge searches, or travel across any sector in the world to discover abandoned derelict vehicles and add them to your fleet.",
+      "action_go_map": "Open World Map to Scout"
+    }
+  },
+  "map": {
+    "tabs": {
+      "anchor": "1. CURRENT ANCHOR",
+      "corridors": "2. CONNECTED CORRIDORS"
+    },
+    "current_sector": "CURRENT ANCHOR",
+    "selected_sector": "TARGET SECTOR",
+    "no_direct_corridor": "No direct route from current anchor",
+    "country": "TERRITORY / COUNTRY",
+    "coords": "WGS84 GRID",
+    "threat_level": "HOSTILITY INDEX",
+    "scavenge_yield": "SECTOR RESERVES",
+    "find_chance": "hit",
+    "risk": "RISK",
+    "visited_badge": "CHARTED",
+    "section": {
+      "routes": "CONNECTED CORRIDORS"
+    },
+    "mode": {
+      "road": "OVERLAND",
+      "sea": "MARITIME"
+    },
+    "action": {
+      "scavenge": "RECON & SCAVENGE (50–75m)",
+      "patrol": "ENGAGE HOSTILES (15m)",
+      "survey": "RECON PERIMETER (45m)",
+      "rest_hours": "BIVOUAC {hours}h",
+      "travel": "MARCH"
+    },
+    "control": {
+      "zoom_in": "Zoom in",
+      "zoom_out": "Zoom out",
+      "center": "Center on survivor",
+      "world": "World view"
+    }
+  },
+  "biome": {
+    "urban": "METROPOLIS RUINS",
+    "suburban": "OUTER SPRAWL",
+    "industrial": "HEAVY INDUSTRY",
+    "rural": "HINTERLAND",
+    "coastal": "LITTORAL PORT",
+    "forest": "TIMBERLAND",
+    "wasteland": "ARID SCORCH",
+    "arctic": "PERMAFROST",
+    "military": "CORDON ZONE"
+  },
+  "location": {
+    "istanbul": "Istanbul",
+    "ankara": "Ankara",
+    "athens": "Athens",
+    "sofia": "Sofia",
+    "bucharest": "Bucharest",
+    "kyiv": "Kyiv",
+    "vienna": "Vienna",
+    "berlin": "Berlin",
+    "paris": "Paris",
+    "london": "London",
+    "madrid": "Madrid",
+    "lisbon": "Lisbon",
+    "reykjavik": "Reykjavik",
+    "moscow": "Moscow",
+    "tbilisi": "Tbilisi",
+    "tehran": "Tehran",
+    "beirut": "Beirut",
+    "tangier": "Tangier",
+    "cairo": "Cairo",
+    "khartoum": "Khartoum",
+    "addis_ababa": "Addis Ababa",
+    "nairobi": "Nairobi",
+    "timbuktu": "Timbuktu",
+    "dakar": "Dakar",
+    "lagos": "Lagos",
+    "kinshasa": "Kinshasa",
+    "johannesburg": "Johannesburg",
+    "cape_town": "Cape Town",
+    "karachi": "Karachi",
+    "delhi": "Delhi",
+    "mumbai": "Mumbai",
+    "almaty": "Almaty",
+    "novosibirsk": "Novosibirsk",
+    "ulaanbaatar": "Ulaanbaatar",
+    "beijing": "Beijing",
+    "shanghai": "Shanghai",
+    "seoul": "Seoul",
+    "tokyo": "Tokyo",
+    "vladivostok": "Vladivostok",
+    "anadyr": "Anadyr",
+    "bangkok": "Bangkok",
+    "kuala_lumpur": "Kuala Lumpur",
+    "jakarta": "Jakarta",
+    "darwin": "Darwin",
+    "alice_springs": "Alice Springs",
+    "sydney": "Sydney",
+    "auckland": "Auckland",
+    "nome": "Nome",
+    "anchorage": "Anchorage",
+    "vancouver": "Vancouver",
+    "san_francisco": "San Francisco",
+    "los_angeles": "Los Angeles",
+    "denver": "Denver",
+    "chicago": "Chicago",
+    "new_york": "New York",
+    "montreal": "Montreal",
+    "st_johns": "St. John's",
+    "nuuk": "Nuuk",
+    "houston": "Houston",
+    "mexico_city": "Mexico City",
+    "panama_city": "Panama City",
+    "bogota": "Bogotá",
+    "lima": "Lima",
+    "manaus": "Manaus",
+    "recife": "Recife",
+    "sao_paulo": "São Paulo",
+    "buenos_aires": "Buenos Aires",
+    "santiago": "Santiago",
+    "ushuaia": "Ushuaia"
+  },
+  "item": {
+    "canned_beans": {
+      "name": "Tin of Navy Beans",
+      "desc": "Dented steel can of salted beans in brine. Heavy, dependable calories."
+    },
+    "jerky": {
+      "name": "Smoked Beef Jerky",
+      "desc": "Salt-cured dried meat strip. Lightweight and durable, but increases thirst."
+    },
+    "mre": {
+      "name": "Military MRE Ration",
+      "desc": "Field combat ration pack with flameless ration heater and high-energy biscuits."
+    },
+    "energy_bar": {
+      "name": "Oatmeal Energy Bar",
+      "desc": "Dense glucose-packed oat bar. Quick boost on the move."
+    },
+    "bottled_water": {
+      "name": "Sealed Bottled Water",
+      "desc": "Factory-sealed mineral water bottle. Safe from microbial infection."
+    },
+    "dirty_water": {
+      "name": "Turbid Stagnant Water",
+      "desc": "Collected from an open puddle or cistern. Quenches thirst but carries disease risk."
+    },
+    "instant_coffee": {
+      "name": "Instant Coffee Packet",
+      "desc": "Bitter freeze-dried coffee crystals. Restores focus at the cost of mild dehydration."
+    },
+    "bandage": {
+      "name": "Sterile Gauze Bandage",
+      "desc": "Clean woven cotton dressing. Stops active traumatic bleeding."
+    },
+    "antiseptic": {
+      "name": "Iodine Antiseptic Bottle",
+      "desc": "Topical povidone-iodine disinfectant. Treats early superficial infections."
+    },
+    "antibiotics": {
+      "name": "Broad-Spectrum Antibiotics",
+      "desc": "Full course of pharmaceutical antibiotic capsules. Cures severe systemic infections."
+    },
+    "painkillers": {
+      "name": "Analgesic Painkillers",
+      "desc": "Synthetic analgesic tablets. Dull chronic pain and reduce fatigue."
+    },
+    "first_aid_kit": {
+      "name": "Field Trauma First Aid Kit",
+      "desc": "Hard-case trauma pack with splints, sutures, and clotting agents. Restores significant health."
+    },
+    "kitchen_knife": {
+      "name": "Kitchen Chef Knife",
+      "desc": "Sturdy stainless-steel culinary blade. Basic close-quarters protection."
+    },
+    "crowbar": {
+      "name": "Steel Crowbar",
+      "desc": "Forged pry bar. Deadly blunt weapon that pries open locked containers (+12% scavenge yield)."
+    },
+    "machete": {
+      "name": "Heavy Bush Machete",
+      "desc": "Wide steel clearing blade with weighted balance. Excellent slashing damage."
+    },
+    "fire_axe": {
+      "name": "Firefighter Axe",
+      "desc": "Heavy pick-headed rescue axe. Devastating impact power (+8% scavenge yield)."
+    },
+    "hunting_rifle": {
+      "name": "Bolt-Action Hunting Rifle",
+      "desc": "Precision scoped long rifle. High lethality when chambered with rifle rounds."
+    },
+    "rifle_rounds": {
+      "name": "Rifle Ammunition (7.62mm)",
+      "desc": "High-powered brass cartridges for bolt-action rifles."
+    },
+    "scrap_metal": {
+      "name": "Salvaged Scrap Metal",
+      "desc": "Rusted sheet plates and angle iron. Fundamental material for fortification and weapon crafting."
+    },
+    "copper_wire": {
+      "name": "Stripped Copper Wire",
+      "desc": "Conductive cabling harvested from abandoned conduits."
+    },
+    "electronics": {
+      "name": "Salvaged Circuit Electronics",
+      "desc": "Microcontroller chips and diodes for advanced electrical crafting."
+    },
+    "cloth_rags": {
+      "name": "Clean Cloth Rags",
+      "desc": "Scraps of woven cotton. Essential for makeshift bandages and fuel wicks."
+    },
+    "duct_tape": {
+      "name": "Industrial Duct Tape",
+      "desc": "Heavy-duty adhesive cloth roll. The backbone of improvised field repairs."
+    },
+    "spark_plug_set": {
+      "name": "Salvaged Spark Plug Set",
+      "desc": "Set of ceramic electrode plugs salvaged from automotive engines. Critical for vehicle ignition restoration."
+    },
+    "fuel_siphon_hose": {
+      "name": "Fuel Siphon Hose",
+      "desc": "Flexible PVC hose with manual primer squeeze bulb. Enables siphoning fuel from abandoned vehicle wrecks."
+    },
+    "duffel_bag": {
+      "name": "Canvas Duffel Bag",
+      "desc": "Reinforced military duffel. Adds +6 kg carry capacity and +3 inventory slots."
+    },
+    "hiking_pack": {
+      "name": "Expedition Hiking Pack",
+      "desc": "Ergonomic trail rucksack with sternum strap. Adds +12 kg capacity and +5 slots."
+    },
+    "military_rucksack": {
+      "name": "Heavy Military Rucksack",
+      "desc": "Rugged ALICE frame assault pack. Adds +18 kg capacity and +8 slots."
+    },
+    "leather_jacket": {
+      "name": "Treated Leather Jacket",
+      "desc": "Thick cowhide jacket. Grants 1 armor against claws, teeth, and blade slashes."
+    },
+    "hazmat_poncho": {
+      "name": "Chemical Hazmat Poncho",
+      "desc": "Heavy vinyl hooded cape. Completely repels toxic spills and chemical acid rain."
+    },
+    "riot_vest": {
+      "name": "Police Tactical Riot Vest",
+      "desc": "Molded ballistic composite chest protector. Grants 3 armor against blunt and ballistic trauma."
+    },
+    "flashlight": {
+      "name": "High-Lumen LED Flashlight",
+      "desc": "Handheld tactical beam. Dispels pitch darkness and improves scavenging speed (+4%)."
+    },
+    "compass": {
+      "name": "Lensatic Military Compass",
+      "desc": "Damped magnetic needle in brass housing. Increases travel overland speed (+8%)."
+    },
+    "canned_sardines": {
+      "name": "Canned Sardines in Oil",
+      "desc": "Tightly packed oily fish in a key-open tin. Rich in protein and essential fatty acids."
+    },
+    "canned_tuna": {
+      "name": "Canned Chunk Tuna",
+      "desc": "Solid white tuna in spring brine. Dependable and filling survival meal."
+    },
+    "canned_mackerel": {
+      "name": "Canned Mackerel Fillets",
+      "desc": "Oily mackerel steaks preserved in spiced tomato sauce."
+    },
+    "canned_salmon": {
+      "name": "Canned Wild Pink Salmon",
+      "desc": "High-grade preserved salmon steak. A rare luxury from pre-collapse storehouses."
+    },
+    "canned_corned_beef": {
+      "name": "Canned Corned Beef",
+      "desc": "Dense trapezoidal tin of cured beef brisket. Calorie-heavy and salty."
+    },
+    "canned_spam": {
+      "name": "Luncheon Meat Tin",
+      "desc": "Gelatinous spiced pork and ham block. Long shelf-life staple."
+    },
+    "canned_vienna_sausages": {
+      "name": "Vienna Sausages Can",
+      "desc": "Small cocktail sausages soaked in salty chicken broth."
+    },
+    "canned_meatballs": {
+      "name": "Canned Meatballs in Gravy",
+      "desc": "Pre-cooked beef meatballs smothered in thick savory brown gravy."
+    },
+    "canned_beef_stew": {
+      "name": "Canned Beef & Potato Stew",
+      "desc": "Hearty stew loaded with chunks of beef, potatoes, and diced carrots."
+    },
+    "canned_chicken_noodle": {
+      "name": "Chicken Noodle Soup Tin",
+      "desc": "Warm comforting broth filled with egg noodles and shredded chicken."
+    },
+    "canned_tomato_soup": {
+      "name": "Condensed Tomato Soup",
+      "desc": "Thick acidic tomato soup. Best heated over camp coals."
+    },
+    "canned_chili_con_carne": {
+      "name": "Chili con Carne Tin",
+      "desc": "Spicy pinto beans and minced beef in a fiery chili pepper sauce."
+    },
+    "canned_ravioli": {
+      "name": "Canned Beef Ravioli",
+      "desc": "Pocket pasta stuffed with minced meat in sweet marinara sauce."
+    },
+    "canned_pork_beans": {
+      "name": "Canned Pork and Beans",
+      "desc": "White beans simmered with sweet molasses and cured pork fat."
+    },
+    "canned_black_beans": {
+      "name": "Canned Seasoned Black Beans",
+      "desc": "Nutritious black turtle beans seasoned with cumin and onion."
+    },
+    "canned_chickpeas": {
+      "name": "Canned Garbanzo Chickpeas",
+      "desc": "Firm whole chickpeas soaked in brine. Excellent energy retention."
+    },
+    "canned_sweet_corn": {
+      "name": "Canned Whole Kernel Corn",
+      "desc": "Sweet yellow corn kernels suspended in sugary liquid."
+    },
+    "canned_green_peas": {
+      "name": "Canned Tender Green Peas",
+      "desc": "Soft green garden peas in mild brine. Easy on an upset stomach."
+    },
+    "canned_mushrooms": {
+      "name": "Canned Sliced Button Mushrooms",
+      "desc": "Pickled white button mushrooms. Earthy taste and minerals."
+    },
+    "canned_peaches": {
+      "name": "Canned Peach Halves in Syrup",
+      "desc": "Golden peach halves swimming in heavy sugar syrup. Great moral booster."
+    },
+    "canned_pineapple_chunks": {
+      "name": "Canned Pineapple Chunks",
+      "desc": "Acidic tropical pineapple pieces. Rehydrates and restores vitamin C."
+    },
+    "canned_pears": {
+      "name": "Canned Bartlett Pears",
+      "desc": "Soft sliced sweet pears in light syrup."
+    },
+    "canned_mandarins": {
+      "name": "Canned Mandarin Segments",
+      "desc": "Peeled mandarin orange segments in sweet natural juice."
+    },
+    "canned_condensed_milk": {
+      "name": "Sweetened Condensed Milk",
+      "desc": "Extremely dense, sugary, pasteurized dairy syrup. Pure concentrated calories."
+    },
+    "canned_evaporated_milk": {
+      "name": "Canned Evaporated Milk",
+      "desc": "Unsweetened concentrated milk in a steel can."
+    },
+    "canned_olives_black": {
+      "name": "Pitted Black Olives Tin",
+      "desc": "Salt-cured ripe black olives rich in mono-unsaturated oils."
+    },
+    "canned_olives_green": {
+      "name": "Stuffed Green Olives Tin",
+      "desc": "Green olives stuffed with sweet pimento pepper paste."
+    },
+    "canned_pickled_cucumbers": {
+      "name": "Jar of Dill Pickles",
+      "desc": "Sour dill cucumbers in vinegar brine. Replenishes lost body salts."
+    },
+    "canned_sauerkraut": {
+      "name": "Canned Fermented Sauerkraut",
+      "desc": "Shredded fermented cabbage. Rich in lactic acid and vitamin C."
+    },
+    "canned_anchovies": {
+      "name": "Tin of Salted Anchovy Fillets",
+      "desc": "Tiny, intensely salty fish fillets cured in olive oil."
+    },
+    "canned_liver_pate": {
+      "name": "Canned Liver Pâté",
+      "desc": "Smooth spreadable liver paste loaded with iron and animal fats."
+    },
+    "canned_artichoke_hearts": {
+      "name": "Marinated Artichoke Hearts",
+      "desc": "Tender artichoke quarters preserved in herb-infused oil."
+    },
+    "canned_baked_beans": {
+      "name": "English Style Baked Beans",
+      "desc": "Haricot beans in a rich savory tomato glaze."
+    },
+    "canned_tomato_paste": {
+      "name": "Double Concentrated Tomato Paste",
+      "desc": "Ultra-thick tomato reduction. High in lycopene and sour flavor."
+    },
+    "canned_grape_leaves": {
+      "name": "Stuffed Grape Leaves Tin",
+      "desc": "Vine leaves wrapped around spiced rice and pine nuts in olive oil."
+    },
+    "hardtack_biscuit": {
+      "name": "Hardtack Survival Biscuit",
+      "desc": "Rock-hard cracker made of flour, water, and salt. Practically immune to rotting."
+    },
+    "pilot_bread": {
+      "name": "Sailor Pilot Bread Cracker",
+      "desc": "Sturdy survival biscuit favored by arctic expeditions."
+    },
+    "rusk_toast": {
+      "name": "Twice-Baked Rusk Slices",
+      "desc": "Dry toasted bread slices. Crisp, light, and easy to chew."
+    },
+    "pemmican_bar": {
+      "name": "Pemmican Tallow Block",
+      "desc": "Rendered animal fat pounded with dried bison meat and chokeberries. Extreme caloric density."
+    },
+    "beef_jerky_peppered": {
+      "name": "Peppered Beef Jerky",
+      "desc": "Chewy smoked beef strip crusted in cracked black pepper."
+    },
+    "turkey_jerky_smoke": {
+      "name": "Hickory Smoked Turkey Jerky",
+      "desc": "Lean cured poultry jerky with a fragrant woodsmoke aroma."
+    },
+    "dried_sausage_link": {
+      "name": "Dry Cured Salami Link",
+      "desc": "Fermented dry pork and beef sausage encased in natural gut."
+    },
+    "dried_salt_cod": {
+      "name": "Salted Dried Cod Slab",
+      "desc": "Bone-dry stiff slab of salted ocean cod. Must be boiled or soaked."
+    },
+    "dried_figs_string": {
+      "name": "String of Sun-Dried Figs",
+      "desc": "Naturally sweetened Aegean figs strung on a hemp twine."
+    },
+    "dried_apricots_pack": {
+      "name": "Sun-Dried Yellow Apricots",
+      "desc": "Chewy dried apricots packed with potassium and natural sugars."
+    },
+    "raisins_box": {
+      "name": "Box of Golden Sultana Raisins",
+      "desc": "Compact cardboard box of seedless sweet dried grapes."
+    },
+    "dried_dates_packet": {
+      "name": "Medjool Desert Dates",
+      "desc": "Rich, fleshy desert dates with caramel notes. Sustained energy release."
+    },
+    "dried_cranberries": {
+      "name": "Dried Tart Cranberries",
+      "desc": "Sweet and sour red berry morsels. Boosts urinary tract health."
+    },
+    "trail_mix_pouch": {
+      "name": "Highlander Trail Mix Pouch",
+      "desc": "Blend of peanuts, cashews, raisins, and dark chocolate chips."
+    },
+    "salted_peanuts": {
+      "name": "Roasted Salted Peanuts",
+      "desc": "Crunchy peanuts roasted in vegetable oil and sea salt."
+    },
+    "roasted_almonds": {
+      "name": "Whole Roasted Almonds",
+      "desc": "Heart-healthy tree nuts rich in vitamin E and magnesium."
+    },
+    "walnut_halves": {
+      "name": "Shelled Walnut Halves",
+      "desc": "Fatty raw walnut kernels. High brain-fuel omega fats."
+    },
+    "sunflower_seeds_pack": {
+      "name": "Roasted Sunflower Seeds",
+      "desc": "Salted sunflower kernels. Good casual snack to pass cold hours."
+    },
+    "pumpkin_seeds": {
+      "name": "Roasted Pumpkin Pepitas",
+      "desc": "Zinc-rich pumpkin seeds roasted with a touch of mineral salt."
+    },
+    "instant_ramen_beef": {
+      "name": "Instant Beef Ramen Packet",
+      "desc": "Dehydrated noodle brick with a spicy beef seasoning sachet."
+    },
+    "instant_ramen_chicken": {
+      "name": "Instant Chicken Ramen Packet",
+      "desc": "Curly egg noodles with salty chicken bouillon powder."
+    },
+    "instant_ramen_spicy": {
+      "name": "Extra Hot Kimchi Ramen",
+      "desc": "Fiery Korean style noodles that warm the blood in sub-zero weather."
+    },
+    "instant_oatmeal_apple": {
+      "name": "Instant Oatmeal Cinnamon & Apple",
+      "desc": "Pre-cooked rolled oats flavored with dried apples and cinnamon."
+    },
+    "instant_mashed_potatoes": {
+      "name": "Potato Flakes Pouch",
+      "desc": "Dehydrated potato flakes that reconstitute instantly with boiling water."
+    },
+    "dry_white_rice_bag": {
+      "name": "One Kilo Bag of Long Grain Rice",
+      "desc": "Polished white rice. A true survival cornerstone if boiled."
+    },
+    "dry_brown_rice_bag": {
+      "name": "Bag of Whole Brown Rice",
+      "desc": "Whole grain unpolished rice. Rich in dietary fiber and B-vitamins."
+    },
+    "red_lentils_sack": {
+      "name": "Sack of Red Split Lentils",
+      "desc": "Quick-cooking dried pulses. Cooks into a thick, warming gruel."
+    },
+    "green_lentils_sack": {
+      "name": "Sack of French Green Lentils",
+      "desc": "Sturdy brown-green lentils that hold their firm shape in boiling stew."
+    },
+    "rolled_oats_tin": {
+      "name": "Steel Tin of Whole Rolled Oats",
+      "desc": "Heavy-gauge steel tin keeping rolled oats dry and pest-free."
+    },
+    "cornmeal_flour_bag": {
+      "name": "Stone-Ground Yellow Cornmeal",
+      "desc": "Coarse yellow maize flour. Makes dense cornbread or polenta."
+    },
+    "wheat_flour_sack": {
+      "name": "Bleached White Flour Sack",
+      "desc": "Refined baking flour for flatbreads and pan-frying."
+    },
+    "dry_pasta_spaghetti": {
+      "name": "Pack of Durum Spaghetti",
+      "desc": "Hard wheat extruded long noodles. Lasts indefinitely when dry."
+    },
+    "dry_pasta_macaroni": {
+      "name": "Elbow Macaroni Box",
+      "desc": "Short hollow pasta elbows."
+    },
+    "sugar_cubes_box": {
+      "name": "Box of White Sugar Cubes",
+      "desc": "Pressed refined sugar blocks. Instant energy boost."
+    },
+    "brown_sugar_pouch": {
+      "name": "Moist Brown Cane Sugar",
+      "desc": "Molasses-rich brown sugar crystals."
+    },
+    "raw_honey_jar": {
+      "name": "Jar of Raw Forest Honey",
+      "desc": "Unfiltered crystallizing wild honey. Never spoils and soothes the throat."
+    },
+    "strawberry_jam_jar": {
+      "name": "Jar of Strawberry Jam",
+      "desc": "Sweet strawberry fruit preserve packed with sugar."
+    },
+    "creamy_peanut_butter": {
+      "name": "Creamy Peanut Butter Tub",
+      "desc": "Calorie monster: dense roasted peanut butter loaded with lipids."
+    },
+    "hazelnut_cocoa_spread": {
+      "name": "Chocolate Hazelnut Spread",
+      "desc": "Thick cocoa and roasted hazelnut paste."
+    },
+    "powdered_whole_milk": {
+      "name": "Can of Powdered Whole Milk",
+      "desc": "Dry whole milk powder. Reconstitutes into rich dairy with clean water."
+    },
+    "powdered_eggs_can": {
+      "name": "Pasteurized Powdered Whole Eggs",
+      "desc": "Commercial spray-dried eggs. Whisk with water and fry for protein."
+    },
+    "table_salt_shaker": {
+      "name": "Iodized Table Salt Shaker",
+      "desc": "Essential for electrolyte balance and curing raw meat against decay."
+    },
+    "black_peppercorns_tin": {
+      "name": "Tin of Whole Black Peppercorns",
+      "desc": "Aromatic pungent dried spice berries from southern trade routes."
+    },
+    "bouillon_cubes_beef": {
+      "name": "Beef Bouillon Stock Cubes",
+      "desc": "Concentrated cubes of dehydrated beef broth, salt, and spices."
+    },
+    "baking_yeast_packet": {
+      "name": "Active Dry Baker's Yeast",
+      "desc": "Granulated live yeast dormant in foil sachets. For bread and mash brewing."
+    },
+    "hot_chili_sauce": {
+      "name": "Bottle of Cayenne Pepper Sauce",
+      "desc": "Vinegary fiery red pepper sauce. Makes bland rations palatable."
+    },
+    "olive_oil_canister": {
+      "name": "Extra Virgin Olive Oil Canister",
+      "desc": "Pure pressed green olive oil. Highly concentrated dietary fat."
+    },
+    "freeze_dried_beef_stroganoff": {
+      "name": "Freeze-Dried Beef Stroganoff",
+      "desc": "High-end mountaineer meal pouch. Tender beef strips and mushrooms."
+    },
+    "freeze_dried_chicken_rice": {
+      "name": "Freeze-Dried Chicken Teriyaki",
+      "desc": "Backpacking meal pouch with white rice, chicken breast, and bell peppers."
+    },
+    "freeze_dried_scrambled_eggs": {
+      "name": "Freeze-Dried Eggs & Bacon Bits",
+      "desc": "Dehydrated breakfast scramble. Rehydrates into fluffy hot eggs."
+    },
+    "emergency_ration_bar_500": {
+      "name": "SOS Emergency Ration Biscuit (500 kcal)",
+      "desc": "Dense compressed fortified wheat biscuit. Vacuum packed for lifeboats."
+    },
+    "emergency_ration_bar_1000": {
+      "name": "Seven Oceans Ration Block (1000 kcal)",
+      "desc": "High-calorie lipid and grain bar. Sustains a survivor for 24 hours."
+    },
+    "energy_gel_caffeine": {
+      "name": "Caffeinated Endurance Gel Pack",
+      "desc": "Glucose and 100mg caffeine gel. Shock treatment for exhaustion."
+    },
+    "glucose_dextrose_tablets": {
+      "name": "Roll of Dextrose Glucose Tablets",
+      "desc": "Chalky lemon-flavored glucose candies for sudden sugar drops."
+    },
+    "protein_cookie_double_choc": {
+      "name": "Whey Protein Chocolate Cookie",
+      "desc": "Chewy baked protein biscuit containing 25g of whey isolate."
+    },
+    "purified_water_canteen": {
+      "name": "Purified Military Canteen (1L)",
+      "desc": "Heavy green polymer canteen filled with sterile purified water."
+    },
+    "spring_water_gallon": {
+      "name": "One Gallon Spring Water Jug",
+      "desc": "Bulky transparent plastic jug filled with clean mountain spring water."
+    },
+    "boiled_tap_water": {
+      "name": "Glass Bottle of Boiled Water",
+      "desc": "Cooled water boiled over campfire to neutralize active pathogens."
+    },
+    "filtered_rainwater": {
+      "name": "Charcoal-Filtered Rainwater",
+      "desc": "Captured rainwater passed through sand and crushed activated charcoal."
+    },
+    "rainwater_jar": {
+      "name": "Raw Rainwater Mason Jar",
+      "desc": "Cloudy rainwater scooped from rooftop runoff tarps. Minor infection risk."
+    },
+    "river_water_flask": {
+      "name": "Murky River Water Flask",
+      "desc": "Drawn from a slow riverbed. Contains silt, algae, and parasites."
+    },
+    "stagnant_puddle_water": {
+      "name": "Scum-Covered Puddle Water",
+      "desc": "Desperation drink skimmed from roadside puddles. High sickness odds."
+    },
+    "chemically_treated_water": {
+      "name": "Chlorine-Treated Bottle Water",
+      "desc": "Tastes strongly of bleach and chemical pools, but guaranteed pathogen-free."
+    },
+    "electrolyte_rehydration_drink": {
+      "name": "Sports Electrolyte Beverage",
+      "desc": "Vibrant blue isotonic drink designed to quickly restore body salts."
+    },
+    "energy_drink_can": {
+      "name": "High-Taurine Energy Drink Can",
+      "desc": "Carbonated concoction of caffeine, taurine, and B-vitamins."
+    },
+    "citrus_soda_can": {
+      "name": "Lemon-Lime Fizzy Soda",
+      "desc": "Sweet carbonated soda. Sticky and bubbly sugar rush."
+    },
+    "root_beer_can": {
+      "name": "Sassafras Root Beer Can",
+      "desc": "Herbal carbonated soda with distinct wintergreen and vanilla tones."
+    },
+    "tonic_water_bottle": {
+      "name": "Quinine Tonic Water Bottle",
+      "desc": "Bitter carbonated water containing quinine."
+    },
+    "black_tea_loose_tin": {
+      "name": "Tin of Loose Leaf Black Tea",
+      "desc": "Fragrant dried leaves from high mountain plantations."
+    },
+    "black_tea_bags_box": {
+      "name": "Box of English Breakfast Teabags",
+      "desc": "Foil-sealed paper teabags packed with bold black tea."
+    },
+    "green_tea_tin": {
+      "name": "Sencha Green Tea Tin",
+      "desc": "Antioxidant-rich unfermented green tea leaves."
+    },
+    "chamomile_herbal_tea": {
+      "name": "Dried Chamomile Flowers Pouch",
+      "desc": "Calming dried blossom heads. Promotes deep, restful sleep."
+    },
+    "rosehip_wild_tea": {
+      "name": "Foraged Wild Rosehips",
+      "desc": "Crushed red rose hips rich in immune-boosting vitamin C."
+    },
+    "linden_flower_tea": {
+      "name": "Dried Linden Blossoms",
+      "desc": "Fragrant dried linden leaves and flowers. Relieves chest congestion."
+    },
+    "roasted_chicory_coffee": {
+      "name": "Roasted Chicory Root Powder",
+      "desc": "Classic wartime coffee substitute made from roasted chicory roots."
+    },
+    "ground_espresso_tin": {
+      "name": "Vacuum-Sealed Espresso Tin",
+      "desc": "Finely milled dark-roast coffee beans. Produces an intense black brew."
+    },
+    "coffee_beans_roasted": {
+      "name": "Bag of Whole Arabica Beans",
+      "desc": "Whole roasted coffee beans. Keeps potency far longer than ground powder."
+    },
+    "hot_cocoa_mix_pouch": {
+      "name": "Sweet Hot Cocoa Mix Pouch",
+      "desc": "Rich milk powder and cocoa blend with mini dehydrated marshmallows."
+    },
+    "malt_beer_can": {
+      "name": "Pilsner Malt Beer Can",
+      "desc": "Crisp golden beer with 5% alcohol. Relaxes nerves after combat."
+    },
+    "craft_ipa_bottle": {
+      "name": "Heavy Hop IPA Glass Bottle",
+      "desc": "Bitter hoppy beer with high alcohol content."
+    },
+    "cheap_lager_can": {
+      "name": "Dented Can of Cheap Lager",
+      "desc": "Watery industrial beer. Still drinkable despite the rusted rim."
+    },
+    "red_table_wine_bottle": {
+      "name": "Bottle of Dry Red Wine",
+      "desc": "Aged vintage grape wine. Boosts morale and dulls lingering pain."
+    },
+    "moonshine_mason_jar": {
+      "name": "Mason Jar of Corn Moonshine",
+      "desc": "Rough 65% proof clear spirit distilled in a homemade copper pot still."
+    },
+    "corn_whiskey_flask": {
+      "name": "Pocket Flask of Aged Whiskey",
+      "desc": "Charred oak aged bourbon in a stainless-steel pocket hip flask."
+    },
+    "clear_vodka_bottle": {
+      "name": "Bottle of Triple-Distilled Vodka",
+      "desc": "Clean neutral 40% spirit. Usable as a morale booster or antiseptic in a pinch."
+    },
+    "apple_cider_jug": {
+      "name": "Gallon of Fermented Apple Cider",
+      "desc": "Cloudy orchard apple cider with a gentle alcoholic tang."
+    },
+    "canned_tomato_juice": {
+      "name": "Can of Salted Tomato Juice",
+      "desc": "Thick savory tomato nectar seasoned with celery salt."
+    },
+    "grapefruit_juice_carton": {
+      "name": "Carton of Tart Grapefruit Juice",
+      "desc": "Bitter citrus juice. Contains potent enzymes and vitamin C."
+    },
+    "powdered_orange_drink_tang": {
+      "name": "Pouch of Synthetic Orange Drink Mix",
+      "desc": "Sugary ascorbic powder that turns stale water into bright orange punch."
+    },
+    "powdered_lemonade_mix": {
+      "name": "Pouch of Sweet Lemonade Powder",
+      "desc": "Crystalline lemon drink mix with citric acid."
+    },
+    "gauze_roll_sterile": {
+      "name": "Sterile Roller Gauze",
+      "desc": "Tightly wound continuous cotton strip for dressing gaping lacerations."
+    },
+    "elastic_compression_wrap": {
+      "name": "Elastic Compression Bandage (ACE)",
+      "desc": "Stretchy elastic bandage with metal clips. Immobilizes twisted ankles and sprains."
+    },
+    "quikclot_hemostatic_gauze": {
+      "name": "QuikClot Combat Hemostatic Gauze",
+      "desc": "Kaolin-infused gauze that accelerates biological blood clotting in seconds."
+    },
+    "combat_tourniquet_cat": {
+      "name": "C-A-T Combat Application Tourniquet",
+      "desc": "Windlass-tightened tactical arterial tourniquet for catastrophic limb bleeding."
+    },
+    "softt_wide_tourniquet": {
+      "name": "SOFTT-W Tactical Tourniquet",
+      "desc": "All-metal buckle wide tourniquet resistant to extreme cold and mud."
+    },
+    "emergency_israeli_bandage": {
+      "name": "Israeli Emergency Pressure Bandage",
+      "desc": "All-in-one sterile dressing with a built-in pressure bar to crush arterial bleeds."
+    },
+    "chest_seal_vented": {
+      "name": "Vented Chest Seal Patch",
+      "desc": "One-way valve hydrogel sheet for treating tension pneumothorax and sucking chest wounds."
+    },
+    "burn_hydrogel_dressing": {
+      "name": "Water-Jel Burn Dressing",
+      "desc": "Cooling hydrogel pad that relieves thermal pain and prevents tissue scarring."
+    },
+    "burn_sheet_sterile": {
+      "name": "Sterile Burn Trauma Sheet",
+      "desc": "Non-adherent large sheet for wrapping extensive second-degree burn victims."
+    },
+    "adhesive_plaster_strip": {
+      "name": "Adhesive Band-Aid Strip",
+      "desc": "Flexible fabric plaster for minor finger cuts and abrasions."
+    },
+    "butterfly_wound_closure": {
+      "name": "Butterfly Skin Closures",
+      "desc": "Adhesive bridge strips that pull laceration edges together without stitches."
+    },
+    "liquid_skin_adhesive": {
+      "name": "Liquid Cyanoacrylate Skin Glue",
+      "desc": "Topical skin glue that seals raw bleeding cuts with a flexible waterproof film."
+    },
+    "sam_splint_roll": {
+      "name": "SAM Aluminum Foam Splint",
+      "desc": "Malleable foam-coated aluminum strip that bends to immobilize fractured limbs."
+    },
+    "triangular_bandage_sling": {
+      "name": "Muslin Triangular Sling Bandage",
+      "desc": "Classic cloth triangle to support fractured wrists, forearms, or shoulders."
+    },
+    "suture_needle_silk": {
+      "name": "Braided Silk Suture with Curved Needle",
+      "desc": "Non-absorbable surgical silk with pre-attached reverse cutting needle."
+    },
+    "disposable_skin_stapler": {
+      "name": "Pre-Loaded Skin Stapler (35 staples)",
+      "desc": "Medical staple gun. Swiftly bridges severe gaping wounds under field conditions."
+    },
+    "povidone_iodine_bottle": {
+      "name": "Povidone-Iodine 10% Solution",
+      "desc": "Deep golden-brown antiseptic liquid. Destroys bacterial spores and fungus on wounds."
+    },
+    "rubbing_alcohol_bottle": {
+      "name": "70% Isopropyl Rubbing Alcohol",
+      "desc": "Hospital-grade alcohol for sterilizing blades, needles, and unbroken skin."
+    },
+    "alcohol_prep_swabs": {
+      "name": "Box of Sterile Alcohol Prep Pads",
+      "desc": "Foil-wrapped miniature wipes saturated with 70% isopropyl alcohol."
+    },
+    "hydrogen_peroxide_bottle": {
+      "name": "3% Hydrogen Peroxide Solution",
+      "desc": "Bubbling oxidative wash. Debrides crusted dirt and coagulated blood from punctures."
+    },
+    "chlorhexidine_scrub": {
+      "name": "Chlorhexidine Gluconate Surgical Scrub",
+      "desc": "Residual antimicrobial skin wash that suppresses pathogens for over 24 hours."
+    },
+    "antibacterial_triple_ointment": {
+      "name": "Triple Antibiotic Bacitracin Ointment",
+      "desc": "Petroleum-based antibacterial salve containing Neomycin, Bacitracin, and Polymyxin."
+    },
+    "silver_sulfadiazine_burn_cream": {
+      "name": "Silver Sulfadiazine Burn Cream (1%)",
+      "desc": "Heavy white antimicrobial silver cream that halts necrotic infection in severe burns."
+    },
+    "potassium_permanganate_crystals": {
+      "name": "Potassium Permanganate Crystals",
+      "desc": "Deep purple crystals. Diluted into water, it creates an emergency topical antiseptic wash."
+    },
+    "amoxicillin_capsules": {
+      "name": "Amoxicillin 500mg Capsules",
+      "desc": "Common penicillin-family antibiotic. Clears respiratory and soft-tissue bacterial infections."
+    },
+    "ciprofloxacin_antibiotic": {
+      "name": "Ciprofloxacin 500mg Tablets",
+      "desc": "Potent fluoroquinolone antibiotic. Treats deep abdominal and severe bone infections."
+    },
+    "doxycycline_hyclate": {
+      "name": "Doxycycline Hyclate 100mg",
+      "desc": "Tetracycline class antibiotic. Highly effective against tick-borne fevers and anthrax spores."
+    },
+    "paracetamol_500mg": {
+      "name": "Paracetamol 500mg Tablets",
+      "desc": "Everyday fever reducer and mild headache relief. Easy on the stomach lining."
+    },
+    "ibuprofen_400mg": {
+      "name": "Ibuprofen 400mg NSAID",
+      "desc": "Non-steroidal anti-inflammatory pill. Knocks down joint swelling, muscle fever, and toothaches."
+    },
+    "naproxen_sodium": {
+      "name": "Naproxen Sodium 220mg",
+      "desc": "Long-acting pain reliever providing up to 12 hours of joint and back pain relief."
+    },
+    "aspirin_cardio_bottle": {
+      "name": "Acetylsalicylic Acid (Aspirin)",
+      "desc": "Blood-thinning pain relief tablets. Reduces stroke risk and soothes inflammation."
+    },
+    "codeine_phosphate_pills": {
+      "name": "Codeine Phosphate 30mg Tablets",
+      "desc": "Mild opioid analgesic for severe fractures and unrelenting persistent coughs."
+    },
+    "tramadol_analgesic_caps": {
+      "name": "Tramadol 50mg Capsules",
+      "desc": "Centrally acting synthetic opioid for serious blunt force trauma and gunshot pain."
+    },
+    "morphine_syrette_military": {
+      "name": "Military Morphine Syrette (10mg)",
+      "desc": "Single-use squirt needle containing pure morphine sulfate. Blunts agonizing agony."
+    },
+    "epinephrine_autoinjector": {
+      "name": "EpiPen 0.3mg Auto-Injector",
+      "desc": "Spring-loaded adrenaline syringe. Reverses fatal anaphylaxis and jumps sluggish hearts."
+    },
+    "atropine_sulfate_autoinjector": {
+      "name": "Atropine Sulfate Auto-Injector",
+      "desc": "Standard issue military antidote for organophosphate pesticides and nerve gas poisoning."
+    },
+    "naloxone_narcan_nasal_spray": {
+      "name": "Narcan Naloxone Nasal Spray",
+      "desc": "Emergency opioid antagonist that knocks narcotics off receptors to restore respiration."
+    },
+    "potassium_iodide_radiation_tabs": {
+      "name": "Potassium Iodide (KI) Tablets",
+      "desc": "Floods the thyroid with stable iodine to prevent uptake of cancer-causing Iodine-131 fallout."
+    },
+    "activated_charcoal_powder": {
+      "name": "Activated Charcoal Toxin Sponge",
+      "desc": "High-porosity carbon slurry. Swallowed immediately following toxic chemical ingestion."
+    },
+    "oral_rehydration_salts_who": {
+      "name": "WHO Oral Rehydration Salts Sachet",
+      "desc": "Precise formulation of glucose, sodium, and potassium to counter lethal dehydration."
+    },
+    "loperamide_diarrhea_relief": {
+      "name": "Loperamide Hydrochloride 2mg",
+      "desc": "Anti-motility medication that shuts down acute infectious diarrhea to conserve body water."
+    },
+    "diphenhydramine_antihistamine": {
+      "name": "Diphenhydramine 25mg (Benadryl)",
+      "desc": "First-generation antihistamine. Suppresses severe hives, bug stings, and insomnia."
+    },
+    "pulse_oximeter_fingertip": {
+      "name": "Fingertip Pulse Oximeter",
+      "desc": "Digital sensor that clips to a finger to check blood oxygen saturation (SpO2) and pulse."
+    },
+    "dual_head_stethoscope": {
+      "name": "Acoustic Medical Stethoscope",
+      "desc": "Double-lumen stethoscope for listening to internal heart valves and bronchial breathing."
+    },
+    "aneroid_blood_pressure_cuff": {
+      "name": "Manual Sphygmomanometer Cuff",
+      "desc": "Inflatable arm cuff with a precision dial gauge to detect internal hemorrhagic shock."
+    },
+    "iv_saline_bag_500ml": {
+      "name": "IV Normal Saline Bag (500ml)",
+      "desc": "Sterile 0.9% sodium chloride infusion bag. Replaces lost circulatory volume in trauma."
+    },
+    "iv_giving_infusion_set": {
+      "name": "IV Gravity Infusion Tubing & Spike",
+      "desc": "Sterile drip chamber and roller clamp tubing to administer intravenous fluids."
+    },
+    "trauma_shears_scissors": {
+      "name": "Titanium Fluoride Trauma Shears",
+      "desc": "Heavy-duty angled blunt-nosed medical shears capable of cutting denim, boots, and pennies."
+    },
+    "surgical_forceps": {
+      "name": "Stainless Steel Tissue Forceps",
+      "desc": "Toothed surgical tweezers for extracting shrapnel, lead fragments, and necrotic tissue."
+    },
+    "wooden_baseball_bat": {
+      "name": "Ash Wood Baseball Bat",
+      "desc": "Smooth solid hardwood sports bat. Good balance and solid bludgeoning force."
+    },
+    "aluminum_baseball_bat": {
+      "name": "Hollow Aluminum Bat",
+      "desc": "Lighter and faster to swing than wood, ringing loudly upon skull impact."
+    },
+    "nailed_baseball_bat": {
+      "name": "Spiked Nail Bat",
+      "desc": "Hardwood bat driven through with rusty construction nails. Rips through flesh."
+    },
+    "barbed_wire_bat": {
+      "name": "Barbed Wire Lucille Bat",
+      "desc": "Wooden club bound tightly in coiled rusted barbed wire. Causes intense bleeding."
+    },
+    "lead_pipe_heavy": {
+      "name": "Heavy Lead Water Pipe",
+      "desc": "Dense, heavy segment of lead plumbing pipe. Crushes bone through makeshift helmets."
+    },
+    "rebar_club_heavy": {
+      "name": "Ribbed Steel Rebar Club",
+      "desc": "Cut section of reinforced concrete rebar wrapped in duct tape at the handle."
+    },
+    "cast_iron_frying_pan": {
+      "name": "Cast-Iron Skillet",
+      "desc": "Heavy cast iron pan. Deals concussive head blows and doubles as cooking gear."
+    },
+    "heavy_sledgehammer": {
+      "name": "10 lb Demolition Sledgehammer",
+      "desc": "Massive forged steel head on fiberglass shaft. Obliterates doors and armor."
+    },
+    "claw_hammer_steel": {
+      "name": "Curved Claw Hammer",
+      "desc": "Standard steel carpenter's hammer with a curved nail-pulling claw."
+    },
+    "tire_iron_cross_wrench": {
+      "name": "Four-Way Cross Tire Iron",
+      "desc": "Heavy four-point steel lug wrench from a truck trunk."
+    },
+    "brass_knuckles": {
+      "name": "Solid Brass Knuckles",
+      "desc": "Cast metal fist weapon. Concentrates punch impact directly onto facial bones."
+    },
+    "police_baton_tonfa": {
+      "name": "Polymer Riot Police Baton",
+      "desc": "Side-handle riot baton manufactured from shatterproof rigid polycarbonate."
+    },
+    "collapsible_steel_baton": {
+      "name": "Friction-Lock Telescopic Baton",
+      "desc": "Three-stage expanding hardened steel baton. Compact when sheathed."
+    },
+    "pickaxe_heavy": {
+      "name": "Heavy Miner Pickaxe",
+      "desc": "Dual pointed steel pick. Penetrates rocky ground, concrete, and heavy armor."
+    },
+    "entrenching_shovel_tactical": {
+      "name": "Folding Entrenching Tool (E-Tool)",
+      "desc": "Military folding spade with a sharpened side edge. Digs trenches and splits skulls."
+    },
+    "chef_knife_8inch": {
+      "name": "High-Carbon Chef Knife",
+      "desc": "Broad, razored culinary blade capable of quick slicing strokes."
+    },
+    "folding_tactical_knife": {
+      "name": "Tanto Folding Pocket Knife",
+      "desc": "Serrated titanium-coated pocket folder with liner lock mechanism."
+    },
+    "bowie_hunting_knife": {
+      "name": "Heavy Bowie Hunting Knife",
+      "desc": "Large clip-point fighting blade with brass crossguard and stag horn handle."
+    },
+    "bayonet_m9": {
+      "name": "M9 Combat Bayonet",
+      "desc": "Military issue knife with wire-cutter scabbard attachment."
+    },
+    "kukri_gurkha_machete": {
+      "name": "Gurkha Kukri Incurved Blade",
+      "desc": "Forward-curved Nepalese chopping knife. Monstrous kinetic chopping power."
+    },
+    "wood_splitting_axe": {
+      "name": "Felling Wood Axe",
+      "desc": "Forged wedge blade on hickory shaft. Cleaves firewood and mutant scavengers alike."
+    },
+    "tactical_tomahawk": {
+      "name": "Breaching Tactical Tomahawk",
+      "desc": "Lightweight combat axe with a rear penetration spike and synthetic grip."
+    },
+    "carpenter_hatchet": {
+      "name": "Short Carpenter Hatchet",
+      "desc": "Handy short-handled hatchet with a flat hammer back."
+    },
+    "hand_sickle_curved": {
+      "name": "Reaping Hand Sickle",
+      "desc": "Crescent-curved harvesting blade. Hooks limbs and pulls shields aside."
+    },
+    "combat_wakizashi": {
+      "name": "Carbon Steel Wakizashi",
+      "desc": "Short Japanese auxiliary sword. Devastating close-quarters slashes."
+    },
+    "folded_steel_katana": {
+      "name": "Forged Katana Longsword",
+      "desc": "Master-crafted two-handed curved saber. Clean decapitating strikes."
+    },
+    "box_cutter_utility": {
+      "name": "Retractable Box Cutter",
+      "desc": "Plastic utility knife with fresh razor-sharp snap-off blades."
+    },
+    "competition_recurve_bow": {
+      "name": "Takedown Recurve Bow",
+      "desc": "Laminated fiberglass and maple field bow. Silent and deadly."
+    },
+    "tactical_compound_bow": {
+      "name": "Twin-Cam Compound Bow (70 lb)",
+      "desc": "Pulley-assisted hunting bow. Flings broadheads with rifle-like speed."
+    },
+    "hunting_crossbow_150lb": {
+      "name": "150 lb Recurve Hunting Crossbow",
+      "desc": "Rifle-stocked mechanical crossbow with stirrup and safety latch."
+    },
+    "carbon_hunting_arrows": {
+      "name": "Carbon Hunting Arrows",
+      "desc": "Fletched carbon-fiber arrows with interchangeable steel tips."
+    },
+    "crossbow_bolts_aluminum": {
+      "name": "Aluminum Crossbow Bolts",
+      "desc": "Short, rigid aluminum bolts designed for high-poundage crossbow rails."
+    },
+    "makarov_pistol_9x18": {
+      "name": "Makarov PM 9x18mm Pistol",
+      "desc": "Legendary Soviet compact handgun. Unstoppable reliability in dust and ice."
+    },
+    "pistol_9mm_semi": {
+      "name": "9mm Service Handgun",
+      "desc": "Standard polymer-frame semi-automatic pistol. 15-round double-stack capacity."
+    },
+    "tactical_handgun_45acp": {
+      "name": "M1911 Tactical .45 ACP Pistol",
+      "desc": "Heavy steel classic pistol firing heavy-slug .45 ACP rounds with enormous stopping power."
+    },
+    "revolver_38_special": {
+      "name": "Snubnose .38 Special Revolver",
+      "desc": "Short-barrel 6-cylinder concealed wheelgun. Never jams or fails to fire."
+    },
+    "revolver_357_magnum": {
+      "name": ".357 Magnum Heavy Revolver",
+      "desc": "Stainless-steel 6-inch barrel hand cannon. Deafening roar and bone-crushing impact."
+    },
+    "pump_shotgun_12g": {
+      "name": "12-Gauge Pump-Action Shotgun",
+      "desc": "Tube-fed tactical combat shotgun. Devastating spread at room distances."
+    },
+    "side_by_side_double_shotgun": {
+      "name": "Double-Barrel Break Shotgun",
+      "desc": "Side-by-side break-action hunting gun. Simple mechanics and double hammer strike."
+    },
+    "sks_semi_auto_carbine": {
+      "name": "SKS 7.62x39mm Carbine",
+      "desc": "Fixed magazine semi-automatic carbine with internal stripper clip feeding."
+    },
+    "akm_assault_rifle": {
+      "name": "AKM Pattern Assault Rifle",
+      "desc": "Stamped steel receiver assault rifle. Fires under sand, snow, and torrential mud."
+    },
+    "ar15_carbine_556": {
+      "name": "AR-15 Tactical Carbine (5.56mm)",
+      "desc": "Lightweight modular rifle. Pinpoint accuracy and light recoil."
+    },
+    "bolt_action_rifle_308": {
+      "name": ".308 Winchester Marksman Rifle",
+      "desc": "Heavy free-floating barrel sniper rifle designed for long-distance takedowns."
+    },
+    "single_shot_flare_gun": {
+      "name": "Orange 26.5mm Signal Flare Gun",
+      "desc": "Emergency polymer flare launcher. Ignites targets at short range."
+    },
+    "ammo_9mm_fmj": {
+      "name": "Box of 9x19mm FMJ Rounds",
+      "desc": "Full metal jacket handgun rounds. Most ubiquitous pistol ammo in ruined cities."
+    },
+    "ammo_45acp_fmj": {
+      "name": "Box of .45 ACP Cartridges",
+      "desc": "Heavy 230-grain subsonic rounds designed for maximum target knockdown."
+    },
+    "ammo_38_special_lead": {
+      "name": ".38 Special Lead Round Nose",
+      "desc": "Classic revolver ammo firing soft lead projectile bullets."
+    },
+    "ammo_357_magnum_jsp": {
+      "name": ".357 Magnum JSP Cartridges",
+      "desc": "Jacketed soft point high-pressure magnum revolver rounds."
+    },
+    "ammo_12g_buckshot_00": {
+      "name": "12-Gauge 00 Buckshot Shells",
+      "desc": "Heavy shells each packing 9 lead buckshot pellets."
+    },
+    "ammo_12g_slug_solid": {
+      "name": "12-Gauge Solid Rifled Slugs",
+      "desc": "One-ounce massive lead slug. Punches through engine blocks and concrete."
+    },
+    "ammo_556_nato_fmj": {
+      "name": "5.56x45mm NATO Ball Ammo (M855)",
+      "desc": "High-velocity penetrator rounds on military stripper clips."
+    },
+    "ammo_762x39_soviet_fmj": {
+      "name": "7.62x39mm Soviet FMJ Rounds",
+      "desc": "Steel-cased military surplus cartridges for AKM and SKS carbines."
+    },
+    "ammo_762x51_winchester": {
+      "name": ".308 Win / 7.62x51mm Ammo",
+      "desc": "Precision brass-cased sniper cartridges for heavy long-distance rifles."
+    },
+    "ammo_red_signal_flare": {
+      "name": "26.5mm Red Aerial Flare Shell",
+      "desc": "Magnesium phosphorus pyrotechnic cartridge for distress guns."
+    },
+    "molotov_cocktail_rag": {
+      "name": "Gasoline Molotov Cocktail",
+      "desc": "Glass bottle filled with fuel and motor oil, stoppered with a kerosene rag."
+    },
+    "improvised_pipe_bomb": {
+      "name": "Steel Pipe Bomb with Fuse",
+      "desc": "Iron pipe packed with black powder, nails, and ball bearings."
+    },
+    "military_smoke_grenade": {
+      "name": "M18 White Smoke Canister",
+      "desc": "Releases an impenetrable curtain of dense white phosphorus-free smoke."
+    },
+    "steel_jaw_bear_trap": {
+      "name": "Heavy Steel Jaw Foothold Trap",
+      "desc": "Spring-loaded tempered steel serrated jaws that snap on unsuspecting legs."
+    },
+    "scrap_iron_plates": {
+      "name": "Heavy Rusted Iron Plates",
+      "desc": "Stout metal sheets torn from vehicle doors."
+    },
+    "sheet_metal_corrugated": {
+      "name": "Corrugated Galvanized Tin Sheet",
+      "desc": "Wavy roofing sheet for reinforced shelters."
+    },
+    "rusted_steel_mesh": {
+      "name": "Rusted Steel Wire Mesh",
+      "desc": "Woven wire grating from industrial screens."
+    },
+    "steel_wire_galvanized": {
+      "name": "Galvanized Steel Fencing Wire",
+      "desc": "Tough, pliable rust-resistant wire for snare traps."
+    },
+    "barbed_wire_spool": {
+      "name": "Spool of Razor Barbed Wire",
+      "desc": "Coiled defensive wire studded with sharp barbs."
+    },
+    "spring_steel_coil": {
+      "name": "Coiled Vehicle Suspension Spring",
+      "desc": "High-carbon tempered spring steel."
+    },
+    "ball_bearings_steel": {
+      "name": "Pouch of Hardened Ball Bearings",
+      "desc": "Chrome steel spheres from wheel bearings."
+    },
+    "chain_links_hardened": {
+      "name": "Heavy Towing Chain Segment",
+      "desc": "Thick forged link chain for securing gates."
+    },
+    "box_iron_nails_3inch": {
+      "name": "Box of 3-Inch Framing Nails",
+      "desc": "Rough forged steel nails for carpentry."
+    },
+    "box_wood_screws": {
+      "name": "Assorted Steel Wood Screws",
+      "desc": "Phillips-drive zinc-coated screws."
+    },
+    "lead_solder_wire_rosin": {
+      "name": "Rosin-Core Lead Solder Tube",
+      "desc": "60/40 tin-lead solder for electrical joints."
+    },
+    "aluminum_can_scraps": {
+      "name": "Flattened Aluminum Drink Cans",
+      "desc": "Thin malleable sheet metal for shims and alarms."
+    },
+    "lead_tire_weights": {
+      "name": "Clip-On Lead Wheel Balance Weights",
+      "desc": "Soft, dense lead scrap ideal for melting."
+    },
+    "gorilla_tape_waterproof": {
+      "name": "Heavy-Duty Waterproof Duct Tape",
+      "desc": "Ultra-thick, weather-resistant fabric tape."
+    },
+    "electrical_tape_vinyl": {
+      "name": "Black PVC Electrical Insulating Tape",
+      "desc": "Stretchy flame-retardant tape for wiring."
+    },
+    "industrial_superglue_gel": {
+      "name": "Industrial Cyanoacrylate Superglue",
+      "desc": "Instant adhesive that bonds metal, bone, and wood."
+    },
+    "epoxy_resin_two_part": {
+      "name": "Two-Part Steel-Reinforced Epoxy",
+      "desc": "Dual syringe resin and hardener that cures rock-hard."
+    },
+    "silicone_caulk_tube": {
+      "name": "Silicone Waterproof Caulk Tube",
+      "desc": "Flexible sealant for weatherproofing windows."
+    },
+    "plastic_cable_zip_ties": {
+      "name": "Heavy Nylon Cable Zip Ties (Pack of 50)",
+      "desc": "High-tensile self-locking ties for cables and gear."
+    },
+    "rubber_inner_tube_strip": {
+      "name": "Bicycle Rubber Inner Tube Strips",
+      "desc": "Stretchy puncture-resistant vulcanized rubber."
+    },
+    "thick_plastic_tarpaulin": {
+      "name": "Heavy Blue Woven Poly Tarp (3x4m)",
+      "desc": "Grommeted waterproof tarp for shelter roofs."
+    },
+    "paracord_550_hank": {
+      "name": "Mil-Spec 550 Nylon Paracord (15m)",
+      "desc": "7-strand kernmantle parachute suspension cord."
+    },
+    "hemp_rope_coil": {
+      "name": "Braided Natural Hemp Rope (10m)",
+      "desc": "Heavy fibrous cordage for hauling and lashing."
+    },
+    "salvaged_circuit_boards": {
+      "name": "Green Printed PCB Circuit Boards",
+      "desc": "Components harvested from broken radios and appliances."
+    },
+    "integrated_microchip_ic": {
+      "name": "Repurposed Microcontroller IC",
+      "desc": "Programmable silicon chips from control units."
+    },
+    "miniature_electric_motor": {
+      "name": "Small 12V High-Torque DC Motor",
+      "desc": "Harvested from printer carriages and car mirrors."
+    },
+    "hand_crank_dynamo_unit": {
+      "name": "Hand-Crank Magnetic Dynamo",
+      "desc": "Mechanical generator that produces DC current when turned."
+    },
+    "damaged_solar_panel_cell": {
+      "name": "Cracked Monocrystalline Solar Cell",
+      "desc": "Partially functional photovoltaic panel wafer."
+    },
+    "aa_alkaline_batteries": {
+      "name": "Pack of 4 AA Alkaline Batteries",
+      "desc": "Fresh 1.5V cylinder cells powering flashlights."
+    },
+    "aaa_alkaline_batteries": {
+      "name": "Pack of 4 AAA Miniature Batteries",
+      "desc": "Compact cells for small headlamps and radios."
+    },
+    "battery_9v_transistor": {
+      "name": "9-Volt Square Transistor Battery",
+      "desc": "Block battery used in alarms and Geiger detectors."
+    },
+    "lithium_cell_18650": {
+      "name": "3.7V 18650 Rechargeable Li-Ion Cell",
+      "desc": "High-capacity cylinder battery from laptop packs."
+    },
+    "rechargeable_powerbank_10k": {
+      "name": "10,000mAh Ruggedized USB Power Bank",
+      "desc": "Rubberized battery bank with dual output ports."
+    },
+    "car_battery_lead_acid": {
+      "name": "Heavy 12V Lead-Acid Vehicle Battery",
+      "desc": "Bulky car battery holding significant electrical reserve."
+    },
+    "diesel_fuel_canister_5l": {
+      "name": "5-Liter Steel Jerrycan of Diesel",
+      "desc": "Dense fuel for heaters, lamps, and generators."
+    },
+    "gasoline_fuel_canister_5l": {
+      "name": "5-Liter Plastic Jerrycan of Gasoline",
+      "desc": "Highly volatile gasoline. Fuel for engines and firebombs."
+    },
+    "kerosene_fuel_canister": {
+      "name": "Tin of Refined Kerosene (2L)",
+      "desc": "Clean burning oil for hurricane lanterns and camp heaters."
+    },
+    "gunpowder_smokeless_flask": {
+      "name": "Canister of Smokeless Nitro Powder",
+      "desc": "High-energy propellant for reloading rifle and pistol cartridges."
+    },
+    "household_bleach_chlorine": {
+      "name": "Bottle of Concentrated Chlorine Bleach",
+      "desc": "Strong oxidant for sanitizing water or neutralizing biological grime."
+    },
+    "motor_oil_10w40_bottle": {
+      "name": "Bottle of 10W-40 Synthetic Motor Oil",
+      "desc": "Lubricant for firearms, bike chains, and machine pivots."
+    },
+    "wd40_penetrating_oil": {
+      "name": "Can of WD-40 Lubricant Spray",
+      "desc": "Frees rusted bolts, drives out moisture, and halts corrosion."
+    },
+    "wooden_strike_matches": {
+      "name": "Box of Wooden Strike-Anywhere Matches",
+      "desc": "Kitchen matches that ignite on any abrasive rough surface."
+    },
+    "ferrocerium_spark_rod": {
+      "name": "Thick Ferrocerium Striker Rod",
+      "desc": "Showers 3,000°C sparks in rain, snow, and gale-force wind."
+    },
+    "refillable_zippo_lighter": {
+      "name": "Classic Windproof Brass Lighter",
+      "desc": "Durable flip-top lighter that stays lit in stiff wind."
+    },
+    "canvas_tote_bag": {
+      "name": "Simple Canvas Tote Bag",
+      "desc": "Open-top grocery sack. Minimal extra capacity (+4 kg, +2 slots)."
+    },
+    "school_backpack": {
+      "name": "Zippered School Backpack",
+      "desc": "Common polyester school pack with two compartments (+8 kg, +4 slots)."
+    },
+    "tactical_assault_pack_35l": {
+      "name": "3-Day MOLLE Assault Pack",
+      "desc": "Military nylon pack with external webbing straps (+15 kg, +6 slots)."
+    },
+    "internal_frame_hiking_pack_55l": {
+      "name": "Internal Frame Expedition Rucksack (55L)",
+      "desc": "Ergonomic aluminum stays distribute heavy weight across the hips (+22 kg, +9 slots)."
+    },
+    "military_molle_rucksack_75l": {
+      "name": "Massive 75L Field Expedition Rucksack",
+      "desc": "Titan of burden. Reinforcements carry full survival kits (+30 kg, +12 slots)."
+    },
+    "denim_jeans_rugged": {
+      "name": "Reinforced Denim Work Dungarees",
+      "desc": "Double-knee stitched heavy denim pants offering basic leg armor."
+    },
+    "cargo_combat_pants_ripstop": {
+      "name": "Ripstop Camouflage Cargo Trousers",
+      "desc": "Tear-resistant military pants loaded with utility thigh pockets."
+    },
+    "flannel_work_shirt": {
+      "name": "Heavy Plaid Flannel Shirt",
+      "desc": "Warm brushed cotton shirt that insulates against nighttime chills."
+    },
+    "heavy_wool_sweater": {
+      "name": "Fisherman Chunky Wool Sweater",
+      "desc": "Greasy unwashed sheep wool that maintains thermal warmth even when soaked."
+    },
+    "heavy_down_parka": {
+      "name": "Sub-Zero Down Winter Parka",
+      "desc": "Goose down lined hooded jacket impervious to blizzard winds."
+    },
+    "motorcycle_leather_jacket": {
+      "name": "Armored Biker Leather Jacket",
+      "desc": "Thick steerhide jacket fitted with foam elbow and shoulder pads (Armor 2)."
+    },
+    "concealable_kevlar_vest_ii": {
+      "name": "Concealable Kevlar Vest (Level II)",
+      "desc": "Discreet woven aramid vest stopping low-velocity handgun rounds (Armor 2)."
+    },
+    "tactical_body_armor_iiia": {
+      "name": "Tactical Kevlar Vest (Level IIIA)",
+      "desc": "Heavy police vest with throat guard. Halts all handgun bullets (Armor 3)."
+    },
+    "ceramic_ballistic_plate_iv": {
+      "name": "Standalone Ceramic Plate Carrier (Level IV)",
+      "desc": "Rigid silicon-carbide ceramic torso rig. Absorbs high-power rifle fire (Armor 5)."
+    },
+    "ballistic_combat_helmet": {
+      "name": "Kevlar Combat Helmet (ACH)",
+      "desc": "Aramid shell stopping shell shrapnel and grazing pistol shots."
+    },
+    "disposable_n95_dust_mask": {
+      "name": "Box of N95 Particulate Respirators",
+      "desc": "Filtration masks protecting lungs from ash, smoke, and spore dust."
+    },
+    "gp5_gas_mask_civilian": {
+      "name": "GP-5 Rubber Gas Mask with Filter",
+      "desc": "Full-face vintage rubber mask protecting from chemical gases and tear gas."
+    },
+    "pocket_swiss_multitool": {
+      "name": "Stainless Folding Multi-Tool",
+      "desc": "Pliers, wire cutters, saw blade, and can opener in one compact frame (+6% scavenge)."
+    },
+    "heavy_duty_bolt_cutters": {
+      "name": "24-Inch Steel Bolt Cutters",
+      "desc": "Compound leverage jaws that snap through padlocks, fences, and rebar (+15% scavenge)."
+    },
+    "lockpick_set_professional": {
+      "name": "Hardened Steel Lockpick Set",
+      "desc": "Tension wrenches and rake picks in a leather folding case (+10% scavenge)."
+    },
+    "diamond_sharpening_stone": {
+      "name": "Dual-Grit Diamond Whetstone",
+      "desc": "Coarse and fine diamond abrasive stone for honing dull blades razor sharp."
+    },
+    "headlamp_rechargeable_led": {
+      "name": "Rechargeable LED Headlamp",
+      "desc": "Hands-free elastic forehead lamp illuminating dark tunnels and rooms (+5% scavenge)."
+    },
+    "military_chem_light_green": {
+      "name": "12-Hour Green Chemical Lightstick",
+      "desc": "Snap-and-shake non-flammable glowing cyalume tube."
+    },
+    "geiger_muller_counter": {
+      "name": "Handheld Geiger-Müller Radiation Counter",
+      "desc": "Clicks furiously in the presence of invisible lethal ionizing gamma rays."
+    },
+    "compact_binoculars_10x42": {
+      "name": "10x42 Roof-Prism Binoculars",
+      "desc": "Rubber-armored binoculars. Spot enemies and road hazards from kilometers away."
+    },
+    "mountaineering_rope_50m": {
+      "name": "Dynamic Climbing Rope (50m, 10.5mm)",
+      "desc": "Kernmantle nylon climbing rope rated for thousands of kilograms of tensile load."
+    },
+    "silnylon_backpacking_tarp": {
+      "name": "Ultralight Silnylon Rain Fly Tarp",
+      "desc": "Silicone-coated nylon shelter sheet. Keeps sleeping survivors bone-dry in downpours."
+    },
+    "hemostatic_gauze_z_fold": {
+      "name": "Z-Folded Hemostatic Combat Gauze",
+      "desc": "Chitosan-impregnated vacuum-packed gauze designed to pack deep arterial wounds."
+    },
+    "pressure_dressing_trauma_4in": {
+      "name": "Emergency Trauma Pressure Dressing 4\"",
+      "desc": "Heavy elastic wrap with built-in pressure bar for controlling massive hemorrhages."
+    },
+    "chest_seal_twin_pack": {
+      "name": "Vented Chest Seal Twin-Pack",
+      "desc": "Adhesive occlusive seals with one-way valves for treating penetrating chest gunshot wounds."
+    },
+    "nasopharyngeal_airway_28fr": {
+      "name": "Nasopharyngeal Airway Tube (28 Fr)",
+      "desc": "Soft flexible rubber airway tube inserted through the nasal passage to secure breathing."
+    },
+    "decompression_needle_14g": {
+      "name": "Tension Pneumothorax 14G Needle Catheter",
+      "desc": "3.25-inch needle for relieving dangerous air pressure trapped inside the chest cavity."
+    },
+    "sam_splint_36inch": {
+      "name": "SAM Moldable Aluminum Foam Splint",
+      "desc": "Pliable radiolucent aluminum sheet covered in foam for immobilizing fractures."
+    },
+    "cervical_extrication_collar": {
+      "name": "Rigid Cervical Extrication Collar",
+      "desc": "Adjustable plastic neck brace preventing spinal damage during traumatic evacuations."
+    },
+    "surgical_scalpel_disposable_10": {
+      "name": "Sterile Disposable Scalpel #10",
+      "desc": "Surgical steel curved blade with molded plastic handle for emergency debridement."
+    },
+    "surgical_hemostat_forceps": {
+      "name": "Curved Hemostatic Locking Forceps",
+      "desc": "Ratchet-locking stainless steel clamps for grasping severed blood vessels."
+    },
+    "bone_saw_gigli_wire": {
+      "name": "Flexible Gigli Wire Bone Saw with Handles",
+      "desc": "Braided surgical stainless steel wire saw used for amputations in field surgery."
+    },
+    "tissue_forceps_toothed": {
+      "name": "Adson Toothed Tissue Forceps",
+      "desc": "Fine surgical tweezers with interlocking teeth for delicate wound suturing."
+    },
+    "dental_extraction_forceps": {
+      "name": "Heavy Dental Tooth Extraction Pliers",
+      "desc": "Stainless cross-hatch pliers for wrenching infected rotting molars from jaws."
+    },
+    "ciprofloxacin_500mg_box": {
+      "name": "Ciprofloxacin 500mg Tablets (14ct)",
+      "desc": "Broad-spectrum fluoroquinolone antibiotic targeting severe gut and bone infections."
+    },
+    "doxycycline_100mg_bottle": {
+      "name": "Doxycycline Hyclate 100mg (20 Caps)",
+      "desc": "Tetracycline class antibiotic used against cholera, Lyme disease, and anthrax exposure."
+    },
+    "amoxicillin_clavulanate_box": {
+      "name": "Amoxicillin-Clavulanate 875/125mg (14ct)",
+      "desc": "Heavy-hitting penicillin derivative formulation overcoming resistant bacterial strains."
+    },
+    "azithromycin_250mg_zpack": {
+      "name": "Azithromycin 250mg Z-Pack (6 Tabs)",
+      "desc": "Macrolide antibiotic course effective against aggressive bronchial and pulmonary infections."
+    },
+    "metronidazole_500mg_bottle": {
+      "name": "Metronidazole 500mg Antimicrobial (20ct)",
+      "desc": "Potent antiprotozoal pills combating contaminated-water dysentery and giardia."
+    },
+    "chloroquine_phosphate_tabs": {
+      "name": "Chloroquine Phosphate 250mg Tablets",
+      "desc": "Antimalarial medication preventing deadly parasitic fever from swarming mosquito bites."
+    },
+    "tramadol_50mg_capsules": {
+      "name": "Tramadol HCl 50mg Pain Capsules (10ct)",
+      "desc": "Synthetic opioid analgesic alleviating crushing pain from compound fractures."
+    },
+    "ketamine_vial_500mg": {
+      "name": "Injectable Ketamine HCl Vial (500mg/10ml)",
+      "desc": "Dissociative surgical anesthetic for setting broken bones and field surgery without pain."
+    },
+    "lidocaine_2pct_epinephrine": {
+      "name": "Lidocaine 2% with Epinephrine (20ml)",
+      "desc": "Local injectable numbing agent that constricts blood vessels during wound suturing."
+    },
+    "fentanyl_transdermal_patch": {
+      "name": "Fentanyl Transdermal Patch 50mcg/hr",
+      "desc": "Potent 72-hour narcotic dermal patch suppressing unimaginable burn or trauma pain."
+    },
+    "ibuprofen_400mg_blister": {
+      "name": "Ibuprofen 400mg Blister Pack (20 Tabs)",
+      "desc": "Non-steroidal anti-inflammatory reducing swelling, fever, and throbbing aches."
+    },
+    "paracetamol_500mg_box": {
+      "name": "Paracetamol 500mg Tablets (24ct)",
+      "desc": "Reliable fever reducer and mild analgesic safe for gastric ulcer sufferers."
+    },
+    "epipen_epinephrine_autoinjector": {
+      "name": "EpiPen 0.3mg Epinephrine Autoinjector",
+      "desc": "Spring-loaded adrenaline syringe reversing acute anaphylactic shock and airway collapse."
+    },
+    "narcan_naloxone_nasal_spray": {
+      "name": "Narcan 4mg Naloxone Nasal Spray",
+      "desc": "Emergency opioid overdose reversal spray rapidly clearing narcotic receptors."
+    },
+    "pralidoxime_2pam_chloride": {
+      "name": "2-PAM Pralidoxime Chloride Injectable",
+      "desc": "Cholinesterase reactivator administered alongside atropine during nerve gas attacks."
+    },
+    "potassium_iodide_130mg_strips": {
+      "name": "Potassium Iodide (IOSAT 130mg, 14 Tabs)",
+      "desc": "Saturates thyroid gland with stable iodine, blocking uptake of radioactive Iodine-131."
+    },
+    "activated_charcoal_slurry": {
+      "name": "USP Activated Charcoal Liquid Suspension",
+      "desc": "Black porous carbon slurry binding ingested poisons and toxic seeds in the stomach."
+    },
+    "ringer_lactate_500ml_iv_bag": {
+      "name": "Ringer's Lactate 500ml Sterile IV Bag",
+      "desc": "Isotonic electrolyte fluid restoring circulating volume after heavy trauma blood loss."
+    },
+    "normal_saline_500ml_iv_bag": {
+      "name": "0.9% Normal Saline 500ml IV Infusion",
+      "desc": "Sterile sodium chloride IV solution used for rehydration and wound irrigation."
+    },
+    "iv_infusion_tubing_set": {
+      "name": "Macro-Drip IV Infusion Tubing Set with Roller Clamp",
+      "desc": "Sterile line with drip chamber, roller regulator, and luer lock connector."
+    },
+    "iv_cannula_catheter_18g": {
+      "name": "Green 18-Gauge IV Cannula Catheters (Box)",
+      "desc": "High-flow stainless steel needle with Teflon catheter for rapid blood and fluid delivery."
+    },
+    "chlorhexidine_gluconate_4pct": {
+      "name": "Chlorhexidine Gluconate 4% Scrub Solution",
+      "desc": "Surgical grade pink antiseptic cleanser killing bacteria and fungi on skin contact."
+    },
+    "hydrocortisone_cream_1pct": {
+      "name": "Hydrocortisone 1% Anti-Itch Ointment",
+      "desc": "Corticosteroid cream subduing severe plant dermatitis, rash, and toxic insect stings."
+    },
+    "calamine_lotion_bottle": {
+      "name": "Calamine Soothing Zinc Lotion (150ml)",
+      "desc": "Pink soothing suspension relieving blistering insect bites, hives, and prickly heat."
+    },
+    "zinc_oxide_petroleum_paste": {
+      "name": "Zinc Oxide Protective Barrier Paste",
+      "desc": "Heavy waterproof white paste protecting chafed thighs, trench foot, and raw friction sores."
+    },
+    "eye_wash_sterile_saline_bottle": {
+      "name": "Sterile Saline Eye Wash Bottle (250ml)",
+      "desc": "Ergonomic eyecup nozzle for flushing caustic chemicals, pepper spray, and grit from eyes."
+    },
+    "burn_gel_hydrogel_packet": {
+      "name": "Water-Jel Sterile Hydrogel Burn Packet",
+      "desc": "Cools thermal burns instantly and halts deeper tissue cooking with tea-tree oil."
+    },
+    "cohesive_flexible_vet_wrap": {
+      "name": "Self-Adherent Cohesive Bandage Roll",
+      "desc": "Sticks to itself without pins or tape; ideal for securing splints and wet dressings."
+    },
+    "sterile_disposable_hypodermic_syringes": {
+      "name": "10x Sterile 5ml Luer-Lock Syringes with Needles",
+      "desc": "Pack of medical grade graduated barrels with 21G injection needles."
+    },
+    "barbed_wire_baseball_bat": {
+      "name": "Barbed-Wire Wrapped Wooden Bat",
+      "desc": "Heavy ash wood baseball bat wound with razor-sharp rusted barb wire."
+    },
+    "spiked_cricket_bat": {
+      "name": "Spiked Willow Cricket Bat",
+      "desc": "Solid English willow bat driven through with dozens of ground construction spikes."
+    },
+    "police_side_handle_tonfa": {
+      "name": "Polycarbonate Riot Police Tonfa",
+      "desc": "Impact-resistant rigid baton with side perpendicular handle for blocking and striking."
+    },
+    "solid_rebar_club": {
+      "name": "Deformed Steel Rebar Club",
+      "desc": "A thick length of ribbed concrete rebar with wrapped rubber bicycle tube grip."
+    },
+    "heavy_railroad_spike_club": {
+      "name": "Railroad Spike Morningstar Club",
+      "desc": "Heavy oak timber studded with forged high-carbon railway track spikes."
+    },
+    "two_handed_splitting_maul": {
+      "name": "8-Pound Wood Splitting Maul",
+      "desc": "Drop-forged wedge axe head combined with sledgehammer butt on fiberglass handle."
+    },
+    "tactical_tomahawk_black": {
+      "name": "Tactical Breaching Tomahawk",
+      "desc": "One-piece drop forged steel hawk with rear penetration spike and paracord wrap."
+    },
+    "firemans_flathead_axe": {
+      "name": "Firefighter Flathead Crash Axe",
+      "desc": "Heavy high-visibility red steel axe designed to chew through structural wood and roofs."
+    },
+    "combat_trench_knife_1918": {
+      "name": "Mark I Trench Knife with Knuckle Duster",
+      "desc": "Double-edged triangular dagger combined with solid brass knuckle-duster grip."
+    },
+    "tactical_karambit_blade": {
+      "name": "Curved Tactical Karambit Blade",
+      "desc": "Tiger-claw curved blade with safety finger ring for lightning-fast close-quarters slashing."
+    },
+    "folding_butterfly_balisong": {
+      "name": "Steel Balisong Butterfly Knife",
+      "desc": "Concealable flip-opening utility knife with razor-honed drop point blade."
+    },
+    "improvised_rebar_spear": {
+      "name": "Ground-Point Rebar Hunting Spear",
+      "desc": "Six-foot steel rod ground down to a needle tip with leather handle wrap."
+    },
+    "scythe_blade_war_pike": {
+      "name": "Straightened Scythe Blade War Pike",
+      "desc": "Agricultural scythe blade reforged straight and bolted to an ash wood pole."
+    },
+    "fiberglass_recurve_bow_45lb": {
+      "name": "45-Pound Takedown Recurve Bow",
+      "desc": "Compact laminated wood and fiberglass limbs delivering silent deadly arrows."
+    },
+    "tactical_compound_crossbow_175lb": {
+      "name": "175-Pound Tactical Compound Crossbow",
+      "desc": "Cams and split limbs hurling aluminum bolts fast enough to pierce engine cowlings."
+    },
+    "bundle_carbon_hunting_arrows": {
+      "name": "Bundle of 6 Carbon Shaft Broadhead Arrows",
+      "desc": "Precision straight-spine carbon fiber arrows tipped with 3-blade razor broadheads."
+    },
+    "bundle_aluminum_crossbow_bolts": {
+      "name": "Quiver of 6 Anodized Crossbow Bolts",
+      "desc": "Heavy-gauge 20-inch aluminum bolts built for high-energy modern crossbows."
+    },
+    "hunting_slingshot_steel_balls": {
+      "name": "High-Velocity Wrist-Rocket Slingshot",
+      "desc": "Tubular latex band slingshot with forearm brace. Fires ball bearings with bone-breaking force."
+    },
+    "glock_19_9mm_pistol": {
+      "name": "Glock 19 Compact 9x19mm Pistol",
+      "desc": "Legendary Austrian polymer pistol renowned for extreme reliability in dirt and muck."
+    },
+    "beretta_92fs_pistol": {
+      "name": "Beretta 92FS 9mm Service Pistol",
+      "desc": "Classic open-slide alloy frame Italian combat pistol holding 15 rounds."
+    },
+    "colt_1911_45acp_pistol": {
+      "name": "Colt M1911A1 .45 ACP Pistol",
+      "desc": "All-steel American service pistol delivering massive stopping power per single bullet."
+    },
+    "tokarev_tt33_pistol": {
+      "name": "Soviet TT-33 Tokarev 7.62x25mm Pistol",
+      "desc": "Rugged single-action pistol firing blisteringly fast armor-piercing pistol cartridges."
+    },
+    "makarov_pm_9x18_pistol": {
+      "name": "Makarov PM 9x18mm Concealed Pistol",
+      "desc": "Compact blowback Soviet officer handgun. Simple, indestructible, and easy to clean."
+    },
+    "sw_model_29_44mag_revolver": {
+      "name": "Smith & Wesson Model 29 .44 Magnum Revolver",
+      "desc": "6.5-inch blued barrel cannon capable of dropping a grizzly bear in its tracks."
+    },
+    "ruger_sp101_357_revolver": {
+      "name": "Ruger SP101 .357 Magnum 3-Inch Revolver",
+      "desc": "Solid steel frame five-shot cylinder. Accepts both .38 Special and .357 Magnum."
+    },
+    "remington_870_express_12g": {
+      "name": "Remington 870 12-Gauge Pump Shotgun",
+      "desc": "Dual action slide bars and steel receiver. The gold standard pump scattergun."
+    },
+    "mossberg_590_tactical_12g": {
+      "name": "Mossberg 590A1 Mil-Spec 12-Gauge",
+      "desc": "Heavy-walled barrel and 8-round magazine tube built to US Marine Corps specifications."
+    },
+    "sawed_off_double_barrel_12g": {
+      "name": "Sawed-Off Side-by-Side 12-Gauge Shotgun",
+      "desc": "Barrels hacked down to 10 inches with pistol grip. Devastating spread at point-blank."
+    },
+    "single_shot_break_action_20g": {
+      "name": "H&R Pardner 20-Gauge Single Shot",
+      "desc": "Primitive single-shot break barrel hammer shotgun. Light, simple, and functional."
+    },
+    "sks_carbine_762x39": {
+      "name": "Soviet SKS Carbine 7.62x39mm",
+      "desc": "10-round internal magazine carbine with folding bayonet. Hard-hitting semi-automatic accuracy."
+    },
+    "mosin_nagant_9130_rifle": {
+      "name": "Mosin-Nagant M91/30 7.62x54mmR Bolt Rifle",
+      "desc": "Historic Russian bolt-action infantry rifle. Deafening muzzle blast and monstrous penetration."
+    },
+    "remington_700_scoped_308": {
+      "name": "Remington 700 .308 Win with 3-9x Scope",
+      "desc": "Hair-trigger precision bolt rifle equipped with long-distance optical crosshair scope."
+    },
+    "ruger_1022_carbine": {
+      "name": "Ruger 10/22 Semi-Auto .22 LR Carbine",
+      "desc": "Virtually recoil-free rimfire rifle ideal for silent small-game subsistence hunting."
+    },
+    "ak74m_assault_rifle_545": {
+      "name": "AK-74M Assault Rifle 5.45x39mm",
+      "desc": "Side-folding polymer stock Russian service rifle with lethal tumbling high-velocity rounds."
+    },
+    "ar15_carbine_556x45": {
+      "name": "Civilian AR-15 Carbine 5.56 NATO",
+      "desc": "Ergonomic modular semi-automatic platform with picatinny rail and red-dot sight."
+    },
+    "fal_battle_rifle_762x51": {
+      "name": "FN FAL 7.62x51mm NATO Battle Rifle",
+      "desc": "\"The Right Arm of the Free World\". Punches full-power battle cartridges through concrete."
+    },
+    "mp5a3_submachine_gun": {
+      "name": "H&K MP5A3 9mm Submachine Gun",
+      "desc": "Roller-delayed blowback submachine gun famous for surgical burst accuracy."
+    },
+    "ammo_9mm_parabellum_box": {
+      "name": "Box of 50 Rounds 9x19mm Luger FMJ",
+      "desc": "Standard brass-cased full metal jacket pistol ammunition."
+    },
+    "ammo_45_acp_box": {
+      "name": "Box of 50 Rounds .45 ACP 230gr Ball",
+      "desc": "Heavy lead-core subsonic handgun cartridges with crushing impact."
+    },
+    "ammo_357_magnum_box": {
+      "name": "Box of 50 Rounds .357 Magnum JHP",
+      "desc": "Jacketed hollow point revolver ammunition producing massive hydraulic expansion."
+    },
+    "ammo_44_magnum_box": {
+      "name": "Box of 25 Rounds .44 Remington Magnum",
+      "desc": "Heavy magnum cartridges delivering enough kinetic foot-pounds to crack engine blocks."
+    },
+    "ammo_12g_00_buckshot_box": {
+      "name": "Box of 25 Shells 12-Gauge 00 Buckshot",
+      "desc": "Each 2-3/4\" hull packs nine heavy 33-caliber lead pellets."
+    },
+    "ammo_12g_rifled_slug_box": {
+      "name": "Box of 10 Shells 12-Gauge 1-oz Rifled Slug",
+      "desc": "Solid 437-grain lead projectiles capable of punch-through on light vehicle armor."
+    },
+    "ammo_22_lr_brick_100": {
+      "name": "Brick of 100 Rounds .22 LR Hollow Point",
+      "desc": "Rimfire copper-plated ammunition; light to carry by the hundreds."
+    },
+    "ammo_556_nato_box": {
+      "name": "Box of 30 Rounds 5.56x45mm NATO M855 (Green Tip)",
+      "desc": "Steel-penetrator core cartridges designed for military AR-15 and M4 rifles."
+    },
+    "ammo_762x39_soviet_box": {
+      "name": "Box of 30 Rounds 7.62x39mm Soviet FMJ",
+      "desc": "Lacquer-coated steel-cased ammunition powering AK-47 and SKS rifles."
+    },
+    "ammo_545x39_soviet_tin": {
+      "name": "Sealed Tin of 30 Rounds 5.45x39mm 7N6",
+      "desc": "Mild-steel core 'poison bullet' rounds engineered for AK-74 rifles."
+    },
+    "ammo_308_winchester_box": {
+      "name": "Box of 20 Rounds .308 Winchester 168gr BTHP",
+      "desc": "Match-grade boat tail hollow point ammunition for surgical sniper work."
+    },
+    "pipe_bomb_shrapnel_fuse": {
+      "name": "Improvised Steel Pipe Shrapnel Bomb",
+      "desc": "Threaded plumbing pipe packed with match-head sulfur, nails, and slow safety fuse."
+    },
+    "thermite_incendiary_canister": {
+      "name": "Thermite Firebomb Canister",
+      "desc": "Iron oxide and aluminum powder mixture burning at 4,000°F. Melts through steel safes."
+    },
+    "m18_smoke_grenade_white": {
+      "name": "M18 Military Smoke Grenade (White)",
+      "desc": "Pulls pin to release an impenetrable cloud of blinding white smoke for retreats."
+    },
+    "tripwire_shotgun_blank_trap": {
+      "name": "Perimeter Tripwire Alarm Blank Mine",
+      "desc": "Spring-loaded firing pin assembly using 12G blanks to sound deafening perimeter alarms."
+    },
+    "claymore_antipersonnel_mine": {
+      "name": "M18A1 Claymore Directional Mine",
+      "desc": "Curved plastic case containing C-4 explosive and 700 steel ball bearings. 'FRONT TOWARD ENEMY'."
+    },
+    "copper_pipe_section_1m": {
+      "name": "1-Meter Rigid Copper Plumbing Pipe (15mm)",
+      "desc": "High-purity antimicrobial copper pipe; prized for stills and electrical projects."
+    },
+    "brass_plumbing_fittings_pack": {
+      "name": "Pack of Assorted Brass Threaded Fittings",
+      "desc": "Tees, elbows, and nipples capable of handling corrosive fluids and high pressures."
+    },
+    "galvanized_sheet_metal_plate": {
+      "name": "Galvanized Sheet Steel Plate (0.8mm)",
+      "desc": "Corrosion-resistant zinc-coated steel sheet for vehicle armor and chimney fabrication."
+    },
+    "expanded_steel_mesh_grating": {
+      "name": "Expanded Steel Diamond Mesh Grate",
+      "desc": "Heavy flattened steel mesh for welding protective window cages and animal traps."
+    },
+    "tungsten_carbide_drill_bits": {
+      "name": "Tungsten Carbide Masonry & Steel Drill Bits",
+      "desc": "Extremely hard drill bit set that bores through armor plate, cast iron, and stone."
+    },
+    "heavy_steel_ball_bearings_bag": {
+      "name": "Pouch of 50 Chrome Steel Ball Bearings (12mm)",
+      "desc": "Mirror-polished hardened steel spheres. Perfect slingshot ammo or pipe bomb shrapnel."
+    },
+    "assorted_steel_springs_box": {
+      "name": "Box of Assorted Tension and Compression Springs",
+      "desc": "High-tensile tempered steel springs for gunsmithing, traps, and mechanical latches."
+    },
+    "hex_bolts_and_nuts_assortment": {
+      "name": "Bucket of Grade 8 High-Strength Hex Bolts & Nuts",
+      "desc": "Structural steel fasteners rated for engine mounts and chassis reinforcement."
+    },
+    "blind_rivets_and_pop_riveter": {
+      "name": "Hand Pop Rivet Tool with 200 Blind Rivets",
+      "desc": "Allows permanent joining of sheet metal without needing access to the backside."
+    },
+    "stainless_steel_hose_clamps": {
+      "name": "Box of 20 Worm-Gear Stainless Hose Clamps",
+      "desc": "Adjustable screw clamps for securing radiator hoses, exhaust patches, and tools."
+    },
+    "car_battery_12v_lead_acid": {
+      "name": "12-Volt Sealed Lead-Acid Car Battery",
+      "desc": "Heavy 60Ah accumulator capable of running camp lights, radios, and inverters."
+    },
+    "lithium_18650_rechargeable_cell": {
+      "name": "Rechargeable 18650 3.7V Lithium-Ion Cell",
+      "desc": "High-capacity cylinder battery pulled from a laptop pack. Powers tactical gear."
+    },
+    "alkaline_9v_transistor_battery": {
+      "name": "Heavy-Duty 9-Volt Alkaline Battery",
+      "desc": "Rectangular snap-terminal battery required by radiation meters, smoke alarms, and radios."
+    },
+    "cr2032_lithium_coin_cells": {
+      "name": "Blister Pack of 5 CR2032 3V Coin Cells",
+      "desc": "Flat lithium button batteries for red-dot optic sights and digital wristwatches."
+    },
+    "solar_charge_controller_mppt": {
+      "name": "12V/24V MPPT Solar Charge Controller Board",
+      "desc": "Microprocessor unit safely charging battery banks from raw solar panel voltage."
+    },
+    "step_down_buck_voltage_regulator": {
+      "name": "DC-DC Step-Down Buck Converter Module",
+      "desc": "Adjusts noisy 12V car battery power down to clean 5V USB output for devices."
+    },
+    "brushless_12v_dc_motor": {
+      "name": "High-RPM Brushless 12V DC Motor",
+      "desc": "Can be spun as an efficient wind generator or used to build power blowers."
+    },
+    "solder_wire_6040_rosin_core": {
+      "name": "Spool of 60/40 Tin-Lead Rosin-Core Solder",
+      "desc": "Low melting point alloy wire for repairing broken circuit boards and radios."
+    },
+    "electric_soldering_iron_40w": {
+      "name": "40-Watt Precision Pencil Soldering Iron",
+      "desc": "Handheld heating element with chisel tip for electronic component soldering."
+    },
+    "insulated_copper_wiring_harness": {
+      "name": "Automotive Multi-Strand Wire Harness Loom",
+      "desc": "Bundle of color-coded copper stranded wires shielded in oil-resistant PVC."
+    },
+    "heavy_toggle_switches_pack": {
+      "name": "Pack of 4 Heavy-Duty Bat Toggle Switches",
+      "desc": "Weatherproof click-toggle electrical switches rated for 20 amps DC."
+    },
+    "neodymium_rare_earth_magnets": {
+      "name": "Set of 6 N52 Strong Neodymium Disc Magnets",
+      "desc": "Incredibly powerful magnetic discs for building homebrew generators and secret latches."
+    },
+    "epoxy_resin_and_hardener_tubes": {
+      "name": "Twin-Syringe High-Strength 2-Part Epoxy",
+      "desc": "Cures rock-hard in 5 minutes to bond metals, wood, ceramics, and fractured gunstocks."
+    },
+    "cyanoacrylate_super_glue_bottle": {
+      "name": "Industrial Cyanoacrylate Super Glue (50g)",
+      "desc": "Instant bonding liquid; also seals clean skin lacerations in emergencies."
+    },
+    "silicone_rtv_gasket_maker": {
+      "name": "RTV High-Temp Silicone Gasket Maker",
+      "desc": "Oil-resistant silicone vulcanizing paste for sealing engine covers and water joints."
+    },
+    "polyurethane_expanding_foam_can": {
+      "name": "Aerosol Expanding Polyurethane Foam (750ml)",
+      "desc": "Shoots expanding insulation foam sealing drafts, rodent gaps, and floating hulls."
+    },
+    "fiberglass_cloth_and_resin_kit": {
+      "name": "Fiberglass Mesh Cloth and Polyester Resin Kit",
+      "desc": "Woven glass matting and catalyst liquid for rebuilding boats, tanks, and vehicle bodies."
+    },
+    "wd40_penetrating_lubricant_can": {
+      "name": "WD-40 Multi-Use Penetrating Lubricant Spray",
+      "desc": "Displaces moisture, frees frozen rusted bolts, and stops squeaking hinges."
+    },
+    "motor_oil_synthetic_10w40": {
+      "name": "1-Quart Full Synthetic 10W-40 Motor Oil",
+      "desc": "High-temperature lubricant keeping combustion engines from seizing solid."
+    },
+    "brake_fluid_dot4_can": {
+      "name": "Synthetic DOT 4 Hydraulic Brake Fluid (500ml)",
+      "desc": "Non-compressible hydraulic oil for vehicle brake and clutch cylinders."
+    },
+    "acetone_solvent_metal_can": {
+      "name": "Pure Chemical Grade Acetone Solvent (1L)",
+      "desc": "Dissolves paints, degreases gun barrels, and serves as explosive synthesis precursor."
+    },
+    "kerosene_fuel_plastic_jug": {
+      "name": "5-Liter Jug of Clean Kerosene Lamp Fuel",
+      "desc": "Refined petroleum distillate for hurricane lanterns, space heaters, and cleaning."
+    },
+    "diesel_fuel_canister_10l": {
+      "name": "10-Liter Steel Jerrycan of Diesel Fuel",
+      "desc": "Heavy fuel for diesel generators, trucks, and lighting smudge pot heaters."
+    },
+    "butane_gas_canister_camping": {
+      "name": "220g Isobutane/Propane Blend Gas Cartridge",
+      "desc": "Self-sealing threaded fuel canister for backpacking stoves and micro-torches."
+    },
+    "rubber_tire_patch_vulcanizing_kit": {
+      "name": "Bicycle & Truck Tire Vulcanizing Patch Kit",
+      "desc": "Rubber cement, cheese grater buffer, and cold vulcanizing rubber patches."
+    },
+    "neoprene_gasket_sheet_thick": {
+      "name": "1/8\" Oil-Resistant Neoprene Rubber Sheet",
+      "desc": "Flexible rubber sheet cut to make watertight seals, face gaskets, and washers."
+    },
+    "heavy_duty_cable_ties_pack_100": {
+      "name": "Pack of 100 Heavy-Duty UV-Resistant Zip Ties",
+      "desc": "Nylon ties rated for 75-lb tensile pull; indispensable for quick camp repairs."
+    },
+    "aluminum_foil_heavy_duty_roll": {
+      "name": "Heavy-Duty Embossed Aluminum Foil Roll",
+      "desc": "Food cooking wrap, heat reflector, and makeshift electromagnetic shielding."
+    },
+    "heat_shrink_tubing_assortment": {
+      "name": "150-Piece Heat Shrink Wire Insulating Sleeves",
+      "desc": "Polyolefin tubing that shrinks tight over exposed soldered wire joints when heated."
+    },
+    "welding_rods_e6013_pack": {
+      "name": "Pack of 30 E6013 Mild Steel Arc Welding Electrodes",
+      "desc": "Rutile-coated welding rods for structural steel repairs using stick welders."
+    },
+    "graphite_powder_lock_lubricant": {
+      "name": "Dry Micronized Graphite Powder Tube",
+      "desc": "Greaseless dry lubricant that frees sticky jammed padlocks and firearm triggers in freezing cold."
+    },
+    "bungee_cargo_cords_pack": {
+      "name": "Pack of 4 Elastic Bungee Cords with Steel Hooks",
+      "desc": "Heavy latex cords with coated steel hooks for strapping gear to packs and racks."
+    },
+    "polyethylene_tarp_repair_tape": {
+      "name": "Heavy UV-Resistant Green Tarp Tape",
+      "desc": "Ultra-sticky adhesive tape designed specifically to seal tears in woven shelters and tarps."
+    },
+    "ratchet_tie_down_strap_5m": {
+      "name": "5-Meter Heavy Ratchet Tie-Down Strap (2-Ton)",
+      "desc": "Polyester webbing strap with heavy steel ratchet winch for hauling cargo."
+    },
+    "silica_gel_desiccant_packs": {
+      "name": "Pack of 20 Moisture Absorbing Silica Gel Packets",
+      "desc": "Porous silicone dioxide granules keeping ammunition and medicines bone-dry."
+    },
+    "chlorine_bleach_sodium_hypochlorite": {
+      "name": "1-Liter Unscented Household Bleach (5.25%)",
+      "desc": "Disinfectant liquid; 2 drops purify one liter of suspect water from cholera."
+    },
+    "calcium_carbide_chunks": {
+      "name": "Lump of Calcium Carbide in Airtight Canister",
+      "desc": "Reacts with water to produce flammable acetylene gas for welding torches and lamps."
+    },
+    "beeswax_pure_block": {
+      "name": "Block of Pure Natural Yellow Beeswax",
+      "desc": "For waterproofing canvas jackets, lubricating wooden friction parts, and candle making."
+    },
+    "tactical_plate_carrier_level4": {
+      "name": "MOLLE Tactical Plate Carrier with Ceramic Plates",
+      "desc": "Heavy ceramic-composite body armor stopping multi-hit armor-piercing rifle rounds."
+    },
+    "concealable_kevlar_vest_level2": {
+      "name": "Concealable Level IIIA Kevlar Vest",
+      "desc": "Lightweight aramid fiber body armor protecting torso from handgun bullets and shrapnel."
+    },
+    "stab_proof_security_vest": {
+      "name": "Stab & Slash Resistant Security Vest",
+      "desc": "Interlocking steel scale matrix preventing puncture wounds from knives and improvised shanks."
+    },
+    "riot_police_hard_armor_suit": {
+      "name": "Full Anti-Riot Hard Shell Armor System",
+      "desc": "Molded polycarbonate chest, forearm, and shin guards designed for brutal melee riots."
+    },
+    "firefighter_turnout_bunker_coat": {
+      "name": "Nomex Firefighter Turnout Bunker Coat",
+      "desc": "Heavy thermal insulation jacket resisting direct heat, embers, and chemical splatters."
+    },
+    "waxed_canvas_hunting_jacket": {
+      "name": "Heavy Waxed Canvas Field Jacket",
+      "desc": "Thick paraffin-waxed duck cotton resisting thorn briars, rain, and tooth scratches."
+    },
+    "military_m65_field_jacket_liner": {
+      "name": "M-65 Combat Field Jacket with Quilted Liner",
+      "desc": "Rugged military cotton-nylon twill coat with button-in quilted insulating thermal liner."
+    },
+    "goretex_waterproof_parka_camo": {
+      "name": "ECWCS Woodland Camo Gore-Tex Parka",
+      "desc": "Breathable waterproof membrane outer jacket shedding monsoon rain and sleet."
+    },
+    "merino_wool_thermal_base_layer": {
+      "name": "Heavyweight Merino Wool Thermal Base Layer",
+      "desc": "Keeps body core warm even when drenched wet in freezing subterranean conditions."
+    },
+    "tactical_ripstop_cargo_pants": {
+      "name": "Ripstop Tactical Operator Pants with Knee Pad Pockets",
+      "desc": "Reinforced crotch and knees with dozens of cargo pockets for spare magazines."
+    },
+    "vibram_sole_combat_boots": {
+      "name": "Gore-Tex Vibram-Sole Tactical Combat Boots",
+      "desc": "Lugged rubber soles preventing ankle twists on broken rubble and sharp debris."
+    },
+    "insulated_extreme_cold_snow_boots": {
+      "name": "-40°C Insulated Winter Sorel Pac Boots",
+      "desc": "Thick rubber lug bottoms with felt liners for trekking through deep frozen nuclear ash."
+    },
+    "heavy_neoprene_wading_boots": {
+      "name": "Chest Wader Waterproof Neoprene Boots",
+      "desc": "Seamless waterproof rubber wading gear for traversing flooded sewers and swamps."
+    },
+    "kevlar_reinforced_tactical_gloves": {
+      "name": "Kevlar-Lined Hard-Knuckle Tactical Gloves",
+      "desc": "Carbon fiber knuckle shields and slash-proof palms for hand-to-hand combat."
+    },
+    "insulated_leather_work_gauntlets": {
+      "name": "Split Cowhide Heavy Welding Gauntlets",
+      "desc": "Thick leather forearm gloves resisting red-hot sparks, jagged scrap, and animal bites."
+    },
+    "ballistic_mtek_bump_helmet": {
+      "name": "Tactical FAST Bump Helmet with Accessory Rails",
+      "desc": "High-impact shell with night-vision shroud and side flashlight attachment rails."
+    },
+    "welding_goggles_shade_5": {
+      "name": "Dual Cup Shade 5 Oxy-Acetylene Welding Goggles",
+      "desc": "Dark green lenses blocking retina-scorching ultraviolet rays and blinding flashes."
+    },
+    "polarized_ballistic_sunglasses": {
+      "name": "ANSI Z87.1 Rated Ballistic Polarized Sunglasses",
+      "desc": "Shatterproof polycarbonate wrap sunglasses eliminating blinding sun glare."
+    },
+    "nomex_flame_resistant_balaclava": {
+      "name": "Nomex Fire-Retardant Balaclava Hood",
+      "desc": "Protects face, throat, and ears from flash burns and hiding user identity."
+    },
+    "boonie_hat_woodland_camo": {
+      "name": "Wide-Brim Woodland Camo Boonie Hat",
+      "desc": "Cotton sun hat with branch loops for foliage camouflage and keeping sun off neck."
+    },
+    "internal_frame_expedition_pack_75l": {
+      "name": "75-Liter Internal Aluminum Frame Expedition Pack",
+      "desc": "Heavy expedition rucksack with padded lumbar belt distributing crushing weight (+35 kg)."
+    },
+    "assault_pack_3_day_40l": {
+      "name": "40-Liter MOLLE 3-Day Assault Backpack",
+      "desc": "Rugged 1000D Cordura pack with hydration bladder compartment and webbing straps (+20 kg)."
+    },
+    "tactical_chest_rig_vest": {
+      "name": "Modular Tactical Chest Rig with Mag Pouches",
+      "desc": "Holds rifle magazines, radio, and trauma kit directly on the chest (+8 kg)."
+    },
+    "canvas_messenger_satchel_heavy": {
+      "name": "Heavy Waxed Canvas Shoulder Satchel",
+      "desc": "Over-the-shoulder flap bag lined with waterproof vinyl for quick loot grabs (+10 kg)."
+    },
+    "waterproof_roll_top_dry_bag_30l": {
+      "name": "30-Liter Heavy PVC Waterproof Dry Bag",
+      "desc": "Roll-top bag that floats and keeps sleeping gear completely dry in deep water (+12 kg)."
+    },
+    "folding_camp_wood_stove": {
+      "name": "Collapsible Titanium Camping Wood Stove",
+      "desc": "Packs flat like a book; efficiently burns twigs and pinecones to boil water smokelessly."
+    },
+    "titanium_pot_and_pan_mess_kit": {
+      "name": "Ultralight Titanium 2-Piece Cook Set",
+      "desc": "Nesting pot and lid-skillet impervious to rust and denting over open campfires."
+    },
+    "handheld_crank_solar_emergency_radio": {
+      "name": "Dynamo Hand-Crank Solar Emergency Radio",
+      "desc": "Picks up AM/FM/NOAA emergency broadcasts, features bright LED light and USB charger."
+    },
+    "high_lumen_tactical_flashlight": {
+      "name": "2000-Lumen Rechargeable Tactical Flashlight",
+      "desc": "Blinding aircraft-grade aluminum beam piercing dark tunnels for hundreds of meters (+8% scavenge)."
+    },
+    "silva_sighting_mirror_compass": {
+      "name": "Silva Ranger Sighting Mirror Compass",
+      "desc": "Precision navigation instrument with clinometer and declination adjustment (+6% travel)."
+    },
+    "bushcraft_parang_heavy_machete": {
+      "name": "Hand-Forged 14-Inch Bushcraft Parang",
+      "desc": "Thick belly blade splitting through dense jungle undergrowth and building shelters."
+    },
+    "folding_entrenching_spade_pick": {
+      "name": "Tri-Fold Military Entrenching Tool with Pick",
+      "desc": "Hardened carbon steel shovel blade with integrated serrated edge and root pick."
+    },
+    "magnesium_fire_starter_block": {
+      "name": "Magnesium Bar with Flint Striker",
+      "desc": "Shave magnesium slivers into a tinder pile and spark with flint to ignite soaking wet wood."
+    },
+    "stormproof_matches_sealed_case": {
+      "name": "Windproof & Waterproof Matches in O-Ring Tube",
+      "desc": "Phosphorus dipped sticks that stay burning submerged underwater or in gale winds."
+    },
+    "tactical_pen_tungsten_glassbreaker": {
+      "name": "Anodized Aluminum Tactical Pen with Carbide Tip",
+      "desc": "Writes upside down in the cold; features an impact tip that shatters car safety glass."
+    },
+    "mechanical_automatic_field_watch": {
+      "name": "Self-Winding Mechanical Field Watch",
+      "desc": "No battery required; wound by wrist motion. Immune to nuclear electromagnetic pulses (EMP)."
+    },
+    "monocular_telescope_12x50": {
+      "name": "12x50 High-Definition Monocular Telescope",
+      "desc": "Nitrogen-purged fog-proof optic for long distance reconnaissance (+4% travel)."
+    },
+    "thermal_mylar_bivvy_emergency_sleeping_bag": {
+      "name": "Reflective Mylar Thermal Emergency Bivvy",
+      "desc": "Reflects 90% of radiated body heat back to prevent hypothermia during wet nights."
+    },
+    "down_filled_subzero_sleeping_bag": {
+      "name": "-20°C Goose Down Expedition Mummy Sleeping Bag",
+      "desc": "Ripstop nylon shell stuffed with 800-fill power down for brutal sub-zero nights."
+    },
+    "self_inflating_camp_sleeping_pad": {
+      "name": "Therm-a-Rest Self-Inflating Sleeping Pad",
+      "desc": "Open-cell foam core inflating automatically to insulate body from frozen ground."
+    },
+    "heavy_canteen_1l_molle_cup": {
+      "name": "1-Liter Military Canteen with Stainless Nesting Cup",
+      "desc": "BPA-free polymer flask slipping inside a steel cup for boiling water over embers."
+    },
+    "sawyer_gravity_water_filter_4l": {
+      "name": "4-Liter Gravity Membrane Water Purifier",
+      "desc": "Hangs from tree branch to filter gallons of dirty pond water down to 0.1 microns."
+    },
+    "tactical_entry_crowbar_short": {
+      "name": "18-Inch Forged Pry Bar & Door Breacher",
+      "desc": "Compact alloy steel pry bar notched for pulling hinges and prying locked trunks (+12% scavenge)."
+    },
+    "heavy_snatch_strap_tow_rope_5t": {
+      "name": "30-Foot Kinetic Energy Vehicle Recovery Snatch Strap",
+      "desc": "Stretches 20% under tension to snatch stuck 4x4 vehicles from mud bogs."
+    },
+    "handheld_laser_rangefinder_600m": {
+      "name": "Laser Distance Rangefinder (600m Range)",
+      "desc": "Bounces eye-safe laser pulse to provide precise yardage to game or sniper targets."
+    },
+    "signal_mirror_heliograph": {
+      "name": "Military Glass Heliograph Sighting Signal Mirror",
+      "desc": "Flashes blinding beams of sunlight visible up to 50 kilometers to rescue pilots."
+    },
+    "camp_bow_saw_folding": {
+      "name": "21-Inch Folding Aluminum Bow Saw",
+      "desc": "High-carbon raker-tooth blade cutting through fallen tree trunks in seconds."
+    },
+    "portable_waterproof_solar_panel_28w": {
+      "name": "28-Watt Foldable USB Solar Panel Charger",
+      "desc": "SunPower cells unfurling over a backpack to charge batteries and radios while marching."
+    },
+    "geiger_tube_pouch_sensor": {
+      "name": "Spare SBM-20 Glass Geiger-Müller Detection Tube",
+      "desc": "Delicate gas-filled vacuum tube sensitive to beta and gamma radiation pulses."
+    },
+    "hydraulic_bottle_jack_6t": {
+      "name": "6-Ton Welded Steel Hydraulic Bottle Jack",
+      "desc": "Compact hydraulic cylinder lifting collapsed concrete beams and heavy vehicle axles."
+    },
+    "industrial_wire_strippers_crimper": {
+      "name": "Automatic Wire Stripping and Crimping Pliers",
+      "desc": "Strips insulation cleanly from 10-24 AWG electrical copper wire without nicking."
+    },
+    "heavy_canvas_tool_roll_organizer": {
+      "name": "Multi-Slot Heavy Canvas Tool Roll Pouch",
+      "desc": "Rolls wrenches, screwdrivers, and pliers into a neat rattle-free bundle."
+    },
+    "tactical_modular_hydration_bladder_3l": {
+      "name": "3-Liter TPU Military Hydration Bladder with Bite Valve",
+      "desc": "Flexible water reservoir with insulated neoprene hose routed over shoulder."
+    },
+    "brass_emergency_whistle_pea_less": {
+      "name": "Pea-Less Solid Brass Survival Whistle (120dB)",
+      "desc": "Shrieks at ear-piercing volumes heard through howling blizzards and fog."
+    },
+    "leather_sheath_folding_pocket_knife": {
+      "name": "Lockback Carbon Steel Pocket Knife with Leather Sheath",
+      "desc": "Classic folding knife with brass bolsters; reliable for field dressing and whittling."
+    },
+    "military_ifak_complete": {
+      "name": "Complete Military IFAK Trauma Kit",
+      "desc": "Tactical individual first aid kit containing combat tourniquets, hemostatic gauze, vented chest seals, and trauma dressings."
+    },
+    "morphine_auto_injector": {
+      "name": "Morphine Auto-Injector",
+      "desc": "Spring-loaded military analgesic auto-injector for severe trauma and hemodynamic shock. Provides immediate pain suppression."
+    },
+    "vehicle_ignition_key": {
+      "name": "Vehicle Ignition Key & Dossier",
+      "desc": "Mechanical ignition key and operational dossier of a claimed vehicle. Used for fleet management."
+    }
+  },
+  "encounter": {
+    "kicker": "FIELD CONTACT",
+    "check": {
+      "combat": "Combat",
+      "gear": "Hazmat"
+    },
+    "abandoned_car": {
+      "title": "Jackknifed Convoy Sedan",
+      "text": "A dust-choked sedan sits wedged against a jersey barrier. The trunk latch is sprung and the wiring harness hangs below the dash.",
+      "choice": {
+        "search": "Ransack the glovebox and trunk (30m)",
+        "strip": "Strip alternator and copper harness",
+        "leave": "Keep moving along the shoulder"
+      },
+      "outcome": {
+        "search": "You pry open the trunk and rake through scattered emergency supplies.",
+        "strip_success": "You cleanly sever the harness and pull intact electronics from the dash.",
+        "strip_failure": "A rusted bracket snaps under tension and slices across your forearm.",
+        "leave": "You bypass the wreck without breaking stride."
+      }
+    },
+    "feral_dogs": {
+      "title": "Starved Pack on the Ridge",
+      "text": "Three rib-thin hounds fan out across the rubble ahead, hackles raised and jaws flecked with foam.",
+      "choice": {
+        "stand": "Hold ground and drive them off",
+        "feed": "Toss a ration to break their focus",
+        "flee": "Scramble over the masonry wall"
+      },
+      "outcome": {
+        "stand_success": "A decisive strike drops the lead hound; the pack scatters into the drainage ditch.",
+        "stand_failure": "Teeth sink into your calf before you wrench free and club them back.",
+        "feed": "The pack snaps over the thrown food while you slip two blocks downwind.",
+        "flee_success": "You vault the rebar wall and lose them through a collapsed courtyard.",
+        "flee_failure": "Loose brick gives way under your boot; the pack mauls your leg as you pull free."
+      }
+    },
+    "raider_toll": {
+      "title": "Barricade Checkpoint",
+      "text": "Armed scavengers step out from behind a burned bus, demanding rations for safe passage through the interchange.",
+      "choice": {
+        "pay": "Hand over two rations of food or water",
+        "fight": "Break through the barricade by force",
+        "barter": "Offer to repair their jammed generator"
+      },
+      "outcome": {
+        "pay": "They weigh your pouches, wave you through the wire, and watch until you clear the block.",
+        "fight_success": "You drop the point man and strip his rig before the others retreat into the smoke.",
+        "fight_failure": "Buckshot and shrapnel tear into your side as you fight your way clear.",
+        "barter_success": "You clean the fouled injector; impressed, they toss you two oat bars and wave you on.",
+        "barter_failure": "Your fix backfires in a shower of sparks. They beat you with rifle butts before shoving you out."
+      }
+    },
+    "collapsed_overpass": {
+      "title": "Pancaked Highway Span",
+      "text": "Concrete slabs block the main corridor, leaving a treacherous tangle of rebar or a long detour around the basin.",
+      "choice": {
+        "climb": "Pick a route straight over the slabs",
+        "detour": "Circle around the industrial perimeter (2–3h)"
+      },
+      "outcome": {
+        "climb_success": "You test each slab and crest the rubble without losing time.",
+        "climb_failure": "A slab shifts underfoot, wrenching your ankle as you slide down the scree.",
+        "detour": "You spend hours skirting flooded underpasses before rejoining the route."
+      }
+    },
+    "acid_rain": {
+      "title": "Sulfa Squall on the Horizon",
+      "text": "Yellow-gray clouds bruise the sky and the first oily drops hiss against rusted sheet metal.",
+      "choice": {
+        "shelter": "Wait out the squall under a concrete culvert",
+        "push_on": "Pull up your collar and march through it"
+      },
+      "outcome": {
+        "shelter": "You huddle beneath concrete until the caustic runoff subsides.",
+        "push_on_success": "Your sealed poncho sheds the acidic downpour without a burn.",
+        "push_on_failure": "Caustic rain soaks through your sleeves, blistering exposed skin."
+      }
+    },
+    "supply_cache": {
+      "title": "Tripwire Civil-Defense Locker",
+      "text": "Behind a false basement wall sits a stenciled relief crate — wired to a makeshift spring gun.",
+      "choice": {
+        "open": "Disarm the wire and crack the crate",
+        "leave": "Back away slowly and leave it"
+      },
+      "outcome": {
+        "open_success": "You crimp the tension wire and lift the lid on untouched emergency stock.",
+        "open_failure": "The wire slips — a rusted bolt fires across your thigh before the latch gives.",
+        "leave": "You mark the cellar on your mental map and leave the trap untouched."
+      }
+    },
+    "rusted_debris": {
+      "title": "Shifting Steel Joists",
+      "text": "A promising storeroom lies pinned beneath a groaned web of corroded roof trusses.",
+      "choice": {
+        "careful": "Shore the beam andworm through carefully",
+        "force": "Wrench the sheet metal clear by brute force"
+      },
+      "outcome": {
+        "careful_success": "You slip beneath the truss and clear the passage without disturbing the load.",
+        "careful_failure": "Jagged flashing drops from the ceiling, raking across your shoulder.",
+        "force": "You tear free a slab of steel plate at the cost of scraped knuckles."
+      }
+    },
+    "storm_at_sea": {
+      "title": "Cross-Swell Squall",
+      "text": "Black swells hammer the hull and freezing spray floods the bilge halfway across the strait.",
+      "choice": {
+        "ride_out": "Lash the tiller and ride out the squall",
+        "turn_back": "Come about and run back for the departure port"
+      },
+      "outcome": {
+        "ride_out_success": "You keep the bow quartering the waves until the squall breaks.",
+        "ride_out_failure": "A breaking crest slams the gunwale, washing gear overboard and bruising your ribs.",
+        "turn_back": "You fight the rudder hard over and limp back to shore."
+      }
+    },
+    "lone_survivor": {
+      "title": "Feverish Courier by the Tracks",
+      "text": "A gaunt courier sits propped against a signal box, clutching an empty canteen and a medic pouch.",
+      "choice": {
+        "share": "Spare a ration or bottle of water",
+        "ignore": "Give a wide berth and keep walking"
+      },
+      "outcome": {
+        "share": "Grateful, they press a handful of medical supplies into your palm before parting ways.",
+        "ignore": "You keep your hand on your weapon and pass without a word."
+      }
+    },
+    "night_prowler": {
+      "title": "Footsteps Outside the Bivouac",
+      "text": "Gravel crunches in the dark just beyond your shelter doorway; someone is testing the latch.",
+      "choice": {
+        "confront": "Lunging into the doorway with weapon raised",
+        "hide": "Kill your light and slip into the crawlspace"
+      },
+      "outcome": {
+        "confront_success": "You catch the intruder off-balance and drive them scrambling into the alley.",
+        "confront_failure": "A blade flashes in the dark, catching your ribs before the prowler bolts.",
+        "hide_success": "The prowler sweeps the empty room and moves on empty-handed.",
+        "hide_failure": "You stay hidden, but they snatch a pouch from the floor on their way out."
+      }
+    },
+    "radio_static": {
+      "title": "Shortwave Carrier Burst",
+      "text": "A solarrepeater atop a utility pole clicks to life, broadcasting automated weather beacons from distant sectors.",
+      "choice": {
+        "listen": "Log the coordinates from the carrier loop (30m)",
+        "ignore": "Save the daylight and move on"
+      },
+      "outcome": {
+        "listen": "You copy down grid bearings for distant transit hubs before the carrier fades.",
+        "ignore": "You leave the repeater clicking into the wind."
+      }
+    },
+    "decompression_chamber": {
+      "title": "Collapsed Highway Field Clinic",
+      "text": "A wounded soldier is pinned beneath an oxygen manifold with acute tension pneumothorax. His trachea is pushed left and his breath rattles violently. Beside him rests a sealed military rucksack.",
+      "choice": {
+        "decompress": "Needle Thoracostomy (Relieve chest cavity pressure)",
+        "loot_pack": "Strip the rucksack and retreat into the rubble",
+        "leave": "Leave him to the failing monitors"
+      },
+      "outcome": {
+        "decompress_success": "A hiss of pressurized air and dark blood erupts. The soldier decompresses and coughs, handing you his morphine reserve in gratitude.",
+        "decompress_failure": "The needle slips against fractured rib cartilage, tearing into soft tissue before you pull away.",
+        "loot_pack": "You slice through the nylon straps and take emergency rations while his boots drum against the floor.",
+        "leave": "You step backward into the dust and let the silence take the ward."
+      }
+    },
+    "checkpoint_siphon": {
+      "title": "Viaduct Toll Post (Iron Rail Company)",
+      "text": "Deserters in heavy coats have barricaded the bridge with railroad ties and a sandbagged machine gun. Their leader demands caloric tribute or ammunition.",
+      "choice": {
+        "pay_toll": "Pay the 2x ration toll for unhindered passage",
+        "fight_sentry": "Draw your weapon and break the roadblock by force",
+        "scale_gorge": "Descend into the freezing gorge and scale the abutment"
+      },
+      "outcome": {
+        "pay_toll": "The sentry weighs your rations and waves you through: 'Keep your head down in the tunnel, traveler.'",
+        "fight_sentry_success": "Accurate defensive fire shatters their sandbag position, forcing the surviving pickets to retreat down the embankment.",
+        "fight_sentry_failure": "Heavy automatic fire pins you behind concrete; shrapnel tears into your thigh before you stumble clear.",
+        "scale_gorge_success": "You drag yourself through waist-deep industrial runoff and scale the cliff, bypassing the toll unseen.",
+        "scale_gorge_failure": "The freezing sludge numbs your hands. You slip on wet gravel, wrenching your knee against concrete."
+      }
+    },
+    "protocol47_cache": {
+      "title": "Hardened Civil Defense Terminal",
+      "text": "An analog terminal glows amber inside a blast-proof alcove. A blinking prompt displays classified military dispatch logs titled 'PROTOCOL 47'.",
+      "choice": {
+        "decrypt": "Bypass logic interlock and copy dispatch logs",
+        "salvage": "Strip copper coils and battery cells from the terminal",
+        "ignore": "Leave the terminal humming in the dark"
+      },
+      "outcome": {
+        "decrypt_success": "The magnetic core dumps encrypted dispatch records revealing the true origin of the Black Sea EMP.",
+        "decrypt_failure": "A power surge sparks across the circuit board, scorching your fingers and fusing the logic chips.",
+        "salvage": "You harvest insulated copper wiring and intact scrap metal from the auxiliary casing.",
+        "ignore": "You leave the CRT phosphor fading into the vault shadows."
+      }
+    }
+  },
+  "log": {
+    "boot": {
+      "telemetry": "SYS_BOOT // TACTICAL TELEMETRY v4.19-REL // RAD: 14.8 mSv/h // CARRIER: 142.85 MHz",
+      "beacon": "RADIO 142.85 MHz: 'Sector 09 Bozkır Complex online... blast doors seal in 45 days. Survive the traverse.'",
+      "awakened": "Cold static clears. You check your straps in the ruins of {location}."
+    },
+    "vital": {
+      "health": {
+        "low": "Your vision narrows; blood and bruising slow every movement.",
+        "critical": "Integrity critical — another hard hit will put you under.",
+        "depleted": "Your body gives out."
+      },
+      "satiety": {
+        "low": "Hunger gnaws at your stomach.",
+        "critical": "Severe caloric deficit; muscle tremor setting in.",
+        "depleted": "Starvation is consuming your tissue."
+      },
+      "hydration": {
+        "low": "Your tongue is dry and cracked.",
+        "critical": "Severe dehydration — dizziness and kidney ache.",
+        "depleted": "Organ failure from dehydration imminent."
+      },
+      "energy": {
+        "low": "Fatigue weighs down your boots.",
+        "critical": "Stamina nearly spent; every step drags.",
+        "depleted": "Complete exhaustion — you are stumbling on sheer reflex."
+      }
+    },
+    "ailment": {
+      "bleeding": {
+        "gained": "Fresh laceration — you are bleeding.",
+        "worse": "Hemorrhage worsens as the wound tears open.",
+        "stopped": "The bleeding finally clots on its own.",
+        "cured": "Dressing applied; hemorrhage staunched.",
+        "treated": "Pressure dressing slows the bleeding."
+      },
+      "infection": {
+        "gained": "Contamination detected — early wound infection.",
+        "worse": "Bacterial load spikes inside the wound.",
+        "symptomatic": "Fever and chills take hold as sepsis turns symptomatic.",
+        "severe": "Delirium and septic shock setting in!",
+        "cleared": "Your immune system clears the lingering infection.",
+        "cured": "Antibiotics purge the systemic infection.",
+        "treated": "Antiseptic wash drives the infection back."
+      },
+      "sprain": {
+        "gained": "Ligament wrenched — overland pace reduced.",
+        "worse": "The sprained joint swells further.",
+        "healed": "The sprained ligament has stabilized.",
+        "cured": "Joint pain subsides completely.",
+        "treated": "Analgesics dull the sprain."
+      },
+      "pain": {
+        "healed": "Pain subsided and vitals stabilized.",
+        "cured": "Analgesic took full effect, relieving all pain."
+      },
+      "poison": {
+        "healed": "Toxic poison purged from bloodstream.",
+        "cured": "Antidote neutralized toxins successfully."
+      }
+    },
+    "effect": {
+      "vital_up": "{vital} +{amount}%.",
+      "vital_down": "{vital} -{amount}%.",
+      "healed": "Restored +{amount}% physical integrity.",
+      "damaged": "Sustained -{amount}% trauma.",
+      "time_lost": "Spent {minutes} minutes.",
+      "morale_boost": "Morale and focus stabilized (+{amount}).",
+      "rad_resistance": "Radiation prophylaxis active (+{amount})."
+    },
+    "skill": {
+      "level_up": "{skill} proficiency advanced to level {level}."
+    },
+    "inventory": {
+      "gained": {
+        "one": "Recovered {item} (×{count}).",
+        "other": "Recovered {item} (×{count})."
+      },
+      "left_behind": "Pack full — left {item} (×{count}) on the ground.",
+      "used": "Used {item}.",
+      "dropped": "Dropped {item} (×{count}).",
+      "picked_up": "Stowed {item} (×{count}).",
+      "equipped": "Equipped {item}.",
+      "unequipped": "Stowed {item} into pack.",
+      "lost": "Lost {item} (×{count}).",
+      "nothing_to_lose": "Nothing in your pack could be taken."
+    },
+    "travel": {
+      "departed": "Departed {origin} toward {destination} ({km} km).",
+      "arrived": "Reached {destination}.",
+      "discovered": "Charted new sector: {destination}.",
+      "aborted": "Retreated back to {origin}."
+    },
+    "scavenge": {
+      "started": "Scouting and salvaging ruins in {location} ({country})...",
+      "empty": "Picked through collapsed structures in {location} ({country}) and came up empty.",
+      "found": "Recovered {count} items of regional supplies and salvage in {location} ({country}).",
+      "rare_discovery": "⭐ Discovered high-tier regional equipment in {location} ({country})!",
+      "field_log": "[RECOVERED DISPATCH] {text}"
+    },
+    "survey": {
+      "revealed": {
+        "one": "Recon identified {count} unmapped corridor.",
+        "other": "Recon identified {count} unmapped corridors."
+      },
+      "signal_node": "Radio beacon plotted: {location}.",
+      "nothing": "Perimeters around {location} are already fully charted."
+    },
+    "rest": {
+      "started": "Barricaded a corner in {location} for {hours}h of rest.",
+      "finished": "Rose after {hours}h of uninterrupted rest."
+    },
+    "encounter": {
+      "triggered": "CONTACT: {title}"
+    },
+    "crafting": {
+      "crafted": "Crafted: {count}× {item}."
+    },
+    "base": {
+      "established": "Outpost established at {location}.",
+      "upgraded": "{structure} upgraded to level {level}.",
+      "repaired": "Outpost perimeter defenses repaired.",
+      "stored": "Stored into outpost locker: {count}× {item}.",
+      "water_collected": "Water Condenser: {count} bottle(s) of clean water stored.",
+      "food_collected": "Hydroponic Garden: {count} canned ration(s) harvested.",
+      "vehicle_repaired": "Vehicle Depot: Stationed vehicle condition repaired by +%{amount}.",
+      "materials_stashed": "All scrap and crafting materials ({count} items) stashed into locker.",
+      "generator_started": "Outpost generator started. Power grid online.",
+      "generator_stopped": "Outpost generator powered down.",
+      "generator_refueled": "Generator refueled (+{hours} hours).",
+      "generator_depleted": "Generator out of fuel! Power grid shut down.",
+      "raid_defended": "Night Raid: Perimeter barricades repelled the prowlers! (+{loot} scrap metal salvaged).",
+      "raid_breached": "Night Raid: Prowlers breached the perimeter! Outpost defenses took %{damage} damage."
+    }
+  },
+  "enemy": {
+    "feral_hound": {
+      "name": "Rabid Feral Hound",
+      "desc": "Gaunt, scarred pack predator lunging through the rubble with bared fangs."
+    },
+    "raider_scout": {
+      "name": "Highway Scavenger Raider",
+      "desc": "Outrider armed with a notched machete and welded scrap armor."
+    },
+    "plague_stalker": {
+      "name": "Fevered Zone Stalker",
+      "desc": "Delirious carrier coated in septic grime, lashing out blindly."
+    },
+    "cordon_deserter": {
+      "name": "Rogue Cordon Deserter",
+      "desc": "Former perimeter trooper in battered ballistic rig carrying a service weapon."
+    },
+    "marauder_marksman": {
+      "name": "Ash Marauder Sniper",
+      "desc": "Concealed sharpshooter armed with a high-caliber scoped rifle tracking movements."
+    },
+    "iron_guard_sentinel": {
+      "name": "Iron Guard Shock Sentinel",
+      "desc": "Heavily armored bunker shock-trooper enforcing shoot-to-kill perimeter isolation."
+    }
+  },
+  "combat": {
+    "kicker": "TACTICAL ENGAGEMENT",
+    "round": "ROUND {round}",
+    "enemy_hp": "HOSTILE INTEGRITY",
+    "player_cover": "Cover",
+    "enemy_cover": "Hostile Cover",
+    "scavenge_tag": "1× per fight",
+    "tag_immobilize": "Immobilize · -2 STAM",
+    "tag_disarm": "Disarm · -2 STAM",
+    "spare_tag": "Claim Loot · +Karma",
+    "execute_tag": "Loot Body · Ruthless",
+    "targeted_fire": "Targeted Ballistics",
+    "maneuvers": "Tactical Maneuvers",
+    "surrender_banner": "⚠ {name} HAS SURRENDERED // WEAPON DROPPED",
+    "jammed_banner": "⚠ WEAPON JAMMED // CLEAR CHAMBER TO FIRE",
+    "enemy_appeared": "HOSTILE CONTACT: {name} detected!",
+    "player_hit": "Struck {name} for {dmg} damage.",
+    "player_missed": "Your attack against {name} missed.",
+    "headshot_crit": "CRITICAL HEADSHOT! Struck {name} in the skull for {dmg} trauma!",
+    "leg_fractured": "Direct hit fractured the leg of {name} ({dmg} dmg)! Hostile immobilized.",
+    "arm_disarmed": "Struck {name} in the weapon arm ({dmg} dmg)! Hostile disarmed.",
+    "enemy_hit": "{name} struck you for {dmg} trauma!",
+    "enemy_missed": "Evaded attack from {name}.",
+    "victory": "Neutralized {name}.",
+    "fled_success": "Broke contact and slipped away from {name}.",
+    "fled_failed": "Failed to break contact with {name}!",
+    "enemy_surrendered": "{name} drops their weapon and falls to their knees, begging for mercy!",
+    "enemy_routed": "Broken morale! {name} panics and flees into the wasteland.",
+    "enemy_spared": "Disarmed {name} peacefully and claimed their supplies.",
+    "enemy_executed": "Executed {name} at point-blank range.",
+    "player_advanced": "Advanced forward, closing range to {range}.",
+    "player_retreated": "Fell back to long distance, opening range to {range}.",
+    "player_took_cover": "Dived behind {cover}!",
+    "jam_cleared": "Racked the bolt and cleared the jammed chamber.",
+    "weapon_jammed": "CLICK! {weapon} suffered a mechanical feed jam!",
+    "weapon_is_jammed_prompt": "Weapon is jammed! Clear the chamber before firing.",
+    "enemy_advanced": "{name} charged forward, closing distance to {range}!",
+    "enemy_crippled_cannot_advance": "{name} attempts to charge but collapses on a fractured leg!",
+    "enemy_took_cover": "{name} dove behind tactical cover!",
+    "player_overwatch_set": "Held weapon at the ready in overwatch stance. Ready to fire on any enemy movement!",
+    "player_aim_set": "Held breath and calibrated sights. Next attack will be significantly more accurate and lethal!",
+    "player_suppression": "Poured rapid suppression fire! {name} was pinned behind cover and suffered severe morale trauma.",
+    "overwatch_triggered": "Overwatch triggered! Fired a lethal reaction shot as {name} moved, dealing {dmg} damage!",
+    "overwatch_missed": "Fired overwatch reaction shot, but {name} dodged out of the line of fire!",
+    "enemy_suppressed_turn": "{name} is pinned down by heavy suppression fire and cannot act this turn!",
+    "enemy_intent_label": "Enemy Intent",
+    "intent": {
+      "surrendered": "Surrendered and helpless.",
+      "suppressed": "Pinned down in cover and terrified!",
+      "crippled": "Crippled leg prevents charging!",
+      "advance": "Preparing to charge forward and close distance!",
+      "take_cover": "Scanning for tactical cover to dive into.",
+      "heavy_shot": "Taking careful aim for a high-damage shot!",
+      "shoot": "Leveling weapon to open fire.",
+      "vicious_strike": "Coiling to unleash a vicious melee lunge!",
+      "attack": "Gearing up for a direct attack."
+    },
+    "range_short": {
+      "melee": "MELEE",
+      "close": "CLOSE",
+      "medium": "MED",
+      "long": "LONG",
+      "extreme": "EXT"
+    },
+    "range": {
+      "melee": "Melee Contact (<5m)",
+      "close": "Close Quarters (15m)",
+      "medium": "Medium Range (40m)",
+      "long": "Long Distance (85m)",
+      "extreme": "Extreme Distance (150m)"
+    },
+    "cover": {
+      "none": "Exposed (0%)",
+      "light": "Light Cover (-30% Dmg)",
+      "heavy": "Fortified (-60% Dmg)"
+    },
+    "zone": {
+      "head": "Cranial / Head",
+      "torso": "Torso / Vitals",
+      "legs": "Legs / Knees",
+      "arms": "Arms / Hands"
+    },
+    "status": {
+      "leg_crippled": "Immobilized",
+      "disarmed": "Disarmed",
+      "overwatch": "OVERWATCH STANCE",
+      "aimed": "AIMED (+25%)",
+      "suppressed": "PINNED DOWN"
+    },
+    "action": {
+      "strike": "Center Mass Strike",
+      "aimed": "Precision Aimed Burst",
+      "scavenge": "Scavenge Mid-Fight",
+      "flee": "Break Contact & Flee",
+      "take_cover": "Take Cover",
+      "take_aim": "Take Aim",
+      "overwatch": "Overwatch",
+      "suppress": "Suppression Fire",
+      "advance": "Advance",
+      "retreat": "Fall Back",
+      "clear_jam": "Clear Jam",
+      "spare": "Spare & Disarm",
+      "execute": "Execute"
+    },
+    "ui": {
+      "player_role": "SURVIVOR",
+      "enemy_role": "HOSTILE THREAT",
+      "btn_attack": "FIRE / ATTACK",
+      "btn_strike": "STRIKE / MELEE",
+      "zone_torso": "Torso",
+      "zone_head": "Head",
+      "zone_legs": "Legs",
+      "zone_arms": "Arms",
+      "clash_round_start": "⚔️ Enemy is drawing weapons! Choose your move.",
+      "clash_player_hit": "💥 YOU: Hit {zone}! Dealt {dmg} damage.",
+      "clash_player_crit": "⚡ YOU: 💀 CRITICAL HEADSHOT! Dealt {dmg} damage!",
+      "clash_player_miss": "💨 YOU: Your attack missed the target!",
+      "clash_enemy_hit": "🩸 ENEMY: {name} struck! Took -{dmg} HP.",
+      "clash_enemy_absorbed": "🛡️ ENEMY: {name} struck, but cover absorbed damage (-{dmg} HP).",
+      "clash_enemy_miss": "💨 ENEMY: {name} attacked but missed completely!",
+      "clash_enemy_advance": "👟 ENEMY: {name} charged closer ({range})!",
+      "clash_enemy_cover": "🧱 ENEMY: {name} dove behind cover!",
+      "clash_enemy_suppressed": "💥 ENEMY: Pinned down behind cover by suppressive fire!",
+      "clash_enemy_crippled": "🦵 ENEMY: Crippled leg prevented closing distance!"
+    }
+  },
+  "crafting": {
+    "station": "WORKBENCH",
+    "section": {
+      "recipes": "FABRICATION & SCHEMATICS"
+    },
+    "tier": {
+      "0": "HANDCRAFT",
+      "1": "WORKBENCH I",
+      "2": "MACHINIST II"
+    },
+    "action": {
+      "craft": "CRAFT",
+      "craft_one": "CRAFT ×1",
+      "craft_max": "CRAFT ALL (×{count})"
+    },
+    "category": {
+      "all": "ALL",
+      "survival": "SURVIVAL",
+      "medical": "MEDICAL",
+      "weapons": "WEAPONS",
+      "gear": "GEAR"
+    },
+    "no_recipes_in_cat": "No craftable schematics found in this category.",
+    "select_prompt": "Tap any schematic above to inspect requirements and craft.",
+    "ingredients_needed": "REQUIRED MATERIALS",
+    "station_missing_warn": "Requires {tier}. Build or upgrade the Workbench at your outpost.",
+    "craftable_count": "{count} Craftable"
+  },
+  "base": {
+    "location_label": "ESTABLISHED OUTPOST",
+    "integrity": "PERIMETER",
+    "none_established": "No permanent outpost established. Claim your current sector to build workstations and storage.",
+    "storage_empty": "Outpost storage locker is empty.",
+    "section": {
+      "outpost": "OUTPOST INFRASTRUCTURE",
+      "storage": "OUTPOST STOCKPILE"
+    },
+    "action": {
+      "establish": "CLAIM OUTPOST AT {location}",
+      "relocate": "RELOCATE OUTPOST TO {location}",
+      "upgrade": "BUILD / UPGRADE",
+      "repair": "REINFORCE PERIMETER (1× Steel Plate)",
+      "collect_all": "COLLECT HARVEST",
+      "stash_all_materials": "📦 STASH ALL MATERIALS",
+      "take_all": "EMPTY LOCKER",
+      "toggle_generator": "⚡ TOGGLE POWER",
+      "refuel_generator": "⛽ REFUEL (+12h)",
+      "inspect_facility": "INSPECT FACILITY"
+    },
+    "facility_inspect_prompt": "Tap any facility above to inspect requirements and upgrade.",
+    "production_ready": "OUTPOST HARVEST READY",
+    "subtab": {
+      "facilities": "🏛️ FACILITIES",
+      "storage": "📦 STORAGE",
+      "defense": "🛡️ DEFENSE"
+    },
+    "power_label": "POWER GRID",
+    "power_active": "ONLINE ⚡",
+    "power_offline": "OFFLINE",
+    "generator_fuel": "FUEL: {hours}h ({mins}m)",
+    "threat_label": "THREAT LEVEL",
+    "threat_low": "LOW",
+    "threat_medium": "MEDIUM",
+    "threat_high": "HIGH",
+    "defense_power": "DEFENSE POWER",
+    "no_defense_logs": "No security events or night raid incidents logged yet.",
+    "raid_won_title": "Raid Repelled",
+    "raid_lost_title": "Perimeter Breached"
+  },
+  "structure": {
+    "workbench": {
+      "name": "Field Workbench",
+      "desc": "Unlocks Tier I and Tier II fabrication schematics at this outpost."
+    },
+    "rain_catcher": {
+      "name": "Atmospheric Condenser & Tarp",
+      "desc": "Passively filters clean water into the outpost stockpile over time."
+    },
+    "barricade": {
+      "name": "Rebar & Sheet-Metal Barricade",
+      "desc": "Fortifies the shelter perimeter against night prowlers and raids."
+    },
+    "med_cot": {
+      "name": "Sterile Field Cot",
+      "desc": "Accelerates physical integrity recovery while resting at the outpost."
+    },
+    "greenhouse": {
+      "name": "Hydroponic Garden",
+      "desc": "Passively yields preserved canned rations into outpost storage over time."
+    },
+    "radio_relay": {
+      "name": "Radio Relay Antenna",
+      "desc": "Trickle recharges transceiver battery while resting and boosts field radio clarity."
+    },
+    "vehicle_depot": {
+      "name": "Vehicle Maintenance Depot",
+      "desc": "Gradually repairs chassis condition and engine components of stationed vehicles over time."
+    },
+    "generator": {
+      "name": "Field Fuel Generator",
+      "desc": "Powers the outpost grid. Cuts crafting times in half, boosts hydroponics, and powers perimeter floodlights."
+    }
+  },
+  "reject": {
+    "dead": "Signal lost — survivor is deceased.",
+    "in_encounter": "Resolve the active field contact first.",
+    "in_combat": "Resolve the active combat engagement first.",
+    "no_combat": "No active combat engagement.",
+    "already_scavenged": "Already scavenged during this engagement.",
+    "workbench_tier": "Requires a higher-tier Workbench at your current outpost.",
+    "missing_materials": "Insufficient components in your pack.",
+    "already_outpost": "Outpost is already established at this sector.",
+    "not_at_outpost": "You must be stationed at your outpost for this action.",
+    "max_level": "Structure is already at maximum level.",
+    "integrity_full": "Outpost perimeter is already at 100% integrity.",
+    "not_usable": "That item cannot be consumed or applied directly.",
+    "not_equippable": "That item cannot be equipped.",
+    "missing_item": "Item is no longer in your pack.",
+    "nothing_to_treat": "No active condition requires that treatment right now.",
+    "no_room_to_swap": "Not enough pack space to swap equipment.",
+    "pack_too_small": "Remove items from your pack before unequipping it.",
+    "slot_empty": "Nothing is equipped in that slot.",
+    "no_room": "No free inventory slots remaining.",
+    "too_heavy": "Exceeds maximum carry weight limit.",
+    "unknown_node": "Unknown sector coordinate.",
+    "already_here": "Already stationed at this sector.",
+    "no_route": "No passable corridor connects directly to that sector.",
+    "invalid_duration": "Invalid rest duration.",
+    "no_encounter": "No active encounter.",
+    "invalid_choice": "Invalid tactical option."
+  },
+  "death": {
+    "title": "SIGNAL TERMINATED",
+    "cause": {
+      "starvation": "Succumbed to prolonged starvation.",
+      "dehydration": "Collapsed from systemic dehydration.",
+      "exhaustion": "Heart failed under total exhaustion.",
+      "bleeding": "Exsanguinated from untreated lacerations.",
+      "infection": "Consumed by untreated septic shock.",
+      "acid": "Chemical burns from caustic fallout proved fatal.",
+      "drowning": "Swallowed by storm swells in open water.",
+      "wounds": "Fell to cumulative trauma in the field."
+    },
+    "summary": "Survived {days} days across {nodes} charted sectors. Final transmission logged at {location}.",
+    "action_memorial": "🪦 MEMORIAL LOG"
+  },
+  "faction": {
+    "title": "WASTELAND FACTIONS & DIPLOMACY",
+    "iron_guard": {
+      "name": "Iron Guard",
+      "desc": "Remnants of subterranean military garrisons; technocratic, disciplined, enforcing ruthless quarantine parameters across the central corridor."
+    },
+    "nomad_guild": {
+      "name": "Nomad Guild",
+      "desc": "Transcontinental trade caravans and scrap peddlers; pragmatic, peaceful, offering barter and safe passage in exchange for salvage."
+    },
+    "ash_marauders": {
+      "name": "Ash Marauders",
+      "desc": "Desperate rogue raider war-bands operating out of scorched border ruins; extortion-driven, opportunistic, and violent."
+    },
+    "tier": {
+      "allied": "ALLIED (+30% Barter Discount)",
+      "friendly": "FRIENDLY (+15% Barter Discount)",
+      "neutral": "NEUTRAL (Standard Terms)",
+      "suspicious": "SUSPICIOUS (+30% Price Markup)",
+      "hostile": "HOSTILE (Shoot-on-Sight)"
+    }
+  },
+  "environment": {
+    "weather": {
+      "clear_sky": "Clear Sky",
+      "radiation_ash_fog": "Toxic Ash Fog",
+      "corrosive_acid_rain": "Corrosive Acid Rain",
+      "subzero_cold_front": "Sub-zero Cold Front",
+      "gale_windstorm": "Gale Windstorm"
+    },
+    "alert": {
+      "shivering": "Core temperature dropping ({coreTemp}°C). Severe shivering sets in, sapping calories.",
+      "hypothermia": "Stage II Hypothermia ({coreTemp}°C)! Extremities freezing, stamina and health failing.",
+      "acid_burn": "Caustic acid precipitation burns unprotected skin and corrodes gear!",
+      "ash_inhalation": "Inhaling dense radioactive ash ({dose} mSv). Bronchial passages inflamed!",
+      "windstorm_fatigue": "Buffeting gale winds double travel fatigue and dehydrate your throat."
+    },
+    "flashlight_on": "Tactical light switched ON. Visibility increased, but light signature visible to raiders!",
+    "flashlight_off": "Tactical light switched OFF. Stepping into the shadows."
+  },
+  "barter": {
+    "kicker": "COMMODITY EXCHANGE",
+    "action_open": "Trade / Barter",
+    "player_offered_val": "Your Offer Value",
+    "merchant_demanded_val": "Demanded Value",
+    "status_balanced": "TRADE ACCEPTABLE",
+    "status_insufficient": "INSUFFICIENT VALUE (+{diff} pts needed)",
+    "player_empty": "No tradeable commodities in pack.",
+    "col_player": "SURVIVOR PACK (OFFER TRAY)",
+    "col_merchant": "MERCHANT WARES",
+    "action_haggle": "Haggle (-18% Discount)",
+    "haggle_done": "Haggled",
+    "action_cancel": "Cancel / Step Away",
+    "action_confirm": "Execute Barter",
+    "haggle_success": "Smooth negotiation! The merchant agrees to an 18% discount on their wares.",
+    "haggle_failed": "Aggressive haggling offended the merchant! They tacked on a 10% stubborn surcharge.",
+    "trade_completed": "Barter sealed! Exchanged {playerVal} pts of goods for {merchantVal} pts of supplies.",
+    "insufficient_value": "The merchant shakes their head: 'Not enough value on the table, survivor.'",
+    "refused_standing": "{faction} sentinels turn you away at gunpoint: 'Your standing is too low for trade.'",
+    "merchant": {
+      "nomad_caravan": {
+        "name": "Nomad Guild Caravan Peddler",
+        "desc": "A sun-weathered trader sitting atop a cart lined with water purification and field medicine."
+      },
+      "iron_guard_quartermaster": {
+        "name": "Iron Guard Logistics Quartermaster",
+        "desc": "A rigid officer behind reinforced blast-glass trading military ordnance for raw salvage."
+      },
+      "wasteland_peddler": {
+        "name": "Fringe Wasteland Scavenger",
+        "desc": "A hunched scavenger surrounded by scavenged wiring, lead sheets, and jury-rigged tools."
+      }
+    }
+  },
+  "pwa": {
+    "install_title": "INSTALL APP (PWA)",
+    "install_desc": "Add Last Breath to your home screen for fullscreen, zero lag, and offline play.",
+    "install_btn": "ADD TO HOME SCREEN 📲",
+    "already_installed": "App is already installed.",
+    "ios_guide_title": "iPHONE / iPAD INSTALL INSTRUCTIONS",
+    "ios_guide_step1": "1. Tap the Share button in Safari toolbar.",
+    "ios_guide_step2": "2. Scroll down and select 'Add to Home Screen'.",
+    "ios_guide_step3": "3. Tap 'Add' in the top right. The game will be installed!",
+    "installed_success": "App installed successfully! Ready for offline play.",
+    "close": "CLOSE"
+  },
+  "vehicle": {
+    "action_inspect": "Vehicle & Caravan",
+    "label": {
+      "sector": "Sector",
+      "trunk_load": "Trunk Load",
+      "pack_inventory": "Survivor Pack",
+      "trunk_inventory": "Vehicle Trunk",
+      "pack_empty": "No items in pack.",
+      "trunk_empty": "Cargo trunk is empty.",
+      "mounted_vehicle": "Mounted Vehicle"
+    },
+    "status": {
+      "operational": "OPERATIONAL",
+      "abandoned": "ABANDONED WRECK",
+      "driving": "DRIVING",
+      "missing": "MISSING",
+      "installed": "INSTALLED",
+      "missing_materials": "MISSING MATERIALS",
+      "ready": "READY TO DRIVE",
+      "needs_repair": "NEEDS RESTORATION",
+      "here": "In Current Sector",
+      "unknown_location": "Unknown Location"
+    },
+    "action": {
+      "mount": "Start Engine (Mount)",
+      "dismount": "Turn Off Engine (Dismount)",
+      "install": "Install Component",
+      "siphon": "Siphon Fuel from Wreck",
+      "repair_scrap": "Patch Body (Scrap Metal)",
+      "repair_oil": "Top Up Lubricant (Motor Oil)",
+      "to_trunk": "To Trunk",
+      "to_pack": "To Pack",
+      "install_upgrade": "Install Upgrade",
+      "camp_4h": "Camp in Cabin (4h)",
+      "camp_8h": "Sleep in Cabin (8h)",
+      "ram_enemy": "Ram with Vehicle",
+      "speed_away": "Speed Away"
+    },
+    "spec": {
+      "speed": "Speed",
+      "noise": "Hazard Noise",
+      "shelter": "Cabin Shelter",
+      "armor": "Armor Defense",
+      "amphibious": "Amphibious",
+      "solar_electric": "Solar Electric",
+      "field_clinic": "Field Clinic",
+      "arctic_tracked": "Arctic Tracked",
+      "muscle_powered": "Manual Muscle (Fuel-Free)",
+      "cabin": "Sealed Cabin"
+    },
+    "gauge": {
+      "fuel": "Fuel Tank",
+      "condition": "Engine Condition"
+    },
+    "section": {
+      "restoration": "Component Salvage & Restoration",
+      "maintenance": "Field Maintenance & Refueling",
+      "cargo_bay": "Cargo Hold & Pack Logistics",
+      "upgrades": "Modular Upgrades & Attachments"
+    },
+    "enduro": {
+      "name": "Enduro 250cc Recon Motorcycle",
+      "desc": "Light, agile single-track runner built for navigating rubble-choked ruins and mountain trails."
+    },
+    "uaz": {
+      "name": "UAZ-469 Military Utility 4x4",
+      "desc": "Iconic Soviet all-terrain utility vehicle. Rugged mechanicals and sealed cabin protect against corrosive rain and cold."
+    },
+    "ural": {
+      "name": "Ural-4320 Armored Mobile Caravan",
+      "desc": "Massive 6x6 heavy diesel carrier converted into an armored expedition fortress. Huge cargo hold and unmatched crew shelter."
+    },
+    "log": {
+      "mounted": "Engine purrs to life! You take the wheel of the {vehicle}.",
+      "dismounted": "Engine switched off. You step down from the {vehicle} on foot.",
+      "part_installed": "Installed component into chassis. ({remaining} more needed).",
+      "fully_restored": "Chassis fully restored and tuned! The vehicle is ready for expedition travel.",
+      "refueled": "Poured +{added}L of fuel into the tank. Current level: {total}L.",
+      "repaired": "Condition restored by +{gain}%. Current integrity: {condition}%.",
+      "siphoned": "Siphoned +{siphoned}L of fuel from abandoned roadside wrecks into the tank!",
+      "no_fuel": "The engine sputters dry! Tank is empty.",
+      "not_ready": "The vehicle is missing critical components and cannot start.",
+      "cannot_cross_water": "Wheeled overland vehicles cannot cross open sea waters!",
+      "upgrade_installed": "Installed modular upgrade on {vehicle}: {upgrade}.",
+      "camped": "Cooled down the engine and rested safely inside vehicle cabin for {hours} hours.",
+      "ram_impact": "Full throttle! Slammed vehicle directly into {enemy} dealing {damage} kinetic damage!",
+      "escaped_in_vehicle": "Floored the gas pedal and left {enemy} choking in exhaust fumes!",
+      "field_clinic_healed": "Field ambulance clinic treated your injuries during the journey (+15 HP).",
+      "discovered": "🚨 Abandoned {vehicle} discovered in sector {location}!",
+      "claimed": "{vehicle} has been claimed and added to your personal vehicle fleet."
+    },
+    "reject": {
+      "invalid_vehicle": "Vehicle not found.",
+      "insufficient_fuel": "Insufficient fuel for journey.",
+      "trunk_full": "Vehicle trunk is overloaded!",
+      "part_not_in_inventory": "Required component not found in inventory.",
+      "no_cabin_shelter": "This vehicle is an exposed open-frame runner and lacks a sealed cabin or camper bed for resting.",
+      "upgrade_already_installed": "This modular upgrade is already installed on the vehicle.",
+      "missing_upgrade_materials": "Missing required components or tools to fabricate this upgrade.",
+      "muscle_powered_no_fuel": "This vehicle is manually pumped and does not consume liquid fuel."
+    },
+    "buggy": {
+      "name": "Scavenger Solar Dune Buggy",
+      "desc": "Ultra-lightweight solar-assisted reconnaissance buggy. Whisper-silent electric drive with automatic daylight battery replenishment."
+    },
+    "btr": {
+      "name": "BTR-80 Armored Amphibious Carrier",
+      "desc": "Heavy 8x8 amphibious combat vehicle with ballistic steel armor plating and water-jet propulsion. Can cross sea and river routes directly."
+    },
+    "upgrade": {
+      "bullbar": {
+        "name": "Reinforced Steel Bullbar",
+        "desc": "Heavy frontal bullbar welded from steel plates. Protects against collisions and enables ramming through roadblocks (+15% Armor)."
+      },
+      "cargo_rack": {
+        "name": "Expanded Roof Cargo Rack",
+        "desc": "Heavy steel tube roof basket. Increases vehicle trunk cargo capacity by +40%."
+      },
+      "tires": {
+        "name": "All-Terrain Mud & Snow Tires",
+        "desc": "Deep-treaded reinforced off-road tires. Cuts fuel consumption by 20% and improves transit speed."
+      },
+      "floodlights": {
+        "name": "High-Intensity Roof Floodlights",
+        "desc": "High-lumen halogen light bar wired to battery. Completely eliminates night vision travel hazard penalties."
+      },
+      "fuel_tank": {
+        "name": "Auxiliary Welded Jerrycan Rack",
+        "desc": "External welded fuel tank bracket. Increases total fuel/energy capacity by +25 Liters/kWh."
+      },
+      "camper_bed": {
+        "name": "Padded Camper Sleeper Berth",
+        "desc": "Insulated foam mattress and wool bedding. Allows safe, warm camping and sleep anywhere on the overland map."
+      }
+    },
+    "ambulance": {
+      "name": "Paramedic Field Ambulance (Medevac)",
+      "desc": "Military field medevac ambulance. Equipped with sterile mobile clinic supplies that patch wounds, fractures, and trauma during transit and camp."
+    },
+    "snowcat": {
+      "name": "Arctic Tracked Snowcat",
+      "desc": "Heavy-duty tracked arctic vehicle engineered for blizzard terrain and frozen mountain passes. Eliminates tundra terrain penalties."
+    },
+    "draisine": {
+      "name": "Abandoned Railway Draisine",
+      "desc": "Manual pump-action railroad handcar operating along rail corridors. Fuel-free manual propulsion with near-silent acoustic stealth."
+    },
+    "rhib": {
+      "name": "Tactical Combat Assault RHIB",
+      "desc": "Twin-outboard rigid inflatable tactical boat capable of traversing coastal and open sea corridors at blistering speeds."
+    },
+    "fuel": {
+      "muscle_label": "Manual Muscle (No Fuel)"
+    },
+    "action_mount": "Mount & Drive",
+    "action_dismount": "Dismount",
+    "hud_title": "VEHICLE COCKPIT HUD",
+    "parked_in_sector": "Vehicle Parked in Sector",
+    "trunk_load": "Cargo Trunk",
+    "speed_multiplier": "{speed}x Transit Speed",
+    "action_open_trunk": "Trunk & Maintenance",
+    "zero_fuel_consumption": "Muscle Powered (0 L Fuel)",
+    "action_view_on_map": "View on Map",
+    "discovery": {
+      "title": "ABANDONED VEHICLE DISCOVERED!",
+      "tag_derelict": "DERELICT WRECK",
+      "parts_needed_title": "PARTS REQUIRED FOR RESTORATION",
+      "action_claim_inventory": "Claim & Add to Inventory",
+      "action_inspect_now": "Inspect & Install Parts Now",
+      "action_leave_sector": "Mark Sector & Leave"
+    }
+  },
+  "codex": {
+    "title": "EXPEDITION CODEX & MEMORIAL",
+    "toast_unlocked": "ACHIEVEMENT UNLOCKED",
+    "tab": {
+      "memorial": "Memorial Graveyard",
+      "achievements": "Achievements",
+      "career": "Career Telemetry",
+      "lore": "Field Manual & Lore"
+    },
+    "label": {
+      "rank": "Career Rank",
+      "achievements": "Achievements Unlocked",
+      "days_survived": "days survived",
+      "sectors": "sectors charted",
+      "kills": "enemies neutralized",
+      "locked": "CLASSIFIED / LOCKED",
+      "career_standing": "SURVIVOR REPUTATION TIER",
+      "days": "days"
+    },
+    "rank": {
+      "tier_1": "Greenhorn Refugee",
+      "desc_1": "Freshly awakened survivor taking tentative first steps through the ruins.",
+      "tier_2": "Wasteland Wanderer",
+      "desc_2": "Tested traveler who has endured combat, starvation, and toxic storms.",
+      "tier_3": "Eurasian Steppe Wolf",
+      "desc_3": "Hardened veteran who navigates trade corridors, repairs engines, and survives lethal ambushes.",
+      "tier_4": "Expedition Commander",
+      "desc_4": "Elite survivor commanding overland caravans and commanding high standing with factions.",
+      "tier_5": "Legend of the Last Breath",
+      "desc_5": "A mythical survivor whose name is whispered across every bunker and radio frequency."
+    },
+    "memorial": {
+      "intro_text": "A solemn registry of every survivor who drew their last breath in the wasteland. Their names, achievements, and final hours are etched into this terminal memory.",
+      "empty_title": "No Fallen Survivors Yet",
+      "empty_desc": "Every survivor in this expedition line is currently alive. When a character perishes, their memorial will be recorded here forever."
+    },
+    "stats": {
+      "total_expeditions": "Expeditions Launched",
+      "total_days": "Cumulative Survival Time",
+      "total_km": "Total Distance Covered",
+      "total_sectors": "Sectors Charted",
+      "enemies_neutralized": "Enemies Neutralized",
+      "enemies_spared": "Enemies Spared & Disarmed",
+      "barter_volume": "Total Commodity Barter Value",
+      "vehicles_restored": "Expedition Vehicles Restored",
+      "fuel_siphoned": "Fuel Siphoned from Wrecks",
+      "crafts_done": "Crafted Field Recipes"
+    },
+    "ach": {
+      "first_blood": {
+        "title": "First Contact",
+        "desc": "Neutralize an enemy in tactical combat."
+      },
+      "pacifist_mercy": {
+        "title": "Law of Mercy",
+        "desc": "Spare a surrendered enemy instead of executing them."
+      },
+      "trauma_surgeon": {
+        "title": "Combat Medic",
+        "desc": "Treat severe trauma using a CAT tourniquet or SAM splint."
+      },
+      "mechanic_maestro": {
+        "title": "Wreck Engineer",
+        "desc": "Fully restore an abandoned expedition vehicle with all components."
+      },
+      "silk_road_tycoon": {
+        "title": "Silk Road Tycoon",
+        "desc": "Execute a barter transaction valued over 200 trade points."
+      },
+      "nomad_ally": {
+        "title": "Nomad Kinship",
+        "desc": "Reach +30 standing (Allied) with the Nomad Guild."
+      },
+      "iron_discipline": {
+        "title": "Iron Discipline",
+        "desc": "Reach +30 standing (Allied) with the Iron Guard military."
+      },
+      "acid_survivor": {
+        "title": "Chemical Veteran",
+        "desc": "Weather a corrosive acid storm or radiation ash front without taking damage."
+      },
+      "eurasian_nomad": {
+        "title": "Eurasian Nomad",
+        "desc": "Chart and visit 10 different geographic sectors on the world map."
+      },
+      "endurance_champion": {
+        "title": "Iron Will",
+        "desc": "Survive for more than 10 full days in the post-apocalyptic wasteland."
+      },
+      "fuel_siphoner": {
+        "title": "Fuel Siphoner",
+        "desc": "Siphon vehicle fuel from roadside wrecks using a siphon hose."
+      },
+      "outpost_pioneer": {
+        "title": "Outpost Pioneer",
+        "desc": "Establish a forward outpost base in a sector."
+      },
+      "master_scavenger": {
+        "title": "Master Scavenger",
+        "desc": "Scavenge over 50 items and supplies from ruins."
+      },
+      "sniper_doctrine": {
+        "title": "Dead-Eye",
+        "desc": "Land a lethal targeted head shot from long range with a firearm."
+      }
+    },
+    "lore_cat": {
+      "factions": "Wasteland Factions",
+      "tactics": "Survival Tactics & Field Medicine",
+      "vehicles": "Overland Vehicles & Logistics"
+    },
+    "lore": {
+      "cleared": "DECLASSIFIED",
+      "iron_guard": {
+        "title": "Iron Guard Command Structure",
+        "desc": "Remnants of pre-collapse military forces sealed inside subterranean bunkers. Driven by rigid protocol and high-tech weaponry, they enforce quarantine and trade military ordnance for raw industrial scrap."
+      },
+      "nomad_guild": {
+        "title": "Nomad Guild Trade Caravans",
+        "desc": "An expansive confederation of merchant clans and scavengers who traverse ancient Silk Road corridors with water purification convoys and camel/draft caravans."
+      },
+      "ash_marauders": {
+        "title": "Ash Marauder Doctrine",
+        "desc": "Desperate raiders and scavenger renegades who claim viaduct checkpoints and choke points, extorting passing travelers with toll barriers and ambush raiding."
+      },
+      "trauma_tccc": {
+        "title": "Tactical Combat Casualty Care (TCCC)",
+        "desc": "Post-collapse medical doctrine prioritizing rapid bleeding control with CAT Tourniquets, needle decompression for tension pneumothorax, and fracture stabilization using SAM splints."
+      },
+      "weather_extremes": {
+        "title": "Atmospheric Toxicity Profiles",
+        "desc": "Industrial ruins emit corrosive acid rain capable of melting skin and synthetic gear, while radioactive ash fronts require sealed NBC respirators and enclosed cabin shelters."
+      },
+      "vehicle_overland": {
+        "title": "Expedition Motorization Protocol",
+        "desc": "Motorized overland transit provides 3x-4.5x speed advantages and immense trunk cargo capacity, but combustion engine noise heavily attracts marauders and roving beasts."
+      }
+    }
+  },
+  "ad": {
+    "action_airdrop": "Distress Airdrop (Rewarded)",
+    "airdrop": {
+      "title": "EMERGENCY SUPPLY AIRDROP",
+      "desc": "A supply drone drops a sealed canister at {location}, packed with emergency rations, potable water, and medical bandages."
+    },
+    "log": {
+      "reward_granted": "Emergency airdrop canister deployed! Supplies have landed at your coordinates.",
+      "reward_granted_vip": "👑 VIP ACCESS: Emergency airdrop delivered instantly without commercial delay!",
+      "dismissed": "Emergency broadcast interrupted. Supply drop aborted."
+    }
+  },
+  "radio": {
+    "ui": {
+      "title": "AN/PRC-117F TACTICAL TRANSCEIVER",
+      "pwr_on": "POWER ON",
+      "pwr_off": "POWER OFF",
+      "carrier_lock": "CARRIER LOCKED",
+      "scanning_carrier": "TUNING SQUELCH",
+      "tuning_hint": "Rotate the analog dial or use AUTO-SCAN to sweep the wasteland frequencies (88.0 - 108.0 MHz).",
+      "no_power_msg": "TRANSCEIVER BATTERY DEPLETED. CRANK THE HAND DYNAMO TO RECHARGE.",
+      "confirm_sos": "BROADCAST EMERGENCY SOS PING?\n\nConsumes 40m battery. May summon friendly nomad aid or attract hostile raiders!",
+      "presets": "PRESETS",
+      "decode_and_plot": "DECODE INTEL & PLOT BEACON",
+      "decoded_plotted": "DECODED & PLOTTED ON MAP",
+      "beacon_detected": "RADIO BEACON IN SECTOR",
+      "beacon_here_hint": "An intercepted transmission pinpointed coordinates in this sector.",
+      "tune_radio": "TUNE RADIO",
+      "claim_cache": "CLAIM RECOVERED CACHE"
+    },
+    "signal": {
+      "dr_aris": {
+        "name": "Mayday // Emergency Clinic SOS",
+        "caller": "Dr. Aris (Under Siege)",
+        "transcript": "Mayday, this is Dr. Aris from the Sector Medical Annex... Our barricades will not hold the swarm much longer. If anyone receives this, coordinates are locked to the clinic basement cache. Take whatever medical supplies you can carry..."
+      },
+      "numbers_station": {
+        "name": "Station Echo-309 // NATO Numbers Station",
+        "caller": "Automated Repeating Siren",
+        "transcript": "[STATIC BEEP] ... 7 - 4 - 1 - 9 - 2 ... [CHIRP] ... SECTOR SOFIA EMERGENCY BUNKER ACCESS CODE CONFIRMED ... [CYCLE REPEAT] ..."
+      },
+      "raider_ambush": {
+        "name": "Intercept // Jackal Raider Band",
+        "caller": "Intercepted Raider Comm",
+        "transcript": "All units hold perimeter at the Ankara canyon pass. Road spikes and fuel traps are armed. Scavenger spotted inbound... kill on sight..."
+      },
+      "weather_beacon": {
+        "name": "NOAA Emergency Meteorological Beacon",
+        "caller": "Automated Satellite Telemetry",
+        "transcript": "ATTENTION SURVIVORS: Atmospheric ion disturbance and acid precipitation front tracking over sector. Seek hardened indoor shelter immediately..."
+      },
+      "nomad_caravan": {
+        "name": "Nomad Merchant Caravan Broadcast",
+        "caller": "Wanderer Tariq",
+        "transcript": "Peace to the wasteland. The Red Star Caravan has made camp in Sector Bucharest for the next 24 hours. We carry clean water, scrap, and rare filters. Come unarmed or face our guards."
+      },
+      "pulsar_anomaly": {
+        "name": "Unknown Frequency // Pulsar Pulse",
+        "caller": "Unknown Origin",
+        "transcript": "[RHYTHMIC METALLIC CHANTS] ... The sky fractured, but the core endures... 106.3 MHz resonates with the old reactor beneath Kyiv... Do not let the radiation blind you..."
+      }
+    },
+    "cache": {
+      "medical_drop": "Medical Supply Drop",
+      "nato_bunker": "NATO Emergency Bunker Cache",
+      "ambush_thwarted": "Raider Ambush Disarmed",
+      "forecast_logged": "Atmospheric Telemetry Logged",
+      "trader_rendezvous": "Nomad Caravan Rendezvous Point",
+      "anomaly_analyzed": "Anomalous Pulse Analyzed"
+    },
+    "log": {
+      "cranked": "Hand-cranked emergency dynamo. Transceiver battery charged to {battery}m.",
+      "decoded": "Decoded radio transmission: {title} ({freq}).",
+      "beacon_plotted": "Plotted emergency radio beacon on Sector Map: {location}.",
+      "beacon_collected": "Recovered emergency supply cache at radio beacon coordinates: {title}.",
+      "sos_aid_drop": "Friendly nomad patrol answered your emergency SOS! Dropped survival rations nearby.",
+      "sos_hostile_intercept": "Hostile scavengers intercepted your SOS broadcast! Prepare for heightened danger."
+    },
+    "reject": {
+      "low_battery": "Transceiver battery too depleted for transmission. Crank dynamo to recharge."
+    },
+    "sos": {
+      "aid_arrived": "Nomad patrol answered SOS and dropped rations.",
+      "raider_alert": "Hostile scavengers locked onto your SOS ping!"
+    }
+  },
+  "travel": {
+    "ui": {
+      "transit_title": "SECTOR TRANSIT",
+      "arrived_title": "DESTINATION REACHED",
+      "speed": "Speed",
+      "distance": "Distance",
+      "est_time": "Est. Time",
+      "rem_distance": "Remaining Distance",
+      "progress": "Transit Progress",
+      "skip": "⏩ SKIP",
+      "enter_sector": "ENTER SECTOR",
+      "first_visit": "FIRST VISIT"
+    },
+    "log": {
+      "ambush_alert": "⚠️ ALERT: CONVOY AMBUSHED EN ROUTE! HOSTILE THREAT DETECTED!"
+    }
+  }
+}

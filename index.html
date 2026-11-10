@@ -1,165 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#121316">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <title>English Skills Hub | Reading with Writing</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0c0e" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Last Breath" />
+  <title>Last Breath — Post-Collapse Field Terminal</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="./icons/icon.svg" />
+  <link rel="stylesheet" href="./css/main.css?v=38" />
+  <link rel="stylesheet" href="./css/layout.css?v=38" />
+  <link rel="stylesheet" href="./css/components/map.css?v=38" />
+  <link rel="stylesheet" href="./css/components/panels.css?v=38" />
+
+  <!-- Google AdSense for Games / H5 Ads -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6006298574044898"
+    crossorigin="anonymous"
+    data-ad-frequency-hint="30s"
+    data-adbreak-test="on">
+  </script>
+  <script>
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adBreak = function(o) { adsbygoogle.push(o); };
+    window.adConfig = function(o) { adsbygoogle.push(o); };
+  </script>
 </head>
-<body data-surface="paper">
-
-  <!-- Masthead -->
-  <header class="app-header">
-    <div class="brand-meta">
-      <a href="admin.html" class="btn-pill" style="text-decoration: none;">⚙️ Studio</a>
-      <h1 class="brand-title">English Skills Hub</h1>
-      <span class="brand-tag">Reading & Writing Studio</span>
-    </div>
-    
-    <div class="header-tools">
-      <!-- Okuma Yüzeyi Teması (Paper / Sepia / Night) -->
-      <div class="tool-group" role="group" aria-label="Reading surface theme">
-        <button type="button" class="surface-btn active" data-surface-mode="paper" title="Paper Mode">☀️ Paper</button>
-        <button type="button" class="surface-btn" data-surface-mode="sepia" title="Warm Sepia Mode">📜 Sepia</button>
-        <button type="button" class="surface-btn" data-surface-mode="night" title="Night Ink Mode">🌙 Night</button>
-      </div>
-
-      <!-- Font Boyutu -->
-      <div class="tool-group" role="group" aria-label="Text size controls">
-        <button id="font-decrease" aria-label="Decrease text size">A−</button>
-        <button id="font-size-label" style="pointer-events: none;">16px</button>
-        <button id="font-increase" aria-label="Increase text size">A+</button>
-      </div>
-
-      <button id="toggle-dyslexic" class="btn-pill" title="Toggle dyslexia-friendly Lexend font">Easy-Read</button>
-      <button id="btn-open-wordbank" class="btn-pill" title="Open your personal saved words">🔖 Word Bank</button>
-      <button id="btn-open-progress" class="btn-pill" title="View your learning progress">📊 Progress</button>
-    </div>
-  </header>
-
-  <!-- Grade Bar (1-6) -->
-  <nav class="grade-nav" id="grade-pills"></nav>
-
-  <!-- Editorial 2-Column Shell -->
-  <div class="editorial-shell">
-    <!-- Left Sidebar: Index & Context -->
-    <aside class="sidebar-column">
-      <div class="sidebar-section">
-        <div class="sidebar-header-row">
-          <span class="section-label" id="sidebar-units-heading" style="margin-bottom: 0;">Units in this Grade</span>
-          <button type="button" id="btn-toggle-units-mobile" class="btn-pill mobile-drawer-toggle">▾ Hide Units</button>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="top-bar-row">
+        <div class="brand-cluster">
+          <h1 class="brand-title" data-i18n="app.title">LAST BREATH</h1>
+          <span class="brand-sub" data-i18n="app.subtitle">FIELD TERMINAL // REV 0.1</span>
         </div>
-        <div id="sidebar-collapsible-content" class="sidebar-collapsible">
-          <input type="search" id="unit-search-input" class="sidebar-search-input" placeholder="🔍 Search title, skill, word..." aria-label="Search units or vocabulary">
-          <ul id="unit-nav-list" class="unit-index-list"></ul>
-        </div>
-      </div>
 
-      <div class="metadata-panel">
-        <span class="section-label" style="margin-bottom: 0.25rem;">Pedagogical Focus</span>
-        <dl>
-          <div>
-            <dt>Reading Strategy</dt>
-            <dd id="sidebar-skill-name">-</dd>
-          </div>
-          <div>
-            <dt>Writing Target</dt>
-            <dd id="sidebar-writing-goal">-</dd>
-          </div>
-        </dl>
-      </div>
-    </aside>
-
-    <!-- Main Workspace -->
-    <main class="main-column" id="main-workspace">
-      <!-- Article Header -->
-      <header class="article-header">
-        <div class="article-header-top">
-          <span class="article-kicker" id="banner-grade-tag">Grade 1 · Unit 1</span>
-          <div class="article-header-actions">
-            <div class="tool-group">
-              <button type="button" id="btn-prev-unit" title="Previous Unit">← Prev</button>
-              <button type="button" id="btn-next-unit" title="Next Unit">Next →</button>
-            </div>
-            <button type="button" id="btn-print-handout" class="btn-pill" title="Print complete classroom worksheet for this unit">📄 Handout</button>
+        <div class="hud-telemetry">
+          <div class="hud-clock-cluster">
+            <span id="hud-name" class="hud-survivor-tag">SURVIVOR</span>
+            <span>·</span>
+            <span id="hud-day">DAY 1</span>
+            <span>·</span>
+            <span id="hud-clock">06:00</span>
+            <span id="hud-phase" class="hud-phase-badge">DAYLIGHT</span>
+            <span>·</span>
+            <span id="hud-location" class="hud-sector-tag">Istanbul</span>
           </div>
         </div>
-        <h2 class="article-headline" id="banner-unit-title">Loading Unit...</h2>
-        <p class="article-subhead" id="banner-unit-desc"></p>
-      </header>
 
-      <!-- Navigation Tabs -->
-      <nav class="nav-tabs" role="tablist">
-        <button class="tab-link active" data-tab="passage">📖 Passage</button>
-        <button class="tab-link" data-tab="vocab">🔤 Vocabulary</button>
-        <button class="tab-link" data-tab="practice">✍️ Practice</button>
-        <button class="tab-link" data-tab="write">📝 Write</button>
-      </nav>
+        <div class="hud-controls">
+          <button id="btn-install-app" type="button" class="btn btn-ghost btn-xs btn-install" aria-label="Install App" title="Mobil / Masaüstü Uygulamayı Yükle" hidden>
+            <span class="btn-install-icon">📲</span>
+            <span class="btn-install-label" data-i18n="hud.install_app">YÜKLE</span>
+          </button>
+          <button id="btn-locale-toggle" type="button" class="btn btn-ghost btn-icon btn-locale" aria-label="Language / Dil" title="Language / Dil">
+            <svg class="icon-globe" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span id="locale-indicator" class="locale-indicator">TR</span>
+          </button>
+          <button id="btn-open-radio" type="button" class="btn btn-ghost btn-xs btn-radio" title="Radio Transceiver / Telsiz">
+            📻 <span class="radio-label" data-i18n="hud.radio">RADIO</span><span id="radio-signal-badge" class="radio-signal-badge" hidden>●</span>
+          </button>
+          <button id="btn-open-codex" type="button" class="btn btn-ghost btn-xs" data-i18n="hud.codex">
+            📖 CODEX
+          </button>
+          <button id="btn-open-menu" type="button" class="btn btn-ghost btn-xs" data-i18n="menu.action.open_menu">
+            MAIN MENU
+          </button>
+          <button id="btn-new-run" type="button" class="btn btn-ghost btn-xs" data-i18n="hud.new_run">
+            NEW EXPEDITION
+          </button>
+        </div>
+      </div>
 
-      <!-- Dynamic Tab Content -->
-      <section id="workspace-content"></section>
+      <div id="hud-vitals-strip" class="hud-vitals-strip">
+        <span class="hud-vital-pill" data-vital="health">
+          <span class="pill-key" data-i18n="hud.pill.health">HP</span>
+          <strong class="pill-val">100%</strong>
+        </span>
+        <span class="hud-vital-pill" data-vital="satiety">
+          <span class="pill-key" data-i18n="hud.pill.satiety">KCAL</span>
+          <strong class="pill-val">70%</strong>
+        </span>
+        <span class="hud-vital-pill" data-vital="hydration">
+          <span class="pill-key" data-i18n="hud.pill.hydration">H2O</span>
+          <strong class="pill-val">65%</strong>
+        </span>
+        <span class="hud-vital-pill" data-vital="energy">
+          <span class="pill-key" data-i18n="hud.pill.energy">STAM</span>
+          <strong class="pill-val">85%</strong>
+        </span>
+      </div>
+    </header>
+
+    <main class="deck-grid">
+      <!-- Left Column (Desktop) / Tab 4 (Mobile): Bioscan & Proficiencies -->
+      <section class="deck-pane pane-status" data-tab-panel="status">
+        <header class="pane-header">
+          <span data-i18n="hud.tab.status">BIOSCAN</span>
+        </header>
+        <div id="status-root" class="pane-scroll"></div>
+      </section>
+
+      <!-- Left Resizer Handle (Desktop) -->
+      <div id="resizer-left" class="deck-resizer resizer-col resizer-left" role="separator" aria-orientation="vertical" title="Sütun Genişliği (Çift tık: Sıfırla)"></div>
+
+      <!-- Center Top (Desktop) / Tab 1 (Mobile): World Map & Local Sector Operations -->
+      <section class="deck-pane pane-map is-active-panel" data-tab-panel="map">
+        <header class="pane-header">
+          <span data-i18n="hud.tab.map">SECTOR MAP</span>
+        </header>
+        <div id="map-viewport" class="map-stage">
+          <div class="map-controls">
+            <button
+              id="map-zoom-in"
+              type="button"
+              class="map-ctrl-btn"
+              data-i18n-attr="title:map.control.zoom_in"
+            >+</button>
+            <button
+              id="map-zoom-out"
+              type="button"
+              class="map-ctrl-btn"
+              data-i18n-attr="title:map.control.zoom_out"
+            >−</button>
+            <button
+              id="map-center"
+              type="button"
+              class="map-ctrl-btn"
+              data-i18n-attr="title:map.control.center"
+            >⌖</button>
+            <button
+              id="map-world"
+              type="button"
+              class="map-ctrl-btn"
+              data-i18n-attr="title:map.control.world"
+            >🌐</button>
+          </div>
+        </div>
+        <div id="resizer-map-dossier" class="map-dossier-resizer" role="separator" title="Harita / Bilgi Boyutu (Çift tık: Sıfırla)"></div>
+        <div id="map-dossier" class="pane-scroll"></div>
+      </section>
+
+
+
+      <!-- Right Resizer Handle (Desktop) -->
+      <div id="resizer-right" class="deck-resizer resizer-col resizer-right" role="separator" aria-orientation="vertical" title="Sütun Genişliği (Çift tık: Sıfırla)"></div>
+
+      <!-- Right Column Tab 1 (Desktop) / Tab 2 (Mobile): Inventory & Equipment -->
+      <section class="deck-pane pane-inventory" data-tab-panel="inventory">
+        <header class="pane-header">
+          <span data-i18n="hud.tab.inventory">PACK &amp; GEAR</span>
+          <div class="pane-tab-switcher">
+            <button type="button" class="pane-switch-btn is-active" data-right-tab="inventory" data-i18n="hud.tab.inventory_short">PACK</button>
+            <button type="button" class="pane-switch-btn" data-right-tab="craft" data-i18n="hud.tab.craft_short">CRAFT</button>
+            <button type="button" class="pane-switch-btn" data-right-tab="base" data-i18n="hud.tab.base_short">BASE</button>
+          </div>
+        </header>
+        <div id="inventory-root" class="pane-scroll"></div>
+      </section>
+
+      <!-- Right Column Tab 2 (Desktop) / Tab 3 (Mobile): Crafting -->
+      <section class="deck-pane pane-craft is-desktop-right-hidden" data-tab-panel="craft">
+        <header class="pane-header">
+          <span data-i18n="hud.tab.craft">CRAFTING</span>
+          <div class="pane-tab-switcher">
+            <button type="button" class="pane-switch-btn" data-right-tab="inventory" data-i18n="hud.tab.inventory_short">PACK</button>
+            <button type="button" class="pane-switch-btn is-active" data-right-tab="craft" data-i18n="hud.tab.craft_short">CRAFT</button>
+            <button type="button" class="pane-switch-btn" data-right-tab="base" data-i18n="hud.tab.base_short">BASE</button>
+          </div>
+        </header>
+        <div id="craft-root" class="pane-scroll"></div>
+      </section>
+
+      <!-- Right Column Tab 3 (Desktop) / Tab 4 (Mobile): Outpost & Base -->
+      <section class="deck-pane pane-base is-desktop-right-hidden" data-tab-panel="base">
+        <header class="pane-header">
+          <span data-i18n="hud.tab.base">OUTPOST</span>
+          <div class="pane-tab-switcher">
+            <button type="button" class="pane-switch-btn" data-right-tab="inventory" data-i18n="hud.tab.inventory_short">PACK</button>
+            <button type="button" class="pane-switch-btn" data-right-tab="craft" data-i18n="hud.tab.craft_short">CRAFT</button>
+            <button type="button" class="pane-switch-btn is-active" data-right-tab="base" data-i18n="hud.tab.base_short">BASE</button>
+          </div>
+        </header>
+        <div id="base-root" class="pane-scroll"></div>
+      </section>
     </main>
+
+    <nav class="mobile-nav" aria-label="Primary Panels">
+      <button type="button" class="mobile-tab-btn is-active" data-tab-target="map">
+        <span class="tab-glyph">⌖</span>
+        <span class="tab-label" data-i18n="hud.tab.map_short">MAP</span>
+      </button>
+      <button type="button" class="mobile-tab-btn" data-tab-target="inventory">
+        <span class="tab-glyph">▤</span>
+        <span class="tab-label" data-i18n="hud.tab.inventory_short">PACK</span>
+      </button>
+      <button type="button" class="mobile-tab-btn" data-tab-target="craft">
+        <span class="tab-glyph">⚒</span>
+        <span class="tab-label" data-i18n="hud.tab.craft_short">CRAFT</span>
+      </button>
+      <button type="button" class="mobile-tab-btn" data-tab-target="base">
+        <span class="tab-glyph">🏛</span>
+        <span class="tab-label" data-i18n="hud.tab.base_short">BASE</span>
+      </button>
+      <button type="button" class="mobile-tab-btn" data-tab-target="status">
+        <span class="tab-glyph">✚</span>
+        <span class="tab-label" data-i18n="hud.tab.status_short">BIO</span>
+      </button>
+    </nav>
   </div>
 
-  <!-- Printable Full Lesson Handout (Visible only when printing full handout) -->
-  <section id="printable-handout" class="printable-handout" aria-hidden="true"></section>
+  <div id="main-menu" class="main-menu-overlay" hidden></div>
 
-  <!-- Vocabulary Modal -->
-  <div id="vocab-modal" class="modal-overlay" style="display: none;">
-    <div class="modal-dialog">
-      <div class="modal-top">
-        <h3 id="modal-term" class="modal-term">Word</h3>
-        <button id="modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+  <div id="action-modal" class="action-modal-overlay" hidden></div>
+
+  <div id="barter-modal" class="action-modal-overlay" hidden></div>
+
+  <div id="vehicle-modal" class="action-modal-overlay" hidden></div>
+
+  <div id="vehicle-discovery-modal" class="action-modal-overlay" hidden></div>
+
+  <div id="codex-modal" class="action-modal-overlay" hidden></div>
+
+  <div id="radio-modal" class="action-modal-overlay" hidden></div>
+
+  <div id="travel-modal" class="action-modal-overlay" hidden></div>
+
+  <div id="encounter-host" class="encounter-overlay" hidden></div>
+
+  <div id="toast-banner" class="toast-banner" role="status" aria-live="polite"></div>
+
+  <div id="death-modal" class="modal-backdrop" hidden>
+    <div class="modal-card">
+      <h2 class="modal-title" data-i18n="death.title">SIGNAL TERMINATED</h2>
+      <p id="death-cause" class="tone-bad"></p>
+      <p id="death-summary" class="muted-note"></p>
+      <div class="death-actions-row">
+        <button id="btn-death-restart" type="button" class="btn btn-accent" data-i18n="hud.new_run">
+          NEW EXPEDITION
+        </button>
+        <button id="btn-death-memorial" type="button" class="btn btn-ghost" data-i18n="death.action_memorial">
+          🪦 MEMORIAL LOG
+        </button>
       </div>
-      <span id="modal-pos" class="modal-pos">noun</span>
-      <p id="modal-definition" class="modal-definition"></p>
-      <div style="display: flex; gap: 0.5rem; margin-top: 1.25rem; flex-wrap: wrap;">
-        <button id="modal-speak-btn" class="btn-pill active">🔊 Pronounce</button>
-        <button id="modal-practice-btn" class="btn-pill">🎙 Practice Saying It</button>
-        <button id="modal-save-btn" class="btn-pill btn-save-word">☆ Save Word</button>
-      </div>
-      <div id="modal-speech-feedback" class="speech-feedback-box" style="display: none;"></div>
     </div>
   </div>
 
-  <!-- Personal Word Bank Modal -->
-  <div id="wordbank-modal" class="modal-overlay" style="display: none;">
-    <div class="modal-dialog" style="max-width: 560px;">
-      <div class="modal-top">
-        <h3 class="modal-term" style="font-size: 1.85rem;">My Personal Word Bank</h3>
-        <button id="wordbank-modal-close" class="modal-close-btn" aria-label="Close word bank">✕</button>
-      </div>
-      <p style="font-size: 0.8rem; color: var(--ink-400); font-family: var(--font-mono); margin-bottom: 1rem;">BOOKMARKED VOCABULARY ACROSS GRADES 1–6</p>
-      <div id="wordbank-modal-body"></div>
-    </div>
-  </div>
-
-  <!-- Student Progress Modal -->
-  <div id="progress-modal" class="modal-overlay" style="display: none;">
-    <div class="modal-dialog" style="max-width: 580px;">
-      <div class="modal-top">
-        <h3 class="modal-term" style="font-size: 1.85rem;">Literacy Progress Report</h3>
-        <button id="progress-modal-close" class="modal-close-btn" aria-label="Close progress report">✕</button>
-      </div>
-      <p style="font-size: 0.85rem; color: var(--ink-400); font-family: var(--font-mono); margin-bottom: 1rem;">STUDENT PORTFOLIO & ACHIEVEMENTS (GRADES 1–6)</p>
-      <div id="progress-modal-body"></div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--ink-border);">
-        <button id="btn-reset-progress" class="btn-pill" style="color: #dc2626; border-color: #fecaca;">🗑 Reset Progress</button>
-        <button id="btn-print-progress" class="btn-pill active">🖨 Print Report</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="js/data.js"></script>
-  <script src="js/state.js"></script>
-  <script src="js/speech.js"></script>
-  <script src="js/app.js"></script>
-
+  <script defer src="./dist/app.bundle.js?v=42"></script>
 </body>
 </html>

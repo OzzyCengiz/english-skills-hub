@@ -1,0 +1,3556 @@
+{
+  "app": {
+    "title": "LAST BREATH",
+    "subtitle": "SAHA TERMİNALİ // REV 0.1"
+  },
+  "menu": {
+    "kicker": "ACİL DURUM YAYINI // HAYATTA KALMA TERMİNALİ",
+    "lore": "Şebeke çöküşü +14 ay. Kısa dalga röleleri tüm kıtalarda susuyor. Kalorini idareli kullan, geçilebilir koridorları haritalandır, bir sığınak kur ve nefes almaya devam et.",
+    "active_transmission": "AKTİF HAYATTA KALAN SİNYALİ BULUNDU",
+    "charted_sectors": "{count} bölge haritalandı",
+    "new_expedition_title": "YENİ SEFER YAPILANDIRMASI",
+    "no_save_title": "YENİ HAYATTA KALAN PROTOKOLÜ",
+    "no_save_desc": "Sektörde kayıtlı aktif hayatta kalan sinyali bulunamadı. Kıyamet sonrası harabelerde hayatta kalma mücadelenizi başlatmak için yeni bir sefer kaydı oluşturun.",
+    "select_archetype": "1. UZMANLIK GEÇMİŞİNİ SEÇ",
+    "select_sector": "2. BAŞLANGIÇ SEKTÖRÜNÜ SEÇ",
+    "footer_hint": "TÜM İLERLEME YEREL TERMİNALE OTOMATİK KAYDEDİLİR",
+    "action": {
+      "continue": "KAYITLI SEFERE DEVAM ET",
+      "start_new": "SEKTÖRE İNİŞ YAP",
+      "open_menu": "ANA MENÜ",
+      "new_game": "YENİ SEFERE BAŞLA →",
+      "create_character": "YENİ HAYATTA KALAN OLUŞTUR →",
+      "back_to_menu": "← ANA MENÜ",
+      "new_game_main": "YENİ OYUN",
+      "load_game": "OYUN YÜKLE",
+      "settings": "AYARLAR",
+      "exit": "ÇIKIŞ",
+      "return_to_game": "OYUNA DÖN",
+      "desc_new_game": "Sıfırdan yeni bir hayatta kalma seferi başlat ve karakterini yarat.",
+      "desc_load_game": "Kaydedilmiş sefer yuvalarını (10 Slot) görüntüle ve devam et.",
+      "desc_settings": "Ses, dil, CRT ekran paraziti ve sistem ayarlarını yapılandır.",
+      "desc_exit": "Mevcut oturumu sonlandır ve oyundan çık.",
+      "codex_memorial": "SEFER DEFTERİ & ANIT",
+      "desc_codex_memorial": "Hayatta kalanların anıt mezarını, başarımları, kümülatif istatistikleri ve saha istihbaratını incele.",
+      "install_app": "UYGULAMAYI YÜKLE (PWA)",
+      "desc_install_app": "Cihazınıza yükleyerek çevrimdışı ve tam ekran oynayın."
+    },
+    "archetype": {
+      "scavenger": {
+        "name": "Keşifçi / İzci",
+        "desc": "Kurye çantası, pusula, ekstra erzak ve Sv.1 Keşif & Yağmalama uzmanlığı ile başlar."
+      },
+      "medic": {
+        "name": "Saha Sıhhiyecisi",
+        "desc": "Travma kiti, antibiyotik, kimyasal panço ve Sv.1 Saha Tıbbı uzmanlığı ile başlar."
+      },
+      "engineer": {
+        "name": "Hurda Mühendisi",
+        "desc": "Levye, çelik plaka, bakır tel ve Sv.1 Hurda Mühendisliği uzmanlığı ile başlar."
+      },
+      "veteran": {
+        "name": "Kordon Muhafızı",
+        "desc": "Pala, korumalı deri ceket, askeri kumanya (MRE) ve Sv.1 Yakın Çatışma ile başlar."
+      }
+    },
+    "slots": {
+      "title": "SEFER KAYIT YUVALARI",
+      "subtitle": "10 Kayıt Yuvası // 2 Ücretsiz Slot · 8 Survivor Premium Slot",
+      "free_badge": "ÜCRETSİZ",
+      "premium_badge": "PREMIUM",
+      "locked_badge": "KİLİTLİ 🔒",
+      "active_badge": "AKTİF SEFER",
+      "empty": "BOŞ YUVA",
+      "empty_desc": "Bu yuvada kayıtlı bir hayatta kalma seferi bulunmuyor.",
+      "locked_desc": "Bu yuva kilitlidir. 8 ilave kayıt yuvasını kullanmak için Premium sürüm gereklidir.",
+      "load_btn": "YÜKLE",
+      "save_btn": "KAYDET",
+      "delete_btn": "SİL",
+      "unlock_btn": "KİLİDİ AÇ 🔒",
+      "delete_confirm": "Bu kayıt yuvasındaki tüm ilerleme silinecek. Emin misiniz?",
+      "save_success": "Oyun başarıyla kaydedildi.",
+      "load_failed": "Kayıt yüklenemedi veya bozuk.",
+      "premium_status_active": "SURVIVOR PREMIUM AKTİF 👑",
+      "premium_status_free": "ÜCRETSİZ SÜRÜM (FREE)",
+      "upgrade_cta": "PREMIUM'A YÜKSELT"
+    },
+    "premium": {
+      "title": "SURVIVOR PREMIUM SÜRÜMÜ",
+      "kicker": "ÖZEL VIP ERİŞİM DÜZEYİ",
+      "desc": "Çorak topraklarda sınırları kaldırın. Tüm reklamları devre dışı bırakın, 10 kayıt yuvasının tümünü sınırsız açın ve acil yardım sandıklarına anında ulaşın.",
+      "active_badge": "👑 ÖMÜR BOYU PREMIUM ETKİN // Tüm reklamlar kaldırıldı, 10 yuva açık.",
+      "feature_1": "Tamamen Reklamsız Kesintisiz Deneyim (Sıfır reklam beklemesi)",
+      "feature_2": "10 Adet Bağımsız Kayıt Yuvası (Tüm yuvalar sınırsız açık)",
+      "feature_3": "Anında Acil Durum Erzak Yardımı (Reklamsız tayın, su ve bandaj)",
+      "feature_4": "Altın VIP Rozeti & Kalıcı Meta-Destek",
+      "unlock_btn": "PREMIUM'U ETKİNLEŞTİR (TEST MODU)",
+      "revoke_btn": "PREMIUM'U KALDIR (KİLİTLİ MODU TEST ET)",
+      "promo_label": "LİSANS VEYA PROMOSYON KODUNUZ VAR MI?",
+      "promo_submit": "KODU DOĞRULA",
+      "promo_success": "✓ Kod onaylandı! Ömür Boyu Premium hesabınız aktifleştirildi.",
+      "promo_invalid": "✗ Geçersiz kod. Test kodu: VIP-SURVIVOR",
+      "close": "KAPAT",
+      "active_notice": "Survivor Premium lisansı bu cihazda başarıyla aktifleştirildi."
+    },
+    "settings": {
+      "title": "SİSTEM AYARLARI",
+      "subtitle": "Arayüz, ses, dil ve yerel depolama yapılandırması",
+      "language": "Arayüz Dili (Language)",
+      "sfx": "Ses Efektleri (SFX)",
+      "ambient": "Telsiz & Atmosfer Ambiyansı",
+      "crt": "CRT Ekran Paraziti ve Tarama Çizgileri",
+      "autosave": "Otomatik Kayıt Sistemi",
+      "reset_title": "Tehlikeli Bölge (Veri Sıfırlama)",
+      "reset_desc": "Tüm kayıt yuvalarını, ayarları ve yerel verileri sıfırlar.",
+      "reset_btn": "TÜM VERİLERİ SIFIRLA",
+      "reset_confirm": "DİKKAT: Tüm kayıtlarınız ve ayarlarınız kalıcı olarak silinecek! Onaylıyor musunuz?",
+      "on": "AÇIK",
+      "off": "KAPALI",
+      "saved_notice": "Ayarlar kaydedildi."
+    },
+    "exit": {
+      "title": "OTURUMU SONLANDIR",
+      "desc": "Çorak topraklardan ayrılmak üzeresiniz. Mevcut seferiniz aktif yuvaya otomatik olarak kaydedilmiştir.",
+      "confirm_btn": "ÇIKIŞ YAP",
+      "cancel_btn": "İPTAL / GERİ DÖN",
+      "terminated_title": "BAĞLANTI KESİLDİ // SESSION TERMINATED",
+      "terminated_desc": "Hayatta kalan verileri güvenli belleğe mühürlendi. Tarayıcı sekmesini kapatabilirsiniz.",
+      "reconnect_btn": "YENİDEN BAĞLAN"
+    }
+  },
+  "character": {
+    "create_title": "HAYATTA KALAN KAYDI // YENİ SEFER",
+    "create_subtitle": "ACİL DURUM PROTOKOLÜ AKTİF. SAHA GÖREVLİSİ KİMLİĞİNİ, BİYOMETRİK VERİLERİNİ VE İNİŞ SEKTÖRÜNÜ BELİRLEYİN.",
+    "default_name": "Kazazede",
+    "callsign_kicker": "ÇAĞRI KODU // KİMLİK",
+    "steps": {
+      "identity": "1. KİMLİK",
+      "archetype": "2. GEÇMİŞ",
+      "sector": "3. SEKTÖR",
+      "summary": "4. ÖZET"
+    },
+    "step_subtitle": {
+      "1": "Adım 1/4: Çağrı kodunuzu, yaşınızı, kan grubunuzu ve hayatta kalma mizacınızı belirleyin.",
+      "2": "Adım 2/4: Kıyamet öncesi uzmanlık geçmişinizi ve başlangıç ekipman kitinizi seçin.",
+      "3": "Adım 3/4: Hayatta kalma operasyonuna başlayacağınız ilk iniş sektörünü seçin.",
+      "4": "Adım 4/4: Saha kimlik dosyanızı gözden geçirin ve seferi başlatın."
+    },
+    "label": {
+      "identity": "1. SAHA GÖREVLİSİ KİMLİĞİ VE BİYOMETRİ",
+      "name": "ÇAĞRI KODU / İSİM",
+      "age": "YAŞ",
+      "blood": "KAN GRUBU",
+      "trait": "HAYATTA KALMA MİZACI",
+      "archetype": "2. UZMANLIK GEÇMİŞİ VE EKİPMAN",
+      "sector": "3. BAŞLANGIÇ İNİŞ SEKTÖRÜ",
+      "dossier_preview": "SAHA KİMLİK DOSYASI // CANLI ÖNİZLEME"
+    },
+    "placeholder": {
+      "name": "İsim veya çağrı kodu girin..."
+    },
+    "action": {
+      "random_name": "⚄ RASTGELE",
+      "deploy": "SEKTÖRE İNİŞ YAP // SEFERİ BAŞLAT",
+      "back": "← SİNYALE GERİ DÖN",
+      "back_to_menu": "← ANA MENÜ",
+      "next": "SONRAKİ ADIM →",
+      "prev": "← ÖNCEKİ ADIM"
+    },
+    "age_bracket": {
+      "young": "Genç (18–25) // Yüksek Kondisyon & Hızlı Enerji Yenilenmesi",
+      "prime": "Olgun (26–40) // Dengeli Metanet & Çeviklik",
+      "veteran": "Kıdemli (41–65) // Hayatta Kalma Tecrübesi & Ekstra Toplama Bilgisi"
+    }
+  },
+  "trait": {
+    "stoic": {
+      "name": "Soğukkanlı",
+      "desc": "Acı ve travmaya yüksek direnç; ağır fiziksel hasar ve kanamalarda panik ve enerji kaybını düşürür."
+    },
+    "night_owl": {
+      "name": "Gece Kuşu",
+      "desc": "Gece operasyonlarında yüksek dikkat ve duyusal avantaj; karanlıkta keşif yaparken yön şaşırmayı önler."
+    },
+    "fast_metabolism": {
+      "name": "Hızlı İyileşme",
+      "desc": "Güvenli sığınaklarda dinlenirken ve uyurken %25 daha hızlı doğal sağlık yenilenmesi."
+    },
+    "hoarder": {
+      "name": "İstifçi",
+      "desc": "Çanta istifleme ve dengeleme ustası; azami taşıma kapasitesini kalıcı olarak +2.5 kg artırır."
+    },
+    "iron_stomach": {
+      "name": "Demir Mide",
+      "desc": "Sağlam sindirim bağışıklığı; bozuk gıdalardan ve arıtılmamış sulardan enfeksiyon kapma riskini %50 düşürür."
+    }
+  },
+  "loot": {
+    "title": {
+      "scavenge_found": "KEŞİF & ARAMA // KAYNAKLAR BULUNDU",
+      "scavenge_empty": "KEŞİF & ARAMA // SEKTÖR BOŞ",
+      "combat_victory": "TEHDİT ETKİSİZ // SAVAŞ GANİMETİ",
+      "combat_scavenge": "ÇATIŞMA İÇİ YAĞMALAMA // HIZLI BULGU",
+      "survey_result": "BÖLGE GÖZLEMİ // TAMAMLANDI",
+      "rest_result": "SAHA İSTİRAHATİ // DURUM RAPORU"
+    },
+    "desc": {
+      "scavenge_found": "{location} ({country}) sektöründeki arama sonucunda aşağıdaki kaynaklar bulundu. Çantanıza almak istediklerinizi seçin:",
+      "scavenge_empty": "{location} ({country}) sektöründe yapılan detaylı aramada işe yarar bir şey bulunamadı. Bölgedeki hurda ve erzak tükenmiş olabilir.",
+      "combat_victory": "{enemy} etkisiz hale getirildi (+{xp} XP). Hedefin üzerinden aşağıdaki ganimetler ele geçirildi:",
+      "combat_scavenge": "Çatışma sırasında düşmanın dikkatinden kaçarak şu ganimet ele geçirildi:",
+      "survey": "Yüksek bir gözetleme noktasından yapılan taramada {count} yeni komşu koridor ve sektör haritalandı.",
+      "survey_empty": "Gözlem tamamlandı. Bu noktadan haritalanmamış yeni bir sektör tespit edilemedi.",
+      "rest": "{hours} saat güvenli şekilde dinlenildi. Yaşamsal fonksiyonlar dengelendi ve enerji toplandı."
+    },
+    "load_status": "Çanta Yükü: {current} / {max} kg (+{selected} kg seçildi)",
+    "overload_warning": "⚠ UYARI: Seçilen eşyalar azami çanta taşıma kapasitenizi aşıyor!",
+    "no_items": "Toplanabilecek bir eşya bulunamadı.",
+    "action": {
+      "take_all": "TÜMÜNÜ AL",
+      "take_selected": "SEÇİLENLERİ AL ({count})",
+      "leave_all": "YERDE BIRAK",
+      "close": "ANLADIM // DEVAM ET"
+    },
+    "scanner": {
+      "searching": "SEKTÖR TARANIYOR...",
+      "completed": "TARAMA TAMAMLANDI",
+      "empty_status": "SEKTÖR BOŞ",
+      "items_detected": "{revealed} / {total} kaynak tespit edildi",
+      "completed_desc": "Toplam {count} adet kaynak tespit edildi.",
+      "empty_desc": "Bu sektörde kullanılabilir bir eşya veya hurda bulunamadı.",
+      "telemetry_searching": "Molozlar, dolaplar ve enkaz taranıyor...",
+      "speedup": "HIZLANDIR ⏩",
+      "searching_wait": "ARANIYOR... (%{percent})"
+    }
+  },
+  "hud": {
+    "day": "GÜN {day}",
+    "day_short": "G{day}",
+    "daylight": "GÜNDÜZ",
+    "night": "GECE",
+    "new_run": "YENİ SEFER",
+    "confirm_reset": "Mevcut seferi bırakıp ana menüden yeni bir sefer başlatmak istiyor musunuz?",
+    "tab": {
+      "map": "HARİTA",
+      "map_short": "HARİTA",
+      "inventory": "ÇANTA & EKİPMAN",
+      "inventory_short": "ÇANTA",
+      "craft": "ÜRETİM & ŞEMA",
+      "craft_short": "ÜRETİM",
+      "base": "SIĞINAK & ALTYAPI",
+      "base_short": "SIĞINAK",
+      "status": "BİYOTARAMA",
+      "status_short": "BİYO",
+      "log": "SAHA KAYDI",
+      "log_short": "GÜNLÜK"
+    },
+    "pill": {
+      "health": "CAN",
+      "satiety": "KAL",
+      "hydration": "SU",
+      "energy": "DAY"
+    },
+    "codex": "KODEKS",
+    "install_app": "YÜKLE",
+    "radio": "TELSİZ"
+  },
+  "ui": {
+    "page": "Sayfa {current} / {total}",
+    "prev_page": "◀ Önceki",
+    "next_page": "Sonraki ▶",
+    "slot_range": "{from}-{to} / {total}",
+    "close": "KAPAT"
+  },
+  "rarity": {
+    "common": "YAYGIN",
+    "rare": "NADİR",
+    "epic": "EPİK",
+    "legendary": "EFSANEVİ"
+  },
+  "status": {
+    "tabs": {
+      "vitals": "1. BİYOMETRİK",
+      "body": "2. TRAVMA",
+      "skills": "3. UZMANLIK"
+    },
+    "section": {
+      "vitals": "BİYOMETRİK DEĞERLER",
+      "body": "ANATOMİK TRAVMA ŞEMASI",
+      "conditions": "AKTİF TRAVMA & ENFEKSİYON",
+      "readout": "ÇATIŞMA & DONANIM TELEMETRİSİ",
+      "skills": "HAYATTA KALMA UZMANLIKLARI"
+    },
+    "body": {
+      "part": {
+        "head": "Kafatası / Baş",
+        "torso": "Gövde / Göğüs",
+        "leftArm": "Sol Kol",
+        "rightArm": "Sağ Kol",
+        "leftLeg": "Sol Bacak",
+        "rightLeg": "Sağ Bacak"
+      },
+      "condition": {
+        "intact": "SAĞLAM",
+        "arterial_bleed": "ATARDAMAR KANAMASI",
+        "minor_bleed": "KANAMA",
+        "fracture": "KIRIK",
+        "pneumothorax": "PNÖMOTORAKS",
+        "burn": "YANIK",
+        "infection": "ENFEKTE"
+      },
+      "no_supplies": "Gereken tıbbi malzeme çantada yok"
+    },
+    "vital": {
+      "health": "BÜTÜNLÜK",
+      "satiety": "KALORİ",
+      "hydration": "SU SEVİYESİ",
+      "energy": "DAYANIKLILIK"
+    },
+    "band": {
+      "fine": "NORMAL",
+      "low": "DÜŞÜK",
+      "critical": "KRİTİK",
+      "depleted": "TÜKENDİ"
+    },
+    "no_ailments": "Aktif kanama, sistemik enfeksiyon veya kas-iskelet travması tespit edilmedi.",
+    "readout": {
+      "weapon": "Kuşanılan Silah",
+      "combat_rating": "Taktik Çatışma Gücü",
+      "armor": "Zırh / Koruma Değeri",
+      "scavenge_bonus": "Arama Verimliliği",
+      "travel_bonus": "Yürüyüş Hızı"
+    }
+  },
+  "ailment": {
+    "bleeding": {
+      "name": "Açık Kanama",
+      "desc": "Her saat düzenli kan kaybı. Şok başlamadan önce bandaj veya ilk yardım kiti uygulayın.",
+      "severity": "DERECE {severity}"
+    },
+    "infection": {
+      "name": "Sistemik Enfeksiyon",
+      "desc": "Bakteri yükü artıyor. İleri aşamalarda antiseptik veya antibiyotik gerekir."
+    },
+    "sprain": {
+      "name": "Bağ Burkulması",
+      "desc": "İyileşene kadar bölgeler arası yürüyüş hızını düşürür.",
+      "remaining": "{hours}sa kaldı"
+    },
+    "pain": {
+      "name": "Şiddetli Ağrı & Şok",
+      "desc": "Akut travma ve doku hasarı kaynaklı yoğun acı. Enerji tükenmesini hızlandırır ve hareket kabiliyetini kısıtlar."
+    },
+    "poison": {
+      "name": "Toksik Zehirlenme",
+      "desc": "Dolaşım sistemine karışan kimyasal veya biyolojik toksin. Zamanla doku nekrozuna ve organ hasarına yol açar."
+    }
+  },
+  "skill": {
+    "level_short": "SV {level}",
+    "max_level": "MAKS",
+    "foraging": {
+      "name": "Keşif & Yağmalama",
+      "desc": "Yıkıntılardan bulunan ganimet miktarını ve tehlikelerden kaçınma şansını artırır."
+    },
+    "medical": {
+      "name": "Saha Tıbbı",
+      "desc": "Tedavi ve iyileşme etkisini güçlendirir; doğal kan pıhtılaşma şansını artırır."
+    },
+    "engineering": {
+      "name": "Hurda Mühendisliği",
+      "desc": "Araç sökümü, tamirat ve mekanik engelleri aşma başarısını yükseltir."
+    },
+    "marksmanship": {
+      "name": "Yakın Çatışma & Silahlar",
+      "desc": "Düşman karşılaşmalarında taktik çatışma gücünü artırır."
+    }
+  },
+  "inventory": {
+    "tabs": {
+      "pack": "1. SIRT ÇANTASI",
+      "equipped": "2. KUŞANILAN DONANIM",
+      "vehicles": "Araçlar & Filo"
+    },
+    "weight": "YÜK",
+    "slots": "SLOT",
+    "overloaded_notice": "AŞIRI YÜK — Seyahat %15 yavaşlar ve dayanıklılık tüketimi %15 artar.",
+    "unarmed": "Silahsız",
+    "no_ammo": "Mermisiz",
+    "slot_empty": "— BOŞ —",
+    "empty": "Bu kategoride eşya yok.",
+    "ground_empty": "Bu bölgede yerde bırakılmış eşya yok.",
+    "section": {
+      "equipped": "KUŞANILAN EKİPMAN",
+      "pack": "SIRT ÇANTASI",
+      "ground": "YERDEKİ ZULA"
+    },
+    "slot": {
+      "weapon": "SİLAH",
+      "body": "GÖVDE",
+      "pack": "ÇANTA"
+    },
+    "category": {
+      "all": "TÜMÜ",
+      "supplies": "ERZAK",
+      "medical": "TIBBİ",
+      "weapons": "SİLAH",
+      "scrap": "HURDA",
+      "gear": "TEÇHİZAT"
+    },
+    "action": {
+      "use": "KULLAN",
+      "equip": "KUŞAN",
+      "unequip": "ÇIKAR",
+      "drop": "BIRAK (1)",
+      "drop_all": "TÜMÜNÜ BIRAK",
+      "take": "AL",
+      "take_all": "HEPSİNİ AL",
+      "close_inspect": "KAPAT",
+      "take_one": "AL (×1)",
+      "take_all_item": "HEPSİNİ AL (×{count})",
+      "treat": "TEDAVİ ET"
+    },
+    "grid": {
+      "inspect_prompt": "İncelemek ve işlem yapmak için bir yuvaya dokunun.",
+      "slot_num": "Yuva {num}",
+      "empty_slot": "BOŞ",
+      "total_weight": "Toplam Yük",
+      "unit_kg": "kg"
+    },
+    "vehicles": {
+      "list_title": "SAHİPLENİLEN ARAÇ ENVANTERİ",
+      "empty_title": "HENÜZ BİR ARAÇ KEŞFEDİLMEDİ",
+      "empty_desc": "Dünyanın herhangi bir sektöründe keşif (survey), arama (scavenge) veya intikal yaparak terkedilmiş araçlar keşfedebilir ve filonuza katabilirsiniz.",
+      "action_go_map": "Keşif İçin Haritaya Git"
+    }
+  },
+  "map": {
+    "tabs": {
+      "anchor": "1. MEVCUT MEVKİ",
+      "corridors": "2. BAĞLANTILI KORİDORLAR"
+    },
+    "current_sector": "MEVCUT SEKTÖR",
+    "selected_sector": "SEÇİLİ HEDEF SEKTÖR",
+    "no_direct_corridor": "Mevcut sektörden doğrudan geçiş koridoru yok",
+    "country": "ÜLKE / BÖLGE",
+    "coords": "WGS84 KONUM",
+    "threat_level": "TEHLİKE DÜZEYİ",
+    "scavenge_yield": "SEKTÖR REZERVİ",
+    "find_chance": "bulma",
+    "risk": "RİSK",
+    "visited_badge": "HARİTALANDI",
+    "section": {
+      "routes": "BAĞLANTILI KORİDORLAR"
+    },
+    "mode": {
+      "road": "KARA YOLU",
+      "sea": "DENİZ YOLU"
+    },
+    "action": {
+      "scavenge": "BÖLGEDE KEŞİF YAP (50–75dk)",
+      "patrol": "DÜŞMAN ARA / ÇATIŞ (15dk)",
+      "survey": "ÇEVREYİ KEŞFET (45dk)",
+      "rest_hours": "DİNLEN {hours}sa",
+      "travel": "İLERLE"
+    },
+    "control": {
+      "zoom_in": "Yakınlaştır",
+      "zoom_out": "Uzaklaştır",
+      "center": "Karaktere odakla",
+      "world": "Dünya görünümü"
+    }
+  },
+  "location": {
+    "istanbul": "İstanbul",
+    "ankara": "Ankara",
+    "athens": "Atina",
+    "sofia": "Sofya",
+    "bucharest": "Bükreş",
+    "kyiv": "Kiev",
+    "vienna": "Viyana",
+    "berlin": "Berlin",
+    "paris": "Paris",
+    "london": "Londra",
+    "madrid": "Madrid",
+    "lisbon": "Lizbon",
+    "reykjavik": "Reykjavik",
+    "moscow": "Moskova",
+    "tbilisi": "Tiflis",
+    "tehran": "Tahran",
+    "beirut": "Beyrut",
+    "tangier": "Tanca",
+    "cairo": "Kahire",
+    "khartoum": "Hartum",
+    "addis_ababa": "Addis Ababa",
+    "nairobi": "Nairobi",
+    "timbuktu": "Timbuktu",
+    "dakar": "Dakar",
+    "lagos": "Lagos",
+    "kinshasa": "Kinşasa",
+    "johannesburg": "Johannesburg",
+    "cape_town": "Cape Town",
+    "karachi": "Karaçi",
+    "delhi": "Yeni Delhi",
+    "mumbai": "Mumbai",
+    "almaty": "Almatı",
+    "novosibirsk": "Novosibirsk",
+    "ulaanbaatar": "Ulanbatur",
+    "beijing": "Pekin",
+    "shanghai": "Şanghay",
+    "seoul": "Seul",
+    "tokyo": "Tokyo",
+    "vladivostok": "Vladivostok",
+    "anadyr": "Anadır",
+    "bangkok": "Bangkok",
+    "kuala_lumpur": "Kuala Lumpur",
+    "jakarta": "Cakarta",
+    "darwin": "Darwin",
+    "alice_springs": "Alice Springs",
+    "sydney": "Sidney",
+    "auckland": "Auckland",
+    "nome": "Nome",
+    "anchorage": "Anchorage",
+    "vancouver": "Vancouver",
+    "san_francisco": "San Francisco",
+    "los_angeles": "Los Angeles",
+    "denver": "Denver",
+    "chicago": "Chicago",
+    "new_york": "New York",
+    "montreal": "Montreal",
+    "st_johns": "St. John's",
+    "nuuk": "Nuuk",
+    "houston": "Houston",
+    "mexico_city": "Mexico City",
+    "panama_city": "Panama City",
+    "bogota": "Bogota",
+    "lima": "Lima",
+    "manaus": "Manaus",
+    "recife": "Recife",
+    "sao_paulo": "São Paulo",
+    "buenos_aires": "Buenos Aires",
+    "santiago": "Santiago",
+    "ushuaia": "Ushuaia"
+  },
+  "biome": {
+    "urban": "METROPOL YIKINTISI",
+    "suburban": "KENAR MAHALLE",
+    "industrial": "SANAYİ BÖLGESİ",
+    "rural": "KIRSAL ALAN",
+    "coastal": "LİMAN HATTI",
+    "forest": "ORMANLIK",
+    "wasteland": "ÇORAK TOPRAK",
+    "arctic": "BUZUL HATTI",
+    "military": "ASKERİ KORDON"
+  },
+  "enemy": {
+    "feral_hound": {
+      "name": "Kuduz Yaban Köpeği",
+      "desc": "Enkazların arasından dişlerini göstererek atılan aç yırtıcı."
+    },
+    "raider_scout": {
+      "name": "Otoyol Yağmacısı",
+      "desc": "Çentikli pala ve kaynaklı hurda zırh kuşanmış saldırgan izci."
+    },
+    "plague_stalker": {
+      "name": "Enfekte Bölge Avcısı",
+      "desc": "Septik kirle kaplı, ne yaptığını bilmeden saldıran enfekte."
+    },
+    "cordon_deserter": {
+      "name": "Kaçak Kordon Askeri",
+      "desc": "Yıpranmış balistik yelekli, silahlı eski karantina askeri."
+    },
+    "marauder_marksman": {
+      "name": "Kül Yağmacısı Keskin Nişancı",
+      "desc": "Dürbünlü yüksek kalibreli tüfekle hareketleri izleyen gizlenmiş nişancı."
+    },
+    "iron_guard_sentinel": {
+      "name": "Demir Muhafız Şok Nöbetçisi",
+      "desc": "Görüldüğü yerde vur emri uygulayan, ağır zırhlı sığınak hücum askeri."
+    }
+  },
+  "combat": {
+    "kicker": "TAKTİK ÇATIŞMA",
+    "round": "TUR {round}",
+    "enemy_hp": "DÜŞMAN BÜTÜNLÜĞÜ",
+    "player_cover": "Siper Durumu",
+    "enemy_cover": "Düşman Siperi",
+    "scavenge_tag": "Çatışma başı 1×",
+    "tag_immobilize": "Hareketsiz Bırak · -2 DAY",
+    "tag_disarm": "Silahsızlandır · -2 DAY",
+    "spare_tag": "Ganimeti Al · +Karma",
+    "execute_tag": "İnfaz Et · Acımasız",
+    "targeted_fire": "Hedefli Balistik Atışlar",
+    "maneuvers": "Taktik Manevralar",
+    "surrender_banner": "⚠ {name} TESLİM OLDU // SİLAHINI BIRAKTI",
+    "jammed_banner": "⚠ SİLAH TUTUKLUK YAPTI // MEKANİZMAYI TEMİZLEYİN",
+    "enemy_appeared": "DÜŞMAN TEMASI: {name} tespit edildi!",
+    "player_hit": "{name} hedefine {dmg} hasar verdin.",
+    "player_missed": "{name} hedefine saldırın ıskaladı.",
+    "headshot_crit": "ÖLÜMCÜL KAFATASI VURUŞU! {name} kafasından {dmg} travma aldı!",
+    "leg_fractured": "İsabetli atış {name} bacağını kırdı ({dmg} hasar)! Düşman hareketsiz kaldı.",
+    "arm_disarmed": "{name} silah kolundan vuruldu ({dmg} hasar)! Silahını düşürdü.",
+    "enemy_hit": "{name} sana {dmg} travma hasarı verdi!",
+    "enemy_missed": "{name} saldırısından sıyrıldın.",
+    "victory": "{name} etkisiz hale getirildi.",
+    "fled_success": "Teması kesip {name} tehdidinden uzaklaştın.",
+    "fled_failed": "{name} karşısında geri çekilemedin!",
+    "enemy_surrendered": "{name} silahını fırlatıp dizlerinin üzerine çöktü ve merhamet diliyor!",
+    "enemy_routed": "Moral çöktü! {name} panik içinde çorak topraklara kaçtı.",
+    "enemy_spared": "{name} bağışlanıp silahsızlandırıldı ve teçhizatı ele geçirildi.",
+    "enemy_executed": "{name} yakın mesafeden infaz edildi.",
+    "player_advanced": "İleri atılarak mesafeyi kapattın: {range}.",
+    "player_retreated": "Geriye çekilerek menzili açtın: {range}.",
+    "player_took_cover": "{cover} arkasına siper aldın!",
+    "jam_cleared": "Mekanizma çekilip sıkışan kovan temizlendi.",
+    "weapon_jammed": "KLİK! {weapon} mekanizması besleme hatası verip tutukluk yaptı!",
+    "weapon_is_jammed_prompt": "Silah tutukluk yaptı! Ateş etmeden önce mekanizmayı temizleyin.",
+    "enemy_advanced": "{name} hızla hücuma geçerek aradaki mesafeyi kapattı: {range}!",
+    "enemy_crippled_cannot_advance": "{name} hücum etmeye çalıştı ancak kırık bacağının üzerine çöktü!",
+    "enemy_took_cover": "{name} taktiksel siper arkasına daldı!",
+    "player_overwatch_set": "Silahınızı hazır tutup pusuya yattınız. Düşman hareket ettiği an tetik çekilecek!",
+    "player_aim_set": "Nefesinizi tutup hedefe odaklandınız. Bir sonraki vuruşunuz daha isabetli ve ölümcül olacak!",
+    "player_suppression": "Seri baskı ateşi açtınız! {name} siperine gömüldü ve morali ağır darbe aldı.",
+    "overwatch_triggered": "Pusu tetiklendi! {name} yaklaşırken refleks atışıyla {dmg} hasar verdiniz!",
+    "overwatch_missed": "Pusu ateşi açtınız ancak {name} hızla sıyrıldı!",
+    "enemy_suppressed_turn": "{name} yoğun baskı ateşi altında sindiği için bu tur hamle yapamadı!",
+    "enemy_intent_label": "Düşman Niyeti",
+    "intent": {
+      "surrendered": "Teslim oldu, eylem yapmıyor.",
+      "suppressed": "Baskı altında siperine sindi, başını kaldıramıyor!",
+      "crippled": "Kırık bacağı yüzünden hücum edemiyor!",
+      "advance": "Üzerinize doğru koşarak mesafeyi kapatmaya hazırlanıyor!",
+      "take_cover": "Siper aramak için etrafı kolaçan ediyor.",
+      "heavy_shot": "Ölümcül ağır atış için nişan alıyor!",
+      "shoot": "Silahını doğrultup ateş açmaya hazırlanıyor.",
+      "vicious_strike": "Vahşi bir atılımla yakın saldırı yapacak!",
+      "attack": "Doğrudan saldırıya geçmeye hazırlanıyor."
+    },
+    "range_short": {
+      "melee": "YAKIN",
+      "close": "KISA",
+      "medium": "ORTA",
+      "long": "UZAK",
+      "extreme": "AŞIRI"
+    },
+    "range": {
+      "melee": "Göğüs Göğüse (<5m)",
+      "close": "Yakın Mesafe (15m)",
+      "medium": "Orta Menzil (40m)",
+      "long": "Uzak Mesafe (85m)",
+      "extreme": "Aşırı Uzak (150m)"
+    },
+    "cover": {
+      "none": "Açıkta (%0)",
+      "light": "Hafif Siper (-%30 Hasar)",
+      "heavy": "Tahkimat (-%60 Hasar)"
+    },
+    "zone": {
+      "head": "Kafatası / Baş",
+      "torso": "Gövde / Yaşamsal",
+      "legs": "Bacaklar / Diz",
+      "arms": "Kollar / Eller"
+    },
+    "status": {
+      "leg_crippled": "Hareketsiz",
+      "disarmed": "Silahsız",
+      "overwatch": "PUSUDASINIZ (OVERWATCH)",
+      "aimed": "NİŞAN ALINDI (+%25)",
+      "suppressed": "DÜŞMAN BASKI ALTINDA"
+    },
+    "action": {
+      "strike": "Gövdeye Saldırı",
+      "aimed": "Hassas Nişanlı Atış",
+      "scavenge": "Çatışma Ortasında Yağmala",
+      "flee": "Teması Kes & Kaç",
+      "take_cover": "Siper Al",
+      "take_aim": "Nişan Al",
+      "overwatch": "Pusuya Yat",
+      "suppress": "Baskı Ateşi",
+      "advance": "Yaklaş",
+      "retreat": "Geri Çekil",
+      "clear_jam": "Tutukluğu Gider",
+      "spare": "Affet & Silahsızlandır",
+      "execute": "İnfaz Et"
+    },
+    "ui": {
+      "player_role": "HAYATTA KALAN",
+      "enemy_role": "DÜŞMAN TEHDİDİ",
+      "btn_attack": "ATEŞ ET / SALDIR",
+      "btn_strike": "DARBE İNDİR",
+      "zone_torso": "Gövde",
+      "zone_head": "Kafa",
+      "zone_legs": "Bacak",
+      "zone_arms": "Kol",
+      "clash_round_start": "⚔️ Düşman silahına davranıyor! Hamleni belirle.",
+      "clash_player_hit": "💥 SİZ: {zone} isabeti! {dmg} hasar verdiniz.",
+      "clash_player_crit": "⚡ SİZ: 💀 KRİTİK KAFA VURUŞU! {dmg} hasar verdiniz!",
+      "clash_player_miss": "💨 SİZ: Atışınız hedefi ıskaladı!",
+      "clash_enemy_hit": "🩸 DÜŞMAN: {name} vurdu! -{dmg} Can kaybettiniz.",
+      "clash_enemy_absorbed": "🛡️ DÜŞMAN: {name} vurdu ama siper hasarı azalttı (-{dmg} Can).",
+      "clash_enemy_miss": "💨 DÜŞMAN: {name} saldırdı fakat hamlesi boşa çıktı!",
+      "clash_enemy_advance": "👟 DÜŞMAN: {name} hızla yaklaştı ({range})!",
+      "clash_enemy_cover": "🧱 DÜŞMAN: {name} siper arkasına mevzilendi!",
+      "clash_enemy_suppressed": "💥 DÜŞMAN: Yoğun ateş yüzünden kafasını kaldıramadı!",
+      "clash_enemy_crippled": "🦵 DÜŞMAN: Sakat bacağı yüzünden ilerleyemedi!"
+    }
+  },
+  "crafting": {
+    "station": "TEZGAH",
+    "section": {
+      "recipes": "ÜRETİM & ŞEMALAR"
+    },
+    "tier": {
+      "0": "EL İŞÇİLİĞİ",
+      "1": "TEZGAH I",
+      "2": "TORNA II"
+    },
+    "action": {
+      "craft": "ÜRET",
+      "craft_one": "ÜRET ×1",
+      "craft_max": "TÜMÜNÜ ÜRET (×{count})"
+    },
+    "category": {
+      "all": "TÜMÜ",
+      "survival": "HAYATTA KALMA",
+      "medical": "TIBBİ",
+      "weapons": "SİLAHLAR",
+      "gear": "EKİPMAN"
+    },
+    "no_recipes_in_cat": "Bu kategoride henüz üretilebilir şema bulunamadı.",
+    "select_prompt": "Malzemeleri görmek ve üretmek için yukarıdaki şemalardan birine dokunun.",
+    "ingredients_needed": "GEREKLİ MALZEMELER",
+    "station_missing_warn": "Bu şema için {tier} gereklidir. Sığınağınızda Saha Tezgahı inşa edin veya geliştirin.",
+    "craftable_count": "{count} Adet Üretilebilir"
+  },
+  "base": {
+    "location_label": "KURULU SIĞINAK",
+    "integrity": "SAVUNMA",
+    "none_established": "Henüz kalıcı bir sığınak kurulmadı. Tezgah ve depo inşa etmek için mevcut sektörü sahiplenin.",
+    "storage_empty": "Sığınak deposu boş.",
+    "section": {
+      "outpost": "SIĞINAK ALTYAPISI",
+      "storage": "SIĞINAK DEPOSU"
+    },
+    "action": {
+      "establish": "{location} BÖLGESİNDE SIĞINAK KUR",
+      "relocate": "SIĞINAĞI {location} BÖLGESİNE TAŞI",
+      "upgrade": "İNŞA ET / GELİŞTİR",
+      "repair": "ÇEVREYİ ONAR (1× Çelik Plaka)",
+      "collect_all": "HASADI ÇANTAYA AL",
+      "stash_all_materials": "📦 TÜM MALZEMELERİ DEPOLA",
+      "take_all": "DEPOYU BOŞALT",
+      "toggle_generator": "⚡ GÜCÜ AÇ / KAPAT",
+      "refuel_generator": "⛽ YAKIT DOLDUR (+12s)",
+      "inspect_facility": "TESİSİ İNCELE"
+    },
+    "facility_inspect_prompt": "Detayları görmek ve inşa/geliştirme yapmak için bir tesise dokunun.",
+    "production_ready": "SIĞINAK ÜRETİMİ HAZIR",
+    "subtab": {
+      "facilities": "🏛️ TESİSLER",
+      "storage": "📦 DEPO",
+      "defense": "🛡️ SAVUNMA"
+    },
+    "power_label": "GÜÇ ŞEBEKESİ",
+    "power_active": "AKTİF ⚡",
+    "power_offline": "KAPALI",
+    "generator_fuel": "YAKIT: {hours}s ({mins} dk)",
+    "threat_label": "TEHDİT SEVİYESİ",
+    "threat_low": "DÜŞÜK",
+    "threat_medium": "ORTA",
+    "threat_high": "YÜKSEK",
+    "defense_power": "SAVUNMA GÜCÜ",
+    "no_defense_logs": "Henüz kayıtlı bir gece baskını veya güvenlik olayı yok.",
+    "raid_won_title": "Baskın Püskürtüldü",
+    "raid_lost_title": "Savunma Aşıldı"
+  },
+  "structure": {
+    "workbench": {
+      "name": "Saha Çalışma Tezgahı",
+      "desc": "Bu sığınakta Seviye I ve Seviye II üretim şemalarını açar."
+    },
+    "rain_catcher": {
+      "name": "Yağmur Suyu Yoğuşturucu",
+      "desc": "Zamanla sığınak deposuna otomatik temiz su biriktirir."
+    },
+    "barricade": {
+      "name": "Çelik & Demir Barikat",
+      "desc": "Sığınak çevresini gece baskınlarına karşı güçlendirir."
+    },
+    "med_cot": {
+      "name": "Steril Revir Yatağı",
+      "desc": "Sığınakta dinlenirken can yenilenmesini hızlandırır."
+    },
+    "greenhouse": {
+      "name": "Hidroponik Sera",
+      "desc": "Zamanla sığınak deposuna otomatik konserve gıda hasat eder."
+    },
+    "radio_relay": {
+      "name": "Telsiz Röle Kulesi",
+      "desc": "Sığınakta dinlenirken telsiz bataryasını otomatik şarj eder ve sinyal gücünü artırır."
+    },
+    "vehicle_depot": {
+      "name": "Araç Bakım Hangarı",
+      "desc": "Sığınakta bekleyen aracın gövde kondisyonunu zamanla otomatik onarır."
+    },
+    "generator": {
+      "name": "Dizel & Benzin Jeneratörü",
+      "desc": "Sığınağa elektrik gücü sağlar. Üretim sürelerini yarıya indirir, serayı hızlandırır ve gece savunmasını aydınlatır."
+    }
+  },
+  "item": {
+    "canned_beans": {
+      "name": "Konserve Kuru Fasulye",
+      "desc": "Tuzlu salamura içinde ezik teneke kutu fasulye. Ağır ve güvenilir kalori."
+    },
+    "jerky": {
+      "name": "Kurutulmuş Et (Jerky)",
+      "desc": "Tuzla kurutulmuş et şeridi. Hafif ve dayanıklı, ancak susuzluğu artırır."
+    },
+    "mre": {
+      "name": "Askeri MRE Kumanyası",
+      "desc": "Alevsiz ısıtıcı ve yüksek kalorili bisküviler içeren askeri savaş rasyonu."
+    },
+    "energy_bar": {
+      "name": "Yulaflı Enerji Barı",
+      "desc": "Yoğun glikoz ve yulaf barı. Hareket halindeyken hızlı enerji sağlar."
+    },
+    "bottled_water": {
+      "name": "Mühürlü Şişe Su",
+      "desc": "Fabrika mühürlü mineral suyu. Mikrobiyal enfeksiyon riski taşımaz."
+    },
+    "dirty_water": {
+      "name": "Bulanık Durgun Su",
+      "desc": "Açık su birikintisinden toplanmış. Susuzluğu giderir ancak hastalık riski taşır."
+    },
+    "instant_coffee": {
+      "name": "Hazır Kahve Paketi",
+      "desc": "Acı dondurulmuş kahve kristalleri. Hafif susuzluk pahasına zihni açar."
+    },
+    "bandage": {
+      "name": "Steril Gazlı Bez",
+      "desc": "Temiz pamuklu sargı. Aktif travmatik kanamayı durdurur."
+    },
+    "antiseptic": {
+      "name": "İyotlu Antiseptik Şişe",
+      "desc": "Povidon iyot dezenfektanı. Erken yüzeyel enfeksiyonları tedavi eder."
+    },
+    "antibiotics": {
+      "name": "Geniş Spektrumlu Antibiyotik",
+      "desc": "İlaç kapsülleri kürü. Ağır sistemik enfeksiyonları tamamen iyileştirir."
+    },
+    "painkillers": {
+      "name": "Ağrı Kesici Tablet",
+      "desc": "Sentetik analjezik haplar. Kronik ağrıyı dindirir ve yorgunluğu azaltır."
+    },
+    "first_aid_kit": {
+      "name": "Saha Travma İlk Yardım Kiti",
+      "desc": "Atel, dikiş ve pıhtılaştırıcı içeren sert çanta. Önemli ölçüde sağlık yeniler."
+    },
+    "kitchen_knife": {
+      "name": "Mutfak Bıçağı",
+      "desc": "Sağlam paslanmaz çelik bıçak. Temel yakın dövüş savunması sağlar."
+    },
+    "crowbar": {
+      "name": "Çelik Levye",
+      "desc": "Dövme demir levye. Ölümcül ezici darbe ve kilitli sandıkları açma avantajı (+%12 arama)."
+    },
+    "machete": {
+      "name": "Ağır Çalı Palası",
+      "desc": "Ağırlık merkezi önde geniş çelik pala. Mükemmel kesici hasar verir."
+    },
+    "fire_axe": {
+      "name": "İtfaiyeci Baltası",
+      "desc": "Sivri burunlu ağır kurtarma baltası. Yıkıcı darbe gücü (+%8 arama)."
+    },
+    "hunting_rifle": {
+      "name": "Sürgülü Av Tüfeği",
+      "desc": "Hassas dürbünlü uzun namlu. Mühimmat yüklendiğinde ölümcül menzilli güç."
+    },
+    "rifle_rounds": {
+      "name": "Tüfek Mermisi (7.62mm)",
+      "desc": "Sürgülü tüfekler için yüksek güçlü pirinç kovanlı fişekler."
+    },
+    "scrap_metal": {
+      "name": "Hurda Metal Parçaları",
+      "desc": "Paslı sac levhalar ve profil demirler. Tahkimat ve silah üretimi için temel hammadde."
+    },
+    "copper_wire": {
+      "name": "Soyulmuş Bakır Tel",
+      "desc": "Terk edilmiş hatlardan sökülmüş iletken kablo."
+    },
+    "electronics": {
+      "name": "Elektronik Devre Parçaları",
+      "desc": "İleri düzey elektrikli alet üretimi için mikroyongalar ve diyotlar."
+    },
+    "cloth_rags": {
+      "name": "Kumaş Parçaları",
+      "desc": "Dokuma pamuklu kumaş kırpıntıları. Derme çatma sargılar ve fitiller için gereklidir."
+    },
+    "duct_tape": {
+      "name": "Endüstriyel Koli Bandı",
+      "desc": "Ağır hizmet tipi yapışkan bant rulosu. Saha tamiratlarının vazgeçilmezi."
+    },
+    "spark_plug_set": {
+      "name": "Hurda Buji Takımı",
+      "desc": "Otomobil motorlarından sökülmüş seramik elektrotlu bujiler. Taşıt ateşleme sistemi için kritiktir."
+    },
+    "fuel_siphon_hose": {
+      "name": "Yakıt Sifon Hortumu",
+      "desc": "Manuel emme pompalı esnek PVC hortum. Terkedilmiş araç enkazlarından benzin veya dizel çekmeyi sağlar."
+    },
+    "duffel_bag": {
+      "name": "Kanvas Kurye Çantası",
+      "desc": "Güçlendirilmiş askeri bez çanta. +6 kg taşıma kapasitesi ve +3 çanta yuvası sağlar."
+    },
+    "hiking_pack": {
+      "name": "Dağcı Sırt Çantası",
+      "desc": "Göğüs kemerli ergonomik tırmanış çantası. +12 kg kapasite ve +5 yuva ekler."
+    },
+    "military_rucksack": {
+      "name": "Ağır Askeri Taarruz Çantası",
+      "desc": "ALICE iskeletli dayanıklı taarruz çantası. +18 kg kapasite ve +8 yuva ekler."
+    },
+    "leather_jacket": {
+      "name": "Korumalı Deri Ceket",
+      "desc": "Kalın sığır derisi mont. Pençe, diş ve bıçak saldırılarına karşı 1 zırh sağlar."
+    },
+    "hazmat_poncho": {
+      "name": "Kimyasal Koruma Pançosu",
+      "desc": "Ağır vinil kapüşonlu pelerin. Zehirli sıvıları ve asit yağmurlarını tamamen engeller."
+    },
+    "riot_vest": {
+      "name": "Çevik Kuvvet Balistik Yelek",
+      "desc": "Darbeye dayanıklı kompozit zırh. Ezici darbelere ve ateşli silahlara karşı 3 zırh sağlar."
+    },
+    "flashlight": {
+      "name": "Taktik LED El Feneri",
+      "desc": "Yüksek lümenli el feneri. Zifiri karanlığı aydınlatır ve arama verimini artırır (+%4)."
+    },
+    "compass": {
+      "name": "Askeri Mercekli Pusula",
+      "desc": "Pirinç gövdeli manyetik pusula. Harita koridorlarında intikal hızını artırır (+%8)."
+    },
+    "canned_sardines": {
+      "name": "Konserve Yağlı Sardalya",
+      "desc": "Açma halkalı teneke kutuda yağlı sardalya. Protein ve yağ açısından zengin."
+    },
+    "canned_tuna": {
+      "name": "Konserve Parça Ton Balığı",
+      "desc": "Tuzlu salamura içinde beyaz ton balığı. Doyurucu ve güvenilir protein."
+    },
+    "canned_mackerel": {
+      "name": "Konserve Uskumru Fileto",
+      "desc": "Baharatlı domates sosunda korunmuş yağlı uskumru dilimleri."
+    },
+    "canned_salmon": {
+      "name": "Konserve Pembe Somon",
+      "desc": "Yüksek kaliteli konserve somon dilimi. Çöküş öncesi depolardan nadir bir lüks."
+    },
+    "canned_corned_beef": {
+      "name": "Konserve Kornbif",
+      "desc": "Tuzlanmış sığır döş eti. Yoğun kalorili ve tok tutucu."
+    },
+    "canned_spam": {
+      "name": "Konserve Jambon / Spam",
+      "desc": "Jöleli konserve et bloğu. Onlarca yıl bozulmayan hayatta kalma klasiği."
+    },
+    "canned_vienna_sausages": {
+      "name": "Konserve Viyana Sosis",
+      "desc": "Tuzlu et suyuna batırılmış küçük kokteyl sosisleri."
+    },
+    "canned_meatballs": {
+      "name": "Konserve Soslu Köfte",
+      "desc": "Koyu et suyu sosunda pişirilmiş sığır köfteleri."
+    },
+    "canned_beef_stew": {
+      "name": "Konserve Patatesli Et Yahnisi",
+      "desc": "Sığır eti, patates ve havuç parçalarıyla dolu doyurucu yahni."
+    },
+    "canned_chicken_noodle": {
+      "name": "Konserve Tavuklu Şehriye Çorbası",
+      "desc": "Yumurta şehriyesi ve didiklenmiş tavuklu sıcak et suyu çorbası."
+    },
+    "canned_tomato_soup": {
+      "name": "Konserve Domates Çorbası",
+      "desc": "Kıvamlı domates çorbası. Kamp ateşinde ısıtıldığında iç ısıtır."
+    },
+    "canned_chili_con_carne": {
+      "name": "Konserve Acılı Chili con Carne",
+      "desc": "Kıymalı ve fasulyeli acı biber soslu Meksika yahnisi."
+    },
+    "canned_ravioli": {
+      "name": "Konserve Kıymalı Mantı / Ravioli",
+      "desc": "Domates sosu içinde kıymalı dolgulu hazır makarna."
+    },
+    "canned_pork_beans": {
+      "name": "Konserve Etli Kuru Fasulye",
+      "desc": "Pekmez ve domuz yağıyla pişirilmiş beyaz kuru fasulye."
+    },
+    "canned_black_beans": {
+      "name": "Konserve Siyah Fasulye",
+      "desc": "Kimyon ve soğanla tatlandırılmış besleyici siyah fasulye."
+    },
+    "canned_chickpeas": {
+      "name": "Konserve Haşlanmış Nohut",
+      "desc": "Tuzlu suda haşlanmış diri nohut. Uzun süreli tokluk sağlar."
+    },
+    "canned_sweet_corn": {
+      "name": "Konserve Mısır",
+      "desc": "Şekerli su içinde diri sarı mısır taneleri."
+    },
+    "canned_green_peas": {
+      "name": "Konserve Bezelye",
+      "desc": "Hafif tuzlu suda yumuşak bahçe bezelyesi. Sindirimi son derece kolaydır."
+    },
+    "canned_mushrooms": {
+      "name": "Konserve Dilimli Mantar",
+      "desc": "Salamura edilmiş kültür mantarı dilimleri."
+    },
+    "canned_peaches": {
+      "name": "Konserve Şeftali Kompostosu",
+      "desc": "Koyu şekerli şurup içinde altın şeftali yarımları. Morali yükseltir."
+    },
+    "canned_pineapple_chunks": {
+      "name": "Konserve Ananas Parçaları",
+      "desc": "Tropikal ananas dilimleri. C vitamini ve sıvı dengesi sağlar."
+    },
+    "canned_pears": {
+      "name": "Konserve Armut",
+      "desc": "Hafif şurupta yumuşak armut dilimleri."
+    },
+    "canned_mandarins": {
+      "name": "Konserve Mandalina Dilimleri",
+      "desc": "Tatlı meyve suyunda soyulmuş mandalina dilimleri."
+    },
+    "canned_condensed_milk": {
+      "name": "Şekerli Yoğunlaştırılmış Süt",
+      "desc": "Aşırı tatlı ve yoğun süt şurubu. Saf konsantre kalori deposu."
+    },
+    "canned_evaporated_milk": {
+      "name": "Konserve Buharlaştırılmış Süt",
+      "desc": "Şekersiz konsantre süt. Kahve ve çorbalara besleyicilik katar."
+    },
+    "canned_olives_black": {
+      "name": "Konserve Çekirdeksiz Siyah Zeytin",
+      "desc": "Tuzlu salamurada olgun siyah zeytinler. Faydalı yağlar içerir."
+    },
+    "canned_olives_green": {
+      "name": "Konserve Biberli Yeşil Zeytin",
+      "desc": "Kırmızı biber ezmesi dolgulu salamura yeşil zeytin."
+    },
+    "canned_pickled_cucumbers": {
+      "name": "Kornişon Turşu Kavanozu",
+      "desc": "Sirkeli salamurada dereotlu çıtır salatalık turşusu."
+    },
+    "canned_sauerkraut": {
+      "name": "Konserve Lahana Turşusu (Sauerkraut)",
+      "desc": "Fermente edilmiş kıyılmış lahana. C vitamini deposudur."
+    },
+    "canned_anchovies": {
+      "name": "Konserve Hamsi Fileto (Ançüez)",
+      "desc": "Zeytinyağında dinlendirilmiş yoğun tuzlu küçük balık filetoları."
+    },
+    "canned_liver_pate": {
+      "name": "Konserve Ciğer Ezmesi (Pate)",
+      "desc": "Demir ve hayvansal yağ zengini sürülebilir ciğer ezmesi."
+    },
+    "canned_artichoke_hearts": {
+      "name": "Konserve Enginar Kalbi",
+      "desc": "Otlu zeytinyağında marine edilmiş yumuşak enginar göbeği."
+    },
+    "canned_baked_beans": {
+      "name": "Fırınlanmış Soslu Kuru Fasulye",
+      "desc": "Koyu domates sosunda fırınlanmış İngiliz usulü kuru fasulye."
+    },
+    "canned_tomato_paste": {
+      "name": "Konserve Çift Konsantre Domates Salçası",
+      "desc": "Yoğun kıvamlı yemeklik domates salçası."
+    },
+    "canned_grape_leaves": {
+      "name": "Konserve Zeytinyağlı Yaprak Sarma",
+      "desc": "Baharatlı pirinç dolgulu zeytinyağlı asma yaprağı sarması."
+    },
+    "hardtack_biscuit": {
+      "name": "Peksimet / Hardtack Bisküvi",
+      "desc": "Un, su ve tuzla pişirilmiş taş gibi sert bisküvi. Asla bozulmaz."
+    },
+    "pilot_bread": {
+      "name": "Denizci Krakeri (Pilot Bread)",
+      "desc": "Kutup kaşiflerinin tercihi, neme ve basınca dayanıklı kalın kraker."
+    },
+    "rusk_toast": {
+      "name": "Kıtır Etimek / Ekmek Rusk",
+      "desc": "İki kez fırınlanmış kıtır ekmek dilimleri."
+    },
+    "pemmican_bar": {
+      "name": "Pemikan Yağlı Et Bloğu",
+      "desc": "Kurutulmuş et, böğürtlen ve donmuş hayvan yağının karışımı. Olağanüstü enerji verir."
+    },
+    "beef_jerky_peppered": {
+      "name": "Karabiberli Dana Jerky",
+      "desc": "Dövülmüş karabiber taneleriyle tütsülenmiş kuru dana eti."
+    },
+    "turkey_jerky_smoke": {
+      "name": "Tütsülenmiş Hindi Eti",
+      "desc": "Odun dumanında kurutulmuş yağsız hindi eti şeritleri."
+    },
+    "dried_sausage_link": {
+      "name": "Kuru Sucuk / Salam Halkası",
+      "desc": "Doğal bağırsakta fermente edilmiş dayanıklı kuru sucuk."
+    },
+    "dried_salt_cod": {
+      "name": "Tuzlu Kuru Morina Balığı",
+      "desc": "Kaya tuzuyla taşlaşmış okyanus balığı. Pişirilmeden önce ıslatılmalıdır."
+    },
+    "dried_figs_string": {
+      "name": "İpe Dizili Kuru İncir",
+      "desc": "Güneşte kurutulmuş tatlı Ege incirleri."
+    },
+    "dried_apricots_pack": {
+      "name": "Kuru Kayısı Paketi",
+      "desc": "Potasyum ve doğal şeker deposu kurutulmuş kayısılar."
+    },
+    "raisins_box": {
+      "name": "Çekirdeksiz Kuru Üzüm",
+      "desc": "Hafif ve taşıması kolay kurutulmuş tatlı üzüm kutusu."
+    },
+    "dried_dates_packet": {
+      "name": "Medine Hurması Paketi",
+      "desc": "Karamel tadında dolgun çöl hurmaları. Yüksek dayanıklılık sağlar."
+    },
+    "dried_cranberries": {
+      "name": "Kurutulmuş Turna Yemişi",
+      "desc": "Mayhoş ve tatlı kırmızı yaban mersini taneleri."
+    },
+    "trail_mix_pouch": {
+      "name": "Karışık Kuruyemiş Torbası",
+      "desc": "Fıstık, kaju, kuru üzüm ve bitter çikolata parçaları karışımı."
+    },
+    "salted_peanuts": {
+      "name": "Tuzlu Kavrulmuş Fıstık",
+      "desc": "Deniz tuzuyla kavrulmuş çıtır yer fıstığı."
+    },
+    "roasted_almonds": {
+      "name": "Kavrulmuş Badem",
+      "desc": "E vitamini ve magnezyum zengini kavrulmuş badem içi."
+    },
+    "walnut_halves": {
+      "name": "Ayıklanmış Ceviz İçi",
+      "desc": "Omega yağ asitleri içeren besleyici ceviz parçaları."
+    },
+    "sunflower_seeds_pack": {
+      "name": "Kavrulmuş Ay Çekirdeği",
+      "desc": "Soğuk nöbet saatlerinde oyalanmak için tuzlu ay çekirdeği."
+    },
+    "pumpkin_seeds": {
+      "name": "Kavrulmuş Kabak Çekirdeği",
+      "desc": "Çinko zengini kavrulmuş kabak çekirdeği içi."
+    },
+    "instant_ramen_beef": {
+      "name": "Hazır Dana Etli Noodle",
+      "desc": "Baharat poşetli hazır kurutulmuş erişte bloğu."
+    },
+    "instant_ramen_chicken": {
+      "name": "Hazır Tavuklu Noodle",
+      "desc": "Tavuk bulyon tozu içeren çabuk pişen kıvırcık erişte."
+    },
+    "instant_ramen_spicy": {
+      "name": "Ekstra Acılı Kore Noodle",
+      "desc": "Dondurucu soğukta kanı ısıtan aşırı baharatlı hazır ramen."
+    },
+    "instant_oatmeal_apple": {
+      "name": "Elmalı Tarçınlı Hazır Yulaf",
+      "desc": "Kurutulmuş elma ve tarçın aromalı pratik yulaf ezmesi."
+    },
+    "instant_mashed_potatoes": {
+      "name": "Hazır Patates Püresi Tozu",
+      "desc": "Sıcak suyla karıştırıldığında anında kıvama gelen patates tozu."
+    },
+    "dry_white_rice_bag": {
+      "name": "1 Kg Uzun Taneli Pirinç",
+      "desc": "Haşlandığında hacmi üçe katlanan temel tahıl erzağı."
+    },
+    "dry_brown_rice_bag": {
+      "name": "1 Kg Kepekli Esmer Pirinç",
+      "desc": "B vitaminleri ve lif zengini işlenmemiş esmer pirinç."
+    },
+    "red_lentils_sack": {
+      "name": "1 Kg Kırmızı Mercimek",
+      "desc": "Çabuk pişen ve besleyici koyu bir çorba oluşturan kırmızı mercimek."
+    },
+    "green_lentils_sack": {
+      "name": "1 Kg Yeşil Mercimek",
+      "desc": "Yahnilerde diri kalan demir zengini yeşil mercimek."
+    },
+    "rolled_oats_tin": {
+      "name": "Teneke Kutuda Yulaf Ezmesi",
+      "desc": "Neme ve kemirgenlere karşı tenekede saklanan bütün yulaf."
+    },
+    "cornmeal_flour_bag": {
+      "name": "Taş Değirmen Mısır Unu",
+      "desc": "Koyu mısır ekmeği ve lapa yapımına uygun mısır unu."
+    },
+    "wheat_flour_sack": {
+      "name": "Beyaz Buğday Unu Torbası",
+      "desc": "Tavada bazlama ve ekmek pişirmeye uygun rafine un."
+    },
+    "dry_pasta_spaghetti": {
+      "name": "Paket Spagetti Makarna",
+      "desc": "Kuru kaldığı sürece bozulmayan sert durum buğdayı makarnası."
+    },
+    "dry_pasta_macaroni": {
+      "name": "Kutu Düdük Makarna",
+      "desc": "Kolay pişen dirsek biçimli makarna."
+    },
+    "sugar_cubes_box": {
+      "name": "Küp Şeker Kutusu",
+      "desc": "Preslenmiş saf beyaz şeker küpleri. Anında glikoz sağlar."
+    },
+    "brown_sugar_pouch": {
+      "name": "Esmer Kamış Şekeri",
+      "desc": "Koyu pekmez aromalı nemli esmer şeker."
+    },
+    "raw_honey_jar": {
+      "name": "Ham Çam Balı Kavanozu",
+      "desc": "Doğal kristalize orman balı. Asla bozulmaz, boğazı yumuşatır."
+    },
+    "strawberry_jam_jar": {
+      "name": "Çilek Reçeli Kavanozu",
+      "desc": "Yüksek şekerli çilek marmelatı."
+    },
+    "creamy_peanut_butter": {
+      "name": "Krem Fıstık Ezmesi",
+      "desc": "Kalori canavarı: yoğun kavrulmuş yer fıstığı ezmesi."
+    },
+    "hazelnut_cocoa_spread": {
+      "name": "Kakaolu Fındık Kreması",
+      "desc": "Kakaolu yoğun fındık ezmesi. Yüksek moral ve hızlı kalori verir."
+    },
+    "powdered_whole_milk": {
+      "name": "Tam Yağlı Süt Tozu",
+      "desc": "Suyla karıştırıldığında zengin süt elde edilen dayanıklı toz."
+    },
+    "powdered_eggs_can": {
+      "name": "Pastörize Yumurta Tozu",
+      "desc": "Suyla çırpılıp tavada pişirilebilen yüksek proteinli yumurta tozu."
+    },
+    "table_salt_shaker": {
+      "name": "İyotlu Sofra Tuzu",
+      "desc": "Vücut elektrolit dengesi ve et kurutmak için elzem mineral."
+    },
+    "black_peppercorns_tin": {
+      "name": "Tane Karabiber Tenekesi",
+      "desc": "Et ve çorbalara lezzet katan kokulu kuru karabiber taneleri."
+    },
+    "bouillon_cubes_beef": {
+      "name": "Et Suyu Bulyon Küpleri",
+      "desc": "Sıcak suya atıldığında lezzetli et suyu oluşturan tuzlu küpler."
+    },
+    "baking_yeast_packet": {
+      "name": "Kuru Ekmek Mayası Paketi",
+      "desc": "Ekmek kabartmak ve alkol damıtmak için aktif kuru maya."
+    },
+    "hot_chili_sauce": {
+      "name": "Acı Biber Sosu Şişesi",
+      "desc": "Tatsız tuzsuz konserveleri yenilebilir kılan sirke bazlı acı sos."
+    },
+    "olive_oil_canister": {
+      "name": "1 Litre Sızma Zeytinyağı",
+      "desc": "Preslenmiş zeytinyağı tenekesi. Saf sağlıklı yağ kaynağı."
+    },
+    "freeze_dried_beef_stroganoff": {
+      "name": "Dondurularak Kurutulmuş Biftek Stroganoff",
+      "desc": "Sıcak su eklenerek yenen dağcı yemeği."
+    },
+    "freeze_dried_chicken_rice": {
+      "name": "Dondurulmuş Tavuklu Pirinç Yemeği",
+      "desc": "Pilav ve tavuk göğsü içeren hafif ve besleyici kamp rasyonu."
+    },
+    "freeze_dried_scrambled_eggs": {
+      "name": "Kurutulmuş Pastırmalı Çırpılmış Yumurta",
+      "desc": "Sıcak suyla kabaran doyurucu kahvaltı paketi."
+    },
+    "emergency_ration_bar_500": {
+      "name": "Can Salı Acil Durum Bisküvisi (500 kcal)",
+      "desc": "Kurtarma filikaları için vakumlanmış aşırı sert enerji bloğu."
+    },
+    "emergency_ration_bar_1000": {
+      "name": "Seven Oceans Hayatta Kalma Bloğu (1000 kcal)",
+      "desc": "Bir kazazedeyi 24 saat ayakta tutabilecek yoğun kalori tuğlası."
+    },
+    "energy_gel_caffeine": {
+      "name": "Kafeinli Koşu Jel Paketi",
+      "desc": "Bitkinlik anında hızla emilen 100mg kafeinli glikoz jeli."
+    },
+    "glucose_dextrose_tablets": {
+      "name": "Dekstroz Glikoz Şekerleri Rulosu",
+      "desc": "Ani kan şekeri düşüşlerine karşı çiğnenir glikoz tableti."
+    },
+    "protein_cookie_double_choc": {
+      "name": "Çikolatalı Yüksek Proteinli Kurabiye",
+      "desc": "25 gram peynir altı suyu proteini içeren fırınlanmış bisküvi."
+    },
+    "purified_water_canteen": {
+      "name": "1 Litrelik Matara Temiz Su",
+      "desc": "Yeşil polimer matarada arıtılmış saf içme suyu."
+    },
+    "spring_water_gallon": {
+      "name": "1 Galon Doğal Kaynak Suyu",
+      "desc": "Temiz dağ kaynağından doldurulmuş büyük plastik bidon su."
+    },
+    "boiled_tap_water": {
+      "name": "Kaynatılmış İçme Suyu Şişesi",
+      "desc": "Ateşte kaynatılarak mikroplardan arındırılmış soğutulmuş su."
+    },
+    "filtered_rainwater": {
+      "name": "Kömür Filtresinden Geçmiş Yağmur Suyu",
+      "desc": "Kömür ve kum filtresinden süzülmüş nispeten temiz yağmur suyu."
+    },
+    "rainwater_jar": {
+      "name": "Ham Yağmur Suyu Kavanozu",
+      "desc": "Çatılardan toplanmış hafif tozlu yağmur suyu. Düşük mikrop riski taşır."
+    },
+    "river_water_flask": {
+      "name": "Bulanık Nehir Suyu Matarası",
+      "desc": "Nehirden doldurulmuş yosunlu su. Parazit riski yüksektir."
+    },
+    "stagnant_puddle_water": {
+      "name": "Çamurlu Çukur Suyu",
+      "desc": "Çaresizlik anında sokak çukurundan alınmış su. Çok yüksek enfeksiyon riski."
+    },
+    "chemically_treated_water": {
+      "name": "Klor Tabletiyle Arıtılmış Su",
+      "desc": "Ağır klor kokulu ancak mikroplardan tamamen temizlenmiş su."
+    },
+    "electrolyte_rehydration_drink": {
+      "name": "İzotonik Elektrolit İçeceği",
+      "desc": "Vücut sıvı ve mineral dengesini hızla yenileyen sporcu içeceği."
+    },
+    "energy_drink_can": {
+      "name": "Taurinli Enerji İçeceği Kutusu",
+      "desc": "Ağır kafein ve taurin içeren gazlı enerji içeceği."
+    },
+    "citrus_soda_can": {
+      "name": "Gazlı Limonlu Meşrubat",
+      "desc": "Şekerli ve gazlı ferahlatıcı limon sodası."
+    },
+    "root_beer_can": {
+      "name": "Kök Birası (Root Beer)",
+      "desc": "Vanilya ve şifalı kök aromalı gazlı içecek."
+    },
+    "tonic_water_bottle": {
+      "name": "Kininli Tonik Şişesi",
+      "desc": "Sıtma parazitlerine karşı hafif koruyucu kinin içeren acı tonik."
+    },
+    "black_tea_loose_tin": {
+      "name": "Dökme Siyah Çay Tenekesi",
+      "desc": "Kaynar suyla demlendiğinde zihni açan kaliteli siyah çay."
+    },
+    "black_tea_bags_box": {
+      "name": "Poşet Siyah Çay Kutusu",
+      "desc": "Demlenmeye hazır pratik poşet çay kutusu."
+    },
+    "green_tea_tin": {
+      "name": "Yeşil Çay Tenekesi",
+      "desc": "Antioksidan zengini yatıştırıcı yeşil çay."
+    },
+    "chamomile_herbal_tea": {
+      "name": "Kurutulmuş Papatya Çayı",
+      "desc": "Sinirleri yatıştıran ve rahat uyku sağlayan kuru papatya çiçeği."
+    },
+    "rosehip_wild_tea": {
+      "name": "Kuşburnu Çayı Paketi",
+      "desc": "C vitamini deposu kurutulmuş yabani kuşburnu meyveleri."
+    },
+    "linden_flower_tea": {
+      "name": "Kurutulmuş Ihlamur Çiçeği",
+      "desc": "Göğsü yumuşatan ve soğuk algınlığına iyi gelen kuru ıhlamur."
+    },
+    "roasted_chicory_coffee": {
+      "name": "Kavrulmuş Hindiba Kahvesi",
+      "desc": "Savaş dönemi kahve ikamesi olan kavrulmuş acı hindiba tozu."
+    },
+    "ground_espresso_tin": {
+      "name": "Vakumlu İtalyan Espresso Tenekesi",
+      "desc": "Aşırı koyu kavrulmuş yoğun aromalı öğütülmüş espresso kahvesi."
+    },
+    "coffee_beans_roasted": {
+      "name": "Tane Çekirdek Kahve Torbası",
+      "desc": "Öğütülmedikçe aromasını yıllarca koruyan tane kahve çekirdekleri."
+    },
+    "hot_cocoa_mix_pouch": {
+      "name": "Sıcak Çikolata Karışımı",
+      "desc": "Sıcak suya karıştırılan şekerli kakao ve krema tozu."
+    },
+    "malt_beer_can": {
+      "name": "Teneke Kutu Bira (500ml)",
+      "desc": "Savaş sonrası sinirleri gevşeten hafif malt arpa birası."
+    },
+    "craft_ipa_bottle": {
+      "name": "Şişe Ağır Şerbetçiotlu Bira",
+      "desc": "Yüksek alkollü ve aromatik şişe bira."
+    },
+    "cheap_lager_can": {
+      "name": "Ezik Kutu Ucuz Lager Bira",
+      "desc": "Hafif sulandırılmış paslı kutu bira."
+    },
+    "red_table_wine_bottle": {
+      "name": "Şişe Kuru Kırmızı Şarap",
+      "desc": "Yıllanmış kırmızı şarap. Morali yükseltir ve ağrıyı hafifletir."
+    },
+    "moonshine_mason_jar": {
+      "name": "Kavanozda Kaçak Mısır Rakısı / Moonshine",
+      "desc": "%65 alkollü ev yapımı saf damıtık içki. Ateş gibi yakar."
+    },
+    "corn_whiskey_flask": {
+      "name": "Çelik Konyak Matarasında Viski",
+      "desc": "Paslanmaz çelik cep matarasında meşe fıçıda yıllanmış viski."
+    },
+    "clear_vodka_bottle": {
+      "name": "Üç Kez Damıtılmış Votka Şişesi",
+      "desc": "%40 alkollü saf votka. Acil durumlarda yara temizliğinde de kullanılır."
+    },
+    "apple_cider_jug": {
+      "name": "Fermente Elma Şırası Bidonu",
+      "desc": "Hafif alkollü doğal mayalanmış elma sirkesi ve şırası."
+    },
+    "canned_tomato_juice": {
+      "name": "Tuzlu Domates Suyu Kutusu",
+      "desc": "Mineral ve tuz zengini kıvamlı domates suyu."
+    },
+    "grapefruit_juice_carton": {
+      "name": "Greyfurt Suyu Kartonu",
+      "desc": "Acımtırak ve ferahlatıcı narenciye suyu."
+    },
+    "powdered_orange_drink_tang": {
+      "name": "Toz Portakal İçeceği Paketi (Tang)",
+      "desc": "Bulanık suyun tadını gizleyen şekerli toz içecek."
+    },
+    "powdered_lemonade_mix": {
+      "name": "Toz Limonata Karışımı",
+      "desc": "Sitrik asit ve şeker içeren toz limonata paketi."
+    },
+    "gauze_roll_sterile": {
+      "name": "Steril Rulo Gazlı Bez",
+      "desc": "Açık kesikleri sarmak için sıkı sarılmış pamuklu rulo."
+    },
+    "elastic_compression_wrap": {
+      "name": "Elastik Kompresyon Bandajı",
+      "desc": "Metal kopçalı esnek bandaj. Burkulmuş eklemleri sabitler ve şişliği indirir."
+    },
+    "quikclot_hemostatic_gauze": {
+      "name": "QuikClot Kanama Durdurucu Gazlı Bez",
+      "desc": "Kaolin emdirilmiş askeri sargı; saniyeler içinde pıhtılaşma sağlar."
+    },
+    "combat_tourniquet_cat": {
+      "name": "C-A-T Taktik Turnike",
+      "desc": "Şiddetli uzuv kanamalarını mekanik burguyla kesen taktik turnike."
+    },
+    "softt_wide_tourniquet": {
+      "name": "SOFTT-W Geniş Metal Tokalı Turnike",
+      "desc": "Çamur ve soğuğa dayanıklı askeri uzuv turnikesi."
+    },
+    "emergency_israeli_bandage": {
+      "name": "İsrail Tipi Acil Basınç Bandajı",
+      "desc": "Dahili basınç çubuğuna sahip hepsi bir arada travma sargısı."
+    },
+    "chest_seal_vented": {
+      "name": "Valfli Göğüs Yarası Yaması",
+      "desc": "Göğüs kafesi delinmelerinde akciğer sönmesini engelleyen tek yönlü valfli yama."
+    },
+    "burn_hydrogel_dressing": {
+      "name": "Water-Jel Yanık Hidrojel Örtüsü",
+      "desc": "Termal yanıklarda acıyı anında dindiren ve enfeksiyonu önleyen jel örtü."
+    },
+    "burn_sheet_sterile": {
+      "name": "Steril Geniş Yanık Çarşafı",
+      "desc": "Geniş yüzeyli yanıklarda deriye yapışmayan steril koruyucu örtü."
+    },
+    "adhesive_plaster_strip": {
+      "name": "Yapışkanlı Yara Bandı",
+      "desc": "Küçük kesik ve sıyrıklar için pratik bez yara bandı."
+    },
+    "butterfly_wound_closure": {
+      "name": "Kelebek Yara Kapatma Bantları",
+      "desc": "Dikiş atmadan derin kesik kenarlarını birleştiren yapışkan kelebek bantlar."
+    },
+    "liquid_skin_adhesive": {
+      "name": "Tıbbi Sıvı Doku Yapıştırıcısı",
+      "desc": "Yara kenarlarını saniyeler içinde kapatan su geçirmez tıbbi yapıştırıcı."
+    },
+    "sam_splint_roll": {
+      "name": "SAM Alüminyum Köpük Atel",
+      "desc": "Kırık ve çıkık uzuvları sabitlemek için bükülebilir süngerli alüminyum atel."
+    },
+    "triangular_bandage_sling": {
+      "name": "Üçgen Kol Askı Bezi",
+      "desc": "Kırık kol ve omuzları göğse sabitleyen pamuklu askı bezi."
+    },
+    "suture_needle_silk": {
+      "name": "İpek Cerrahi Dikiş İpliği ve İğnesi",
+      "desc": "Derin yırtıkları dikmek için eğri iğneli steril cerrahi ipek ip."
+    },
+    "disposable_skin_stapler": {
+      "name": "Tek Kullanımlık Deri Zımbası (Stapler)",
+      "desc": "Saha şartlarında derin yaraları saniyeler içinde tutturan zımba aleti."
+    },
+    "povidone_iodine_bottle": {
+      "name": "Batikon / Povidon İyot %10",
+      "desc": "Yara temizliğinde bakteri ve mantarları yok eden koyu kırmızı antiseptik."
+    },
+    "rubbing_alcohol_bottle": {
+      "name": "İzopropil Alkol Şişesi (%70)",
+      "desc": "Aletleri ve yara çevresini sterilize eden tıbbi alkol."
+    },
+    "alcohol_prep_swabs": {
+      "name": "Alkollü Dezenfektan Mendiller",
+      "desc": "İğne ve neşter öncesi cildi silmek için steril alkollü pedler."
+    },
+    "hydrogen_peroxide_bottle": {
+      "name": "Oksijenli Su Şişesi (%3)",
+      "desc": "Yaradaki pıhtı ve kiri köpürterek temizleyen hidrojen peroksit."
+    },
+    "chlorhexidine_scrub": {
+      "name": "Klorheksidin Cerrahi Yıkama Sıvısı",
+      "desc": "Ciltte 24 saat kalıcı mikrop kırıcı etki bırakan ameliyat solüsyonu."
+    },
+    "antibacterial_triple_ointment": {
+      "name": "Üçlü Antibiyotikli Yara Merhemi",
+      "desc": "Enfeksiyonu engelleyen ve doku iyileşmesini hızlandıran yoğun merhem."
+    },
+    "silver_sulfadiazine_burn_cream": {
+      "name": "Gümüş Sülfadiazin Yanık Kremi",
+      "desc": "İkinci ve üçüncü derece yanıklarda iltihabı durduran gümüşlü yanık kremi."
+    },
+    "potassium_permanganate_crystals": {
+      "name": "Potasyum Permanganat Kristalleri",
+      "desc": "Suya karıştırıldığında mor renkli dezenfektan oluşturan güçlü kimyasal."
+    },
+    "amoxicillin_capsules": {
+      "name": "Amoksisilin 500mg Kapsül",
+      "desc": "Solunum yolu ve doku enfeksiyonlarını temizleyen temel antibiyotik."
+    },
+    "ciprofloxacin_antibiotic": {
+      "name": "Siprofloksasin 500mg Tablet",
+      "desc": "Ağır karın ve kemik enfeksiyonlarına karşı güçlü geniş spektrumlu antibiyotik."
+    },
+    "doxycycline_hyclate": {
+      "name": "Doksisiklin 100mg Kapsül",
+      "desc": "Kene ateşi, veba ve şarbona karşı etkili askeri antibiyotik."
+    },
+    "paracetamol_500mg": {
+      "name": "Parasetamol 500mg Tablet",
+      "desc": "Ateş düşürücü ve hafif ağrı kesici; mideyi yormaz."
+    },
+    "ibuprofen_400mg": {
+      "name": "İbuprofen 400mg İltihap Giderici",
+      "desc": "Eklem iltihabını, kas ağrılarını ve burkulma sızılarını dindiren antienflamatuar."
+    },
+    "naproxen_sodium": {
+      "name": "Naproksen Sodyum Ağrı Kesici",
+      "desc": "12 saat kesintisiz etki sağlayan uzun süreli eklem ve bel ağrısı hapı."
+    },
+    "aspirin_cardio_bottle": {
+      "name": "Aspirin Şişesi",
+      "desc": "Ateş düşürücü ve kan sulandırıcı asetilsalisilik asit tabletleri."
+    },
+    "codeine_phosphate_pills": {
+      "name": "Kodein Fosfat 30mg Tablet",
+      "desc": "Kırık ve ağır travma ağrılarını kesen opiat türevi kuvvetli ağrı kesici."
+    },
+    "tramadol_analgesic_caps": {
+      "name": "Tramadol 50mg Kapsül",
+      "desc": "Ağır ateşli silah ve darbe yaralanmalarında ağrıyı bloke eden güçlü analjezik."
+    },
+    "morphine_syrette_military": {
+      "name": "Askeri Morfin Ampulü (10mg)",
+      "desc": "Tek kullanımlık enjektörlü askeri morfin. Şiddetli travma şokunu önler."
+    },
+    "epinephrine_autoinjector": {
+      "name": "Epinefrin / Adrenalin Oto-Enjektörü",
+      "desc": "Alerjik şok ve ani kalp durmasında hayat kurtaran acil adrenalin iğnesi."
+    },
+    "atropine_sulfate_autoinjector": {
+      "name": "Atropin Sülfat Sinir Gazı Panzehiri",
+      "desc": "Zehirli kimyasallar ve böcek zehirlerine karşı askeri otomatik panzehir iğnesi."
+    },
+    "naloxone_narcan_nasal_spray": {
+      "name": "Nalokson / Narcan Burun Spreyi",
+      "desc": "Ağır uyuşukluk ve zehirlenmelerde solunumu açan opioid panzehiri."
+    },
+    "potassium_iodide_radiation_tabs": {
+      "name": "Potasyum İyodür Radyasyon Hapı",
+      "desc": "Tiroit bezini doyurarak radyoaktif serpintinin vücuda yerleşmesini önleyen tablet."
+    },
+    "activated_charcoal_powder": {
+      "name": "Aktif Kömür Zehir Emici Toz",
+      "desc": "Ağızdan alınan zehirleri ve bozuk gıdaları midede emen aktif karbon tozu."
+    },
+    "oral_rehydration_salts_who": {
+      "name": "DSÖ Ağızdan Sıvı Tedavisi Tuzu (ORS)",
+      "desc": "Dizanteri ve aşırı su kaybında sıvı dengesini düzelten elektrolit paketi."
+    },
+    "loperamide_diarrhea_relief": {
+      "name": "Loperamid İshal Kesici Hap",
+      "desc": "Bağırsak hareketlerini durdurarak su kaybını önleyen ishal kesici."
+    },
+    "diphenhydramine_antihistamine": {
+      "name": "Difenhidramin Antihistaminik",
+      "desc": "Böcek sokması ve zehirlenmelerde alerjik reaksiyonu bastıran ilaç."
+    },
+    "pulse_oximeter_fingertip": {
+      "name": "Parmak Tipi Nabız ve Oksimetre",
+      "desc": "Kandaki oksijen seviyesini ve nabzı anında ölçen dijital cihaz."
+    },
+    "dual_head_stethoscope": {
+      "name": "Çift Taraflı Tıbbi Steteskop",
+      "desc": "Akciğer hırıltılarını ve kalp ritmini dinlemeye yarayan steteskop."
+    },
+    "aneroid_blood_pressure_cuff": {
+      "name": "Manuel Tansiyon Aleti",
+      "desc": "İç kanama şokunu ve kan basıncını ölçmeye yarayan kolluklu tansiyon aleti."
+    },
+    "iv_saline_bag_500ml": {
+      "name": "Serum Fizyolojik Torbası (500ml)",
+      "desc": "Damardan verilen steril tuzlu serum. Kan kaybı ve şokta hacim kazandırır."
+    },
+    "iv_giving_infusion_set": {
+      "name": "Serum Hortumu ve Kelebek Seti",
+      "desc": "Serum torbasını damar yoluna bağlayan damla ayarlı hortum seti."
+    },
+    "trauma_shears_scissors": {
+      "name": "Ağır Hizmet Travma Makası",
+      "desc": "Kot kumaşı, deri bot ve kemerleri yaralıya zarar vermeden kesen küt uçlu makas."
+    },
+    "surgical_forceps": {
+      "name": "Dişli Cerrahi Penset / Cımbız",
+      "desc": "Yaradan şarapnel, mermi çekirdeği ve yabancı cisim çıkarmaya yarayan çelik penset."
+    },
+    "wooden_baseball_bat": {
+      "name": "Ahşap Beyzbol Sopası",
+      "desc": "Dolu dişbudak ağacından beyzbol sopası. Güçlü ezici darbe indirir."
+    },
+    "aluminum_baseball_bat": {
+      "name": "Alüminyum Beyzbol Sopası",
+      "desc": "Ahşaba göre daha hafif ve hızlı savrulan içi boş metal sopa."
+    },
+    "nailed_baseball_bat": {
+      "name": "Çivili Beyzbol Sopası",
+      "desc": "Paslı inşaat çivileri çakılmış ölümcül modifiye sopa."
+    },
+    "barbed_wire_bat": {
+      "name": "Dikenli Telle Sarılı Sopa",
+      "desc": "Paslı dikenli telle sıkıca sarılmış beyzbol sopası. Derin yırtılmalara yol açar."
+    },
+    "lead_pipe_heavy": {
+      "name": "Ağır Kurşun Su Borusu",
+      "desc": "Ağır ve yoğun kurşun boru parçası. Kemikleri ve kaskları ezer."
+    },
+    "rebar_club_heavy": {
+      "name": "İnşaat Demiri Sopa",
+      "desc": "Betonarme inşaat demiri. Koli bandıyla sarılmış tutamağa sahiptir."
+    },
+    "cast_iron_frying_pan": {
+      "name": "Döküm Demir Tava",
+      "desc": "Ağır döküm tava. Beyin sarsıcı darbe vurur ve yemek pişirmede kullanılır."
+    },
+    "heavy_sledgehammer": {
+      "name": "Ağır Balyoz (10 lb)",
+      "desc": "Dövme çelik başlıklı yıkım balyozu. Zırhları ve barikatları paramparça eder."
+    },
+    "claw_hammer_steel": {
+      "name": "Çelik Marangoz Çekici",
+      "desc": "Çivi sökmeye ve kafataslarını delmeye uygun çelik marangoz çekici."
+    },
+    "tire_iron_cross_wrench": {
+      "name": "Dörtlü İstavroz Bijon Anahtarı",
+      "desc": "Kamyon bagajından çıkma dört kollu ağır bijon anahtarı."
+    },
+    "brass_knuckles": {
+      "name": "Pirinç Muşta",
+      "desc": "Yumruk gücünü tek bir noktaya odaklayan döküm metal muşta."
+    },
+    "police_baton_tonfa": {
+      "name": "Polis Tonfası / Cop",
+      "desc": "Kırılmaz polikarbondan üretilmiş yan kulplu çevik kuvvet copu."
+    },
+    "collapsible_steel_baton": {
+      "name": "Teleskopik Çelik Cop",
+      "desc": "Yaylı ve kilitli teleskopik çelik cop. Gizli taşımaya uygundur."
+    },
+    "pickaxe_heavy": {
+      "name": "Madenci Kazması",
+      "desc": "Sivri uçlu ağır kazma; taş, beton ve ağır zırhları delip geçer."
+    },
+    "entrenching_shovel_tactical": {
+      "name": "Katlanır Askeri Tahkimat Küreği",
+      "desc": "Kenarı bilenmiş katlanabilir istihkam küreği."
+    },
+    "chef_knife_8inch": {
+      "name": "Karbon Çelik Şef Bıçağı",
+      "desc": "Geniş ve jilet gibi keskin mutfak bıçağı."
+    },
+    "folding_tactical_knife": {
+      "name": "Taktik Katlanır Çakı",
+      "desc": "Tırtıklı kenarlı ve kilit mekanizmalı dayanıklı tanto cep çakısı."
+    },
+    "bowie_hunting_knife": {
+      "name": "Bowie Avcı Bıçağı",
+      "desc": "Geniş namlulu ve korumalı klasik Amerikan av ve dövüş bıçağı."
+    },
+    "bayonet_m9": {
+      "name": "M9 Askeri Süngü Bıçak",
+      "desc": "Tel kesme özelliğine sahip kınlı ordu süngüsü."
+    },
+    "kukri_gurkha_machete": {
+      "name": "Gurka Kukri Palası",
+      "desc": "İçe eğimli ağır namlusuyla muazzam parçalama gücüne sahip pala."
+    },
+    "wood_splitting_axe": {
+      "name": "Odun Yarma Baltası",
+      "desc": "Dövme çelik kama ağızlı ağır odun baltası."
+    },
+    "tactical_tomahawk": {
+      "name": "Taktik Tomahawk Baltası",
+      "desc": "Arka tarafında zırh delici sivri ucu bulunan hafif taarruz baltası."
+    },
+    "carpenter_hatchet": {
+      "name": "Marangoz Nacağı",
+      "desc": "Arka kısmı çekiç olarak kullanılabilen kısa saplı el nacağı."
+    },
+    "hand_sickle_curved": {
+      "name": "Kavisli Hasat Orağı",
+      "desc": "Hilal biçimli tarım orağı; düşmanı kendine doğru çekip keser."
+    },
+    "combat_wakizashi": {
+      "name": "Karbon Çelik Vakizaşi",
+      "desc": "Geleneksel kısa kılıç; dar koridorlarda hızlı ve ölümcül darbeler indirir."
+    },
+    "folded_steel_katana": {
+      "name": "Dövme Çelik Katana",
+      "desc": "İki elle savrulan kusursuz dengelenmiş samuray kılıcı."
+    },
+    "box_cutter_utility": {
+      "name": "Falcata / Maket Bıçağı",
+      "desc": "Sürgülü jiletli maket bıçağı; kumaş kesmeye ve acil savunmaya uygundur."
+    },
+    "competition_recurve_bow": {
+      "name": "Olimpik Klasik Yay (Recurve)",
+      "desc": "Lamine fiberglastan sessiz ve öldürücü av yayı."
+    },
+    "tactical_compound_bow": {
+      "name": "Makaralı Taktik Av Yayı (70 lb)",
+      "desc": "Makaralı sistemle çekilen aşırı güçlü ve sessiz taarruz yayı."
+    },
+    "hunting_crossbow_150lb": {
+      "name": "150 lb Avcı Tatar Yayı / Kundaklı Yay",
+      "desc": "Tüfek kundaklı ağır arbalet; kalın zırhları deler."
+    },
+    "carbon_hunting_arrows": {
+      "name": "Karbon Av Okları",
+      "desc": "Tüy kanatlı ve çelik uçlu dayanıklı karbon oklar."
+    },
+    "crossbow_bolts_aluminum": {
+      "name": "Alüminyum Arbalet Okları / Cıvata",
+      "desc": "Arbalet rayı için üretilmiş kısa ve rijit alüminyum oklar."
+    },
+    "makarov_pistol_9x18": {
+      "name": "Makarov 9x18mm Tabanca",
+      "desc": "Tozda ve çamurda tutukluk yapmayan efsanevi Sovyet yarı otomatik beylik tabancası."
+    },
+    "pistol_9mm_semi": {
+      "name": "9mm Yarı Otomatik Tabanca",
+      "desc": "Polimer gövdeli standart servis tabancası; güvenilir ve dengeli."
+    },
+    "tactical_handgun_45acp": {
+      "name": "M1911 Taktik .45 ACP Tabanca",
+      "desc": "Ağır çelik gövdeli durdurucu gücü yüksek klasik Amerikan tabancası."
+    },
+    "revolver_38_special": {
+      "name": "Kısa Namlu .38 Özel Toplu Tabanca",
+      "desc": "Asla tutukluk yapmayan 6 patlar mekanik toplu tabanca."
+    },
+    "revolver_357_magnum": {
+      "name": ".357 Magnum Ağır Toplu Tabanca",
+      "desc": "Paslanmaz çelik uzun namlulu el topu. Devasa delip geçme gücü."
+    },
+    "pump_shotgun_12g": {
+      "name": "12 Kalibre Pompalı Av Tüfeği",
+      "desc": "Yakın mesafede önüne çıkan her şeyi süpüren emektar pompalı tüfek."
+    },
+    "side_by_side_double_shotgun": {
+      "name": "Çifte Kırma Av Tüfeği",
+      "desc": "Yana yana iki namlulu geleneksel kırma tüfek; sade ve arıza yapmaz."
+    },
+    "sks_semi_auto_carbine": {
+      "name": "SKS 7.62x39mm Yarı Otomatik Karabin",
+      "desc": "Ahşap kundaklı Sovyet tüfeği; 7.62mm mühimmatı seri ve isabetli ateşler."
+    },
+    "akm_assault_rifle": {
+      "name": "AKM / Kalaşnikof Piyade Tüfeği",
+      "desc": "Dünyanın en dayanıklı taarruz tüfeği; her türlü çamur ve tozda çalışır."
+    },
+    "ar15_carbine_556": {
+      "name": "AR-15 Taktik Karabin (5.56mm)",
+      "desc": "Hafif ve modüler yarı otomatik tüfek; yüksek isabet ve düşük geri tepme."
+    },
+    "bolt_action_rifle_308": {
+      "name": ".308 Kalibre Keskin Nişancı Tüfeği",
+      "desc": "Ağır namlulu uzun menzilli av ve keskin nişancı tüfeği."
+    },
+    "single_shot_flare_gun": {
+      "name": "26.5mm İşaret Fişeği Tabancası",
+      "desc": "Turuncu polimer denizci fişeği tabancası; hedefleri ateşe verir."
+    },
+    "ammo_9mm_fmj": {
+      "name": "9x19mm Tabanca Mermisi Kutusu",
+      "desc": "Şehir harabelerinde en sık bulunan tam metal ceketli tabanca fişekleri."
+    },
+    "ammo_45acp_fmj": {
+      "name": ".45 ACP Ağır Tabanca Mermisi",
+      "desc": "Hedefi yere seren ağır çekirdekli .45 kalibre tabanca mermisi."
+    },
+    "ammo_38_special_lead": {
+      "name": ".38 Özel Toplu Tabanca Mermisi",
+      "desc": "Toplu tabancalar için yumuşak kurşun uçlu klasik fişekler."
+    },
+    "ammo_357_magnum_jsp": {
+      "name": ".357 Magnum Yüksek Basınçlı Fişek",
+      "desc": "Zırhı parçalayan yüksek barutlu magnum mühimmatı."
+    },
+    "ammo_12g_buckshot_00": {
+      "name": "12 Kalibre 9'lu Şevrotin Av Fişeği",
+      "desc": "İçinde 9 iri kurşun bilye barındıran yıkıcı yakın dövüş fişeği."
+    },
+    "ammo_12g_slug_solid": {
+      "name": "12 Kalibre Tek Kurşun (Slug)",
+      "desc": "1 onsluk devasa kurşun kütle; araba motorunu ve betonu deler."
+    },
+    "ammo_556_nato_fmj": {
+      "name": "5.56x45mm NATO Piyade Fişeği",
+      "desc": "Yüksek namlu çıkış hızına sahip askeri piyade tüfeği mermisi."
+    },
+    "ammo_762x39_soviet_fmj": {
+      "name": "7.62x39mm Kalaşnikof Fişeği",
+      "desc": "Çelik kovanlı dayanıklı askeri mühimmat."
+    },
+    "ammo_762x51_winchester": {
+      "name": ".308 Win / 7.62x51mm Keskin Nişancı Mermisi",
+      "desc": "Ağır tüfekler için uzun menzilli pirinç kovanlı fişek."
+    },
+    "ammo_red_signal_flare": {
+      "name": "26.5mm Kırmızı Paraşütlü Fişek",
+      "desc": "Gökyüzünü aydınlatan ve temas ettiği yeri yakan magnezyum fişeği."
+    },
+    "molotov_cocktail_rag": {
+      "name": "Molotof Kokteyli",
+      "desc": "Benzin ve motor yağı dolu cam şişe; fırlatıldığında alev dalgası yayar."
+    },
+    "improvised_pipe_bomb": {
+      "name": "Çivi Dolgulu Boru Bombası",
+      "desc": "Barut, çivi ve bilyeyle doldurulmuş parça tesirli el yapımı bomba."
+    },
+    "military_smoke_grenade": {
+      "name": "M18 Askeri Sis Bombası",
+      "desc": "Görüşü tamamen kapatan yoğun beyaz sis perdesi oluşturur."
+    },
+    "steel_jaw_bear_trap": {
+      "name": "Çelik Ayı Kapanı",
+      "desc": "Yaylı sertleştirilmiş dişli kapan; basan hedefin bacağını kırarak kilitler."
+    },
+    "scrap_iron_plates": {
+      "name": "Paslı Sac Levhalar",
+      "desc": "Araç kapılarından sökülmüş dayanıklı demir saclar."
+    },
+    "sheet_metal_corrugated": {
+      "name": "Oluklu Sac Plaka",
+      "desc": "Sığınak tahkimatı ve barikat için oluklu çatı sacı."
+    },
+    "rusted_steel_mesh": {
+      "name": "Paslı Çelik Tel Kafes",
+      "desc": "Sanayi filtrelerinden sökülmüş sağlam çelik tel örgü."
+    },
+    "steel_wire_galvanized": {
+      "name": "Galvanizli Çelik Tel Rulosu",
+      "desc": "Tuzak ve bağlama işleri için bükülebilir paslanmaz tel."
+    },
+    "barbed_wire_spool": {
+      "name": "Dikenli Tel Yumağı",
+      "desc": "Barikatları ve sığınak çevrelerini korumak için dikenli tel."
+    },
+    "spring_steel_coil": {
+      "name": "Otomobil Helezon Yayı",
+      "desc": "Yüksek karbonlu sert yay çeliği."
+    },
+    "ball_bearings_steel": {
+      "name": "Çelik Bilye Torbası",
+      "desc": "Rulmanlardan çıkarılmış sertleştirilmiş çelik bilyeler."
+    },
+    "chain_links_hardened": {
+      "name": "Ağır Çelik Çekme Zinciri",
+      "desc": "Kapıları kilitlemek ve araç çekmek için kalın zincir."
+    },
+    "box_iron_nails_3inch": {
+      "name": "3 İnç İnşaat Çivisi Kutusu",
+      "desc": "Ahşap tahkimat ve barikat kurmak için çelik çiviler."
+    },
+    "box_wood_screws": {
+      "name": "Yıldız Başlı Ahşap Vidası",
+      "desc": "Çinko kaplı ahşap montaj vidaları."
+    },
+    "lead_solder_wire_rosin": {
+      "name": "Reçineli Lehim Teli Tüpü",
+      "desc": "Devre kartı ve kablo tamirinde kullanılan lehim teli."
+    },
+    "aluminum_can_scraps": {
+      "name": "Ezilmiş Alüminyum Meşrubat Kutusu",
+      "desc": "İnce alüminyum sac; erken uyarı zilleri için uygundur."
+    },
+    "lead_tire_weights": {
+      "name": "Kurşun Lastik Denge Ağırlıkları",
+      "desc": "Eritilip mermi dökümünde kullanılan yumuşak kurşun parçaları."
+    },
+    "gorilla_tape_waterproof": {
+      "name": "Ağır Hizmet Su Geçirmez Bant",
+      "desc": "Zorlu hava koşullarına dayanıklı ekstra güçlü yapışkan bant."
+    },
+    "electrical_tape_vinyl": {
+      "name": "Siyah PVC İzole Elektrik Bandı",
+      "desc": "Elektrik kablolarını yalıtmak için alev almaz esnek bant."
+    },
+    "industrial_superglue_gel": {
+      "name": "Jel Japon Yapıştırıcısı",
+      "desc": "Saniyeler içinde ahşap, metal ve plastiği tutturan hızlı yapıştırıcı."
+    },
+    "epoxy_resin_two_part": {
+      "name": "Çift Komponentli Çelik Epoksi",
+      "desc": "Kuruduğunda metal gibi sertleşen dolgu ve yapıştırma kimyasalı."
+    },
+    "silicone_caulk_tube": {
+      "name": "Silikon Mastik Kartuşu",
+      "desc": "Pencere ve kapı aralıklarını su geçirmez şekilde yalıtan silikon."
+    },
+    "plastic_cable_zip_ties": {
+      "name": "Plastik Cırt Kelepçe Paketi (50'li)",
+      "desc": "Kablo ve ekipman sabitlemede vazgeçilmez kendinden kilitli bağ."
+    },
+    "rubber_inner_tube_strip": {
+      "name": "Bisiklet İç Lastiği Şeritleri",
+      "desc": "Sapan lastiği ve esnek bağlama işleri için dayanıklı kauçuk."
+    },
+    "thick_plastic_tarpaulin": {
+      "name": "Kalın Su Geçirmez Mavi Branda",
+      "desc": "Kuşgözü halkalı su ve rüzgar geçirmez baraka brandası."
+    },
+    "paracord_550_hank": {
+      "name": "Askeri 550 Parakord İpi (15m)",
+      "desc": "7 iç damarlı, 250 kg çekme kapasiteli paraşüt ipi."
+    },
+    "hemp_rope_coil": {
+      "name": "Örme Doğal Kenevir Halatı (10m)",
+      "desc": "Yük kaldırma ve kütük bağlama için kalın lifli urgan."
+    },
+    "salvaged_circuit_boards": {
+      "name": "Sökülmüş Yeşil Devre Kartı",
+      "desc": "Telsiz ve televizyonlardan çıkarılmış yedek elektronik parça."
+    },
+    "integrated_microchip_ic": {
+      "name": "Entegre Mikroçip / Yonga",
+      "desc": "Otomatik tuzak ve cihaz kontrolü için programlanabilir çip."
+    },
+    "miniature_electric_motor": {
+      "name": "Küçük 12V DC Elektrik Motoru",
+      "desc": "Yazıcılardan sökülmüş hassas doğru akım motoru."
+    },
+    "hand_crank_dynamo_unit": {
+      "name": "El Çevirmeli Manyetik Dinamo",
+      "desc": "Kolu çevrildikçe elektrik üreten taşınabilir jeneratör ünitesi."
+    },
+    "damaged_solar_panel_cell": {
+      "name": "Kırık Monokristal Güneş Paneli",
+      "desc": "Hala düşük voltajda akım üretebilen güneş hücresi parçası."
+    },
+    "aa_alkaline_batteries": {
+      "name": "4'lü Kalem Pil Paketi (AA)",
+      "desc": "El fenerleri ve telsizler için standart alkalin piller."
+    },
+    "aaa_alkaline_batteries": {
+      "name": "4'lü İnce Kalem Pil (AAA)",
+      "desc": "Küçük kafa lambaları için ince alkalin piller."
+    },
+    "battery_9v_transistor": {
+      "name": "9V Kare Blok Pil",
+      "desc": "Alarm ve radyasyon sayaçlarında kullanılan kare pil."
+    },
+    "lithium_cell_18650": {
+      "name": "18650 Şarj Edilebilir Lityum Pil",
+      "desc": "Taktik fenerler için yüksek kapasiteli lityum hücre."
+    },
+    "rechargeable_powerbank_10k": {
+      "name": "10.000 mAh Kauçuklu Taşınabilir Batarya",
+      "desc": "Darbe emici kılıflı harici USB şarj cihazı."
+    },
+    "car_battery_lead_acid": {
+      "name": "12V Otomobil Aküsü",
+      "desc": "Sığınak aydınlatması için devasa enerji kaynağı."
+    },
+    "diesel_fuel_canister_5l": {
+      "name": "5 Litre Sac Bidon Dizel Yakıt",
+      "desc": "Jeneratör ve mazot sobası için kaliteli yakıt."
+    },
+    "gasoline_fuel_canister_5l": {
+      "name": "5 Litre Benzin Bidonu",
+      "desc": "Uçucu ve parlayıcı benzin; motorlar ve patlayıcılar için."
+    },
+    "kerosene_fuel_canister": {
+      "name": "2 Litre Gazyağı Tenekesi",
+      "desc": "Fırtına lambaları ve gaz ocakları için kokusuz yakıt."
+    },
+    "gunpowder_smokeless_flask": {
+      "name": "Dumansız Barut Kutusu",
+      "desc": "Mermi doldurmak ve patlayıcı yapmak için nitro barut."
+    },
+    "household_bleach_chlorine": {
+      "name": "Klorlu Çamaşır Suyu Şişesi",
+      "desc": "Suları mikrop ve bakterilerden arındıran klor çözeltisi."
+    },
+    "motor_oil_10w40_bottle": {
+      "name": "1 Litre Motor Yağı (10W-40)",
+      "desc": "Silah ve zincir mekanizmalarını yağlayan sentetik yağ."
+    },
+    "wd40_penetrating_oil": {
+      "name": "WD-40 Pas Sökücü Sprey",
+      "desc": "Paslı kilitleri açan ve nemi kovan sprey."
+    },
+    "wooden_strike_matches": {
+      "name": "Kav Kibriti Kutusu",
+      "desc": "Taşa veya sert zemine sürtülerek yanan ahşap kibritler."
+    },
+    "ferrocerium_spark_rod": {
+      "name": "Magnezyum / Ferroseryum Ateş Başlatıcı Çubuk",
+      "desc": "Islakken bile kıvılcım saçan askeri ateş başlatıcı."
+    },
+    "refillable_zippo_lighter": {
+      "name": "Rüzgar Geçirmez Metal Çakmak",
+      "desc": "Fırtınada sönmeyen dayanıklı benzinli çakmak."
+    },
+    "canvas_tote_bag": {
+      "name": "Bez Pazar Torbası",
+      "desc": "Omuza asılan bez çanta (+4 kg, +2 yuva)."
+    },
+    "school_backpack": {
+      "name": "Fermuarlı Okul Sırt Çantası",
+      "desc": "İki bölmeli standart sırt çantası (+8 kg, +4 yuva)."
+    },
+    "tactical_assault_pack_35l": {
+      "name": "3 Günlük Taktik Taarruz Çantası",
+      "desc": "Dıştan askı ipli sağlam askeri çanta (+15 kg, +6 yuva)."
+    },
+    "internal_frame_hiking_pack_55l": {
+      "name": "Alüminyum İskeletli Dağcı Çantası (55L)",
+      "desc": "Ağırlığı bele dağıtan profesyonel dağ çantası (+22 kg, +9 yuva)."
+    },
+    "military_molle_rucksack_75l": {
+      "name": "75 Litrelik Ağır Sefer Çantası",
+      "desc": "Taşıma devi; komple hayatta kalma kiti taşır (+30 kg, +12 yuva)."
+    },
+    "denim_jeans_rugged": {
+      "name": "Güçlendirilmiş Kot İş Pantolonu",
+      "desc": "Çift kat dikişli kalın kot pantolon; temel koruma sağlar."
+    },
+    "cargo_combat_pants_ripstop": {
+      "name": "Yırtılmaz Kargo Askeri Pantolon",
+      "desc": "Çok cepli ve yırtılmaya dirençli kamuflaj kargo pantolonu."
+    },
+    "flannel_work_shirt": {
+      "name": "Kalın Ekoseli Flanel Gömlek",
+      "desc": "Gece ayazına karşı vücut ısısını koruyan sıcak pamuklu gömlek."
+    },
+    "heavy_wool_sweater": {
+      "name": "Örgü Yün Balıkçı Kazağı",
+      "desc": "Islandığında bile ısı yalıtımını kaybetmeyen kalın koyun yünü kazak."
+    },
+    "heavy_down_parka": {
+      "name": "Kaz Tüyü Kışlık Parka",
+      "desc": "Kar fırtınasına ve dondurucu rüzgara geçit vermeyen kalın parka."
+    },
+    "motorcycle_leather_jacket": {
+      "name": "Korumalı Deri Motosiklet Montu",
+      "desc": "Dirsek ve omuz pedli kalın dana derisi mont (Zırh 2)."
+    },
+    "concealable_kevlar_vest_ii": {
+      "name": "Gizlenebilir Kevlar Yelek (Seviye II)",
+      "desc": "Tabanca mermilerini durduran gizli aramid yelek (Zırh 2)."
+    },
+    "tactical_body_armor_iiia": {
+      "name": "Taktik Polis Yeleği (Seviye IIIA)",
+      "desc": "Boğaz korumalı ağır kurşun geçirmez yelek (Zırh 3)."
+    },
+    "ceramic_ballistic_plate_iv": {
+      "name": "Seviye IV Seramik Zırh Plakalı Taşıyıcı",
+      "desc": "Tüfek mermilerini parçalayan kompozit seramik göğüs zırhı (Zırh 5)."
+    },
+    "ballistic_combat_helmet": {
+      "name": "Askeri Balistik Kask (Kevlar)",
+      "desc": "Şarapnel ve seken mermilere karşı kafatasını koruyan ordu kaskı."
+    },
+    "disposable_n95_dust_mask": {
+      "name": "N95 Toz ve Partikül Maskesi",
+      "desc": "Akciğerleri kül, duman ve zehirli tozdan koruyan filtreli maske."
+    },
+    "gp5_gas_mask_civilian": {
+      "name": "GP-5 Kauçuk Gaz Maskesi ve Filtresi",
+      "desc": "Zehirli gazlara ve dumanlara karşı tam yüz koruması sağlayan gaz maskesi."
+    },
+    "pocket_swiss_multitool": {
+      "name": "Paslanmaz Çakı Pense / Çok Amaçlı Alet",
+      "desc": "Pense, testere ve konserve açacağı içeren profesyonel çakı (+%6 arama)."
+    },
+    "heavy_duty_bolt_cutters": {
+      "name": "Ağır Demir Kesme Makası",
+      "desc": "Asma kilitleri, zincirleri ve tel örgüleri kolayca kesen dev makas (+%15 arama)."
+    },
+    "lockpick_set_professional": {
+      "name": "Çelik Maymuncuk Takımı",
+      "desc": "Kilitli kapı ve kasaları sessizce açmaya yarayan kilit açma seti (+%10 arama)."
+    },
+    "diamond_sharpening_stone": {
+      "name": "Çift Taraflı Elmas Bileme Taşı",
+      "desc": "Körleşmiş pala ve bıçakları jilet gibi keskinleştiren bileme taşı."
+    },
+    "headlamp_rechargeable_led": {
+      "name": "Şarj Edilebilir LED Kafa Lambası",
+      "desc": "Elleri serbest bırakan elastik kafa feneri; gece görüşü sağlar (+%5 arama)."
+    },
+    "military_chem_light_green": {
+      "name": "12 Saatlik Yeşil Kimyasal Işık Çubuğu",
+      "desc": "Kırılarak yakılan alevsiz su altı kimyasal aydınlatma çubuğu."
+    },
+    "geiger_muller_counter": {
+      "name": "El Tipi Geiger Radyasyon Sayacı",
+      "desc": "Radyasyonlu bölgelerde cızırtıyla uyaran dijital radyasyon sayacı."
+    },
+    "compact_binoculars_10x42": {
+      "name": "10x42 Kauçuk Kaplı Dürbün",
+      "desc": "Yol üzerindeki tuzakları ve yağmacıları uzaktan tespit eden kaliteli dürbün."
+    },
+    "mountaineering_rope_50m": {
+      "name": "50 Metre Profesyonel Dağcılık İpi",
+      "desc": "Uçurumlardan iniş ve nehir geçişleri için mukavemetli tırmanış ipi."
+    },
+    "silnylon_backpacking_tarp": {
+      "name": "Su Geçirmez Kamp Brandası / Tarp",
+      "desc": "Şiddetli yağmurda dinlenen kazazedeyi kupkuru tutan silikonlu branda."
+    },
+    "hemostatic_gauze_z_fold": {
+      "name": "Z-Katlamalı Hemostatik Muharebe Gazı",
+      "desc": "Derin atardamar yaralarına tampon yapmak için kitosan emdirilmiş vakumlu gazlı bez."
+    },
+    "pressure_dressing_trauma_4in": {
+      "name": "Acil Travma Basınç Bandajı 10cm",
+      "desc": "Aşırı kanamaları durdurmak için yerleşik baskı köprüsüne sahip elastik bandaj."
+    },
+    "chest_seal_twin_pack": {
+      "name": "Tek Yönlü Valfli Göğüs Bandı İkili Paket",
+      "desc": "Göğüs kafesi delinmelerinde ve akciğer çökmesinde kullanılan tek yönlü valfli yapışkan yama."
+    },
+    "nasopharyngeal_airway_28fr": {
+      "name": "Nazofaringeal Solunum Tüpü (28 Fr)",
+      "desc": "Bilinçsiz kazazedelerde soluk borusunu açık tutmak için burundan sokulan yumuşak tüp."
+    },
+    "decompression_needle_14g": {
+      "name": "Göğüs Dekompresyon İğnesi 14G",
+      "desc": "Göğüs boşluğunda biriken sıkışmış havayı boşaltarak boğulmayı önleyen çelik iğne."
+    },
+    "sam_splint_36inch": {
+      "name": "SAM Alüminyum Şekil Alabilir Atel",
+      "desc": "Kırık ve çıkık kemikleri sabitlemek için bükülebilen süngerli alüminyum levha."
+    },
+    "cervical_extrication_collar": {
+      "name": "Ayarlanabilir Boyunluk (Cervical Collar)",
+      "desc": "Travma sonrası boyun ve omurga hareketini engelleyen sert plastik boyunluk."
+    },
+    "surgical_scalpel_disposable_10": {
+      "name": "Tek Kullanımlık Cerrahi Neşter No:10",
+      "desc": "Doku temizleme ve acil cerrahi müdahaleler için çelik jilet keskinliğinde neşter."
+    },
+    "surgical_hemostat_forceps": {
+      "name": "Kilitli Hemostatik Damar Forsepsi",
+      "desc": "Kopan kan damarlarını sıkıştırıp kilitleyen tıbbi paslanmaz forseps pens."
+    },
+    "bone_saw_gigli_wire": {
+      "name": "Gigli Telli Esnek Kemik Testeresi",
+      "desc": "Acil saha ampütasyonlarında kemikleri kesmek için çelik örgülü tel testere."
+    },
+    "tissue_forceps_toothed": {
+      "name": "Adson Dişli Cerrahi Doku Pensi",
+      "desc": "Yara dikerken dokuları kavrayıp hizalamaya yarayan ince cerrahi cımbız."
+    },
+    "dental_extraction_forceps": {
+      "name": "Diş Çekme Kerpeteni",
+      "desc": "İltihaplı ve çürük azı dişlerini çekmek için kullanılan sağlam paslanmaz alet."
+    },
+    "ciprofloxacin_500mg_box": {
+      "name": "Siprofloksasin 500mg Tablet (14'lü)",
+      "desc": "Şiddetli bağırsak, kemik ve solunum yolu enfeksiyonlarına karşı güçlü antibiyotik."
+    },
+    "doxycycline_100mg_bottle": {
+      "name": "Doksisiklin 100mg Kapsül (20'li)",
+      "desc": "Kolera, veba, tifo ve şarbon gibi tehlikeli enfeksiyonlara karşı etkili antibiyotik."
+    },
+    "amoxicillin_clavulanate_box": {
+      "name": "Amoksisilin + Klavulanik Asit 1000mg (14'lü)",
+      "desc": "Dirençli bakteriyel enfeksiyonları ve iltihaplı yaraları iyileştiren geniş spektrumlu antibiyotik."
+    },
+    "azithromycin_250mg_zpack": {
+      "name": "Azitromisin 250mg Z-Paketi (6 Tablet)",
+      "desc": "Zatürre ve bronşiyal enfeksiyonlara karşı hızlı etkili 5 günlük antibiyotik kürü."
+    },
+    "metronidazole_500mg_bottle": {
+      "name": "Metronidazol 500mg Antimikrobiyal (20'li)",
+      "desc": "Pis su parazitlerini, amipli dizanteriyi ve anaerobik enfeksiyonları temizleyen ilaç."
+    },
+    "chloroquine_phosphate_tabs": {
+      "name": "Klorokin Fosfat 250mg Tablet",
+      "desc": "Sıtma ve tropikal bataklık parazitlerine karşı koruma ve tedavi sağlayan hap."
+    },
+    "tramadol_50mg_capsules": {
+      "name": "Tramadol HCl 50mg Ağrı Kapsülü (10'lu)",
+      "desc": "Şiddetli kırık ve travma ağrılarını dindiren sentetik opioid ağrı kesici."
+    },
+    "ketamine_vial_500mg": {
+      "name": "Enjektabl Ketamin Flakon (500mg/10ml)",
+      "desc": "Saha cerrahisinde ve kemik yerleştirmede derin uyuşturma sağlayan anestezik solüsyon."
+    },
+    "lidocaine_2pct_epinephrine": {
+      "name": "Lidokain %2 + Epinefrin Lokal Anestezi (20ml)",
+      "desc": "Yara dikiminde bölgeyi uyuşturan ve kanamayı yavaşlatan lokal anestezik."
+    },
+    "fentanyl_transdermal_patch": {
+      "name": "Fentanil Transdermal Ağrı Bandı 50mcg",
+      "desc": "Yanık ve ağır ezilme ağrılarını 72 saat boyunca kesen yüksek etkili narkotik bant."
+    },
+    "ibuprofen_400mg_blister": {
+      "name": "İbuprofen 400mg Blister (20 Tablet)",
+      "desc": "İltihap, ateş ve adale ağrılarını dindiren iltihap kurutucu ağrı kesici."
+    },
+    "paracetamol_500mg_box": {
+      "name": "Parasetamol 500mg Tablet (24'lü)",
+      "desc": "Ateşi düşüren, baş ve kas ağrılarını hafifleten temel ağrı kesici."
+    },
+    "epipen_epinephrine_autoinjector": {
+      "name": "EpiPen 0.3mg Epinefrin Oto-Enjektörü",
+      "desc": "Ölümcül alerjik şoklarda ve nefes borusu tıkanmalarında hayat kurtaran adrenalin iğnesi."
+    },
+    "narcan_naloxone_nasal_spray": {
+      "name": "Narcan 4mg Nalokson Burun Spreyi",
+      "desc": "Aşırı doz opioid ve kimyasal zehirlenmelerinde komayı hızla sonlandıran burun spreyi."
+    },
+    "pralidoxime_2pam_chloride": {
+      "name": "Pralidoksim (2-PAM) Klorür Flakonu",
+      "desc": "Sinir gazı felçlerine karşı atropinle birlikte kas fonksiyonunu geri getiren panzehir."
+    },
+    "potassium_iodide_130mg_strips": {
+      "name": "Potasyum İyodür 130mg İyot Tableti (14'lü)",
+      "desc": "Radyoaktif iyot serpintisinin tiroid bezine yerleşmesini engelleyen koruyucu tablet."
+    },
+    "activated_charcoal_slurry": {
+      "name": "Aktif Karbon Süspansiyonu 250ml",
+      "desc": "Yutulan zehirleri ve zehirli mantar toksinlerini midede hapsedip dışarı atan sıvı."
+    },
+    "ringer_lactate_500ml_iv_bag": {
+      "name": "Ringer Laktat 500ml Steril Serum Torbası",
+      "desc": "Ağır kan kaybı ve şok durumlarında damar içi hacmi geri kazandıran elektrolit serumu."
+    },
+    "normal_saline_500ml_iv_bag": {
+      "name": "0.9% İzotonik Sodyum Klorür Serumu (500ml)",
+      "desc": "Damar içi hidrasyon ve açık yara yıkaması için steril tuzlu su serumu."
+    },
+    "iv_infusion_tubing_set": {
+      "name": "Serum Seti ve Damla Ayar Makarası",
+      "desc": "Serum torbalarını damar yoluna bağlayan steril hortum ve damla ayar kiti."
+    },
+    "iv_cannula_catheter_18g": {
+      "name": "Yeşil 18G Damar Yolu İğne Kanülü (Kutu)",
+      "desc": "Hızlı serum ve kan aktarımı için geniş çaplı steril damar yolu kanülü."
+    },
+    "chlorhexidine_gluconate_4pct": {
+      "name": "Klorheksidin %4 Cerrahi Antiseptik Çözelti",
+      "desc": "Ameliyat öncesi cilt temizliğinde kullanılan mikrop öldürücü cerrahi solüsyon."
+    },
+    "hydrocortisone_cream_1pct": {
+      "name": "Hidrokortizon %1 Kaşıntı ve Egzama Kremi",
+      "desc": "Zehirli sarmaşık ve böcek sokmalarındaki iltihap ve kaşıntıyı kesen kortizonlu krem."
+    },
+    "calamine_lotion_bottle": {
+      "name": "Kalamin Losyonu (150ml)",
+      "desc": "Kaşıntılı böcek sokmaları ve alerjik döküntüleri serinletip yatıştıran çinkolu losyon."
+    },
+    "zinc_oxide_petroleum_paste": {
+      "name": "Çinko Oksit Bariyer Pişik Macunu",
+      "desc": "Siper ayak hastalığı, sürtünme pişiği ve açık su yaralarını izole eden kalın macun."
+    },
+    "eye_wash_sterile_saline_bottle": {
+      "name": "Steril Göz Yıkama Solüsyonu (250ml)",
+      "desc": "Göze kaçan asit, kimyasal toz veya biber gazını durulamak için kadeh başlıklı solüsyon."
+    },
+    "burn_gel_hydrogel_packet": {
+      "name": "Steril Su Bazlı Hidrojel Yanık Pakedi",
+      "desc": "Ateş ve sıcak metal yanıklarında doku hasarını donduran ve ağrıyı kesen hidrojel."
+    },
+    "cohesive_flexible_vet_wrap": {
+      "name": "Kendine Yapışan Esnek Bandaj (Coban)",
+      "desc": "Pense ya da bant gerektirmeden birbirine tutunan pratik elastik sabitleme sargısı."
+    },
+    "sterile_disposable_hypodermic_syringes": {
+      "name": "10'lu Steril 5ml Enjektör ve İğne Ucu",
+      "desc": "İlaç ve panzehir enjeksiyonu için kilitli gövdeli steril tek kullanımlık enjektörler."
+    },
+    "barbed_wire_baseball_bat": {
+      "name": "Dikenli Tel Sarılı Beyzbol Sopası",
+      "desc": "Paslı ve jiletli dikenli telle sarılmış, kafataslarını parçalayan sert dişbudak sopası."
+    },
+    "spiked_cricket_bat": {
+      "name": "Çivili Kriket Sopası",
+      "desc": "Gövdesine bilenmiş inşaat çivileri çakılmış ağır ve dengeli kriket sopası."
+    },
+    "police_side_handle_tonfa": {
+      "name": "Polis Tipi Yan Kollu Tonfa Cop",
+      "desc": "Vuruş ve savuşturma teknikleri için polikarbonat gövdeli sağlam çevik kuvvet copu."
+    },
+    "solid_rebar_club": {
+      "name": "Nervürlü İnşaat Demiri Sopa",
+      "desc": "Bisiklet iç lastiğiyle kavrama sapı yapılmış ağır ve eğilmez nervürlü inşaat demiri."
+    },
+    "heavy_railroad_spike_club": {
+      "name": "Demiryolu Çivili Gürz",
+      "desc": "Gövdesine dövme çelik demiryolu ray çivileri monte edilmiş yıkıcı gürz."
+    },
+    "two_handed_splitting_maul": {
+      "name": "8 Librelik Odun Yarma Baltası",
+      "desc": "Bir tarafı keskin yarma kaması diğer tarafı balyoz olan uzun saplı dev balta."
+    },
+    "tactical_tomahawk_black": {
+      "name": "Taktik Kapı Kırma Tomahavkı",
+      "desc": "Arka tarafında zırh delen sivri mahmuz bulunan tek parça dövme çelik taktik balta."
+    },
+    "firemans_flathead_axe": {
+      "name": "İtfaiyeci Düz Ağızlı Yangın Baltası",
+      "desc": "Yanan binalarda kapı ve çatılara dalmak için tasarlanmış ağır kırmızı ordu baltası."
+    },
+    "combat_trench_knife_1918": {
+      "name": "1918 Siper Muharebe Bıçağı (Muştalı)",
+      "desc": "Tunç döküm parmak muştası ve çift ağızlı sivri hançere sahip tarihi siper bıçağı."
+    },
+    "tactical_karambit_blade": {
+      "name": "Taktik Karambit Çengelli Bıçak",
+      "desc": "Kaplan pençesi kavisli namlusu ve parmak halkasıyla ölümcül yakın mesafe bıçağı."
+    },
+    "folding_butterfly_balisong": {
+      "name": "Çelik Kelebek Bıçak (Balisong)",
+      "desc": "Hızla açılıp kapanabilen, cepte taşınabilir jilet gibi keskin çelik kelebek bıçak."
+    },
+    "improvised_rebar_spear": {
+      "name": "Sivrilmiş İnşaat Demiri Av Mızrağı",
+      "desc": "Ucu taşa sürtülerek sivriltilmiş, mesafeli saplama sağlayan 2 metrelik çelik mızrak."
+    },
+    "scythe_blade_war_pike": {
+      "name": "Düzeltilmiş Tırpan Namlulu Savaş Pikesi",
+      "desc": "Tarım tırpanı namlusunun düzleştirilerek uzun dişbudak sırığa perçinlenmesiyle yapılmış pike."
+    },
+    "fiberglass_recurve_bow_45lb": {
+      "name": "45 Librelik Katlanabilir Olimpik Yay",
+      "desc": "Sessizce ve ölümcül isabetle ok fırlatan dayanıklı lamine fiberglas yay."
+    },
+    "tactical_compound_crossbow_175lb": {
+      "name": "175 Librelik Makaralı Taktik Kundaklı Yay",
+      "desc": "Yüksek çekiş gücüyle çelik uçlu okları kurşun hızında fırlatan profesyonel arbalet."
+    },
+    "bundle_carbon_hunting_arrows": {
+      "name": "6'lı Karbon Gövdeli Çelik Av Oku Demeti",
+      "desc": "Kemikleri delen 3 jiletli çelik uca sahip hafif ve dengeli karbon fiber oklar."
+    },
+    "bundle_aluminum_crossbow_bolts": {
+      "name": "6'lı Alüminyum Arbalet Oku Sadakı",
+      "desc": "175 libreye kadar arbaletlerle uyumlu, sert alaşımlı 20 inçlik çelik uçlu oklar."
+    },
+    "hunting_slingshot_steel_balls": {
+      "name": "Bilek Destekli Avcı Sapanı",
+      "desc": "Lateks lastikli ve bilek destekli profesyonel sapan; çelik bilyeleri kemik kırıcı hızla fırlatır."
+    },
+    "glock_19_9mm_pistol": {
+      "name": "Glock 19 Kompakt 9mm Tabanca",
+      "desc": "Çamurda ve tozda asla tutukluk yapmayan dünyaca ünlü polimer gövdeli 9x19mm beylik tabancası."
+    },
+    "beretta_92fs_pistol": {
+      "name": "Beretta 92FS 9mm Hizmet Tabancası",
+      "desc": "Açık kızaklı alüminyum alaşım gövdeli, 15 mermi kapasiteli İtalyan ordu tabancası."
+    },
+    "colt_1911_45acp_pistol": {
+      "name": "Colt M1911A1 .45 ACP Çelik Tabanca",
+      "desc": "Ağır .45 kalibre mermisiyle tek vuruşta hedefi yıkan efsanevi Amerikan çelik tabancası."
+    },
+    "tokarev_tt33_pistol": {
+      "name": "Sovyet Tokarev TT-33 7.62x25mm Tabanca",
+      "desc": "Hızlı ve zırh delen 7.62mm mermiler ateşleyen son derece dayanıklı Sovyet tabancası."
+    },
+    "makarov_pm_9x18_pistol": {
+      "name": "Makarov PM 9x18mm Subay Tabancası",
+      "desc": "Basit mekanizmalı, neredeyse hiç bozulmayan kompakt Sovyet subay tabancası."
+    },
+    "sw_model_29_44mag_revolver": {
+      "name": "S&W Model 29 .44 Magnum Altıpatlar",
+      "desc": "Ayıları bile durdurabilecek korkunç balistik güce sahip devasa çelik revolver."
+    },
+    "ruger_sp101_357_revolver": {
+      "name": "Ruger SP101 .357 Magnum Paslanmaz Revolver",
+      "desc": "Geri tepmeye dayanıklı masif çelik gövdeli 5 atımlık magnum altıpatlar."
+    },
+    "remington_870_express_12g": {
+      "name": "Remington 870 12 Kalibre Pompalı Tüfek",
+      "desc": "Çelik gövdesi ve çift çekme koluyla asla takılmayan efsanevi pompalı av tüfeği."
+    },
+    "mossberg_590_tactical_12g": {
+      "name": "Mossberg 590A1 Askeri Pompalı Tüfek",
+      "desc": "8 fişek kapasiteli boru şarjörü ve kalınlaştırılmış namlusuyla askeri standart pompalı tüfek."
+    },
+    "sawed_off_double_barrel_12g": {
+      "name": "Namlu ve Kundak Kesik Çifte Av Tüfeği",
+      "desc": "Namluları ve dipçiği testereyle kesilmiş, sıfır mesafede dehşet saçan çift kırma tüfek."
+    },
+    "single_shot_break_action_20g": {
+      "name": "H&R Tek Kırma 20 Kalibre Av Tüfeği",
+      "desc": "Dıştan horozlu, tek fişek alan hafif ve basit kırık namlu av tüfeği."
+    },
+    "sks_carbine_762x39": {
+      "name": "Sovyet SKS Yarı Otomatik Karabin 7.62mm",
+      "desc": "10 mermilik dahili şarjörü ve katlanır süngüsü bulunan sağlam yarı otomatik tüfek."
+    },
+    "mosin_nagant_9130_rifle": {
+      "name": "Mosin-Nagant M91/30 Kurmalı Piyade Tüfeği",
+      "desc": "Ağır 7.62x54mm fişeğiyle yüzlerce metreden çelik levhaları delen efsanevi tüfek."
+    },
+    "remington_700_scoped_308": {
+      "name": "Remington 700 .308 Dürbünlü Keskin Nişancı Tüfeği",
+      "desc": "3-9x büyütmeli dürbünü ve hassas tetiğiyle uzak hedefleri tek kurşunda indiren av tüfeği."
+    },
+    "ruger_1022_carbine": {
+      "name": "Ruger 10/22 Yarı Otomatik .22 LR Tüfek",
+      "desc": "Sıfır geri tepmeli, küçük av hayvanlarını sessizce vurmak için ideal hafif tüfek."
+    },
+    "ak74m_assault_rifle_545": {
+      "name": "AK-74M Piyade Tüfeği 5.45x39mm",
+      "desc": "Katlanır dipçikli, yüksek namlu çıkış hızına sahip ölümcül modern Rus piyade tüfeği."
+    },
+    "ar15_carbine_556x45": {
+      "name": "AR-15 Yarı Otomatik Karabin 5.56mm",
+      "desc": "Raylı kundağı ve kırmızı nokta nişangahıyla ergonomik ve isabetli modern tüfek."
+    },
+    "fal_battle_rifle_762x51": {
+      "name": "FN FAL 7.62 NATO Muharebe Tüfeği",
+      "desc": "Beton barikatları ve zırhları delen ağır muharebe mermileri ateşleyen kudretli tüfek."
+    },
+    "mp5a3_submachine_gun": {
+      "name": "H&K MP5A3 9mm Hafif Makineli Tabanca",
+      "desc": "Makaralı kilit mekanizması sayesinde sarsıntısız nokta atışı yapan efsanevi makineli tabanca."
+    },
+    "ammo_9mm_parabellum_box": {
+      "name": "50'lik 9x19mm Parabellum Tabanca Mermisi",
+      "desc": "Glock, Beretta ve MP5 için pirinç kovanlı standart 9mm tabanca mermi kutusu."
+    },
+    "ammo_45_acp_box": {
+      "name": "50'lik .45 ACP Tabanca Mermisi Kutusu",
+      "desc": "Colt 1911 ve klasik tabancalar için ağır kurşun çekirdekli güçlü mermiler."
+    },
+    "ammo_357_magnum_box": {
+      "name": "50'lik .357 Magnum İçi Boşluklu Mermi Kutusu",
+      "desc": "Revolverler için dokuda muazzam tahribat yaratan ceketsiz magnum kurşunları."
+    },
+    "ammo_44_magnum_box": {
+      "name": "25'lik .44 Magnum Yıkıcı Mermi Kutusu",
+      "desc": "S&W Model 29 için üretilmiş canavarca kinetik enerjiye sahip kurşun kutusu."
+    },
+    "ammo_12g_00_buckshot_box": {
+      "name": "25'lik 12 Kalibre Şevrotin (00 Buckshot) Fişek",
+      "desc": "Her bir fişeğinde dokuz adet 8.4mm iri kurşun bilye barındıran yıkıcı fişek kutusu."
+    },
+    "ammo_12g_rifled_slug_box": {
+      "name": "10'luk 12 Kalibre Tek Kurşun (Slug) Fişek",
+      "desc": "Yivli tek parça masif kurşun kütlesi; yüz metreden kapıları ve zırhları deler."
+    },
+    "ammo_22_lr_brick_100": {
+      "name": "100'lük .22 LR Küçük Çap Mermi Paketi",
+      "desc": "Sessiz tüfekler için ağırlık yapmayan, yüzlercesi cebe sığan hafif mermi paketi."
+    },
+    "ammo_556_nato_box": {
+      "name": "30'luk 5.56x45mm NATO M855 Çelik Çekirdekli Mermi",
+      "desc": "AR-15 tüfekleri için çelik delici çekirdeğe sahip askeri yeşil uçlu mermi kutusu."
+    },
+    "ammo_762x39_soviet_box": {
+      "name": "30'luk 7.62x39mm Sovyet Tüfek Mermisi",
+      "desc": "SKS ve AK platformları için vernikli çelik kovanlı standart tüfek mermisi."
+    },
+    "ammo_545x39_soviet_tin": {
+      "name": "30'luk 5.45x39mm 7N6 Sovyet Mermi Kutusu",
+      "desc": "AK-74 tüfekleri için hedefte taklalar atarak ilerleyen çelik çekirdekli mermi."
+    },
+    "ammo_308_winchester_box": {
+      "name": "20'lik .308 Win Keskin Nişancı Mermisi Kutusu",
+      "desc": "Keskin nişancı tüfekleri için aerodinamik süper isabetli poligon mermileri."
+    },
+    "pipe_bomb_shrapnel_fuse": {
+      "name": "Çivi Dolu Boru Bombası",
+      "desc": "Tesisat borusuna doldurulmuş kibrit kükürdü, çiviler ve fitille ateşlenen el yapımı bomba."
+    },
+    "thermite_incendiary_canister": {
+      "name": "Termit Yangın Bombası Kutusu",
+      "desc": "Demir oksit ve alüminyum tozu karışımı; çeliği ve motor bloklarını eriterek yakan yangın bombası."
+    },
+    "m18_smoke_grenade_white": {
+      "name": "M18 Askeri Beyaz Sis Bombası",
+      "desc": "Görüşü tamamen kapatan yoğun beyaz sis bulutu salarak geri çekilmeyi sağlayan sis bombası."
+    },
+    "tripwire_shotgun_blank_trap": {
+      "name": "Tuzak Telli Çevre Güvenlik Alarm Mayını",
+      "desc": "Kampa yaklaşan davetsiz misafirleri patlama sesiyle haber veren tuzak telli tetik mekanizması."
+    },
+    "claymore_antipersonnel_mine": {
+      "name": "M18A1 Claymore Yönlendirilmiş Anti-Personel Mayını",
+      "desc": "700 çelik bilye ve C4 patlayıcı içeren, yöneltildiği alandaki her şeyi yok eden mayın."
+    },
+    "copper_pipe_section_1m": {
+      "name": "1 Metrelik Bakır Su Tesisat Borusu",
+      "desc": "Su arıtma imbikleri ve elektrik projeleri için saf ve değerli bakır boru parçası."
+    },
+    "brass_plumbing_fittings_pack": {
+      "name": "Pirinç Tesisat Rakor ve Manşon Paketi",
+      "desc": "Korozyona dayanıklı, yüksek basınca uygun pirinç dirsek ve rakor bağlantıları."
+    },
+    "galvanized_sheet_metal_plate": {
+      "name": "Galvanizli Çelik Saç Levha",
+      "desc": "Paslanmaz çinko kaplı, araç zırhlama ve soba borusu yapımında kullanılan dayanıklı saç."
+    },
+    "expanded_steel_mesh_grating": {
+      "name": "Genişletilmiş Çelik Izgara Tel",
+      "desc": "Pencere korumaları, zırh kafesleri ve sağlam hayvan tuzakları kaynaklamak için çelik ızgara."
+    },
+    "tungsten_carbide_drill_bits": {
+      "name": "Tungsten Karbür Çelik ve Beton Matkap Uçları",
+      "desc": "Zırh çeliğini, döküm demiri ve sert betonu delebilen elmas sertliğinde matkap uçları."
+    },
+    "heavy_steel_ball_bearings_bag": {
+      "name": "50'li Krom Çelik Bilye Torbası (12mm)",
+      "desc": "Sapan mermisi ya da şarapnel yapımında kullanılan parlatılmış sert çelik bilyeler."
+    },
+    "assorted_steel_springs_box": {
+      "name": "Çeşitli Gergi ve Baskı Çelik Yay Kutusu",
+      "desc": "Tüfek mekanizmaları, tuzaklar ve kilitler tamir etmek için çelik yay seti."
+    },
+    "hex_bolts_and_nuts_assortment": {
+      "name": "8.8 Kalite Çelik Cıvata ve Somun Kovası",
+      "desc": "Araç şasileri ve ağır makine montajlarında kullanılan yüksek mukavemetli çelik cıvatalar."
+    },
+    "blind_rivets_and_pop_riveter": {
+      "name": "Kör Perçin Tabancası ve 200 Perçin",
+      "desc": "Levhaları ve saçları arkasına ulaşmaya gerek kalmadan perçinleyen el aleti seti."
+    },
+    "stainless_steel_hose_clamps": {
+      "name": "20'li Paslanmaz Kelepçe Kutusu",
+      "desc": "Radyatör hortumlarını sıkıştırmak ve acil boru çatlaklarını yamamak için ayarlı kelepçeler."
+    },
+    "car_battery_12v_lead_acid": {
+      "name": "12 Volt 60Ah Kurşun-Asit Oto Aküsü",
+      "desc": "Kamp aydınlatması, telsiz ve dönüştürücülere güç sağlayan ağır araç aküsü."
+    },
+    "lithium_18650_rechargeable_cell": {
+      "name": "3.7V 18650 Şarj Edilebilir Lityum Pil",
+      "desc": "Dizüstü bilgisayar bataryalarından sökülmüş, el feneri ve lazerleri besleyen lityum pil."
+    },
+    "alkaline_9v_transistor_battery": {
+      "name": "9 Volt Alkalin Blok Pil",
+      "desc": "Geiger sayaçları, yangın dedektörleri ve telsizler için gerekli yüksek voltajlı blok pil."
+    },
+    "cr2032_lithium_coin_cells": {
+      "name": "5'li CR2032 3V Düğme Pil Paketi",
+      "desc": "Taktik nişangahlar, optikler ve dijital saatler için minyatür 3V lityum piller."
+    },
+    "solar_charge_controller_mppt": {
+      "name": "MPPT Güneş Paneli Şarj Kontrol Kartı",
+      "desc": "Güneş panellerinden gelen akımı akülere zarar vermeden aktaran akıllı kontrol beyni."
+    },
+    "step_down_buck_voltage_regulator": {
+      "name": "DC-DC Voltaj Düşürücü Regülatör Modülü",
+      "desc": "12V araç elektriğini cep telefonları ve cihazlar için temiz 5V USB'ye çeviren devre."
+    },
+    "brushless_12v_dc_motor": {
+      "name": "12V Fırçasız DC Elektrik Motoru",
+      "desc": "Rüzgar türbini jeneratörü veya körük yapımında kullanılabilen verimli elektrik motoru."
+    },
+    "solder_wire_6040_rosin_core": {
+      "name": "Reçineli 60/40 Kalay-Kurşun Lehim Teli Makarası",
+      "desc": "Elektronik devreleri ve kopuk kabloları birleştirmek için eriyen kaliteli lehim."
+    },
+    "electric_soldering_iron_40w": {
+      "name": "40 Watt İnce Uçlu Kalem Havya",
+      "desc": "Elektronik devreleri tamir etmek ve kabloları lehimlemek için elektrikli havya."
+    },
+    "insulated_copper_wiring_harness": {
+      "name": "Oto Tesisat Kablo Demeti",
+      "desc": "Aydınlatma ve güç hatları kurmak için renk kodlu izole bakır kablo demeti."
+    },
+    "heavy_toggle_switches_pack": {
+      "name": "4'lü Ağır Hizmet Tipi Mandal Şalter Paketi",
+      "desc": "Elektrik hatlarını ve farları açıp kapatmak için su geçirmez mandallı anahtarlar."
+    },
+    "neodymium_rare_earth_magnets": {
+      "name": "6'lı N52 Güçlü Neodimyum Mıknatıs",
+      "desc": "Jeneratör bobinleri ve gizli bölme kilitleri için inanılmaz çekim gücüne sahip mıknatıslar."
+    },
+    "epoxy_resin_and_hardener_tubes": {
+      "name": "Çift Şırıngalı 5 Dakikalık Epoksi Yapıştırıcı",
+      "desc": "Metali, ahşabı ve kırık tüfek dipçiklerini taş gibi yapıştıran iki bileşenli reçine."
+    },
+    "cyanoacrylate_super_glue_bottle": {
+      "name": "Endüstriyel Siyanoakrilat Hızlı Yapıştırıcı (50g)",
+      "desc": "Saniyeler içinde yapışan kuvvetli yapıştırıcı; acil kesik kapamada da kullanılır."
+    },
+    "silicone_rtv_gasket_maker": {
+      "name": "RTV Yüksek Isı Sıvı Conta Silikonu",
+      "desc": "Motor kapaklarını, egzoz bağlantılarını ve su borularını sızdırmaz hale getiren kırmızı silikon."
+    },
+    "polyurethane_expanding_foam_can": {
+      "name": "Poliüretan Şişen Montaj Köpüğü (750ml)",
+      "desc": "Duvar çatlaklarını, rüzgar deliklerini ve su kaçaklarını tıkayan dev köpük sprey."
+    },
+    "fiberglass_cloth_and_resin_kit": {
+      "name": "Fiberglas Elyaf ve Reçine Tamir Kiti",
+      "desc": "Delik su depolarını, kayıkları ve araç panellerini onarmak için cam elyaf kumaş kiti."
+    },
+    "wd40_penetrating_lubricant_can": {
+      "name": "WD-40 Pas Sökücü ve Yağlayıcı Sprey",
+      "desc": "Paslı kilitleri açan, suyu kovan ve silah mekanizmalarını temizleyen mucize sprey."
+    },
+    "motor_oil_synthetic_10w40": {
+      "name": "1 Litre Tam Sentetik 10W-40 Motor Yağı",
+      "desc": "Jeneratör ve araç motorlarının kilitlenmesini önleyen kaliteli motor yağı."
+    },
+    "brake_fluid_dot4_can": {
+      "name": "DOT 4 Sentetik Hidrolik Fren Yağı (500ml)",
+      "desc": "Araç fren sistemleri ve hidrolik debriyajlar için yüksek kaynama noktalı hidrolik yağ."
+    },
+    "acetone_solvent_metal_can": {
+      "name": "Saf Kimyasal Aseton Çözücü (1 Litre)",
+      "desc": "Boya sökücü, silah temizleyici ve kimyasal sentezlerde kullanılan uçucu çözücü."
+    },
+    "kerosene_fuel_plastic_jug": {
+      "name": "5 Litrelik Gazyağı (Kerosene) Bidonu",
+      "desc": "Gaz lambaları, kamp sobaları ve mekanik parça yıkamak için rafine yakıt."
+    },
+    "diesel_fuel_canister_10l": {
+      "name": "10 Litrelik Çelik Mazot (Dizel) Bidonu",
+      "desc": "Dizel jeneratörler, ağır kamyonlar ve ısıtıcılar için saf dizel yakıtı."
+    },
+    "butane_gas_canister_camping": {
+      "name": "220g Vidalı Kamp Gazı Kartuşu (Bütan-Propan)",
+      "desc": "Taşınabilir kamp ocakları ve pürmüzler için vidalı gaz tüpü."
+    },
+    "rubber_tire_patch_vulcanizing_kit": {
+      "name": "Lastik Yama ve Soğuk Vulkanize Kiti",
+      "desc": "Patlak bisiklet ve araç lastiklerini kalıcı olarak yamamak için solüsyon ve yama takımı."
+    },
+    "neoprene_gasket_sheet_thick": {
+      "name": "Yağa Dayanıklı Kalın Neopren Kauçuk Levha",
+      "desc": "Su geçirmez contalar, gaz maskesi pulları ve yalıtım parçaları kesmek için levha."
+    },
+    "heavy_duty_cable_ties_pack_100": {
+      "name": "100'lü UV Dayanımlı Ağır Hizmet Cırt Kelepçe",
+      "desc": "Telsiz anteni sabitlemeden barikat kurmaya kadar her işte kullanılan sağlam plastik kelepçeler."
+    },
+    "aluminum_foil_heavy_duty_roll": {
+      "name": "Kalın Mutfak Alüminyum Folyo Rulosu",
+      "desc": "Yemek pişirme, ısı reflektörü ve sinyal engelleme için kullanılan dayanıklı folyo."
+    },
+    "heat_shrink_tubing_assortment": {
+      "name": "150 Parça Isıyla Daralan Kablo Makaron Seti",
+      "desc": "Açıkta kalan lehimli kabloları ısıtılarak su geçirmez şekilde kaplayan yalıtım makaronu."
+    },
+    "welding_rods_e6013_pack": {
+      "name": "30'lu E6013 Rutil Çelik Kaynak Elektrodu",
+      "desc": "Jeneratörle çalışan kaynak makinelerinde demir ve çelik kaynatmak için kaynak teli."
+    },
+    "graphite_powder_lock_lubricant": {
+      "name": "Kuru Grafit Tozu Kilit Yağlayıcı",
+      "desc": "Donma yapmayan, kilit mekanizmalarını ve tetikleri pürüzsüzleştiren kuru grafit tozu."
+    },
+    "bungee_cargo_cords_pack": {
+      "name": "4'lü Çelik Kancalı Elastik Bagaj Lastiği",
+      "desc": "Yükleri araç bagajına veya sırt çantasına sıkıca bağlamaya yarayan esnek kordonlar."
+    },
+    "polyethylene_tarp_repair_tape": {
+      "name": "Su Geçirmez Branda ve Çadır Tamir Bandı",
+      "desc": "Güneşten ve sudan etkilenmeyen, yırtılan çadır ve brandaları mühürleyen kalın yapışkan bant."
+    },
+    "ratchet_tie_down_strap_5m": {
+      "name": "5 Metrelik 2 Tonluk Mandallı Yük Spanzeti",
+      "desc": "Ağır yükleri, jeneratörleri ve araçları taşırken sabitleyen krikolu polyester kayış."
+    },
+    "silica_gel_desiccant_packs": {
+      "name": "20'li Nem Alıcı Silika Jel Poşeti",
+      "desc": "Mühimmat sandıklarını, telsizleri ve ilaçları rutubetten ve pastan koruyan nem alıcı paketler."
+    },
+    "chlorine_bleach_sodium_hypochlorite": {
+      "name": "1 Litre Kokusuz Çamaşır Suyu (Sodyum Hipoklorit)",
+      "desc": "Ortam dezenfeksiyonu ve şüpheli suları arıtmak için kullanılan klorlu sıvı."
+    },
+    "calcium_carbide_chunks": {
+      "name": "Hava Geçirmez Kutuda Karpit (Kalsiyum Karbür)",
+      "desc": "Suyla temas ettiğinde yanıcı asetilen gazı üreten karpit madeni."
+    },
+    "beeswax_pure_block": {
+      "name": "Saf Doğal Sarı Balmumu Kalıbı",
+      "desc": "Kumaş ve botları su geçirmez yapmada, ip cilalamada ve mum dökümünde kullanılan doğal balmumu."
+    },
+    "tactical_plate_carrier_level4": {
+      "name": "Seramik Seviye IV Balistik Hücum Yeleği",
+      "desc": "Tüfek mermilerini göğüste durduran seramik kompozit zırh plakalarına sahip hücum yeleği."
+    },
+    "concealable_kevlar_vest_level2": {
+      "name": "Gizlenebilir Seviye IIIA Kevlar Çelik Yelek",
+      "desc": "Kıyafet altına giyilebilen, tabanca ve şarapnel darbelerini emen hafif kevlar yelek."
+    },
+    "stab_proof_security_vest": {
+      "name": "Bıçak ve Kesik Korumalı Güvenlik Yeleği",
+      "desc": "Hançer, şiş ve kesici alet saldırılarına karşı gövdeyi koruyan çelik pullu yelek."
+    },
+    "riot_police_hard_armor_suit": {
+      "name": "Çevik Kuvvet Tam Zırh Takımı (Robocop)",
+      "desc": "Sopa ve taş darbelerine karşı göğüs, kol ve kaval kemiklerini koruyan polikarbonat zırh."
+    },
+    "firefighter_turnout_bunker_coat": {
+      "name": "İtfaiyeci Nomex Yangın Koruyucu Mont",
+      "desc": "Doğrudan aleve, kıvılcıma ve aşındırıcı kimyasallara dayanıklı kalın itfaiyeci montu."
+    },
+    "waxed_canvas_hunting_jacket": {
+      "name": "Ağır Mumlu Kanvas Avcı Ceketi",
+      "desc": "Dikenlere, yağmura ve vahşi hayvan pençelerine karşı son derece dirençli mumlu ceket."
+    },
+    "military_m65_field_jacket_liner": {
+      "name": "M-65 Askeri Parka ve Kapitoneli İçlik",
+      "desc": "Soğuk rüzgarları kesen, çıkartılabilir kapitone astara sahip efsanevi askeri kaban."
+    },
+    "goretex_waterproof_parka_camo": {
+      "name": "Gore-Tex Su Geçirmez Kamuflaj Parka",
+      "desc": "Şiddetli yağmuru ve sulusepkeni dışarıda tutan, terletmeyen nefes alabilir askeri yağmurluk."
+    },
+    "merino_wool_thermal_base_layer": {
+      "name": "Termal Merinos Yün İçlik Takımı",
+      "desc": "Sırılsıklam olsa dahi vücut ısısını muhafaza eden yüksek kaliteli doğal termal içlik."
+    },
+    "tactical_ripstop_cargo_pants": {
+      "name": "Yırtılmaz Taktik Kargo Pantolon",
+      "desc": "Diz kapaklarında koruma yuvaları ve çok sayıda cebe sahip yırtılmaz kumaşlı pantolon."
+    },
+    "vibram_sole_combat_boots": {
+      "name": "Vibram Tabanlı Su Geçirmez Taktik Bot",
+      "desc": "Enkaz ve moloz üzerinde ayak bileğini burkulmaktan ve paslı çivilerden koruyan bot."
+    },
+    "insulated_extreme_cold_snow_boots": {
+      "name": "-40°C Kar ve Buz Seferi Botu",
+      "desc": "Dondurucu nükleer kış şartlarında ayakların donmasını önleyen kalın keçe astarlı kar botu."
+    },
+    "heavy_neoprene_wading_boots": {
+      "name": "Su Geçirmez Neopren Çizme",
+      "desc": "Kanalizasyon ve bataklıklardan geçerken kazazedeyi sülüklerden ve sudan koruyan boy çizmesi."
+    },
+    "kevlar_reinforced_tactical_gloves": {
+      "name": "Karbon Korumalı Kevlar Taktik Eldiven",
+      "desc": "Cam kırıkları ve bıçak kesiklerine dayanıklı, eklem yerleri karbon zırhlı eldiven."
+    },
+    "insulated_leather_work_gauntlets": {
+      "name": "Kalın Deri İş ve Kaynakçı Eldiveni",
+      "desc": "Kızgın metalleri tutmaya, paslı saçları taşımaya ve ısırıklara dayanıklı kalın deri eldiven."
+    },
+    "ballistic_mtek_bump_helmet": {
+      "name": "Raylı Taktik Operasyon Kaskı",
+      "desc": "Gece görüş ve fener montaj raylarına sahip, kafayı darbelere karşı koruyan kompozit kask."
+    },
+    "welding_goggles_shade_5": {
+      "name": "5 Numara Oksijen Kaynakçı Gözlüğü",
+      "desc": "Kör edici ışık parlamalarını ve göz yakan ultraviyole ışınları kesen koyu camlı gözlük."
+    },
+    "polarized_ballistic_sunglasses": {
+      "name": "Balistik Korumalı Polarize Güneş Gözlüğü",
+      "desc": "Güneş yansımasını kesen ve seken küçük parçacıklara karşı gözü koruyan polikarbonat gözlük."
+    },
+    "nomex_flame_resistant_balaclava": {
+      "name": "Nomex Yanmaz Kar Maskesi (Balaklava)",
+      "desc": "Yüzü ve boynu ani alev parlamalarından koruyan ve kimliği gizleyen askeri kar maskesi."
+    },
+    "boonie_hat_woodland_camo": {
+      "name": "Geniş Kenarlı Kamuflajlı Boonie Şapka",
+      "desc": "Güneş çarpmasını engelleyen ve etrafa kamufle olmak için yaprak takılabilen fötr şapka."
+    },
+    "internal_frame_expedition_pack_75l": {
+      "name": "75 Litrelik Alüminyum İskeletli Sefer Çantası",
+      "desc": "Ağır yükleri bele eşit dağıtarak taşımayı kolaylaştıran dev sırt çantası (+35 kg)."
+    },
+    "assault_pack_3_day_40l": {
+      "name": "40 Litrelik 3 Günlük Taktik Taarruz Çantası",
+      "desc": "Hidrasyon hortumu yuvası ve modüler bağlantı kayışları olan operasyon çantası (+20 kg)."
+    },
+    "tactical_chest_rig_vest": {
+      "name": "Göğüs Tipi Taktik Şarjör Yeleği (Chest Rig)",
+      "desc": "Şarjörleri, telsizi ve ilk yardım paketini göğüs üzerinde hazır tutan taşıyıcı yelek (+8 kg)."
+    },
+    "canvas_messenger_satchel_heavy": {
+      "name": "Mumlu Kanvas Postacı Omuz Çantası",
+      "desc": "Hızlı erişim sağlayan, su geçirmez astarlı dayanıklı çapraz omuz çantası (+10 kg)."
+    },
+    "waterproof_roll_top_dry_bag_30l": {
+      "name": "30 Litrelik Su Geçirmez Sızdırmaz Torba (Dry Bag)",
+      "desc": "Suya düşse bile batmayan ve içindekileri kupkuru tutan kalın PVC torba (+12 kg)."
+    },
+    "folding_camp_wood_stove": {
+      "name": "Katlanabilir Titanyum Odun Sobası",
+      "desc": "Kitap gibi düz katlanan, çalı çırpıyla duman çıkarmadan su kaynatan kamp sobası."
+    },
+    "titanium_pot_and_pan_mess_kit": {
+      "name": "İki Parçalı Titanyum Kamp Tencere Seti",
+      "desc": "Açık ateşte paslanmayan ve deforme olmayan ultra hafif titanyum pişirme seti."
+    },
+    "handheld_crank_solar_emergency_radio": {
+      "name": "Dinamolu ve Güneş Enerjili Acil Durum Telsiz-Radyosu",
+      "desc": "Elle çevrilerek veya güneşle şarj olan, acil yayınları dinleyen ve ışık veren radyo."
+    },
+    "high_lumen_tactical_flashlight": {
+      "name": "2000 Lümen Şarj Edilebilir Taktik El Feneri",
+      "desc": "Karanlık tünelleri yüzlerce metre aydınlatan kör edici uçak alüminyumu el feneri (+%8 arama)."
+    },
+    "silva_sighting_mirror_compass": {
+      "name": "Silva Aynalı Profesyonel Askeri Pusula",
+      "desc": "Aynalı hedefleme kapağıyla harita üzerinde kusursuz rota belirleyen hassas pusula (+%6 hız)."
+    },
+    "bushcraft_parang_heavy_machete": {
+      "name": "El Dövmesi 35cm Bushcraft Parang Palası",
+      "desc": "Sığınak inşasında ve kalın dalları biçmede üstün performans gösteren ağır pala."
+    },
+    "folding_entrenching_spade_pick": {
+      "name": "Katlanabilir Askeri Tahkimat Küreği ve Kazması",
+      "desc": "Siper kazmak, kök sökmek ve yakın dövüşte kafatası kırmak için askeri kürek."
+    },
+    "magnesium_fire_starter_block": {
+      "name": "Magnezyum Bloklu Kıvılcım Ateş Başlatıcı",
+      "desc": "Islak odunları bile tutuşturan, binlerce derece sıcaklıkta yanan magnezyum çubuğu."
+    },
+    "stormproof_matches_sealed_case": {
+      "name": "Su ve Fırtına Geçirmez Kibrit Kapsülü",
+      "desc": "Suya batırılsa bile sönmeyen, contalı kapsül içinde 25 adet fırtına kibriti."
+    },
+    "tactical_pen_tungsten_glassbreaker": {
+      "name": "Tungsten Cam Kırıcı Uçlu Taktik Kalem",
+      "desc": "Soğukta yazabilen, arka ucundaki elmas sertliğindeki tungstenle oto camlarını patlatan kalem."
+    },
+    "mechanical_automatic_field_watch": {
+      "name": "Otomatik Mekanik Kurmalı Asker Saati",
+      "desc": "Pil gerektirmeyen, koldaki hareketle kurulan ve nükleer EMP dalgasından etkilenmeyen saat."
+    },
+    "monocular_telescope_12x50": {
+      "name": "12x50 Azot Gazlı Monoküler El Dürbünü",
+      "desc": "Buğu yapmayan mercekleriyle düşman hareketlerini uzaktan gözetleyen tek göz dürbün (+%4 hız)."
+    },
+    "thermal_mylar_bivvy_emergency_sleeping_bag": {
+      "name": "Mylar Termal Acil Durum Uyku Tulumu",
+      "desc": "Vücut ısısının %90'ını içeri yansıtarak donarak ölümü engelleyen metalize tulum."
+    },
+    "down_filled_subzero_sleeping_bag": {
+      "name": "-20°C Kaz Tüyü Mumya Uyku Tulumu",
+      "desc": "Dondurucu kış gecelerinde kazazedeyi sıcacık tutan hafif ve hacimli profesyonel tulum."
+    },
+    "self_inflating_camp_sleeping_pad": {
+      "name": "Kendiliğinden Şişen Yalıtımlı Kamp Matı",
+      "desc": "Buz tutmuş topraktan gelen soğuğu keserek omurgayı koruyan şişme konfor matı."
+    },
+    "heavy_canteen_1l_molle_cup": {
+      "name": "Paslanmaz Çelik Kupalı Askeri Matara 1L",
+      "desc": "Köz üzerinde su kaynatmaya yarayan çelik kupasıyla birlikte taşınan askeri su matarası."
+    },
+    "sawyer_gravity_water_filter_4l": {
+      "name": "4 Litrelik Yerçekimli Membran Su Arıtma Çantası",
+      "desc": "Ağaca asılarak çamurlu gölet suyunu mikron düzeyinde süzüp temiz içme suyuna dönüştürür."
+    },
+    "tactical_entry_crowbar_short": {
+      "name": "18 İnç Kısa Kapı Patlatma Levyesi",
+      "desc": "Kilitli sandıkları ve kapı menteşelerini sessizce sökmek için dövme çelik taktik levyecik (+%12 arama)."
+    },
+    "heavy_snatch_strap_tow_rope_5t": {
+      "name": "9 Metrelik 5 Tonluk Kinetik Araç Çekme Halatı",
+      "desc": "Çamura batmış araçları esneyerek sarsıntısız çekip kurtaran elastik çelik kancalı halat."
+    },
+    "handheld_laser_rangefinder_600m": {
+      "name": "600 Metre Lazerli Mesafe Ölçer",
+      "desc": "Nişancılıkta ve hedef tespitinde metre cinsinden kesin mesafeyi hesaplayan lazer cihazı."
+    },
+    "signal_mirror_heliograph": {
+      "name": "Nişangahlı Cam İmdat Sinyal Aynası",
+      "desc": "Güneş ışığını kilometrelerce ötedeki gözlemcilere çaktıran askeri yardım aynası."
+    },
+    "camp_bow_saw_folding": {
+      "name": "Katlanabilir Alüminyum Kamp Kol Testeresi",
+      "desc": "Devrilmiş ağaç gövdelerini saniyeler içinde yakacak odun haline getiren keskin testere."
+    },
+    "portable_waterproof_solar_panel_28w": {
+      "name": "28 Watt Katlanabilir Güneş Paneli Şarj Cihazı",
+      "desc": "Yürürken çantaya asılarak telsiz ve pilleri şarj eden su geçirmez solar panel."
+    },
+    "geiger_tube_pouch_sensor": {
+      "name": "SBM-20 Geiger Sayacı Yedek Algılama Tüpü",
+      "desc": "Radyasyon sayaçlarının beyni olan, gama ve beta ışınlarını algılayan cam vakum tüp."
+    },
+    "hydraulic_bottle_jack_6t": {
+      "name": "6 Tonluk Çelik Hidrolik Şişe Kriko",
+      "desc": "Yıkılmış beton kirişleri ve araçları kaldırmak için kompakt hidrolik kriko."
+    },
+    "industrial_wire_strippers_crimper": {
+      "name": "Otomatik Kablo Soyma ve Pabuç Sıkma Pensesi",
+      "desc": "Kablo tesisatını bakırına zarar vermeden saniyede soyan profesyonel elektrikçi pensesi."
+    },
+    "heavy_canvas_tool_roll_organizer": {
+      "name": "Kalın Mumlu Bez Takım Çantası Rulosu",
+      "desc": "Anahtar ve tornavidaları ses çıkarmadan derli toplu taşımaya yarayan rulo alet çantası."
+    },
+    "tactical_modular_hydration_bladder_3l": {
+      "name": "3 Litrelik Isırık Valfli Askeri Su Torbası",
+      "desc": "Çantanın içine yerleştirilip hortumuyla yürürken su içmeyi sağlayan taktik suluk."
+    },
+    "brass_emergency_whistle_pea_less": {
+      "name": "120 Desibel Masif Pirinç Düdük",
+      "desc": "Kar fırtınalarında ve siste kilometrelerce öteden duyulan bilyesiz metal acil düdüğü."
+    },
+    "leather_sheath_folding_pocket_knife": {
+      "name": "Kilitli Çakı ve Deri Kılıfı",
+      "desc": "Pirinç perçinli, odun yontmak ve ip kesmek için pratik kilit mekanizmalı cep çakısı."
+    },
+    "military_ifak_complete": {
+      "name": "Tam Donanımlı Askeri Travma Kiti (IFAK)",
+      "desc": "Taktik operasyonlar için tasarlanmış kapsamlı ilk yardım kiti. Atardamar turnikesi, hemostatik kaolin gazlı bez, valfli göğüs mührü ve dekompresyon ekipmanı içerir."
+    },
+    "morphine_auto_injector": {
+      "name": "Morfin Oto-Enjektörü",
+      "desc": "Acil saha travmalarında ve şok durumlarında kullanılan yay mekanizmalı askeri ağrı kesici oto-enjektör. Ağrıyı anında keser ve morali toparlar."
+    },
+    "vehicle_ignition_key": {
+      "name": "Araç Kontak Anahtarı & Ruhsatı",
+      "desc": "Keşfedilen ve sahiplenilen araca ait mekanik kontak anahtarı ve tescil dosyası. Filo yönetiminde kullanılır."
+    }
+  },
+  "faction": {
+    "title": "ÇORAK TOPRAK FRAKSİYONLARI & DİPLOMASİ",
+    "iron_guard": {
+      "name": "Demir Muhafızlar",
+      "desc": "Yeraltı askeri garnizonlarının kalıntıları; teknokratik, disiplinli, merkezi hat üzerinde acımasız karantina protokolleri uygulayan birlik."
+    },
+    "nomad_guild": {
+      "name": "Göçebe Loncası",
+      "desc": "Kıtalararası ticaret kervanları ve hurdacı esnafı; pragmatik, barışçıl, hurda karşılığında takas ve güvenli geçiş sağlayan tüccarlar."
+    },
+    "ash_marauders": {
+      "name": "Kül Yağmacıları",
+      "desc": "Sınır harabelerinde kol gezen başıboş çeteler; haraç odaklı, fırsatçı ve acımasız haydutlar."
+    },
+    "tier": {
+      "allied": "MÜTTEFİK (%30 Takas İndirimi)",
+      "friendly": "DOSTANE (%15 Takas İndirimi)",
+      "neutral": "TARAFSIZ (Standart Şartlar)",
+      "suspicious": "ŞÜPHELİ (%30 Fiyat Artışı)",
+      "hostile": "DÜŞMAN (Görüldüğü Yerde Ateş)"
+    }
+  },
+  "environment": {
+    "weather": {
+      "clear_sky": "Açık Gökyüzü",
+      "radiation_ash_fog": "Zehirli Kül Sisi",
+      "corrosive_acid_rain": "Aşındırıcı Asit Yağmuru",
+      "subzero_cold_front": "Sıfırın Altında Soğuk Cephe",
+      "gale_windstorm": "Şiddetli Fırtına"
+    },
+    "alert": {
+      "shivering": "Vücut ısısı düşüyor ({coreTemp}°C). Şiddetli titreme başladı, kalori tüketimi hızlandı.",
+      "hypothermia": "Evre II Hipotermi ({coreTemp}°C)! Uzuvlar donuyor, kondisyon ve sağlık çöküyor.",
+      "acid_burn": "Yakıcı asit yağmuru korumasız cilde temas ediyor ve donanımı eritiyor!",
+      "ash_inhalation": "Yoğun radyoaktif kül solunuyor ({dose} mSv). Bronşlar tahriş oluyor!",
+      "windstorm_fatigue": "Şiddetli rüzgar yürüyüşü zorlaştırıyor ve boğazı kurutuyor."
+    },
+    "flashlight_on": "Fener AÇIK. Arama hızı arttı ancak ışık hüzmesi yağmacıların dikkatini çekiyor!",
+    "flashlight_off": "Fener KAPALI. Gölgelerin içine adım atılıyor."
+  },
+  "barter": {
+    "kicker": "MAL TAKAS MASASI",
+    "action_open": "Tüccar ile Takas",
+    "player_offered_val": "Senin Teklif Değerin",
+    "merchant_demanded_val": "İstenen Mal Değeri",
+    "status_balanced": "ANLAŞMA KABUL EDİLEBİLİR",
+    "status_insufficient": "YETERSİZ DEĞER (+{diff} puan gerekli)",
+    "player_empty": "Çantada takas edilecek eşya bulunmuyor.",
+    "col_player": "HAYATTA KALAN ÇANTASI (TEKLİF)",
+    "col_merchant": "TÜCCAR ENVANTERİ",
+    "action_haggle": "Pazarlık Yap (-%18 İndirim)",
+    "haggle_done": "Pazarlık Yapıldı",
+    "action_cancel": "Vazgeç / Ayrıl",
+    "action_confirm": "Takası Tamamla",
+    "haggle_success": "Usta işi pazarlık! Tüccar mallarında %18 indirimi kabul etti.",
+    "haggle_failed": "Sert pazarlık tüccarı kızdırdı! Fiyatlara %10 inat zammı koydu.",
+    "trade_completed": "Takas tamamlandı! {playerVal} puanlık eşya verilip {merchantVal} puanlık erzak alındı.",
+    "insufficient_value": "Tüccar başını salladı: 'Masadaki mallar yetersiz, yabancı.'",
+    "refused_standing": "{faction} muhafızları namlu doğrulttu: 'İtibarın ticaret için çok düşük.'",
+    "merchant": {
+      "nomad_caravan": {
+        "name": "Göçebe Loncası Kervan Tüccarı",
+        "desc": "Su arıtma tabletleri ve saha tıbbı gereçleriyle dolu bir kervanın başında bekleyen tecrübeli tüccar."
+      },
+      "iron_guard_quartermaster": {
+        "name": "Demir Muhafız Levazım Subayı",
+        "desc": "Zırhlı camın arkasından hurda karşılığı askeri mühimmat takas eden disiplinli levazım subayı."
+      },
+      "wasteland_peddler": {
+        "name": "Çorak Arazi Başıboş Hurdacı",
+        "desc": "Bakır kablolar, kurşun plakalar ve derme çatma aletlerle dolu çuvalının başında bekleyen bir hurdacı."
+      }
+    }
+  },
+  "pwa": {
+    "install_title": "UYGULAMAYI YÜKLE (PWA)",
+    "install_desc": "Last Breath'i ana ekranınıza ekleyerek tam ekran, sıfır gecikme ve çevrimdışı oynayın.",
+    "install_btn": "ANA EKRANA EKLE 📲",
+    "already_installed": "Uygulama zaten yüklü.",
+    "ios_guide_title": "iPHONE / iPAD YÜKLEME ADIMLARI",
+    "ios_guide_step1": "1. Safari alt çubuğundaki Paylaş (Share) butonuna dokunun.",
+    "ios_guide_step2": "2. Açılan menüden 'Ana Ekrana Ekle'yi seçin.",
+    "ios_guide_step3": "3. Sağ üstteki 'Ekle' butonuna dokunun. Oyun ana ekranınıza eklenecektir.",
+    "installed_success": "Uygulama başarıyla yüklendi! Çevrimdışı oynayabilirsiniz.",
+    "close": "KAPAT"
+  },
+  "encounter": {
+    "decompression_chamber": {
+      "title": "Çökmüş Karayolu Sahra Kliniği",
+      "text": "Yaralı bir asker devrilmiş bir oksijen manifoldu altında sıkışmış, akut basınçlı pnömotoraks geçiriyor. Nefesi hırıltılı ve soluk borusu sola kaymış. Hemen yanında mühürlü bir askeri çanta duruyor.",
+      "choice": {
+        "decompress": "Dekompresyon İğnesi (Göğüs boşluğu basıncını tahliye et)",
+        "loot_pack": "Çantayı kesip molozların arasına çekil",
+        "leave": "Onu susan monitörlerle baş başa bırak"
+      },
+      "outcome": {
+        "decompress_success": "Basınçlı havanın ve koyu kanın fıslamasıyla göğüs rahatlar. Asker öksürerek minnetle morfin ampullerini size uzatır.",
+        "decompress_failure": "İğne kırık kaburga kıkırdağına çarparak kayar, yumuşak dokuyu zedeler.",
+        "loot_pack": "Askı kayışlarını kesip acil durum tayınlarını alırken askerin botları zemine vurmaya devam eder.",
+        "leave": "Geri adım atıp koğuşu derin sessizliğe terk edersiniz."
+      }
+    },
+    "checkpoint_siphon": {
+      "title": "Viyadük Barikatı (Demir Yolcuları)",
+      "text": "Kalın kaputlu asker kaçakları, tren traversleri ve kum torbalarıyla köprüyü tahkim etmiş; ağır bir makineli tüfek yolu kesiyor. Liderleri kalori veya mermi haraç istiyor.",
+      "choice": {
+        "pay_toll": "Geçiş için 2x yiyecek/içecek haraç ver",
+        "fight_sentry": "Silahını çek ve barikatı zorla aş",
+        "scale_gorge": "Buz gibi kanyona inip viyadük ayağına tırman"
+      },
+      "outcome": {
+        "pay_toll": "Nöbetçi tayınları tartıp işaret eder: 'Tünelde başını eğik tut yolcu, tavan çökebilir.'",
+        "fight_sentry_success": "İsabetli savunma ateşi kum torbası mevzilerini dağıtır; hayatta kalan nöbetçiler geri çekilir.",
+        "fight_sentry_failure": "Yoğun makineli tüfek ateşi sizi betonun arkasına hapseder; şarapnel bacağınızı sıyırır.",
+        "scale_gorge_success": "Beline kadar gelen kimyasal atık suyunu yarıp kayalara tırmanır, kontrol noktasını fark edilmeden geçersiniz.",
+        "scale_gorge_failure": "Buz gibi balçık ellerinizi hissizleştirir; ıslak çakılda kayıp dizinizi betona çarparsınız."
+      }
+    },
+    "protocol47_cache": {
+      "title": "Zırhlı Sivil Savunma Terminali",
+      "text": "Patlamaya dayanıklı bir nişin içinde analog bir ekran kehribar renginde parıldıyor. Yanıp sönen komut satırında 'PROTOKOL 47' başlıklı gizli askeri kayıtlar görünüyor.",
+      "choice": {
+        "decrypt": "Mantık kilidini baypas edip kayıtları kopyala",
+        "salvage": "Terminalin bakır bobinlerini ve pil hücrelerini sök",
+        "ignore": "Terminali karanlıkta vızıldamaya bırak"
+      },
+      "outcome": {
+        "decrypt_success": "Manyetik bellek, Karadeniz EMP patlamasının gerçek iç yüzünü ortaya döken şifreli emirleri deşifre eder.",
+        "decrypt_failure": "Devre kartından sıçrayan kıvılcım parmaklarınızı yakar ve mantık çiplerini eritir.",
+        "salvage": "Kasanın içinden yalıtımlı bakır kablolar ve sağlam hurda parçaları sökersiniz.",
+        "ignore": "CRT ekranının fosforlu ışıltısını sığınağın gölgelerinde bırakırsınız."
+      }
+    }
+  },
+  "log": {
+    "boot": {
+      "telemetry": "SYS_BOOT // SAHA TELEMETRİ v4.19-REL // RAD: 14.8 mSv/s // SİNYAL: 142.85 MHz",
+      "beacon": "TELSİZ 142.85 MHz: 'Sektör 09 Bozkır Sığınağı aktif... sığınak kapıları 45 gün içinde kilitlenecektir. İntikali tamamlayın.'",
+      "awakened": "Soğuk cızırtı dağılıyor. {location} harabelerinde teçhizat kayışlarını sıkıyorsun."
+    },
+    "scavenge": {
+      "started": "{location} ({country}) harabelerinde detaylı keşif & arama yapılıyor...",
+      "empty": "{location} ({country}) içindeki yıkıntılar tarandı ancak işe yarar kaynak bulunamadı.",
+      "found": "{location} ({country}) bölgesinde {count} parça yerel kaynak ve teçhizat ele geçirildi.",
+      "rare_discovery": "⭐ {location} ({country}) bölgesinde değerli bir kaynak keşfedildi!",
+      "field_log": "[ELE GEÇİRİLEN SAHA KAYDI] {text}"
+    },
+    "crafting": {
+      "crafted": "Üretildi: {count}× {item}."
+    },
+    "base": {
+      "established": "{location} bölgesinde sığınak kuruldu.",
+      "upgraded": "{structure} seviye {level} olarak geliştirildi.",
+      "repaired": "Sığınak tahkimatı ve barikatlar onarıldı.",
+      "stored": "Sığınak deposuna aktarıldı: {count}× {item}.",
+      "water_collected": "Su Yoğuşturucu: {count} şişe temiz su depolandı.",
+      "food_collected": "Hidroponik Sera: {count} adet konserve gıda depolandı.",
+      "vehicle_repaired": "Araç Hangarı: Araç kondisyonu +%{amount} onarıldı.",
+      "materials_stashed": "Tüm hurda ve üretim malzemeleri ({count} parça) depoya aktarıldı.",
+      "generator_started": "Sığınak jeneratörü çalıştırıldı. Elektrik şebekesi aktif.",
+      "generator_stopped": "Sığınak jeneratörü kapatıldı.",
+      "generator_refueled": "Jeneratöre yakıt ikmali yapıldı (+{hours} saat).",
+      "generator_depleted": "Jeneratörün yakıtı tükendi! Güç şebekesi kapandı.",
+      "raid_defended": "Gece Baskını: Barikatlar yağmacıları püskürttü! (+{loot} hurda metal ele geçirildi).",
+      "raid_breached": "Gece Baskını: Yağmacılar barikatı aştı! Sığınak çevre savunması %{damage} hasar aldı."
+    },
+    "effect": {
+      "morale_boost": "Moral ve odaklanma toparlandı (+{amount}).",
+      "rad_resistance": "Radyasyon koruma dozu etki gösterdi (+{amount})."
+    },
+    "ailment": {
+      "pain": {
+        "healed": "Ağrı hafifledi ve vücut sakinleşti.",
+        "cured": "Ağrı kesici etkisini gösterdi, acı tamamen dindi."
+      },
+      "poison": {
+        "healed": "Toksik zehirlenme vücuttan temizlendi.",
+        "cured": "Antidot toksinleri nötralize etti, zehirlenme sona erdi."
+      }
+    }
+  },
+  "vehicle": {
+    "action_inspect": "Taşıt & Karavan",
+    "label": {
+      "sector": "Sektör",
+      "trunk_load": "Bagaj Yükü",
+      "pack_inventory": "Hayatta Kalan Çantası",
+      "trunk_inventory": "Taşıt Bagajı",
+      "pack_empty": "Çantada eşya yok.",
+      "trunk_empty": "Taşıt bagajı boş.",
+      "mounted_vehicle": "Aktif Araç"
+    },
+    "status": {
+      "operational": "ÇALIŞIR DURUMDA",
+      "abandoned": "TERKEDİLMİŞ ENKAZ",
+      "driving": "SÜRÜLÜYOR",
+      "missing": "EKSİK",
+      "installed": "TAKILDI",
+      "missing_materials": "EKSİK MALZEME",
+      "ready": "SÜRÜŞE HAZIR",
+      "needs_repair": "PARÇA EKSİK / ONARILMALI",
+      "here": "Bu Sektörde",
+      "unknown_location": "Bilinmeyen Konum"
+    },
+    "action": {
+      "mount": "Kontağı Çalıştır (Bin)",
+      "dismount": "Kontağı Kapat (İn)",
+      "install": "Parçayı Tak",
+      "siphon": "Enkazdan Yakıt Sifonla",
+      "repair_scrap": "Gövdeyi Onar (Hurda)",
+      "repair_oil": "Yağ Seviyesini Tamamla (Motor Yağı)",
+      "to_trunk": "Bagaja Koy",
+      "to_pack": "Çantaya Al",
+      "install_upgrade": "Yükseltmeyi Tak",
+      "camp_4h": "Araçta Dinlen (4s)",
+      "camp_8h": "Araçta Uyu (8s)",
+      "ram_enemy": "Araçla Çarpıp Ez",
+      "speed_away": "Gazı Kökleyip Kaç"
+    },
+    "spec": {
+      "speed": "Hız",
+      "noise": "Motor Gürültüsü",
+      "shelter": "Kabini Korunaklı",
+      "armor": "Zırh Koruması",
+      "amphibious": "Amfibi (Suya Girer)",
+      "solar_electric": "Güneş & Elektrik",
+      "field_clinic": "Sahra Kliniği (Tedavi)",
+      "arctic_tracked": "Kutup Paleti (Buz Aşar)",
+      "muscle_powered": "Kas Gücü (Sıfır Yakıt)",
+      "cabin": "Kapalı Kabin"
+    },
+    "gauge": {
+      "fuel": "Yakıt Deposu",
+      "condition": "Motor Sağlığı"
+    },
+    "section": {
+      "restoration": "Parça Montajı ve Restorasyon",
+      "maintenance": "Saha Bakımı ve İkmal",
+      "cargo_bay": "Bagaj Yükleme ve Çanta Yönetimi",
+      "upgrades": "Modüler Yükseltmeler & Eklentiler"
+    },
+    "enduro": {
+      "name": "Enduro 250cc Keşif Motosikleti",
+      "desc": "Harabe sokaklar ve dağ patikalarını hızla aşmak için tasarlanmış hafif, kıvrak tek izli keşif aracı."
+    },
+    "uaz": {
+      "name": "UAZ-469 Askeri Arazi Taşıtı",
+      "desc": "Klasik Sovyet 4x4 arazi taşıtı. Mekanik sağlamlığı ve kapalı kabini asit yağmuru ve dondurucu soğuğa karşı tam koruma sağlar."
+    },
+    "ural": {
+      "name": "Ural-4320 Ağır Zırhlı Mobil Karavan",
+      "desc": "Zırhlı seyyar bir kaleye dönüştürülmüş 6x6 ağır dizel nakliye devi. Devasa bagaj hacmi ve eşsiz mürettebat koruması sunar."
+    },
+    "log": {
+      "mounted": "Motor kükreyerek çalıştı! {vehicle} direksiyonuna geçtiniz.",
+      "dismounted": "Kontak kapatıldı. {vehicle} taşıtından yaya olarak indiniz.",
+      "part_installed": "Parça gövdeye monte edildi. ({remaining} parça daha gerekiyor).",
+      "fully_restored": "Araç restorasyonu tamamlandı! Taşıt uzun yolculuklara hazır.",
+      "refueled": "Depoya +{added}L yakıt dolduruldu. Mevcut seviye: {total}L.",
+      "repaired": "Araç gövdesi +%{gain} onarıldı. Durum: %{condition}.",
+      "siphoned": "Yol kenarındaki enkazdan depoya +{siphoned}L yakıt sifonlandı!",
+      "no_fuel": "Motor yakıtsızlıktan tekleme yapıp durdu! Yakıt deposu boş.",
+      "not_ready": "Taşıtın kritik parçaları eksik, çalıştırılamıyor.",
+      "cannot_cross_water": "Tekerlekli kara taşıtları deniz yolunu aşamaz!",
+      "upgrade_installed": "{vehicle} üzerine modüler eklenti monte edildi: {upgrade}.",
+      "camped": "Motor durduruldu ve araç kabininde {hours} saat güvenle dinlenildi.",
+      "ram_impact": "Tam gaz ileri! Araç {enemy} üzerine sürülerek {damage} kinetik ezme hasarı vuruldu!",
+      "escaped_in_vehicle": "Gaza sonuna kadar basarak {enemy} geride bırakılıp hızla uzaklaşıldı!",
+      "field_clinic_healed": "Ambulans sahra kliniği seyahat esnasında yaralarınızı tedavi etti (+15 Can).",
+      "discovered": "🚨 {location} sektöründe terkedilmiş bir {vehicle} keşfettiniz!",
+      "claimed": "{vehicle} başarıyla sahiplenildi ve araç envanterinize eklendi."
+    },
+    "reject": {
+      "invalid_vehicle": "Taşıt bulunamadı.",
+      "insufficient_fuel": "Yolculuk için yetersiz yakıt.",
+      "trunk_full": "Taşıt bagajı azami taşıma sınırında!",
+      "part_not_in_inventory": "Gerekli parça envanterde yok.",
+      "no_cabin_shelter": "Bu aracın kapalı bir kabini veya kamp yatağı bulunmadığından içinde güvenle uyunamaz.",
+      "upgrade_already_installed": "Bu yükseltme araca zaten monte edilmiş durumda.",
+      "missing_upgrade_materials": "Bu yükseltmeyi monte etmek için gereken malzemeler eksik.",
+      "muscle_powered_no_fuel": "Bu araç mekanik kas gücüyle çalışır, sıvı yakıt doldurulamaz."
+    },
+    "buggy": {
+      "name": "Güneş Enerjili Çöl Buggy’si",
+      "desc": "Güneş panelleriyle desteklenen ultra hafif keşif aracı. Fısıltı sessizliğinde elektrikli motor ve gündüzleri kendi şarj olan batarya."
+    },
+    "btr": {
+      "name": "BTR-80 Amfibik Zırhlı Personel Taşıyıcı",
+      "desc": "Ağır çelik gövdeli 8x8 zırhlı amfibik muharebe aracı. Ağır zırh koruması ve su jeti motoruyla nehir ve deniz geçişlerini doğrudan aşabilir."
+    },
+    "upgrade": {
+      "bullbar": {
+        "name": "Güçlendirilmiş Çelik Tampon Demiri",
+        "desc": "Çelik plakalardan kaynatılmış ağır ön tampon. Çarpışmalarda korur ve yol barikatlarını yarıp geçmeyi sağlar (+%15 zırh)."
+      },
+      "cargo_rack": {
+        "name": "Genişletilmiş Tavan Bagajı",
+        "desc": "Ağır boru profilli çatı sepeti. Araç bagaj taşıma kapasitesini +%40 artırır."
+      },
+      "tires": {
+        "name": "Arazi Tipi Çamur & Kar Lastikleri",
+        "desc": "Derin dişli güçlendirilmiş arazi lastikleri. Yakıt tüketimini %20 düşürür ve engebeli arazide sürati artırır."
+      },
+      "floodlights": {
+        "name": "Tavan Halojen Projektör Farları",
+        "desc": "Aküye bağlı yüksek lümenli tavan aydınlatma barı. Gece yolculuklarındaki görüş kısıtlamasını ve pusu riskini sıfırlar."
+      },
+      "fuel_tank": {
+        "name": "Ek Yakıt Deposu / Bidon Yuvası",
+        "desc": "Gövdeye kaynatılmış harici yakıt tankı desteği. Toplam yakıt kapasitesine +25 Litre/kWh ekler."
+      },
+      "camper_bed": {
+        "name": "Süngerli Kamp Yatağı & Çatı Çadırı",
+        "desc": "Yalıtımlı sünger yatak ve yün tulum. Haritanın her yerinde güvenli, sıcak bir şekilde dinlenme ve uyuma imkanı sağlar."
+      }
+    },
+    "ambulance": {
+      "name": "Gezici Sahra Ambulansı (Medevac)",
+      "desc": "Tam donanımlı askeri sahra ambulansı. İçerisindeki cerrahi ekipman ve oksijen desteği sayesinde yolculuk ve kamp esnasında ağır yaralanmaları, kanamaları ve kırıkları tedavi eder."
+    },
+    "snowcat": {
+      "name": "Arktik Paletli Kar Canavarı (Snowcat)",
+      "desc": "Kutup şartları ve donmuş dağ yolları için güçlendirilmiş ağır paletli kargo aracı. Tundra zemin cezalarını yok eder ve kar fırtınalarına karşı tam koruma sağlar."
+    },
+    "draisine": {
+      "name": "Terkedilmiş Demiryolu Drezini",
+      "desc": "Demiryolu hatlarında çalışan manivela dişlili demiryolu drezini. Yakıtsız çalışır ve insan gücü kullanır. Motor sesi olmadığı için pusu riskini fısıltı seviyesine (%30) indirir."
+    },
+    "rhib": {
+      "name": "Taktik Askeri Zodyak Botu (RHIB)",
+      "desc": "İkiz motorlu askeri taktik zodyak taarruz botu. Deniz ve nehir rotalarını normal sürenin dörtte birinde aşar."
+    },
+    "fuel": {
+      "muscle_label": "Kas Gücü (Yakıtsız)"
+    },
+    "action_mount": "Araca Bin ve Sür",
+    "action_dismount": "İn / Park Et",
+    "hud_title": "ARAÇ KOKPİT GÖSTERGESİ",
+    "parked_in_sector": "Bu Sektörde Park Halinde Araç",
+    "trunk_load": "Bagaj Yükü",
+    "speed_multiplier": "{speed}x İntikal Hızı",
+    "action_open_trunk": "Bagaj & Bakım",
+    "zero_fuel_consumption": "Kas Gücü (0 L Yakıt)",
+    "action_view_on_map": "Haritada Göster",
+    "discovery": {
+      "title": "TERKEDİLMİŞ ARAÇ KEŞFEDİLDİ!",
+      "tag_derelict": "TERKEDİLMİŞ ENKAZ",
+      "parts_needed_title": "RESTORASYON İÇİN GEREKLİ PARÇALAR",
+      "action_claim_inventory": "Sahiplen & Envantere Ekle",
+      "action_inspect_now": "Hemen İncele & Parça Tak",
+      "action_leave_sector": "Sektörde Bırak & Kapat"
+    }
+  },
+  "death": {
+    "title": "SİNYAL KESİLDİ",
+    "cause": {
+      "starvation": "Uzun süren açlığa yenik düştü.",
+      "dehydration": "Sistemik susuzluktan yere yığıldı.",
+      "exhaustion": "Aşırı bitkinlik ve yorgunluktan kalbi durdu.",
+      "bleeding": "Tedavi edilmeyen derin kan kaybından öldü.",
+      "infection": "Enfeksiyon ve septik şok sonucu can verdi.",
+      "acid": "Aşındırıcı asit yanıkları ölümcül oldu.",
+      "drowning": "Açık denizin fırtınalı dalgalarında kayboldu.",
+      "wounds": "Ağır muharebe travmasına ve yaralarına yenik düştü."
+    },
+    "summary": "{nodes} sektör haritalandıktan sonra {days} gün hayatta kalındı. Son telsiz sinyali {location} harabelerinden alındı.",
+    "action_memorial": "🪦 ANIT MEZAR & SEFER DEFTERİ"
+  },
+  "codex": {
+    "title": "SEFER DEFTERİ, ANIT & KODEKS",
+    "toast_unlocked": "BAŞARIM AÇILDI",
+    "tab": {
+      "memorial": "Anıt Mezar",
+      "achievements": "Başarımlar",
+      "career": "Kümülatif Telemetri",
+      "lore": "Saha El Kitabı & İstihbarat"
+    },
+    "label": {
+      "rank": "Hayatta Kalma Rütbesi",
+      "achievements": "Başarım Açıldı",
+      "days_survived": "gün hayatta kalındı",
+      "sectors": "sektör haritalandı",
+      "kills": "düşman etkisiz hale getirildi",
+      "locked": "GİZLİ / KİLİTLİ",
+      "career_standing": "HAYATTA KALAN İTİBAR DERECESİ",
+      "days": "gün"
+    },
+    "rank": {
+      "tier_1": "Acemi Mülteci",
+      "desc_1": "Kıyamet sonrası harabelere henüz ilk adımlarını atan tecrübesiz mülteci.",
+      "tier_2": "Çorak Arazi Seyyahı",
+      "desc_2": "Çatışma, açlık ve asit fırtınalarını bizzat tatmış dayanıklı gezgin.",
+      "tier_3": "Avrasya Bozkır Kurdu",
+      "desc_3": "Ticaret yollarını bilen, motor onaran ve ölümcül pusuları bertaraf eden çetin gazi.",
+      "tier_4": "Sefer Kolu Komutanı",
+      "desc_4": "Karavanlara liderlik eden ve hizipler nezdinde yüksek itibara sahip usta hayatta kalan.",
+      "tier_5": "Son Nefes Efsanesi",
+      "desc_5": "Adı sığınak duvarlarına kazınmış, tüm Avrasya telsiz frekanslarında efsaneleşen kurtarıcı."
+    },
+    "memorial": {
+      "intro_text": "Avrasya harabelerinde son nefesini veren tüm hayatta kalanların anıt defteri. İsimleri, başarıları ve son anları terminal hafızasında sonsuza dek yaşayacak.",
+      "empty_title": "Henüz Can Veren Hayatta Kalan Yok",
+      "empty_desc": "Bu sefer hattındaki tüm hayatta kalanlar şu anda hayatta. Bir karakter can verdiğinde, hatırası sonsuza dek buraya kaydedilecek."
+    },
+    "stats": {
+      "total_expeditions": "Başlatılan Toplam Sefer",
+      "total_days": "Toplam Hayatta Kalınan Süre",
+      "total_km": "Kat Edilen Toplam Mesafe",
+      "total_sectors": "Haritalanan Toplam Sektör",
+      "enemies_neutralized": "Etkisiz Hale Getirilen Düşman",
+      "enemies_spared": "Affedilen / Bağışlanan Düşman",
+      "barter_volume": "Kümülatif Mal Takas Hacmi",
+      "vehicles_restored": "Restore Edilen Arazi Taşıtı",
+      "fuel_siphoned": "Enkazlardan Sifonlanan Yakıt",
+      "crafts_done": "Tamamlanan Saha Üretimleri"
+    },
+    "ach": {
+      "first_blood": {
+        "title": "İlk Temas",
+        "desc": "Taktiksel çatışmada bir düşmanı etkisiz hale getir."
+      },
+      "pacifist_mercy": {
+        "title": "Merhamet Yasası",
+        "desc": "Teslim olan silahlı bir yağmacıyı öldürmek yerine affedip serbest bırak."
+      },
+      "trauma_surgeon": {
+        "title": "Saha Cerrahı",
+        "desc": "Arteryel kanamayı CAT turnikesi ile durdur ve kırık bir uzvu SAM ateliyle sabitle."
+      },
+      "mechanic_maestro": {
+        "title": "Enkaz Mühendisi",
+        "desc": "Terkedilmiş bir askeri veya arazi taşıtını tüm parçalarını toplayarak restore et."
+      },
+      "silk_road_tycoon": {
+        "title": "İpek Yolu Taciri",
+        "desc": "Tek seferde tüccarlarla 200 değer puanının üzerinde başarılı takas gerçekleştir."
+      },
+      "nomad_ally": {
+        "title": "Bozkır Kardeşliği",
+        "desc": "Göçebe Loncası (Nomad Guild) ile itibarını +30 (Müttefik) seviyesine yükselt."
+      },
+      "iron_discipline": {
+        "title": "Demir Disiplin",
+        "desc": "Demir Muhafızlar (Iron Guard) ile itibarını +30 seviyesine yükselt."
+      },
+      "acid_survivor": {
+        "title": "Kimyasal Gazisi",
+        "desc": "Aşındırıcı asit yağmuru veya radyasyon kül fırtınasını hasar almadan atlat."
+      },
+      "eurasian_nomad": {
+        "title": "Avrasya Seyyahı",
+        "desc": "Harita üzerinde 10 farklı sektörü keşfet ve ayak bas."
+      },
+      "endurance_champion": {
+        "title": "Demir İrade",
+        "desc": "Acımasız kıyamet sonrasında 10 günden fazla hayatta kal."
+      },
+      "fuel_siphoner": {
+        "title": "Yakıt Korsanı",
+        "desc": "Sifon hortumu kullanarak terkedilmiş araç enkazlarından yakıt çek."
+      },
+      "outpost_pioneer": {
+        "title": "İlk Tahkimat",
+        "desc": "Bir sektöre ilk ileri karakol üssünü inşa et."
+      },
+      "master_scavenger": {
+        "title": "Usta Yağmacı",
+        "desc": "Harabelerden toplamda 50'den fazla kaynak ve eşya topla."
+      },
+      "sniper_doctrine": {
+        "title": "Keskin Nişancı",
+        "desc": "Ateşli silahla uzaktan tek vuruşta kritik kafa hasarı ver."
+      }
+    },
+    "lore_cat": {
+      "factions": "Kıyamet Hizipleri",
+      "tactics": "Saha Taktikleri & Travma Tıbbı",
+      "vehicles": "Arazi Taşıtları & İntikal"
+    },
+    "lore": {
+      "cleared": "GİZLİLİK KALDIRILDI",
+      "iron_guard": {
+        "title": "Demir Muhafız Komuta Yapısı",
+        "desc": "Yeraltı askeri sığınaklarında mühürlenmiş kıyamet öncesi nizam ordusu kalıntıları. Katı protokoller ve yüksek teknolojili silahlarla donanmış olup harabelerde karantinayı uygular ve hurda karşılığı mühimmat sağlarlar."
+      },
+      "nomad_guild": {
+        "title": "Göçebe Loncası Ticaret Kervanları",
+        "desc": "Tarihi İpek Yolu güzergahlarını su arıtma konvoyları ve deve/yük kervanlarıyla kat eden tecrübeli tüccar klanları ve gezgin hurdacılar birliği."
+      },
+      "ash_marauders": {
+        "title": "Kül Yağmacıları Doktrini",
+        "desc": "Viyadükleri ve stratejik boğazları kesen, seyyahları haraç barikatlarıyla soyan ve pusu kuran acımasız harabe çeteleri."
+      },
+      "trauma_tccc": {
+        "title": "Taktik Muharebe Yaralı Bakımı (TCCC)",
+        "desc": "Kıyamet şartlarında hayatta kalmak için CAT turnikelerle acil kanama durdurma, göğüs dekompresyonu ve SAM atelleriyle kırık sabitleme doktrini."
+      },
+      "weather_extremes": {
+        "title": "Atmosferik Toksisite Profilleri",
+        "desc": "Sanayi enkazlarından yükselen aşındırıcı asit yağmurları teni ve kıyafetleri eritirken; radyoaktif kül fırtınaları NBC gaz maskeleri veya kapalı araç kabinleri gerektirir."
+      },
+      "vehicle_overland": {
+        "title": "Motorlu İntikal ve Lojistik Protokolü",
+        "desc": "Motorlu araçlar 3x-4.5x hız avantajı ve yüzlerce kiloluk bagaj kapasitesi sunar; ancak içten yanmalı motor gürültüsü yağmacıları ve yaratıkları hızla çeker."
+      }
+    }
+  },
+  "ad": {
+    "action_airdrop": "Acil İkmal Sandığı (Ödüllü)",
+    "airdrop": {
+      "title": "ACİL DURUM İKMAL SANDIĞI",
+      "desc": "Telsiz çağrınız üzerine koordinatlarınıza bir drone tarafından acil tayın, temiz su ve sargı bezi içeren mühürlü bir paraşüt sandığı indirildi."
+    },
+    "log": {
+      "reward_granted": "Acil durum yardım sandığı başarıyla ulaştı! Malzemeler envantere eklendi.",
+      "reward_granted_vip": "👑 VIP ERİŞİM: Acil erzak sandığı reklamsız ve anında teslim edildi!",
+      "dismissed": "Yayın yarıda kesildi. İkmal çağrısı iptal edildi."
+    }
+  },
+  "radio": {
+    "ui": {
+      "title": "AN/PRC-117F TAKTİK TELSİZ ALICISI",
+      "pwr_on": "GÜÇ AÇIK",
+      "pwr_off": "GÜÇ KAPALI",
+      "carrier_lock": "SİNYAL KİLİTLENDİ",
+      "scanning_carrier": "FREKANS ARANIYOR",
+      "tuning_hint": "Analog kadranı çevirerek veya OTO-TARA ile çorak toprakların frekanslarını (88.0 - 108.0 MHz) tarayın.",
+      "no_power_msg": "TELSİZ BATARYASI TÜKENDİ. ŞARJ ETMEK İÇİN EL DİNAMOSUNU ÇEVİRİN.",
+      "confirm_sos": "ACİL DURUM İMDAT (SOS) SİNYALİ GÖNDERİLSİN Mİ?\n\n40 dk batarya tüketir. Dost kervanları yardıma çağırabilir veya pusucu haydutları üzerinize çekebilir!",
+      "presets": "HAFIZALAR",
+      "decode_and_plot": "SİNYALİ ÇÖZ & HARİTAYA İŞLE",
+      "decoded_plotted": "ÇÖZÜLDÜ & HARİTAYA İŞLENDİ",
+      "beacon_detected": "SEKTÖRDE RADYO SİNYALİ VAR",
+      "beacon_here_hint": "Yakalanan bir telsiz yayını bu sektörde acil durum koordinatları belirledi.",
+      "tune_radio": "TELSİZİ AÇ",
+      "claim_cache": "ZULAYI ELE GEÇİR / ERZAĞI AL"
+    },
+    "signal": {
+      "dr_aris": {
+        "name": "Mayday // Acil Durum Kliniği SOS",
+        "caller": "Dr. Aris (Kuşatma Altında)",
+        "transcript": "Mayday, burası Sektör Sağlık Şubesi’nden Dr. Aris... Barikatlarımız yaratık sürüsüne fazla dayanamayacak. Bu yayını alan olursa, koordinatlar klinik bodrum sığınağına kilitlendi. Taşıyabileceğiniz tüm tıbbi erzağı alın..."
+      },
+      "numbers_station": {
+        "name": "Echo-309 İstasyonu // NATO Sayı İstasyonu",
+        "caller": "Otomatik Tekrarlayan Siren",
+        "transcript": "[PARAZİTLİ BİP] ... 7 - 4 - 1 - 9 - 2 ... [BİP] ... SOFYA SEKTÖRÜ ASKERİ SIĞINAK ERİŞİM KODU ONAYLANDI ... [TEKRAR DÖNGÜSÜ] ..."
+      },
+      "raider_ambush": {
+        "name": "Telsiz Yakalama // Çakal Çetesi",
+        "caller": "Yakalanan Haydut Frekansı",
+        "transcript": "Tüm birimler Ankara kanyon geçidinde mevzi alsın. Lastik patlatan çiviler ve yakıt tuzakları hazır. Yola yaklaşan bir çöpçü var... görüldüğü yerde vurun..."
+      },
+      "weather_beacon": {
+        "name": "NOAA Acil Durum Meteoroloji İstasyonu",
+        "caller": "Otomatik Uydu Telemetrisi",
+        "transcript": "DİKKAT: Sektör üzerinde yoğun atmosferik iyon fırtınası ve asit yağmuru cephesi ilerliyor. Derhal kapalı ve korunaklı sığınak bulunuz..."
+      },
+      "nomad_caravan": {
+        "name": "Göçebe Tüccar Kervanı Anonsu",
+        "caller": "Gezgin Tarık",
+        "transcript": "Çorak diyara selam olsun. Kızıl Yıldız Kervanı önümüzdeki 24 saat boyunca Bükreş Sektörü’nde konaklayacak. Temiz su, hurda metal ve nadir filtreler takasa açıktır. Silahsız yaklaşın."
+      },
+      "pulsar_anomaly": {
+        "name": "Bilinmeyen Frekans // Pulsar Dalgaları",
+        "caller": "Bilinmeyen Kaynak",
+        "transcript": "[RİTMİK METALİK UĞULTU] ... Gökyüzü yarıldı ama çekirdek hâlâ ayakta... 106.3 MHz Kiev’in altındaki eski reaktörle rezonansa giriyor... Radyasyonun gözlerinizi kör etmesine izin vermeyin..."
+      }
+    },
+    "cache": {
+      "medical_drop": "Tıbbi Malzeme Zulaları",
+      "nato_bunker": "NATO Acil Sığınak Kasası",
+      "ambush_thwarted": "Haydut Pususu Boşa Çıkarıldı",
+      "forecast_logged": "Atmosferik Telemetri Kaydedildi",
+      "trader_rendezvous": "Göçebe Kervan Buluşma Noktası",
+      "anomaly_analyzed": "Anomali Dalgası Analiz Edildi"
+    },
+    "log": {
+      "cranked": "El dinamosu çevrildi. Telsiz bataryası {battery} dk seviyesine şarj edildi.",
+      "decoded": "Telsiz yayını deşifre edildi: {title} ({freq}).",
+      "beacon_plotted": "Acil durum sinyal noktası haritaya işlendi: {location}.",
+      "beacon_collected": "Telsiz koordinatlarındaki acil durum erzak zulaları ele geçirildi: {title}.",
+      "sos_aid_drop": "Dost bir göçebe devriyesi SOS çağrınıza yanıt verdi! Yakına hayatta kalma erzakları bıraktı.",
+      "sos_hostile_intercept": "Düşman yağmacılar imdat çağrınızı yakaladı! Bölgedeki tehlike seviyesi arttı."
+    },
+    "reject": {
+      "low_battery": "Telsiz bataryası acil durum sinyali için çok zayıf. Şarj için el dinamosunu çevirin."
+    },
+    "sos": {
+      "aid_arrived": "Göçebe devriyesi çağrıya yetişip erzak bıraktı.",
+      "raider_alert": "Düşman yağmacılar imdat sinyalinize kilitlendi!"
+    }
+  },
+  "travel": {
+    "ui": {
+      "transit_title": "SEKTÖR İNTİKALİ",
+      "arrived_title": "HEDEFE ULAŞILDI",
+      "speed": "Hız",
+      "distance": "Toplam Yol",
+      "est_time": "Tahmini Süre",
+      "rem_distance": "Kalan Mesafe",
+      "progress": "İntikal İlerlemesi",
+      "skip": "⏩ HIZLANDIR",
+      "enter_sector": "SEKTÖRE GİRİŞ YAP",
+      "first_visit": "İLK KEŞİF"
+    },
+    "log": {
+      "ambush_alert": "⚠️ DİKKAT: YOLDA PUSUYA DÜŞÜRÜLDÜNÜZ! SİLAHLI TEHDİT TESPİT EDİLDİ!"
+    }
+  }
+}
